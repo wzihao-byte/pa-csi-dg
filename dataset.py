@@ -450,7 +450,6 @@ def load_StanWiFi_data_1(root):
     return data_amp, data_phase, label
 
 
-load_StanWiFi_data_1("data/StanWifi_/train")
 # load_StanWiFi_data("data/StanWifi_/test",'val')
 
 #load_StanWiFi_data_1("data/StanWifi")
@@ -622,3 +621,6 @@ def load_StanWiFi_data_2(root,train_test):
     return data, data_phase, label
 # load_StanWiFi_data_2("data/StanWifi_/train",'train')
 # load_StanWiFi_data_2("data/StanWifi_/test",'test')
+
+if __name__ == "__main__":
+    load_StanWiFi_data_1("data/StanWifi_/train")

@@ -28,5 +28,17 @@ Try to run dataset.py to process the data from original dataset.
 
 Data processed can be downloaded at: [PA-CSI dataset](https://drive.google.com/drive/folders/1fiJBDWDC3WKkD5pLYRwpLCWMXPVzCQ-i?usp=sharing)
 
+## Domain Generalization
+
+A separate PyTorch DG path has been added for leave-one-environment-out experiments and low-intrusion UniCrossFi-inspired ablations.
+
+See [PA_CSI_DG.md](docs/PA_CSI_DG.md) for:
+
+- true DG protocol details
+- preset configs
+- command examples
+- data format assumptions
+- SupCon / NARC / AdaIN ablations
+
 
 

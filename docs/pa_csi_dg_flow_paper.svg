@@ -1,0 +1,201 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">PA-CSI DG training framework with SupCon and AdaIN</title>
+  <desc id="desc">A paper-style flowchart showing the PA-CSI backbone, classifier, natural multi-view branch, projection head, supervised contrastive loss, AdaIN feature mixing, and total training objective.</desc>
+  <defs>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#2563eb"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#0f766e"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#dc2626"/>
+    </marker>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+    <linearGradient id="inputGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dbeafe"/>
+      <stop offset="100%" stop-color="#ccfbf1"/>
+    </linearGradient>
+    <linearGradient id="backboneGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#eff6ff"/>
+      <stop offset="100%" stop-color="#f8fafc"/>
+    </linearGradient>
+    <linearGradient id="regularizerGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#fff7ed"/>
+    </linearGradient>
+    <style>
+      .title { font: 700 28px Arial, Helvetica, sans-serif; fill: #111827; }
+      .subtitle { font: 400 16px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .label { font: 700 18px Arial, Helvetica, sans-serif; fill: #111827; }
+      .small { font: 400 14px Arial, Helvetica, sans-serif; fill: #4b5563; }
+      .tiny { font: 400 12px Arial, Helvetica, sans-serif; fill: #64748b; }
+      .panelTitle { font: 700 15px Arial, Helvetica, sans-serif; fill: #334155; letter-spacing: 0.5px; }
+      .solidBlue { stroke: #2563eb; stroke-width: 4; fill: none; marker-end: url(#arrowBlue); }
+      .solidGreen { stroke: #0f766e; stroke-width: 4; fill: none; marker-end: url(#arrowGreen); }
+      .dashGreen { stroke: #0f766e; stroke-width: 4; fill: none; stroke-dasharray: 10 8; marker-end: url(#arrowGreen); }
+      .dashOrange { stroke: #d97706; stroke-width: 4; fill: none; stroke-dasharray: 10 8; marker-end: url(#arrowOrange); }
+      .dashRed { stroke: #dc2626; stroke-width: 4; fill: none; stroke-dasharray: 10 8; marker-end: url(#arrowRed); }
+      .card { fill: #ffffff; stroke: #cbd5e1; stroke-width: 2; filter: url(#softShadow); }
+      .softCard { fill: #ffffff; stroke: #dbe4ee; stroke-width: 1.5; }
+      .blueCard { fill: #eff6ff; stroke: #93c5fd; stroke-width: 2; }
+      .greenCard { fill: #ecfdf5; stroke: #5eead4; stroke-width: 2; }
+      .orangeCard { fill: #fff7ed; stroke: #fdba74; stroke-width: 2; }
+      .redCard { fill: #fef2f2; stroke: #fca5a5; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+  <rect x="45" y="42" width="1510" height="810" rx="18" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2"/>
+
+  <text x="90" y="90" class="title">PA-CSI Domain Generalization Framework</text>
+  <text x="90" y="120" class="subtitle">Main inference path plus training-only contrastive regularization with natural views and AdaIN feature mixing</text>
+
+  <rect x="80" y="160" width="245" height="575" rx="16" fill="url(#inputGrad)" stroke="#93c5fd" stroke-width="2"/>
+  <text x="105" y="195" class="panelTitle">INPUT</text>
+
+  <rect x="115" y="225" width="175" height="170" rx="14" class="card"/>
+  <text x="148" y="257" class="label">CSI Sample</text>
+  <text x="143" y="283" class="small">Amplitude + Phase</text>
+  <g transform="translate(135,310)">
+    <path d="M0,35 C20,5 40,65 60,35 S100,5 120,35" stroke="#2563eb" stroke-width="4" fill="none"/>
+    <path d="M0,70 C20,40 40,100 60,70 S100,40 120,70" stroke="#0f766e" stroke-width="4" fill="none"/>
+    <circle cx="10" cy="35" r="4" fill="#2563eb"/>
+    <circle cx="75" cy="70" r="4" fill="#0f766e"/>
+  </g>
+
+  <rect x="115" y="450" width="175" height="155" rx="14" class="softCard"/>
+  <text x="139" y="482" class="label">Metadata</text>
+  <text x="135" y="510" class="small">class label y</text>
+  <text x="135" y="535" class="small">domain id e</text>
+  <text x="135" y="560" class="small">sample id</text>
+  <g transform="translate(143,580)">
+    <circle cx="0" cy="0" r="6" fill="#2563eb"/>
+    <circle cx="25" cy="0" r="6" fill="#0f766e"/>
+    <circle cx="50" cy="0" r="6" fill="#d97706"/>
+    <circle cx="75" cy="0" r="6" fill="#dc2626"/>
+  </g>
+
+  <rect x="395" y="160" width="405" height="575" rx="18" fill="url(#backboneGrad)" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="425" y="195" class="panelTitle">BASELINE BACKBONE</text>
+
+  <rect x="440" y="235" width="315" height="120" rx="14" class="blueCard"/>
+  <text x="512" y="268" class="label">PA-CSI Backbone</text>
+  <text x="478" y="296" class="small">dual-stream encoder</text>
+  <text x="490" y="320" class="small">temporal + channel cues</text>
+  <g transform="translate(458,261)">
+    <rect x="0" y="0" width="32" height="22" rx="4" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="0" y="34" width="32" height="22" rx="4" fill="#ccfbf1" stroke="#0f766e" stroke-width="2"/>
+    <path d="M38,11 L72,28 L38,45" stroke="#334155" stroke-width="3" fill="none"/>
+  </g>
+
+  <rect x="440" y="420" width="315" height="115" rx="14" class="blueCard"/>
+  <text x="510" y="455" class="label">Fused Feature</text>
+  <text x="517" y="482" class="small">domain-aware representation</text>
+  <g transform="translate(472,490)">
+    <rect x="0" y="0" width="205" height="12" rx="6" fill="#dbeafe"/>
+    <rect x="0" y="0" width="92" height="12" rx="6" fill="#2563eb"/>
+    <rect x="0" y="22" width="205" height="12" rx="6" fill="#ccfbf1"/>
+    <rect x="0" y="22" width="138" height="12" rx="6" fill="#0f766e"/>
+  </g>
+
+  <rect x="850" y="250" width="215" height="115" rx="14" class="blueCard"/>
+  <text x="902" y="285" class="label">Classifier</text>
+  <text x="894" y="312" class="small">activity logits</text>
+  <g transform="translate(900,330)">
+    <rect x="0" y="0" width="16" height="25" fill="#2563eb"/>
+    <rect x="28" y="-12" width="16" height="37" fill="#0f766e"/>
+    <rect x="56" y="-24" width="16" height="49" fill="#d97706"/>
+    <rect x="84" y="-5" width="16" height="30" fill="#dc2626"/>
+  </g>
+
+  <rect x="1110" y="250" width="180" height="115" rx="14" class="redCard"/>
+  <text x="1158" y="287" class="label">CE Loss</text>
+  <text x="1140" y="315" class="small">classification</text>
+  <text x="1165" y="342" class="tiny">L_ce</text>
+
+  <rect x="850" y="455" width="215" height="115" rx="14" class="orangeCard"/>
+  <text x="893" y="490" class="label">Projection</text>
+  <text x="913" y="517" class="small">128-D space</text>
+  <g transform="translate(895,530)">
+    <circle cx="8" cy="8" r="5" fill="#2563eb"/>
+    <circle cx="35" cy="16" r="5" fill="#2563eb"/>
+    <circle cx="25" cy="-6" r="5" fill="#2563eb"/>
+    <circle cx="84" cy="4" r="5" fill="#0f766e"/>
+    <circle cx="110" cy="14" r="5" fill="#0f766e"/>
+    <circle cx="99" cy="-12" r="5" fill="#0f766e"/>
+  </g>
+
+  <rect x="1110" y="455" width="180" height="115" rx="14" class="orangeCard"/>
+  <text x="1162" y="490" class="label">SupCon</text>
+  <text x="1140" y="518" class="small">class positives</text>
+  <text x="1150" y="545" class="tiny">same class closer</text>
+
+  <rect x="880" y="620" width="640" height="155" rx="18" fill="url(#regularizerGrad)" stroke="#fed7aa" stroke-width="2"/>
+  <text x="910" y="654" class="panelTitle">TRAINING-ONLY REGULARIZERS</text>
+
+  <rect x="930" y="680" width="190" height="70" rx="12" class="greenCard"/>
+  <text x="962" y="708" class="label">Natural Views</text>
+  <text x="965" y="733" class="small">TX antenna masks</text>
+  <g transform="translate(943,714)">
+    <path d="M0,0 C18,-24 42,-24 60,0" stroke="#0f766e" stroke-width="3" fill="none"/>
+    <path d="M10,6 C26,-11 35,-11 50,6" stroke="#0f766e" stroke-width="2" fill="none"/>
+    <circle cx="30" cy="14" r="5" fill="#0f766e"/>
+  </g>
+
+  <rect x="1160" y="680" width="150" height="70" rx="12" class="greenCard"/>
+  <text x="1188" y="709" class="label">Shared</text>
+  <text x="1188" y="733" class="small">backbone</text>
+
+  <rect x="1350" y="680" width="130" height="70" rx="12" class="orangeCard"/>
+  <text x="1373" y="710" class="label">Views</text>
+  <text x="1363" y="734" class="small">embeddings</text>
+
+  <rect x="850" y="760" width="190" height="70" rx="12" class="orangeCard"/>
+  <text x="886" y="789" class="label">AdaIN Mix</text>
+  <text x="877" y="813" class="small">cross-domain style</text>
+
+  <rect x="1110" y="760" width="180" height="70" rx="12" class="orangeCard"/>
+  <text x="1140" y="789" class="label">AdaIN Loss</text>
+  <text x="1150" y="813" class="small">feature consistency</text>
+
+  <rect x="1340" y="300" width="160" height="155" rx="16" class="redCard"/>
+  <text x="1381" y="336" class="label">Total</text>
+  <text x="1372" y="363" class="label">Objective</text>
+  <text x="1363" y="397" class="small">L = L_ce</text>
+  <text x="1363" y="421" class="small">+ lambda_s L_supcon</text>
+  <text x="1363" y="445" class="small">+ lambda_a L_adain</text>
+
+  <rect x="1365" y="500" width="118" height="52" rx="12" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="1392" y="522" class="tiny">Inference</text>
+  <line x1="1380" y1="538" x2="1468" y2="538" stroke="#2563eb" stroke-width="4"/>
+  <text x="1386" y="575" class="tiny">Training only</text>
+  <line x1="1380" y1="590" x2="1468" y2="590" stroke="#d97706" stroke-width="4" stroke-dasharray="10 8"/>
+
+  <path d="M290,310 C350,310 370,295 440,295" class="solidBlue"/>
+  <path d="M598,355 L598,420" class="solidBlue"/>
+  <path d="M755,478 C810,478 815,512 850,512" class="solidBlue"/>
+  <path d="M755,478 C820,478 810,306 850,306" class="solidBlue"/>
+  <path d="M1065,307 L1110,307" class="solidBlue"/>
+  <path d="M1290,307 C1310,307 1318,330 1340,352" class="dashRed"/>
+  <path d="M1065,512 L1110,512" class="dashOrange"/>
+  <path d="M1290,512 C1330,512 1322,430 1340,405" class="dashOrange"/>
+
+  <path d="M290,310 C610,610 720,715 930,715" class="dashGreen"/>
+  <path d="M1120,715 L1160,715" class="dashGreen"/>
+  <path d="M1310,715 L1350,715" class="dashGreen"/>
+  <path d="M1350,715 C1340,630 1260,556 1110,526" class="dashGreen"/>
+
+  <path d="M598,535 C610,690 745,792 850,795" class="dashOrange"/>
+  <path d="M1040,795 L1110,795" class="dashOrange"/>
+  <path d="M1290,795 C1335,730 1340,520 1340,430" class="dashOrange"/>
+
+  <text x="510" y="780" class="tiny">Solid arrows: inference path</text>
+  <text x="510" y="805" class="tiny">Dashed arrows: training-only auxiliary losses</text>
+  <text x="90" y="820" class="tiny">At test time, only PA-CSI Backbone + Classifier are used.</text>
+</svg>

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PA-CSI DG Framework Diagram</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #eceff3;
+    }
+
+    svg {
+      width: min(1600px, 100vw);
+      height: auto;
+      display: block;
+      background: #ffffff;
+      box-shadow: 0 10px 28px rgba(30, 41, 59, 0.16);
+    }
+
+    .title {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 32px;
+      font-weight: 700;
+      fill: #111827;
+    }
+
+    .subtitle {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 17px;
+      fill: #4b5563;
+    }
+
+    .region-title {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      font-weight: 700;
+      fill: #374151;
+      letter-spacing: 0;
+    }
+
+    .region-note {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      fill: #6b7280;
+    }
+
+    .block-title {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 18px;
+      font-weight: 700;
+      fill: #111827;
+    }
+
+    .block-sub {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      fill: #374151;
+    }
+
+    .math {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 16px;
+      fill: #111827;
+      font-style: italic;
+    }
+
+    .caption {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+      fill: #374151;
+    }
+
+    .icon-line {
+      fill: none;
+      stroke: #334155;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.74;
+    }
+
+    .icon-blue {
+      fill: none;
+      stroke: #2f6fb2;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.80;
+    }
+
+    .icon-green {
+      fill: none;
+      stroke: #1f8a70;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.80;
+    }
+
+    .icon-orange {
+      fill: none;
+      stroke: #c77a16;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.80;
+    }
+
+    .icon-red {
+      fill: none;
+      stroke: #c64a43;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.80;
+    }
+
+    .icon-dot {
+      fill: #334155;
+      opacity: 0.65;
+    }
+
+    .icon-symbol {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 24px;
+      font-weight: 700;
+      fill: #334155;
+      opacity: 0.70;
+    }
+
+    .line-label {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      font-weight: 700;
+      fill: #4b5563;
+    }
+
+    .panel {
+      fill: #f8f9fb;
+      stroke: #b7c0ca;
+      stroke-width: 1.3;
+      rx: 12;
+    }
+
+    .group {
+      fill: #ffffff;
+      stroke: #6b7280;
+      stroke-width: 1.4;
+      stroke-dasharray: 8 6;
+      rx: 12;
+    }
+
+    .block {
+      stroke: #334155;
+      stroke-width: 1.45;
+      rx: 12;
+      filter: url(#softShadow);
+    }
+
+    .blue { fill: #eaf3ff; }
+    .green { fill: #e9f7f2; }
+    .yellow { fill: #fff8d9; }
+    .orange { fill: #fff1df; }
+    .red { fill: #fff0ef; }
+
+    .arrow {
+      fill: none;
+      stroke: #2f6fb2;
+      stroke-width: 2.4;
+      marker-end: url(#arrowBlue);
+    }
+
+    .arrow-green {
+      fill: none;
+      stroke: #1f8a70;
+      stroke-width: 2.3;
+      marker-end: url(#arrowGreen);
+    }
+
+    .arrow-dash {
+      fill: none;
+      stroke: #c77a16;
+      stroke-width: 2.3;
+      stroke-dasharray: 8 7;
+      marker-end: url(#arrowOrange);
+    }
+
+    .arrow-red {
+      fill: none;
+      stroke: #c64a43;
+      stroke-width: 2.4;
+      marker-end: url(#arrowRed);
+    }
+
+    .legend-line {
+      stroke-width: 2.8;
+      stroke: #2f6fb2;
+    }
+
+    .legend-dash {
+      stroke-width: 2.8;
+      stroke: #c77a16;
+      stroke-dasharray: 8 7;
+    }
+  </style>
+</head>
+<body>
+  <svg viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+    <title id="title">PA-CSI domain generalization framework</title>
+    <desc id="desc">Academic architecture diagram for WiFi CSI human activity recognition with a main inference path and training-only SupCon and AdaIN regularization branches.</desc>
+    <defs>
+      <filter id="softShadow" x="-8%" y="-8%" width="116%" height="125%">
+        <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/>
+      </filter>
+      <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#2f6fb2"/>
+      </marker>
+      <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#1f8a70"/>
+      </marker>
+      <marker id="arrowOrange" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#c77a16"/>
+      </marker>
+      <marker id="arrowRed" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+        <path d="M2,2 L10,6 L2,10 Z" fill="#c64a43"/>
+      </marker>
+    </defs>
+
+    <rect x="0" y="0" width="1600" height="900" fill="#ffffff"/>
+    <rect x="48" y="38" width="1504" height="804" rx="14" fill="#fbfbfc" stroke="#d7dde6" stroke-width="1.4"/>
+
+    <text x="80" y="86" class="title">PA-CSI Domain Generalization Framework</text>
+    <text x="80" y="118" class="subtitle">Publication-style neural architecture for WiFi CSI-based human activity recognition</text>
+
+    <rect x="68" y="158" width="1464" height="292" rx="12" class="panel"/>
+    <text x="92" y="190" class="region-title">Main prediction path</text>
+    <text x="248" y="190" class="region-note">backbone + classifier used at test time</text>
+
+    <rect x="68" y="482" width="1464" height="300" rx="12" class="panel"/>
+    <text x="92" y="514" class="region-title">Training-only auxiliary regularization</text>
+    <text x="365" y="514" class="region-note">does not add modules at inference</text>
+
+    <rect x="82" y="266" width="190" height="96" class="block blue"/>
+    <g transform="translate(225 281)">
+      <path d="M0 11 C5 1 11 21 16 11 S27 1 32 11" class="icon-blue"/>
+      <path d="M0 25 C5 15 11 35 16 25 S27 15 32 25" class="icon-green"/>
+    </g>
+    <text x="177" y="304" text-anchor="middle" class="block-title">CSI Input</text>
+    <text x="177" y="329" text-anchor="middle" class="block-sub">Amplitude + Phase</text>
+    <text x="177" y="350" text-anchor="middle" class="block-sub">class &amp; domain labels</text>
+
+    <rect x="315" y="266" width="178" height="96" class="block yellow"/>
+    <g transform="translate(450 281)">
+      <path d="M0 0 H34 L21 16 V29 L13 34 V16 Z" class="icon-orange"/>
+      <path d="M8 8 H26" class="icon-line"/>
+    </g>
+    <text x="404" y="304" text-anchor="middle" class="block-title">Preprocess</text>
+    <text x="404" y="329" text-anchor="middle" class="block-sub">phase unwrap</text>
+    <text x="404" y="350" text-anchor="middle" class="block-sub">temporal reduction</text>
+
+    <rect x="542" y="208" width="410" height="214" class="group"/>
+    <g transform="translate(906 221)">
+      <rect x="0" y="0" width="18" height="18" rx="3" class="icon-green"/>
+      <rect x="14" y="10" width="18" height="18" rx="3" class="icon-blue"/>
+      <path d="M5 26 H34" class="icon-line"/>
+    </g>
+    <text x="562" y="236" class="region-title">PA-CSI Backbone</text>
+    <text x="708" y="236" class="region-note">dual stream + gated fusion</text>
+
+    <rect x="578" y="262" width="148" height="62" class="block blue"/>
+    <g transform="translate(689 275)">
+      <path d="M0 15 C5 5 10 25 15 15 S26 5 31 15" class="icon-blue"/>
+    </g>
+    <text x="652" y="288" text-anchor="middle" class="block-title">Amplitude</text>
+    <text x="652" y="309" text-anchor="middle" class="block-sub">stream encoder</text>
+
+    <rect x="578" y="340" width="148" height="62" class="block blue"/>
+    <text x="704" y="372" text-anchor="middle" class="icon-symbol">φ</text>
+    <text x="652" y="366" text-anchor="middle" class="block-title">Phase</text>
+    <text x="652" y="387" text-anchor="middle" class="block-sub">stream encoder</text>
+
+    <rect x="780" y="302" width="136" height="70" class="block green"/>
+    <g transform="translate(880 315)">
+      <path d="M0 2 L18 18 L0 34" class="icon-green"/>
+      <path d="M-18 10 H2" class="icon-blue"/>
+      <path d="M-18 26 H2" class="icon-blue"/>
+    </g>
+    <text x="848" y="331" text-anchor="middle" class="block-title">Gated</text>
+    <text x="848" y="352" text-anchor="middle" class="block-title">Fusion</text>
+    <text x="848" y="388" text-anchor="middle" class="line-label">feature z</text>
+
+    <rect x="1000" y="266" width="164" height="96" class="block blue"/>
+    <g transform="translate(1122 285)">
+      <rect x="0" y="16" width="5" height="16" fill="#2f6fb2" opacity="0.75"/>
+      <rect x="11" y="8" width="5" height="24" fill="#1f8a70" opacity="0.75"/>
+      <rect x="22" y="2" width="5" height="30" fill="#c77a16" opacity="0.75"/>
+      <path d="M-2 33 H31" class="icon-line"/>
+    </g>
+    <text x="1082" y="305" text-anchor="middle" class="block-title">Classifier</text>
+    <text x="1082" y="331" text-anchor="middle" class="block-sub">activity logits</text>
+
+    <rect x="1202" y="266" width="132" height="96" class="block red"/>
+    <text x="1302" y="297" text-anchor="middle" class="icon-symbol">ℓ</text>
+    <text x="1268" y="305" text-anchor="middle" class="block-title">CE Loss</text>
+    <text x="1268" y="333" text-anchor="middle" class="math">L<tspan baseline-shift="sub" font-size="12">ce</tspan></text>
+
+    <rect x="1376" y="238" width="132" height="152" class="block red"/>
+    <text x="1472" y="267" text-anchor="middle" class="icon-symbol">Σ</text>
+    <text x="1442" y="280" text-anchor="middle" class="block-title">Total Loss</text>
+    <text x="1442" y="313" text-anchor="middle" class="math">L = L<tspan baseline-shift="sub" font-size="12">ce</tspan></text>
+    <text x="1442" y="339" text-anchor="middle" class="math">+ &lambda;<tspan baseline-shift="sub" font-size="12">s</tspan>L<tspan baseline-shift="sub" font-size="12">sup</tspan></text>
+    <text x="1442" y="365" text-anchor="middle" class="math">+ &lambda;<tspan baseline-shift="sub" font-size="12">a</tspan>L<tspan baseline-shift="sub" font-size="12">ada</tspan></text>
+
+    <path d="M272 314 H315" class="arrow"/>
+    <path d="M493 314 H542" class="arrow"/>
+    <path d="M542 314 H558 V293 H578" class="arrow"/>
+    <path d="M558 314 V371 H578" class="arrow"/>
+    <path d="M726 293 H760 V326 H780" class="arrow"/>
+    <path d="M726 371 H760 V348 H780" class="arrow"/>
+    <path d="M916 337 H958 V314 H1000" class="arrow"/>
+    <path d="M1164 314 H1202" class="arrow"/>
+    <path d="M1334 314 H1376" class="arrow-red"/>
+
+    <rect x="515" y="552" width="192" height="84" class="block green"/>
+    <g transform="translate(666 568)">
+      <path d="M0 25 C7 5 25 5 32 25" class="icon-green"/>
+      <path d="M8 25 C13 15 19 15 24 25" class="icon-green"/>
+      <circle cx="16" cy="31" r="3.5" fill="#1f8a70" opacity="0.75"/>
+    </g>
+    <text x="611" y="586" text-anchor="middle" class="block-title">Natural Multi-view</text>
+    <text x="611" y="611" text-anchor="middle" class="block-sub">TX antenna masking</text>
+
+    <rect x="760" y="552" width="178" height="84" class="block green"/>
+    <g transform="translate(899 568)">
+      <rect x="0" y="0" width="28" height="8" rx="2" class="icon-green"/>
+      <rect x="0" y="12" width="28" height="8" rx="2" class="icon-green"/>
+      <rect x="0" y="24" width="28" height="8" rx="2" class="icon-green"/>
+    </g>
+    <text x="849" y="586" text-anchor="middle" class="block-title">Shared Backbone</text>
+    <text x="849" y="611" text-anchor="middle" class="block-sub">weight sharing</text>
+
+    <rect x="992" y="552" width="164" height="84" class="block orange"/>
+    <g transform="translate(1124 568)">
+      <circle cx="4" cy="8" r="3.2" fill="#2f6fb2" opacity="0.75"/>
+      <circle cx="18" cy="18" r="3.2" fill="#2f6fb2" opacity="0.75"/>
+      <circle cx="8" cy="28" r="3.2" fill="#1f8a70" opacity="0.75"/>
+      <circle cx="28" cy="6" r="3.2" fill="#c77a16" opacity="0.75"/>
+      <path d="M4 8 L18 18 L8 28 M18 18 L28 6" class="icon-orange"/>
+    </g>
+    <text x="1074" y="586" text-anchor="middle" class="block-title">Projection Head</text>
+    <text x="1074" y="611" text-anchor="middle" class="block-sub">z + view embeddings</text>
+
+    <rect x="1210" y="552" width="162" height="84" class="block red"/>
+    <g transform="translate(1334 569)">
+      <circle cx="6" cy="6" r="4" fill="#2f6fb2" opacity="0.75"/>
+      <circle cx="20" cy="8" r="4" fill="#2f6fb2" opacity="0.75"/>
+      <circle cx="13" cy="24" r="4" fill="#c64a43" opacity="0.75"/>
+      <path d="M6 6 H20" class="icon-blue"/>
+      <path d="M20 8 L13 24" class="icon-red"/>
+    </g>
+    <text x="1291" y="586" text-anchor="middle" class="block-title">SupCon Loss</text>
+    <text x="1291" y="611" text-anchor="middle" class="block-sub">same-class positives</text>
+
+    <rect x="515" y="674" width="192" height="84" class="block orange"/>
+    <g transform="translate(666 690)">
+      <circle cx="8" cy="16" r="8" fill="#eaf3ff" stroke="#2f6fb2" stroke-width="1.5" opacity="0.85"/>
+      <circle cx="28" cy="16" r="8" fill="#fff3df" stroke="#c77a16" stroke-width="1.5" opacity="0.85"/>
+      <path d="M16 16 H20" class="icon-line"/>
+      <path d="M39 9 C45 15 45 21 39 27" class="icon-orange"/>
+    </g>
+    <text x="611" y="708" text-anchor="middle" class="block-title">AdaIN Feature</text>
+    <text x="611" y="729" text-anchor="middle" class="block-title">Mixing</text>
+
+    <rect x="760" y="674" width="178" height="84" class="block orange"/>
+    <g transform="translate(899 690)">
+      <circle cx="4" cy="8" r="3.2" fill="#2f6fb2" opacity="0.75"/>
+      <circle cx="18" cy="18" r="3.2" fill="#c77a16" opacity="0.75"/>
+      <circle cx="8" cy="28" r="3.2" fill="#1f8a70" opacity="0.75"/>
+      <path d="M4 8 L18 18 L8 28" class="icon-orange"/>
+    </g>
+    <text x="849" y="708" text-anchor="middle" class="block-title">Projection Head</text>
+    <text x="849" y="733" text-anchor="middle" class="block-sub">shared space</text>
+
+    <rect x="992" y="674" width="164" height="84" class="block red"/>
+    <text x="1124" y="704" text-anchor="middle" class="icon-symbol">ℓ</text>
+    <text x="1074" y="708" text-anchor="middle" class="block-title">AdaIN Loss</text>
+    <text x="1074" y="733" text-anchor="middle" class="block-sub">style contrastive</text>
+
+    <path d="M404 362 V520 H611 V552" class="arrow-dash"/>
+    <path d="M848 422 V500 H1074 V552" class="arrow-dash"/>
+    <path d="M848 422 V486 H470 V716 H515" class="arrow-dash"/>
+    <text x="426" y="510" class="line-label">preprocessed CSI</text>
+    <text x="870" y="488" class="line-label">feature z</text>
+
+    <path d="M707 594 H760" class="arrow-green"/>
+    <path d="M938 594 H992" class="arrow-green"/>
+    <path d="M1156 594 H1210" class="arrow-green"/>
+
+    <path d="M707 716 H760" class="arrow-dash"/>
+    <path d="M938 716 H992" class="arrow-dash"/>
+
+    <path d="M1372 594 H1452 V390" class="arrow-dash"/>
+    <path d="M1156 716 H1478 V390" class="arrow-dash"/>
+    <text x="1464" y="495" text-anchor="middle" class="line-label">auxiliary losses</text>
+
+    <line x1="96" y1="820" x2="155" y2="820" class="legend-line"/>
+    <text x="170" y="825" class="caption">solid blue arrows: inference data flow</text>
+    <line x1="430" y1="820" x2="489" y2="820" class="legend-dash"/>
+    <text x="504" y="825" class="caption">dashed arrows: training-only regularization</text>
+    <text x="1112" y="825" class="caption">At inference: PA-CSI Backbone + Classifier only.</text>
+  </svg>
+</body>
+</html>

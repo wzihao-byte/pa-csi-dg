@@ -1,0 +1,35 @@
+# Python cache and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local/editor metadata
+.claude/
+.env
+.env.*
+
+# Datasets, checkpoints, and generated experiment outputs
+data/
+datasets/
+outputs/
+outputs_*/
+experiment_outputs/
+results/
+*.pt
+*.pth
+*.npy
+
+# Generated reports and temporary artifacts
+reports/
+archives/
+analysis/domain_shift/
+analysis/k_estimate/
+*.zip
+Screenshot*.png
+
+# SimMMDG integration generated outputs
+simmmdg_pa_csi_integration/outputs/
