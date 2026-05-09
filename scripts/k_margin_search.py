@@ -233,9 +233,6 @@ def set_fixed_experiment_config(
     config["losses"]["temperature"] = 0.2
     config["losses"]["contrastive_loss_type"] = "subcenter_prototype"
     config["losses"]["lambda_supcon"] = 0.1
-    config["losses"]["lambda_narc"] = 0.0
-    config["losses"]["lambda_adain"] = 0.0
-    config["losses"]["use_adain_style_aug"] = False
     config["losses"]["include_same_domain_same_class"] = True
 
     if pair_margins is None:

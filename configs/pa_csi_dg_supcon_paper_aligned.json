@@ -79,9 +79,6 @@
   "losses": {
     "temperature": 0.2,
     "lambda_supcon": 0.1,
-    "lambda_narc": 0.0,
-    "lambda_adain": 0.0,
-    "use_adain_style_aug": false,
     "include_same_domain_same_class": true
   },
   "evaluation": {

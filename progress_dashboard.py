@@ -2346,7 +2346,7 @@ class DashboardState:
         losses = primary_config.get("losses", {})
         enabled_losses = [
             name.replace("lambda_", "")
-            for name in ("lambda_supcon", "lambda_narc", "lambda_adain")
+            for name in ("lambda_supcon",)
             if float(losses.get(name, 0.0)) > 0.0
         ]
 

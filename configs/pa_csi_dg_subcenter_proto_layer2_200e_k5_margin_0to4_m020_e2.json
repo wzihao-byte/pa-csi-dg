@@ -1,9 +1,9 @@
 {
-  "experiment_name": "pa_csi_dg_simmmdg_multiview_bridge_diag_sep02",
+  "experiment_name": "pa_csi_dg_subcenter_proto_layer2_200e_k5_margin_0to4_m020_e2",
   "mode": "dg_loeo",
-  "target_env": "all",
+  "target_env": "E2",
   "device": "cuda",
-  "output_root": "simmmdg_pa_csi_integration/outputs",
+  "output_root": "outputs_diag_prototype_supcon_layer2",
   "seed_list": [42],
   "data": {
     "format": "env_npy_triplets",
@@ -32,7 +32,7 @@
     "test_ratio": 0.2
   },
   "model": {
-    "name": "pa_csi_simmmdg",
+    "name": "pa_csi_dg_lite",
     "time_downsample": 2,
     "max_positions": 500,
     "position_kernels": 10,
@@ -46,13 +46,10 @@
     "channel_kernel_num": 16,
     "channel_kernel_sizes": [2, 4],
     "fusion_dim": 256,
-    "shared_dim": 128,
-    "private_dim": 128,
-    "decomposition_hidden_dim": 256,
     "projection_hidden_dim": 256,
     "projection_dim": 128,
-    "translation_hidden_dim": 256,
     "dropout": 0.1,
+    "prototype_num_subcenters": 5,
     "antenna_layout": {
       "mode": "tx",
       "num_rx": 1,
@@ -82,14 +79,13 @@
   },
   "losses": {
     "temperature": 0.2,
+    "contrastive_loss_type": "subcenter_prototype",
     "lambda_supcon": 0.1,
-    "lambda_sep": 0.2,
-    "lambda_translation": 0.01,
-    "translation_detach_target": false,
-    "lambda_narc": 0.0,
-    "lambda_adain": 0.0,
-    "use_adain_style_aug": false,
-    "include_same_domain_same_class": true
+    "include_same_domain_same_class": true,
+    "lambda_pair_margin": 0.05,
+    "prototype_pair_margins": [
+      {"true": 0, "negative": 4, "margin": 0.20}
+    ]
   },
   "evaluation": {
     "save_confusion_matrix": true

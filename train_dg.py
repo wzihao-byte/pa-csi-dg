@@ -26,9 +26,7 @@ from dg_dataset import (
 )
 from dg_losses import (
     DomainAwareSupConLoss,
-    InstanceContrastiveLoss,
     SubCenterPrototypeContrastiveLoss,
-    adain_mix,
 )
 from dg_models import PaCsiDGLite
 
@@ -146,7 +144,6 @@ def run_epoch(
     loss_config: Mapping[str, Any],
     contrastive_loss_type: str,
     contrastive_loss_fn: Optional[torch.nn.Module],
-    instance_loss_fn: InstanceContrastiveLoss,
     train: bool,
 ) -> Dict[str, Any]:
     if train:
@@ -157,14 +154,10 @@ def run_epoch(
     total_loss = 0.0
     total_ce = 0.0
     total_supcon = 0.0
-    total_narc = 0.0
-    total_adain = 0.0
     all_predictions: List[np.ndarray] = []
     all_labels: List[np.ndarray] = []
     shape_debug: Optional[Dict[str, List[int]]] = None
     lambda_supcon = float(loss_config.get("lambda_supcon", 0.0))
-    lambda_narc = float(loss_config.get("lambda_narc", 0.0))
-    lambda_adain = float(loss_config.get("lambda_adain", 0.0))
 
     iterator = tqdm(loader, leave=False, disable=False)
     for amplitude, phase, labels, domains, sample_ids in iterator:
@@ -179,20 +172,13 @@ def run_epoch(
             ce_loss = F.cross_entropy(outputs["logits"], labels)
 
             supcon_loss = torch.zeros((), device=device)
-            narc_loss = torch.zeros((), device=device)
-            adain_loss = torch.zeros((), device=device)
             supcon_views = outputs["projection"].unsqueeze(1)
             view_outputs: Optional[Dict[str, torch.Tensor]] = None
 
-            if lambda_narc > 0.0 or lambda_supcon > 0.0:
+            if lambda_supcon > 0.0:
                 if model.view_builder is not None:
                     view_outputs = model.encode_antenna_views(amplitude, phase)
                     supcon_views = torch.cat([supcon_views, view_outputs["projection_views"]], dim=1)
-                elif lambda_narc > 0.0:
-                    raise RuntimeError(
-                        "NARC was enabled, but antenna views are unavailable. "
-                        "Configure model.antenna_layout or disable lambda_narc."
-                    )
 
             if lambda_supcon > 0.0:
                 if contrastive_loss_fn is None:
@@ -224,23 +210,7 @@ def run_epoch(
                         f"Choose from {sorted(SUPPORTED_CONTRASTIVE_LOSS_TYPES)}."
                     )
 
-            if lambda_narc > 0.0 and view_outputs is not None:
-                narc_loss = instance_loss_fn(view_outputs["projection_views"], sample_ids=sample_ids)
-
-            if bool(loss_config.get("use_adain_style_aug", False)) and lambda_adain > 0.0:
-                styled_feature = adain_mix(outputs["fused_feature"], domains=domains)
-                styled_projection = F.normalize(model.projection_head(styled_feature), dim=-1)
-                adain_loss = instance_loss_fn(
-                    torch.stack([outputs["projection"], styled_projection], dim=1),
-                    sample_ids=sample_ids,
-                )
-
-            total_batch_loss = (
-                ce_loss
-                + lambda_supcon * supcon_loss
-                + lambda_narc * narc_loss
-                + lambda_adain * adain_loss
-            )
+            total_batch_loss = ce_loss + lambda_supcon * supcon_loss
 
             if not torch.isfinite(total_batch_loss):
                 raise FloatingPointError("Encountered a non-finite loss value.")
@@ -262,8 +232,6 @@ def run_epoch(
         total_loss += float(total_batch_loss.item())
         total_ce += float(ce_loss.item())
         total_supcon += float(supcon_loss.item())
-        total_narc += float(narc_loss.item())
-        total_adain += float(adain_loss.item())
 
         if shape_debug is None:
             shape_debug = {
@@ -284,8 +252,6 @@ def run_epoch(
             "loss_total": 0.0,
             "loss_ce": 0.0,
             "loss_supcon": 0.0,
-            "loss_narc": 0.0,
-            "loss_adain": 0.0,
             "labels": [],
             "predictions": [],
             "shape_debug": shape_debug or {},
@@ -299,8 +265,6 @@ def run_epoch(
             "loss_total": total_loss / max(1, len(loader)),
             "loss_ce": total_ce / max(1, len(loader)),
             "loss_supcon": total_supcon / max(1, len(loader)),
-            "loss_narc": total_narc / max(1, len(loader)),
-            "loss_adain": total_adain / max(1, len(loader)),
             "labels": labels_np.tolist(),
             "predictions": predictions_np.tolist(),
             "shape_debug": shape_debug or {},
@@ -468,8 +432,6 @@ def run_single_experiment(
             include_same_domain_same_class=bool(config["losses"].get("include_same_domain_same_class", True)),
             positive_mode=str(config["losses"].get("supcon_positive_mode", "all_views")),
         )
-    instance_loss_fn = InstanceContrastiveLoss(temperature=float(config["losses"].get("temperature", 0.2)))
-
     selection_metric = str(config["training"].get("selection_metric", "f1_macro"))
     best_val_score = -math.inf
     best_state: Optional[Dict[str, Any]] = None
@@ -489,7 +451,6 @@ def run_single_experiment(
             loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
-            instance_loss_fn,
             train=True,
         )
         with torch.no_grad():
@@ -503,7 +464,6 @@ def run_single_experiment(
                 loss_config,
                 contrastive_loss_type,
                 contrastive_loss_fn,
-                instance_loss_fn,
                 train=False,
             )
 
@@ -547,7 +507,6 @@ def run_single_experiment(
             loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
-            instance_loss_fn,
             train=False,
         )
 
@@ -572,8 +531,6 @@ def run_single_experiment(
         "losses_enabled": {
             "contrastive_loss_type": contrastive_loss_type,
             "lambda_supcon": config["losses"].get("lambda_supcon", 0.0),
-            "lambda_narc": config["losses"].get("lambda_narc", 0.0),
-            "lambda_adain": config["losses"].get("lambda_adain", 0.0),
             "supcon_positive_mode": (
                 config["losses"].get("supcon_positive_mode", "all_views")
                 if contrastive_loss_type == "pairwise_supcon"

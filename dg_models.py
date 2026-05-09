@@ -239,7 +239,7 @@ class AntennaViewBuilder(nn.Module):
         expected_dim = self.num_rx * self.num_tx * self.num_subcarriers
         if input_dim != expected_dim:
             raise ValueError(
-                f"NARC antenna layout expects input_dim={expected_dim} from "
+                f"Antenna view layout expects input_dim={expected_dim} from "
                 f"{self.num_rx}x{self.num_tx}x{self.num_subcarriers}, received {input_dim}."
             )
         self.input_dim = input_dim

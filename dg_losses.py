@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Iterable, List, Mapping, Optional, Sequence, Tuple
+from typing import List, Mapping, Optional, Sequence, Tuple
 
 import torch
 import torch.nn as nn
@@ -209,53 +209,3 @@ class SubCenterPrototypeContrastiveLoss(nn.Module):
 
         return ce_loss + self.lambda_pair_margin * margin_term
 
-
-class InstanceContrastiveLoss(nn.Module):
-    def __init__(self, temperature: float = 0.2) -> None:
-        super().__init__()
-        self.temperature = temperature
-
-    def forward(self, features: torch.Tensor, sample_ids: torch.Tensor) -> torch.Tensor:
-        flat_features, _, _, flat_sample_ids = _flatten_views(features, None, None, sample_ids)
-        if flat_sample_ids is None:
-            raise ValueError("sample_ids are required for instance contrastive loss.")
-        positive_mask = flat_sample_ids[:, None].eq(flat_sample_ids[None, :])
-        return masked_contrastive_loss(flat_features, positive_mask, self.temperature)
-
-
-def choose_style_donors(domains: Optional[torch.Tensor]) -> Optional[torch.Tensor]:
-    if domains is None:
-        return None
-
-    donors = []
-    device = domains.device
-    for index in range(domains.size(0)):
-        candidate_mask = domains != domains[index]
-        candidates = torch.nonzero(candidate_mask, as_tuple=False).flatten()
-        if candidates.numel() == 0:
-            return None
-        donors.append(candidates[torch.randint(candidates.numel(), (1,), device=device)].item())
-    return torch.tensor(donors, device=device, dtype=torch.long)
-
-
-def adain_mix(features: torch.Tensor, domains: Optional[torch.Tensor] = None, eps: float = 1e-5) -> torch.Tensor:
-    if features.dim() != 2:
-        raise ValueError(f"AdaIN expects [batch, dim] fused features, received {features.shape}.")
-    if features.size(0) < 2:
-        return features
-
-    donor_indices = choose_style_donors(domains)
-    if donor_indices is None:
-        permutation = torch.randperm(features.size(0), device=features.device)
-        if torch.equal(permutation, torch.arange(features.size(0), device=features.device)):
-            permutation = torch.roll(permutation, shifts=1)
-        donor_indices = permutation
-
-    donor_features = features[donor_indices]
-    content_mean = features.mean(dim=1, keepdim=True)
-    content_std = features.std(dim=1, keepdim=True, unbiased=False) + eps
-    style_mean = donor_features.mean(dim=1, keepdim=True)
-    style_std = donor_features.std(dim=1, keepdim=True, unbiased=False) + eps
-
-    normalized = (features - content_mean) / content_std
-    return normalized * style_std + style_mean

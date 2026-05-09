@@ -38,7 +38,7 @@ See [PA_CSI_DG.md](docs/PA_CSI_DG.md) for:
 - preset configs
 - command examples
 - data format assumptions
-- SupCon / NARC / AdaIN ablations
+- baseline / SupCon / subcenter SupCon experiments
 
 
 
