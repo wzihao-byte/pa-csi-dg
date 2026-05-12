@@ -62,6 +62,40 @@ SupCon adds supervised contrastive learning over projection embeddings:
 L_total = L_ce + lambda_supcon * L_supcon
 ```
 
+LCA-KM is an optional source-calibrated margin term over the same projection embeddings:
+
+```text
+L_total = existing losses + lambda_akm * L_akm
+```
+
+After a warm-up period, LOSO-Calibrated Adaptive K-Margin recalibrates on the source validation split only. For each source environment, it builds leave-one-source-out class prototypes from the other source environments, measures class-pair hardness, violation rate, compactness, and cross-source instability on the held-out source environment, then selects an adaptive number of hard negative class pairs per class. Cached global source prototypes and pair tables are detached before use, so gradients do not flow through calibration statistics.
+
+The held-out target environment is never used for calibration in `dg_loeo`; target data remains test-only through the existing split builder. Recalibration artifacts are saved under each run directory in `adaptive_kmargin/`.
+
+Enable it with `losses.adaptive_kmargin`:
+
+```json
+"adaptive_kmargin": {
+  "enabled": true,
+  "warmup_epochs": 10,
+  "recalibrate_interval": 5,
+  "beta_softmax": 10.0,
+  "gap_threshold_tau": 0.0,
+  "rho0": 0.65,
+  "rho_min": 0.45,
+  "rho_max": 0.85,
+  "rho_entropy_scale": 0.15,
+  "rho_instability_scale": 0.15,
+  "m_min": 0.02,
+  "m_max": 0.20,
+  "alpha_h": 1.0,
+  "beta_v": 1.0,
+  "gamma_kappa": 1.0,
+  "delta_u": 1.0,
+  "lambda_akm": 0.1
+}
+```
+
 Subcenter SupCon replaces pairwise SupCon geometry with learnable class subcenters:
 
 ```text

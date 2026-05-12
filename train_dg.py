@@ -8,7 +8,7 @@ import math
 import random
 from pathlib import Path
 from statistics import mean, stdev
-from typing import Any, Dict, List, Mapping, Optional
+from typing import Any, Dict, List, Mapping, Optional, Sequence, Tuple
 
 import numpy as np
 import torch
@@ -17,6 +17,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix, f1_score, precisio
 from torch.utils.data import DataLoader, Subset
 from tqdm import tqdm
 
+from adaptive_kmargin import AdaptiveKMarginConfig, AdaptiveKMarginRecalibrator
 from dg_dataset import (
     DomainBalancedBatchSampler,
     DomainClassBalancedBatchSampler,
@@ -25,6 +26,7 @@ from dg_dataset import (
     load_dataset,
 )
 from dg_losses import (
+    AdaptiveKMarginLoss,
     DomainAwareSupConLoss,
     SubCenterPrototypeContrastiveLoss,
 )
@@ -144,6 +146,8 @@ def run_epoch(
     loss_config: Mapping[str, Any],
     contrastive_loss_type: str,
     contrastive_loss_fn: Optional[torch.nn.Module],
+    adaptive_kmargin_loss_fn: Optional[AdaptiveKMarginLoss],
+    adaptive_kmargin_state: Optional[Mapping[str, torch.Tensor]],
     train: bool,
 ) -> Dict[str, Any]:
     if train:
@@ -154,10 +158,14 @@ def run_epoch(
     total_loss = 0.0
     total_ce = 0.0
     total_supcon = 0.0
+    total_akm = 0.0
+    total_pair_margin = 0.0
     all_predictions: List[np.ndarray] = []
     all_labels: List[np.ndarray] = []
     shape_debug: Optional[Dict[str, List[int]]] = None
     lambda_supcon = float(loss_config.get("lambda_supcon", 0.0))
+    adaptive_config = loss_config.get("adaptive_kmargin", {}) or {}
+    lambda_akm = float(adaptive_config.get("lambda_akm", 0.0)) if bool(adaptive_config.get("enabled", False)) else 0.0
 
     iterator = tqdm(loader, leave=False, disable=False)
     for amplitude, phase, labels, domains, sample_ids in iterator:
@@ -210,7 +218,19 @@ def run_epoch(
                         f"Choose from {sorted(SUPPORTED_CONTRASTIVE_LOSS_TYPES)}."
                     )
 
-            total_batch_loss = ce_loss + lambda_supcon * supcon_loss
+            akm_loss = torch.zeros((), device=device)
+            if lambda_akm > 0.0 and adaptive_kmargin_loss_fn is not None and adaptive_kmargin_state is not None:
+                akm_loss = adaptive_kmargin_loss_fn(
+                    outputs["projection"],
+                    labels,
+                    cached_prototypes=adaptive_kmargin_state.get("cached_prototypes"),
+                    selected_pairs=adaptive_kmargin_state.get("selected_pairs"),
+                    pair_weights=adaptive_kmargin_state.get("pair_weights"),
+                    pair_margins=adaptive_kmargin_state.get("pair_margins"),
+                    prototype_valid_mask=adaptive_kmargin_state.get("prototype_valid_mask"),
+                )
+
+            total_batch_loss = ce_loss + lambda_supcon * supcon_loss + lambda_akm * akm_loss
 
             if not torch.isfinite(total_batch_loss):
                 raise FloatingPointError("Encountered a non-finite loss value.")
@@ -232,6 +252,12 @@ def run_epoch(
         total_loss += float(total_batch_loss.item())
         total_ce += float(ce_loss.item())
         total_supcon += float(supcon_loss.item())
+        total_akm += float(akm_loss.item())
+        if contrastive_loss_type == "subcenter_prototype" and isinstance(
+            contrastive_loss_fn,
+            SubCenterPrototypeContrastiveLoss,
+        ):
+            total_pair_margin += float(contrastive_loss_fn.last_pair_margin_loss)
 
         if shape_debug is None:
             shape_debug = {
@@ -252,6 +278,8 @@ def run_epoch(
             "loss_total": 0.0,
             "loss_ce": 0.0,
             "loss_supcon": 0.0,
+            "loss_pair_margin": 0.0,
+            "akm_loss": 0.0,
             "labels": [],
             "predictions": [],
             "shape_debug": shape_debug or {},
@@ -265,6 +293,8 @@ def run_epoch(
             "loss_total": total_loss / max(1, len(loader)),
             "loss_ce": total_ce / max(1, len(loader)),
             "loss_supcon": total_supcon / max(1, len(loader)),
+            "loss_pair_margin": total_pair_margin / max(1, len(loader)),
+            "akm_loss": total_akm / max(1, len(loader)),
             "labels": labels_np.tolist(),
             "predictions": predictions_np.tolist(),
             "shape_debug": shape_debug or {},
@@ -323,6 +353,233 @@ def build_scheduler(
         f"Unsupported lr scheduler '{scheduler_name}'. "
         "Choose from ['exponential_decay', 'exponential']."
     )
+
+
+def pair_key(true_class: int, negative_class: int) -> Tuple[int, int]:
+    return int(true_class), int(negative_class)
+
+
+def normalize_pair_margin_specs(specs: Sequence[Mapping[str, Any]]) -> List[Dict[str, float]]:
+    normalized: List[Dict[str, float]] = []
+    for spec in specs:
+        normalized.append(
+            {
+                "true": int(spec["true"]),
+                "negative": int(spec["negative"]),
+                "margin": float(spec.get("margin", 0.0)),
+            }
+        )
+    return normalized
+
+
+def pair_margin_map(specs: Sequence[Mapping[str, Any]]) -> Dict[Tuple[int, int], float]:
+    return {
+        pair_key(int(spec["true"]), int(spec["negative"])): float(spec.get("margin", 0.0))
+        for spec in specs
+    }
+
+
+def parse_per_pair_caps(
+    specs: Optional[Sequence[Mapping[str, Any]]],
+    field: str,
+) -> Dict[Tuple[int, int], float]:
+    if not specs:
+        return {}
+    parsed: Dict[Tuple[int, int], float] = {}
+    for spec in specs:
+        if field not in spec:
+            continue
+        parsed[pair_key(int(spec["true"]), int(spec["negative"]))] = float(spec[field])
+    return parsed
+
+
+def dynamic_margin_initial_specs(loss_config: Mapping[str, Any]) -> List[Dict[str, float]]:
+    dynamic_config = loss_config.get("dynamic_pair_margin", {}) or {}
+    initial_specs = dynamic_config.get("initial_pair_margins")
+    if initial_specs is None:
+        initial_specs = loss_config.get("prototype_pair_margins", []) or []
+    return normalize_pair_margin_specs(initial_specs)
+
+
+def dynamic_margin_candidate_pairs(loss_config: Mapping[str, Any]) -> List[Tuple[int, int]]:
+    dynamic_config = loss_config.get("dynamic_pair_margin", {}) or {}
+    pair_specs = dynamic_config.get("candidate_pairs")
+    if pair_specs is None:
+        pair_specs = dynamic_config.get("initial_pair_margins")
+    if pair_specs is None:
+        pair_specs = loss_config.get("prototype_pair_margins", []) or []
+    return [pair_key(int(spec["true"]), int(spec["negative"])) for spec in pair_specs]
+
+
+def collect_subcenter_pair_gaps(
+    model: PaCsiDGLite,
+    loader: DataLoader,
+    device: torch.device,
+    candidate_pairs: Sequence[Tuple[int, int]],
+) -> Dict[Tuple[int, int], torch.Tensor]:
+    if not model.has_class_prototypes() or model.class_prototypes is None:
+        raise ValueError("Dynamic pair margins require model.class_prototypes.")
+
+    was_training = model.training
+    model.eval()
+    pair_chunks: Dict[Tuple[int, int], List[torch.Tensor]] = {pair: [] for pair in candidate_pairs}
+
+    with torch.no_grad():
+        prototypes = F.normalize(model.class_prototypes.detach(), dim=-1)
+        num_classes, num_subcenters, feature_dim = prototypes.shape
+        proto_flat = prototypes.reshape(num_classes * num_subcenters, feature_dim)
+
+        for amplitude, phase, labels, domains, sample_ids in loader:
+            amplitude = amplitude.to(device)
+            phase = phase.to(device)
+            labels = labels.to(device)
+
+            outputs = model(amplitude, phase)
+            views = outputs["projection"].unsqueeze(1)
+            if model.view_builder is not None:
+                view_outputs = model.encode_antenna_views(amplitude, phase)
+                views = torch.cat([views, view_outputs["projection_views"]], dim=1)
+
+            batch_size, num_views, current_dim = views.shape
+            if current_dim != feature_dim:
+                raise ValueError(
+                    f"Projection dim {current_dim} does not match prototype dim {feature_dim}."
+                )
+
+            anchors = F.normalize(views.reshape(batch_size * num_views, current_dim), dim=-1)
+            anchor_labels = labels.repeat_interleave(num_views)
+            sim = anchors @ proto_flat.T
+            per_class_max = sim.reshape(anchors.size(0), num_classes, num_subcenters).max(dim=-1).values
+
+            for true_class, negative_class in candidate_pairs:
+                if not (0 <= true_class < num_classes and 0 <= negative_class < num_classes):
+                    raise ValueError(
+                        f"Dynamic pair margin references out-of-range class indices: "
+                        f"true={true_class}, negative={negative_class}, num_classes={num_classes}."
+                    )
+                mask = anchor_labels == true_class
+                if not mask.any():
+                    continue
+                gaps = per_class_max[mask, true_class] - per_class_max[mask, negative_class]
+                pair_chunks[(true_class, negative_class)].append(gaps.detach().cpu())
+
+    if was_training:
+        model.train()
+
+    return {
+        pair: torch.cat(chunks) if chunks else torch.empty(0)
+        for pair, chunks in pair_chunks.items()
+    }
+
+
+def recalibrate_dynamic_pair_margins(
+    model: PaCsiDGLite,
+    loader: DataLoader,
+    device: torch.device,
+    loss_config: Mapping[str, Any],
+    contrastive_loss_fn: SubCenterPrototypeContrastiveLoss,
+    current_specs: Sequence[Mapping[str, Any]],
+    artifact_path: Path,
+    epoch: int,
+) -> Tuple[List[Dict[str, float]], Dict[str, Any]]:
+    dynamic_config = loss_config.get("dynamic_pair_margin", {}) or {}
+    candidate_pairs = dynamic_margin_candidate_pairs(loss_config)
+    current_map = pair_margin_map(current_specs)
+    gap_by_pair = collect_subcenter_pair_gaps(model, loader, device, candidate_pairs)
+
+    quantile = min(max(float(dynamic_config.get("quantile", 0.15)), 0.0), 1.0)
+    ema_momentum = min(max(float(dynamic_config.get("ema_momentum", 0.8)), 0.0), 1.0)
+    min_margin = float(dynamic_config.get("m_min", 0.03))
+    max_margin = float(dynamic_config.get("m_max", 0.18))
+    max_delta = float(dynamic_config.get("max_delta_per_update", 0.03))
+    min_class_samples = int(dynamic_config.get("min_class_samples", 20))
+    m_max_per_pair = parse_per_pair_caps(dynamic_config.get("m_max_per_pair"), "m_max")
+    m_min_per_pair = parse_per_pair_caps(dynamic_config.get("m_min_per_pair"), "m_min")
+
+    next_specs: List[Dict[str, float]] = []
+    pair_records: List[Dict[str, Any]] = []
+
+    for true_class, negative_class in candidate_pairs:
+        key = pair_key(true_class, negative_class)
+        pair_max = float(m_max_per_pair.get(key, max_margin))
+        pair_min = float(m_min_per_pair.get(key, min_margin))
+        if pair_min > pair_max:
+            raise ValueError(
+                f"Per-pair m_min ({pair_min}) exceeds m_max ({pair_max}) for pair "
+                f"{true_class}->{negative_class}."
+            )
+        old_margin = float(current_map.get(key, pair_min))
+
+        gaps = gap_by_pair.get(key, torch.empty(0))
+        sample_count = int(gaps.numel())
+
+        if sample_count >= min_class_samples:
+            raw_margin = float(torch.quantile(gaps.float(), quantile).item())
+            clipped_margin = min(max(raw_margin, pair_min), pair_max)
+            ema_margin = ema_momentum * old_margin + (1.0 - ema_momentum) * clipped_margin
+            if max_delta > 0.0:
+                lower = old_margin - max_delta
+                upper = old_margin + max_delta
+                ema_margin = min(max(ema_margin, lower), upper)
+            new_margin = min(max(ema_margin, pair_min), pair_max)
+            updated = True
+        else:
+            raw_margin = None
+            clipped_margin = None
+            new_margin = old_margin
+            updated = False
+
+        next_specs.append({"true": true_class, "negative": negative_class, "margin": float(new_margin)})
+
+        if sample_count > 0:
+            gaps_float = gaps.float()
+            gap_summary = {
+                "mean": float(gaps_float.mean().item()),
+                "p10": float(torch.quantile(gaps_float, 0.10).item()),
+                "p50": float(torch.quantile(gaps_float, 0.50).item()),
+                "p90": float(torch.quantile(gaps_float, 0.90).item()),
+                "min": float(gaps_float.min().item()),
+                "max": float(gaps_float.max().item()),
+            }
+        else:
+            gap_summary = {}
+
+        pair_records.append(
+            {
+                "true": true_class,
+                "negative": negative_class,
+                "old_margin": old_margin,
+                "raw_quantile_margin": raw_margin,
+                "clipped_margin": clipped_margin,
+                "new_margin": float(new_margin),
+                "updated": updated,
+                "sample_count": sample_count,
+                "gap_summary": gap_summary,
+                "m_min": pair_min,
+                "m_max": pair_max,
+            }
+        )
+
+    contrastive_loss_fn.set_pair_margins(next_specs)
+    margins = [spec["margin"] for spec in next_specs]
+    debug = {
+        "epoch": int(epoch),
+        "source_split": str(dynamic_config.get("source_split", "val")),
+        "quantile": quantile,
+        "ema_momentum": ema_momentum,
+        "m_min": min_margin,
+        "m_max": max_margin,
+        "m_min_per_pair": {f"{t}->{n}": v for (t, n), v in m_min_per_pair.items()},
+        "m_max_per_pair": {f"{t}->{n}": v for (t, n), v in m_max_per_pair.items()},
+        "max_delta_per_update": max_delta,
+        "mean_margin": float(np.mean(margins)) if margins else 0.0,
+        "min_margin": float(np.min(margins)) if margins else 0.0,
+        "max_margin": float(np.max(margins)) if margins else 0.0,
+        "updated_pair_count": int(sum(1 for record in pair_records if record["updated"])),
+        "pair_margins": pair_records,
+    }
+    save_json(artifact_path, debug)
+    return next_specs, debug
 
 
 def build_model_and_optimizer(
@@ -413,6 +670,16 @@ def run_single_experiment(
             f"Unsupported contrastive_loss_type '{contrastive_loss_type}'. "
             f"Choose from {sorted(SUPPORTED_CONTRASTIVE_LOSS_TYPES)}."
         )
+    dynamic_pair_margin_config = config["losses"].get("dynamic_pair_margin", {}) or {}
+    dynamic_pair_margin_enabled = (
+        contrastive_loss_type == "subcenter_prototype"
+        and bool(dynamic_pair_margin_config.get("enabled", False))
+    )
+    current_pair_margin_specs = (
+        dynamic_margin_initial_specs(config["losses"])
+        if dynamic_pair_margin_enabled
+        else normalize_pair_margin_specs(config["losses"].get("prototype_pair_margins", []) or [])
+    )
 
     contrastive_loss_fn: Optional[torch.nn.Module]
     if contrastive_loss_type == "subcenter_prototype":
@@ -424,7 +691,7 @@ def run_single_experiment(
         contrastive_loss_fn = SubCenterPrototypeContrastiveLoss(
             temperature=float(config["losses"].get("temperature", 0.2)),
             lambda_pair_margin=float(config["losses"].get("lambda_pair_margin", 0.0)),
-            prototype_pair_margins=list(config["losses"].get("prototype_pair_margins", []) or []),
+            prototype_pair_margins=current_pair_margin_specs,
         )
     else:
         contrastive_loss_fn = DomainAwareSupConLoss(
@@ -432,6 +699,21 @@ def run_single_experiment(
             include_same_domain_same_class=bool(config["losses"].get("include_same_domain_same_class", True)),
             positive_mode=str(config["losses"].get("supcon_positive_mode", "all_views")),
         )
+
+    adaptive_kmargin_config = AdaptiveKMarginConfig.from_mapping(config["losses"].get("adaptive_kmargin"))
+    adaptive_kmargin_loss_fn: Optional[AdaptiveKMarginLoss] = None
+    adaptive_kmargin_recalibrator: Optional[AdaptiveKMarginRecalibrator] = None
+    adaptive_kmargin_state: Optional[Mapping[str, torch.Tensor]] = None
+    adaptive_kmargin_debug: Dict[str, Any] = {}
+    dynamic_pair_margin_debug: Dict[str, Any] = {}
+    if adaptive_kmargin_config.enabled and adaptive_kmargin_config.lambda_akm > 0.0:
+        adaptive_kmargin_loss_fn = AdaptiveKMarginLoss()
+        adaptive_kmargin_recalibrator = AdaptiveKMarginRecalibrator(
+            adaptive_kmargin_config,
+            num_classes=dataset.num_classes,
+            device=device,
+        )
+
     selection_metric = str(config["training"].get("selection_metric", "f1_macro"))
     best_val_score = -math.inf
     best_state: Optional[Dict[str, Any]] = None
@@ -451,6 +733,8 @@ def run_single_experiment(
             loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
+            adaptive_kmargin_loss_fn,
+            adaptive_kmargin_state,
             train=True,
         )
         with torch.no_grad():
@@ -464,7 +748,43 @@ def run_single_experiment(
                 loss_config,
                 contrastive_loss_type,
                 contrastive_loss_fn,
+                adaptive_kmargin_loss_fn,
+                adaptive_kmargin_state,
                 train=False,
+            )
+
+        if (
+            adaptive_kmargin_recalibrator is not None
+            and epoch >= adaptive_kmargin_config.warmup_epochs
+            and (epoch - adaptive_kmargin_config.warmup_epochs) % max(1, adaptive_kmargin_config.recalibrate_interval) == 0
+        ):
+            calibration = adaptive_kmargin_recalibrator.recalibrate(
+                model,
+                val_loader,
+                artifact_path=output_dir / "adaptive_kmargin" / f"epoch_{epoch:03d}_stats.json",
+            )
+            adaptive_kmargin_state = calibration["state"]
+            adaptive_kmargin_debug = calibration["debug_stats"]
+
+        if (
+            dynamic_pair_margin_enabled
+            and isinstance(contrastive_loss_fn, SubCenterPrototypeContrastiveLoss)
+            and epoch >= int(dynamic_pair_margin_config.get("warmup_epochs", 20))
+            and (
+                epoch - int(dynamic_pair_margin_config.get("warmup_epochs", 20))
+            )
+            % max(1, int(dynamic_pair_margin_config.get("recompute_interval", 10)))
+            == 0
+        ):
+            current_pair_margin_specs, dynamic_pair_margin_debug = recalibrate_dynamic_pair_margins(
+                model=model,
+                loader=val_loader,
+                device=device,
+                loss_config=config["losses"],
+                contrastive_loss_fn=contrastive_loss_fn,
+                current_specs=current_pair_margin_specs,
+                artifact_path=output_dir / "dynamic_pair_margin" / f"epoch_{epoch:03d}_margins.json",
+                epoch=epoch,
             )
 
         epoch_record = {
@@ -472,6 +792,10 @@ def run_single_experiment(
             "train": {k: v for k, v in train_metrics.items() if k not in {"labels", "predictions"}},
             "val": {k: v for k, v in val_metrics.items() if k not in {"labels", "predictions"}},
         }
+        if adaptive_kmargin_debug:
+            epoch_record["adaptive_kmargin"] = adaptive_kmargin_debug
+        if dynamic_pair_margin_debug:
+            epoch_record["dynamic_pair_margin"] = dynamic_pair_margin_debug
         history.append(epoch_record)
 
         if selection_metric not in val_metrics:
@@ -507,6 +831,8 @@ def run_single_experiment(
             loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
+            adaptive_kmargin_loss_fn,
+            adaptive_kmargin_state,
             train=False,
         )
 
@@ -539,6 +865,19 @@ def run_single_experiment(
             "prototype_num_subcenters": int(config["model"].get("prototype_num_subcenters", 0)),
             "lambda_pair_margin": float(config["losses"].get("lambda_pair_margin", 0.0)),
             "prototype_pair_margins": list(config["losses"].get("prototype_pair_margins", []) or []),
+            "dynamic_pair_margin": {
+                "enabled": bool(dynamic_pair_margin_enabled),
+                "config": dict(dynamic_pair_margin_config),
+                "final_pair_margins": (
+                    contrastive_loss_fn.get_pair_margins()
+                    if isinstance(contrastive_loss_fn, SubCenterPrototypeContrastiveLoss)
+                    else []
+                ),
+            },
+            "adaptive_kmargin": {
+                "enabled": bool(adaptive_kmargin_config.enabled),
+                "lambda_akm": float(adaptive_kmargin_config.lambda_akm),
+            },
         },
         "sampler_mode": resolve_sampler_mode(config, split),
     }

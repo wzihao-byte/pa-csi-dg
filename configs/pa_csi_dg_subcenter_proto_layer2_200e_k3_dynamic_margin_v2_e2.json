@@ -1,0 +1,122 @@
+{
+  "experiment_name": "pa_csi_dg_subcenter_proto_layer2_200e_k3_dynamic_margin_v2_e2",
+  "mode": "dg_loeo",
+  "target_env": "E2",
+  "device": "cuda",
+  "output_root": "outputs_dynamic_margin_v2_e2_200e",
+  "seed_list": [42],
+  "data": {
+    "format": "env_npy_triplets",
+    "unwrap_phase": true,
+    "phase_unwrap_axis": -1,
+    "env_files": {
+      "E1": {
+        "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_1.npy",
+        "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_1.npy",
+        "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_1.npy"
+      },
+      "E2": {
+        "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_2.npy",
+        "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_2.npy",
+        "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_2.npy"
+      },
+      "E3": {
+        "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_3.npy",
+        "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_3.npy",
+        "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_3.npy"
+      }
+    }
+  },
+  "split": {
+    "val_ratio": 0.2,
+    "test_ratio": 0.2
+  },
+  "model": {
+    "name": "pa_csi_dg_lite",
+    "time_downsample": 2,
+    "max_positions": 500,
+    "position_kernels": 10,
+    "mcat_layers": 5,
+    "mcat_heads": 9,
+    "temporal_kernel_num": 128,
+    "temporal_kernel_sizes": [20, 40],
+    "channel_group_width": 30,
+    "channel_encoder_layers": 1,
+    "channel_encoder_heads": 6,
+    "channel_kernel_num": 16,
+    "channel_kernel_sizes": [2, 4],
+    "fusion_dim": 256,
+    "projection_hidden_dim": 256,
+    "projection_dim": 128,
+    "dropout": 0.1,
+    "prototype_num_subcenters": 3,
+    "antenna_layout": {
+      "mode": "tx",
+      "num_rx": 1,
+      "num_tx": 3,
+      "num_subcarriers": 30
+    }
+  },
+  "training": {
+    "epochs": 200,
+    "batch_size": 8,
+    "lr": 0.001,
+    "optimizer": "adam",
+    "lr_scheduler": {
+      "name": "exponential_decay",
+      "update": "step",
+      "decay_rate": 0.9,
+      "decay_steps": 10000,
+      "staircase": false
+    },
+    "weight_decay": 0.0,
+    "patience": 200,
+    "selection_metric": "accuracy",
+    "sampler": "none",
+    "num_workers": 0,
+    "domain_balanced_batch": false,
+    "grad_clip_norm": 0.0
+  },
+  "losses": {
+    "temperature": 0.2,
+    "contrastive_loss_type": "subcenter_prototype",
+    "lambda_supcon": 0.1,
+    "include_same_domain_same_class": true,
+    "lambda_pair_margin": 0.05,
+    "prototype_pair_margins": [
+      {"true": 1, "negative": 4, "margin": 0.15},
+      {"true": 4, "negative": 1, "margin": 0.15},
+      {"true": 0, "negative": 4, "margin": 0.10}
+    ],
+    "dynamic_pair_margin": {
+      "enabled": true,
+      "source_split": "val",
+      "warmup_epochs": 20,
+      "recompute_interval": 10,
+      "quantile": 0.15,
+      "ema_momentum": 0.8,
+      "m_min": 0.03,
+      "m_max": 0.18,
+      "max_delta_per_update": 0.03,
+      "min_class_samples": 20,
+      "candidate_pairs": [
+        {"true": 1, "negative": 4},
+        {"true": 4, "negative": 1},
+        {"true": 0, "negative": 4}
+      ],
+      "initial_pair_margins": [
+        {"true": 1, "negative": 4, "margin": 0.15},
+        {"true": 4, "negative": 1, "margin": 0.15},
+        {"true": 0, "negative": 4, "margin": 0.10}
+      ],
+      "m_max_per_pair": [
+        {"true": 1, "negative": 4, "m_max": 0.15},
+        {"true": 4, "negative": 1, "m_max": 0.15},
+        {"true": 0, "negative": 4, "m_max": 0.11}
+      ]
+    }
+  },
+  "evaluation": {
+    "save_confusion_matrix": true
+  }
+}

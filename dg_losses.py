@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import List, Mapping, Optional, Sequence, Tuple
+from typing import Dict, List, Mapping, Optional, Sequence, Tuple
 
 import torch
 import torch.nn as nn
@@ -141,7 +141,17 @@ class SubCenterPrototypeContrastiveLoss(nn.Module):
         super().__init__()
         self.temperature = temperature
         self.lambda_pair_margin = float(lambda_pair_margin)
-        self.prototype_pair_margins: List[Mapping[str, float]] = list(prototype_pair_margins or [])
+        self.prototype_pair_margins: List[Dict[str, float]] = [
+            dict(spec) for spec in (prototype_pair_margins or [])
+        ]
+        self.last_pair_margin_loss = 0.0
+        self.last_pair_margin_active_anchors = 0
+
+    def set_pair_margins(self, prototype_pair_margins: Sequence[Mapping[str, float]]) -> None:
+        self.prototype_pair_margins = [dict(spec) for spec in prototype_pair_margins]
+
+    def get_pair_margins(self) -> List[Dict[str, float]]:
+        return [dict(spec) for spec in self.prototype_pair_margins]
 
     def forward(
         self,
@@ -184,6 +194,9 @@ class SubCenterPrototypeContrastiveLoss(nn.Module):
         denom = torch.logsumexp(scaled.reshape(num_anchors, num_classes * num_subcenters), dim=-1)
         ce_loss = (-positive_logit + denom).mean()
 
+        self.last_pair_margin_loss = 0.0
+        self.last_pair_margin_active_anchors = 0
+
         margin_term = anchors.new_zeros(())
         if self.lambda_pair_margin > 0.0 and self.prototype_pair_margins:
             per_class_max = sim.max(dim=-1).values  # [N, C]
@@ -205,7 +218,68 @@ class SubCenterPrototypeContrastiveLoss(nn.Module):
                 hinge = F.relu(margin_value + neg_score - true_score)
                 collected.append(hinge)
             if collected:
-                margin_term = torch.cat(collected).mean()
+                hinge_values = torch.cat(collected)
+                margin_term = hinge_values.mean()
+                self.last_pair_margin_loss = float(margin_term.detach().cpu().item())
+                self.last_pair_margin_active_anchors = int(hinge_values.numel())
 
         return ce_loss + self.lambda_pair_margin * margin_term
 
+
+class AdaptiveKMarginLoss(nn.Module):
+    def forward(
+        self,
+        embeddings: torch.Tensor,
+        labels: torch.Tensor,
+        cached_prototypes: Optional[torch.Tensor],
+        selected_pairs: Optional[torch.Tensor],
+        pair_weights: Optional[torch.Tensor],
+        pair_margins: Optional[torch.Tensor],
+        prototype_valid_mask: Optional[torch.Tensor] = None,
+    ) -> torch.Tensor:
+        if cached_prototypes is None or selected_pairs is None or pair_weights is None or pair_margins is None:
+            return embeddings.new_zeros(())
+        if embeddings.numel() == 0 or labels.numel() == 0:
+            return embeddings.new_zeros(())
+
+        prototypes = F.normalize(cached_prototypes.detach().to(embeddings.device), dim=-1)
+        selected = selected_pairs.detach().to(embeddings.device)
+        weights = pair_weights.detach().to(embeddings.device)
+        margins = pair_margins.detach().to(embeddings.device)
+        if prototype_valid_mask is None:
+            prototype_valid = torch.ones(prototypes.size(0), device=embeddings.device, dtype=torch.bool)
+        else:
+            prototype_valid = prototype_valid_mask.detach().to(embeddings.device)
+
+        if prototypes.dim() != 2 or prototypes.size(1) != embeddings.size(1):
+            return embeddings.new_zeros(())
+        if selected.shape != weights.shape or selected.shape != margins.shape:
+            return embeddings.new_zeros(())
+        if selected.dim() != 2 or selected.size(0) != prototypes.size(0) or selected.size(1) != prototypes.size(0):
+            return embeddings.new_zeros(())
+
+        embeddings = F.normalize(embeddings, dim=-1)
+        sims = embeddings @ prototypes.T
+        batch_losses: List[torch.Tensor] = []
+        num_classes = prototypes.size(0)
+
+        for class_id in labels.unique().tolist():
+            true_class = int(class_id)
+            if not (0 <= true_class < num_classes) or not bool(prototype_valid[true_class].item()):
+                continue
+
+            pair_mask = (selected[true_class] & prototype_valid).clone()
+            pair_mask[true_class] = False
+            if not pair_mask.any():
+                continue
+
+            sample_mask = labels == true_class
+            true_scores = sims[sample_mask, true_class].unsqueeze(1)
+            neg_scores = sims[sample_mask][:, pair_mask]
+            hinge = F.relu(margins[true_class, pair_mask].unsqueeze(0) - (true_scores - neg_scores))
+            weighted = hinge * weights[true_class, pair_mask].unsqueeze(0)
+            batch_losses.append(weighted.sum(dim=1))
+
+        if not batch_losses:
+            return embeddings.new_zeros(())
+        return torch.cat(batch_losses, dim=0).mean()
