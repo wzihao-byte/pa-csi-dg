@@ -1,0 +1,367 @@
+\documentclass[11pt]{article}
+
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{amsmath}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue
+}
+
+\setlist[itemize]{leftmargin=1.6em}
+\setlist[enumerate]{leftmargin=1.8em}
+\renewcommand{\arraystretch}{1.18}
+
+\title{\textbf{Weekly Report: MMFi Segment-Level Protocol and Baseline Study}}
+\author{mmfi-pa-csi-dg-workspace}
+\date{2026-05-25 to 2026-05-31}
+
+\begin{document}
+\maketitle
+
+\section{Executive Summary}
+
+The work during this week focused on rebuilding a trustworthy MMFi protocol before running full PA-CSI-DG or SupCon experiments. The previous whole-directory MMFi experiments were not sufficient to support any strong conclusion, because the sample unit, split definition, segment duration effects, subject-group confounding, packet dynamics, and phase handling were not yet controlled.
+
+The main result is that the pipeline is technically functional, but the strict domain generalization task is still unsolved. Same-environment segment-disjoint classification is highly learnable, but performance drops sharply under subject-disjoint evaluation. The strict E01--E04 leave-one-environment-out setting is therefore difficult because it is not only an environment shift: it is an environment shift plus an unseen subject-group shift.
+
+The best current small-model strict LOEO candidate is a weighted TemporalCNN using fixed-T A1+delta amplitude features. Its 3-seed S5b target-environment mean is:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Metric & Mean & Std. over target environments \\
+\midrule
+Accuracy & 0.1407 & 0.0186 \\
+Macro-F1 & 0.1021 & 0.0114 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This is better than random and useful as a diagnostic baseline, but it is still weak. Accuracy remains below the duration-only baseline, which means segment length and action duration are still serious confounds.
+
+\section{Main Objectives for the Week}
+
+The goal was not to tune PA-CSI-DG. The goal was to establish a defensible MMFi segment-level experimental protocol. The key questions were:
+
+\begin{itemize}
+  \item What should be the sample unit: whole action directory, official segment, or window?
+  \item Does the segmentation CSV align with WiFi CSI frames?
+  \item Are train, validation, and test splits free from segment leakage?
+  \item Does the E01--E04 LOEO protocol represent pure environment generalization?
+  \item How strong is the duration/segment-length confound?
+  \item Can small models learn anything before full PA-CSI-DG is used?
+  \item Does amplitude delta help?
+  \item Is the failure due to data/loader bugs or due to subject/environment shift?
+\end{itemize}
+
+\section{Data Source and Workspace Setup}
+
+\subsection{Isolated Workspace}
+
+A separate workspace was created:
+
+\begin{verbatim}
+C:/Users/howie/Desktop/mmfi-pa-csi-dg-workspace/
+\end{verbatim}
+
+The original \texttt{pa-csi-dg} repository was kept as a reference only. Exploratory MMFi code, outputs, reports, and converted artifacts were kept inside the new workspace.
+
+\subsection{Raw Data Source}
+
+The active MMFi data source was:
+
+\begin{verbatim}
+Raw MMFi root:
+D:/MMFi_Dataset
+
+Official action segment CSV:
+D:/datasets/mmfi/raw_drive/MMFi_action_segments.csv
+\end{verbatim}
+
+Overlapping WiFi-CSI files between the active raw tree and the previously extracted partial MMFi tree were checked. The tested CSI files matched exactly, which supports using \texttt{D:/MMFi\_Dataset} as the active raw root.
+
+\section{Methodology}
+
+\subsection{Protocol Level}
+
+The protocol was changed from whole-action-directory samples to official segment-level samples.
+
+\begin{itemize}
+  \item Raw frame level: each WiFi CSI frame contains \texttt{CSIamp} and \texttt{CSIphase}.
+  \item Official segment level: segment boundaries come from \texttt{MMFi\_action\_segments.csv}.
+  \item First training/evaluation unit: one official segment.
+  \item Optional window-level training was postponed until segment length and leakage checks were complete.
+\end{itemize}
+
+This was necessary because the earlier whole-directory setup had only about 1080 samples across four environments. It was too coarse and did not represent the official action segmentation structure.
+
+\subsection{Inventory and Segment Length Analysis}
+
+An inventory script scanned the raw MMFi tree and the official segmentation CSV. The segment length distribution was:
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Quantile & Segment length \\
+\midrule
+p01 & 5 frames \\
+p05 & 7 frames \\
+p10 & 9 frames \\
+p25 & 13 frames \\
+p50 & 19 frames \\
+p75 & 24 frames \\
+p90 & 29 frames \\
+p95 & 32 frames \\
+p99 & 38 frames \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This result showed that T=64 or T=96 would be too aggressive as a first baseline. Many segments are much shorter than 64 frames. The first full feature cache therefore used T=32.
+
+\subsection{Feature Construction}
+
+The first full feature cache used only amplitude. Phase was intentionally disabled until phase sanitization could be tested separately.
+
+\subsubsection{P0/A1/T32 Feature}
+
+\begin{itemize}
+  \item Packet mode P0: mean over the 10 packets inside each frame.
+  \item Amplitude mode A1: \(\log(1 + x)\) amplitude transform.
+  \item Phase mode: none.
+  \item Target length: T=32.
+  \item Output shape: \([N,32,342]\), where \(342 = 3 \times 114\).
+\end{itemize}
+
+The generated arrays were:
+
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Environment & Samples & Amplitude shape & Phase shape \\
+\midrule
+E01 & 4503 & [4503, 32, 342] & [4503, 32, 0] \\
+E02 & 3934 & [3934, 32, 342] & [3934, 32, 0] \\
+E03 & 4127 & [4127, 32, 342] & [4127, 32, 0] \\
+E04 & 3883 & [3883, 32, 342] & [3883, 32, 0] \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Total official segment samples:
+
+\begin{verbatim}
+16447
+\end{verbatim}
+
+\subsubsection{A1+Fixed-T Delta Feature}
+
+To test whether temporal change information helps, a derived feature was created:
+
+\begin{verbatim}
+concat(A1_log1p_resampled, delta_time_A1_log1p_resampled)
+\end{verbatim}
+
+The output shape became:
+
+\begin{verbatim}
+[N, 32, 684]
+\end{verbatim}
+
+This is a diagnostic feature. It is not yet the cleanest version of temporal delta, because the delta is computed after resampling to T=32. A future converter-level version should compute delta on the raw segment length before resampling.
+
+\subsection{Split Design}
+
+The split manifests were metadata-aware. They were designed to prevent segment leakage and to separate different protocol questions.
+
+\begin{itemize}
+  \item S0: all-environment segment-disjoint label-shuffle sanity.
+  \item S2: same-environment segment-disjoint split.
+  \item S3: same-environment subject-disjoint split.
+  \item S4a: all-environment segment-disjoint split.
+  \item S4b: all-environment subject-disjoint split.
+  \item S4c: all-environment subject-disjoint and environment-balanced split.
+  \item S5b: strict E01--E04 LOEO with source-subject-disjoint validation.
+\end{itemize}
+
+The strict S5b protocol was treated as:
+
+\begin{verbatim}
+generalization to unseen environment with unseen subject group
+\end{verbatim}
+
+It was not treated as pure environment DG, because MMFi environments and subject groups are coupled:
+
+\begin{center}
+\begin{tabular}{cc}
+\toprule
+Environment & Subject group \\
+\midrule
+E01 & S01--S10 \\
+E02 & S11--S20 \\
+E03 & S21--S30 \\
+E04 & S31--S40 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Baselines}
+
+Four classes of baseline were used.
+
+\begin{enumerate}
+  \item \textbf{M\_length}: duration-only classifier using original length, transformed length, and duration bins.
+  \item \textbf{M\_static}: static amplitude baseline using mean amplitude over time.
+  \item \textbf{M0 handcrafted}: mean, standard deviation, temporal delta magnitude, and range statistics.
+  \item \textbf{M1 TemporalCNN}: small amp-only temporal CNN with source-train-only normalization.
+\end{enumerate}
+
+The linear baselines used ridge classification with class balancing. The neural baseline used TemporalCNN. Later runs added balanced cross-entropy to improve macro-F1 stability.
+
+\subsection{Training and Evaluation Discipline}
+
+For neural baselines:
+
+\begin{itemize}
+  \item Each run used 30 epochs.
+  \item Model selection used source-validation macro-F1 only.
+  \item Target-test metrics were diagnostic only and not used for selection.
+  \item Normalization statistics were computed from train samples only.
+  \item S5b was run with 3 seeds: 42, 43, and 44.
+\end{itemize}
+
+For S0 label-shuffle, the split file carried a label override. This allowed the same loader and training code to be tested under randomized labels.
+
+\section{Results}
+
+\subsection{Leakage Sanity: S0 Label Shuffle}
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Model & Test Accuracy & Test Macro-F1 \\
+\midrule
+Handcrafted ridge & 0.0341 & about 0.032 \\
+Weighted A1+delta TCN & 0.0313 & 0.0298 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The S0 results are near random. This suggests that the current segment-level pipeline does not have an obvious label or split leakage issue.
+
+\subsection{Same-Environment Learnability}
+
+The same-environment segment-disjoint setting was highly learnable.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Experiment & Test Accuracy & Test Macro-F1 \\
+\midrule
+S2 E01 TemporalCNN & 0.9578 & 0.9553 \\
+S2 E03 TemporalCNN & 0.8606 & 0.8518 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This shows that the converted CSI segment pipeline contains learnable action signal.
+
+\subsection{Subject-Disjoint Drop}
+
+The same-environment subject-disjoint setting dropped sharply.
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Experiment & Test Accuracy & Test Macro-F1 \\
+\midrule
+S3 E01 TemporalCNN & 0.3202 & 0.2496 \\
+S3 E03 TemporalCNN & 0.0938 & 0.0857 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+This result identifies subject shift as a major blocker.
+
+\subsection{Strict LOEO Results}
+
+The best current strict LOEO small-model setting is weighted A1+delta TemporalCNN. The 3-seed target results were:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Target Environment & Accuracy & Macro-F1 \\
+\midrule
+E01 & 0.1218 +/- 0.0053 & 0.0925 +/- 0.0051 \\
+E02 & 0.1649 +/- 0.0214 & 0.1172 +/- 0.0163 \\
+E03 & 0.1445 +/- 0.0051 & 0.1046 +/- 0.0054 \\
+E04 & 0.1315 +/- 0.0060 & 0.0943 +/- 0.0045 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The target-environment mean was:
+
+\begin{center}
+\begin{tabular}{lcc}
+\toprule
+Metric & Mean & Std. \\
+\midrule
+Accuracy & 0.1407 & 0.0186 \\
+Macro-F1 & 0.1021 & 0.0114 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Problems Identified}
+
+\subsection{Strict LOEO Performance Is Still Poor}
+
+The best strict LOEO macro-F1 is only about 0.10. This is not strong enough to claim successful domain generalization.
+
+\subsection{Subject Shift Is Severe}
+
+The S2/S3 contrast is the clearest diagnostic result of the week. Same-environment segment-disjoint performance is high, but same-environment subject-disjoint performance drops dramatically. This means the model can learn the action structure within a subject-mixed environment, but much of that structure does not transfer to unseen subjects.
+
+\subsection{Duration Confound Is Strong}
+
+The duration-only baseline reaches approximately 0.17--0.22 accuracy in S5 target environments. The best CSI TCN accuracy is around 0.14. This means segment duration is still a stronger accuracy cue than the current CSI representation.
+
+\subsection{P0 Packet Mean May Remove Useful Motion Information}
+
+The current main features use packet mean. This compresses the 10 packets inside each frame into one value per receiver/subcarrier pair. It may remove short-time motion information.
+
+\subsection{The Current Delta Feature Is Only a Diagnostic}
+
+The A1+delta feature is useful, but it is computed after resampling to T=32. A cleaner version should compute temporal delta on the raw segment before time normalization.
+
+\subsection{Phase Has Not Yet Been Validated}
+
+Phase V1/V2 and phase-only gates have not been completed. Raw or weakly sanitized phase should not be fused into the main model yet.
+
+\section{Recommended Next Steps}
+
+The next week should remain focused on protocol and preprocessing, not on full PA-CSI-DG.
+
+\begin{enumerate}
+  \item Run duration/length-controlled evaluation.
+  \item Implement converter-level raw A1\_delta.
+  \item Run P1 packet mean/std/diff and P3a packet-dynamics ablations.
+  \item Run per-class confusion and failure analysis.
+  \item Run subject-ID predictability diagnostics.
+  \item Only after the above, evaluate phase V1 and consider full PA-CSI-DG.
+\end{enumerate}
+
+\section{Conclusion}
+
+The MMFi segment-level pipeline is usable and the converted CSI features contain learnable action information. However, the strict LOEO task is still not solved. The main failure modes are subject shift, duration confounding, and insufficient feature representation from P0 packet mean. Full PA-CSI-DG and SupCon should not be used for claims until these protocol and preprocessing issues are addressed.
+
+\end{document}

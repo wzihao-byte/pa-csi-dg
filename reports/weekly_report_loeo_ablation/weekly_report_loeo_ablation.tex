@@ -1,0 +1,165 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{Weekly Report: PA-CSI DG LOEO Ablation}
+\author{}
+\date{April 15, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Progress}
+
+\subsection{Experiment Status}
+This week focused on the leave-one-environment-out (LOEO) ablation study for the PA-CSI domain generalization pipeline. The current paper-aligned single-seed experiment queue contains five ablations:
+\begin{enumerate}
+    \item baseline
+    \item SupCon only
+    \item NARC only
+    \item SupCon + NARC
+    \item SupCon + NARC + AdaIN
+\end{enumerate}
+
+At the time of writing, all five ablations have completed for all three held-out environments ($E1$, $E2$, $E3$), including \texttt{SupCon + NARC + AdaIN}.
+
+\subsection{Current Comparable LOEO Ablation Results}
+Table~\ref{tab:overall} reports the completed paper-aligned LOEO ablations. These are the current canonical results because they share the same data split protocol, paper-aligned backbone, optimizer schedule, and training duration.
+
+\begin{table}[H]
+\centering
+\caption{Completed paper-aligned LOEO ablations (seed 42).}
+\label{tab:overall}
+\begin{tabular}{lccp{2.4in}}
+\toprule
+Experiment & Mean Acc. & Mean Macro-F1 & Note \\
+\midrule
+Baseline & 0.8787 & 0.8515 & CE only \\
+SupCon only & \textbf{0.9027} & \textbf{0.8820} & Best completed result \\
+NARC only & 0.8616 & 0.8377 & Worse than baseline \\
+SupCon + NARC & 0.8844 & 0.8617 & Better than NARC only, below SupCon only \\
+SupCon + NARC + AdaIN & 0.8899 & 0.8618 & Best combined objective, still below SupCon only \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Per-environment LOEO accuracy for completed paper-aligned ablations.}
+\label{tab:perenv}
+\begin{tabular}{lccc}
+\toprule
+Experiment & Target $E1$ & Target $E2$ & Target $E3$ \\
+\midrule
+Baseline & 0.9007 & 0.8547 & 0.8807 \\
+SupCon only & \textbf{0.9147} & \textbf{0.8953} & \textbf{0.8980} \\
+NARC only & 0.8967 & 0.8620 & 0.8260 \\
+SupCon + NARC & 0.8813 & 0.8830 & 0.8890 \\
+SupCon + NARC + AdaIN & 0.9103 & 0.8737 & 0.8857 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Class-wise Results}
+The six classes in the local preprocessing pipeline are \texttt{bed}, \texttt{fall}, \texttt{run}, \texttt{sitdown}, \texttt{standup}, and \texttt{walk}. Table~\ref{tab:classrecall} reports the mean class recall averaged over the three held-out environments for the completed paper-aligned ablations.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Mean class recall across LOEO targets $E1$, $E2$, and $E3$ for completed paper-aligned ablations.}
+\label{tab:classrecall}
+\begin{tabular}{lcccccc}
+\toprule
+Experiment & bed & fall & run & sitdown & standup & walk \\
+\midrule
+Baseline & \textbf{0.9986} & 0.5450 & 0.8292 & 0.9475 & 0.7742 & 0.9967 \\
+SupCon only & 0.9869 & \textbf{0.5908} & 0.9158 & 0.9550 & 0.8492 & 0.9967 \\
+NARC only & 0.9672 & 0.5367 & 0.7908 & 0.9192 & 0.8142 & \textbf{0.9983} \\
+SupCon + NARC & 0.9736 & 0.5708 & 0.8958 & 0.9258 & 0.8225 & 0.9950 \\
+SupCon + NARC + AdaIN & 0.9850 & 0.4592 & \textbf{0.9225} & \textbf{0.9800} & \textbf{0.8608} & 0.9933 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{AdaIN Update}
+The \texttt{SupCon + NARC + AdaIN} run is now complete. Its final mean accuracy is $0.8899$ and its mean macro-F1 is $0.8618$. This is slightly better than \texttt{SupCon + NARC}, but it still does not exceed \texttt{SupCon only}.
+
+\begin{table}[H]
+\centering
+\caption{Final LOEO results for \texttt{SupCon + NARC + AdaIN}.}
+\label{tab:adainpartial}
+\begin{tabular}{lcc}
+\toprule
+Target Environment & Accuracy & Macro-F1 \\
+\midrule
+$E1$ & 0.9103 & 0.8817 \\
+$E2$ & 0.8737 & 0.8522 \\
+$E3$ & 0.8857 & 0.8515 \\
+Mean ($E1$--$E3$) & 0.8899 & 0.8618 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{All Existing LOEO Outputs in the Repository}
+In addition to the current canonical paper-aligned runs, the repository also contains earlier exploratory LOEO outputs. These are useful as progress milestones, but they should not be mixed with the paper-aligned table because the training setup changed across iterations.
+
+\begin{table}[H]
+\centering
+\caption{Earlier exploratory LOEO runs already present in the repository.}
+\label{tab:historical}
+\begin{tabular}{p{2.9in}ccc}
+\toprule
+Experiment Output & Mean Acc. & Mean Macro-F1 & Scope \\
+\midrule
+\texttt{diag\_single\_seed / baseline\_pa\_csi\_dg} & 0.8037 & 0.7760 & Old baseline, full $E1$/$E2$/$E3$ \\
+\texttt{single\_seed\_fixed / pa\_csi\_dg\_supcon\_narc} & 0.8372 & 0.8109 & Earlier SupCon+NARC, full $E1$/$E2$/$E3$ \\
+\texttt{sanity / pa\_csi\_dg\_supcon\_narc} & 0.6940 & 0.6498 & Sanity-only run, target $E1$ only \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Analysis}
+
+\subsection{Overall}
+The completed canonical ablations show a stable ranking:
+\[
+\text{SupCon only} > \text{SupCon + NARC + AdaIN} > \text{SupCon + NARC} > \text{Baseline} > \text{NARC only}
+\]
+for both mean accuracy and mean macro-F1. The main reason is that SupCon promotes class-level clustering across environments, while the current NARC formulation mainly promotes sample-level consistency across antenna views.
+
+\subsection{Class-wise Takeaways}
+The class table adds three useful observations:
+\begin{itemize}
+    \item The best class-wise performers are now split across methods: \texttt{bed} is highest under Baseline ($0.9986$), \texttt{fall} under SupCon only ($0.5908$), \texttt{run}/\texttt{sitdown}/\texttt{standup} under SupCon + NARC + AdaIN ($0.9225/0.9800/0.8608$), and \texttt{walk} under NARC only ($0.9983$).
+    \item \texttt{fall} remains the hardest class across all completed ablations, and AdaIN hurts it most, reducing mean recall to $0.4592$.
+    \item AdaIN improves several medium-difficulty classes, but those gains are not large enough to overturn the overall ranking because SupCon only remains more balanced across classes.
+\end{itemize}
+
+\subsection{Why NARC Is Weaker Here}
+NARC only does not help the classes that matter most for the ranking. It slightly improves saturated classes such as \texttt{walk}, but it reduces average recall on \texttt{run}, \texttt{fall}, and \texttt{sitdown} relative to SupCon only. The clearest example is target $E3$, where \texttt{run} recall drops from $0.9425$ under SupCon only to $0.6300$ under NARC only. This is consistent with the current NARC objective treating same-class different-sample pairs as negatives.
+
+\subsection{Practical Caveats}
+Two implementation details may further limit NARC in the current setup:
+\begin{itemize}
+    \item the view builder currently uses \texttt{tx} masking rather than richer multi-receiver views;
+    \item the paper-aligned runs use \texttt{sampler = none}, not class-balanced contrastive batches.
+\end{itemize}
+These factors likely make the current instance-level NARC objective noisier than the class-aware SupCon objective.
+
+\section{Future Steps}
+
+\begin{enumerate}
+    \item Look more deeply into this week's LOEO results, especially the class-wise behavior and the gap between the overall ranking and the best per-class performance.
+    \item Arrange the next round of experiments, including multi-seed validation, macro-F1-based checkpoint selection, and revised NARC settings.
+\end{enumerate}
+
+\section{Summary}
+This week established a clear result from the comparable LOEO ablations: \textbf{SupCon only is still the strongest completed objective}. \texttt{SupCon + NARC + AdaIN} slightly improves over \texttt{SupCon + NARC}, but it does not surpass \texttt{SupCon only}. The overall pattern remains the same: objectives centered on class-consistent clustering generalize better than the current instance-centered NARC formulation.
+
+\end{document}

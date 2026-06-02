@@ -1,0 +1,266 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[hidelinks,pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\pct}[1]{#1\%}
+\setlength{\emergencystretch}{3em}
+
+\title{Monthly Milestone Report -- May 2026}
+\author{Zihao Wang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\begin{tabular}{@{}>{\bfseries}p{1.35in}p{4.75in}@{}}
+Research Area: & WiFi CSI human activity recognition, PA-CSI domain generalization, contrastive representation learning, and cross-environment failure analysis \\
+Main Focus This Month: & Testing prototype/margin/alignment methods for the $E2$ class $1/4$ failure, separating smoke signals from matched full results, and deciding which directions should be stopped \\
+\end{tabular}
+
+\paragraph{Monthly Summary.}
+This month changed the project from method expansion to evidence-based pruning. At the beginning of May, the main hypothesis was that the $E2$ failure could be repaired by better contrastive geometry: sub-center prototypes, fixed or adaptive PairMargin, and source-calibrated hard negative selection. By the end of the month, matched multi-seed evidence showed that this explanation is not sufficient. $K=3$ is not significantly better than $K=1$ under current code, geometry-balance variants collapse their active occupancy, K=1 PairMargin hurts the class-balance metric, OT alignment compresses the target $1/4$ geometry, and the CC-VREx smoke gain fails under full validation. The strongest supported conclusion is that the current $E2$ class $1/4$ problem is a target representation collapse problem, not a simple source-side prototype-capacity or margin-tuning problem.
+
+\clearpage
+
+\section{Review of Previously Defined Goals and Progress}
+
+\begin{longtable}{@{}p{1.65in}p{1.05in}p{3.4in}@{}}
+\toprule
+Previous Goal & Status & Progress Summary \\
+\midrule
+\endhead
+Run the selected \code{K=3 + PairMargin} prototype configuration on full LOEO targets $E1$, $E2$, and $E3$ & Reframed & The original full-LOEO promotion was stopped because the current-code evidence no longer supported multi-center geometry as the main explanation. A matched $K=3$ versus $K=1$ check on $E2$ seeds 42/52/62 showed no significant gain from $K=3$. \\
+Compare the full-LOEO prototype result against the old SupCon reference & Reframed & The comparison target remained important, but May work showed that single-target $E2$ gains are not enough. The clean SupCon line is now treated as the anchor, while all new methods must first beat their own matched baselines. \\
+If the prototype result is mixed, separate sub-center effects from PairMargin effects & Completed with negative outcome & I ran or aggregated focused checks for $K=1$, $K=3$, geometry balance, K=1 PairMargin, dynamic/adaptive margins, OT, and CC-VREx. The result is a clear negative decision for several added mechanisms. \\
+Analyze asymmetric $1\leftrightarrow4$ behavior on $E2$ & Completed & The diagnostics show that the direction of $1\leftrightarrow4$ confusion changes across seeds, and many target mistakes are high-confidence and closer to the predicted source centroid. This argues against hand-built asymmetric margin grids. \\
+Convert April results into manuscript-ready tables and figures & Partially completed & I produced May interim tables, experiment summaries, method-result inventories, and an explicit abandonment report. The material is better organized, but it is not yet manuscript-ready because the main contribution boundary changed. \\
+Start robustness experiments after the prototype result is known & Not completed & Robustness experiments were deferred. The more urgent issue is now to determine whether the $E2$ class $1/4$ collapse is data/label-related or representation-level domain shift. \\
+\bottomrule
+\end{longtable}
+
+\paragraph{Overall assessment.}
+The month did not deliver a new winning method, but it delivered an important research correction. The project now has a cleaner boundary between supported results, smoke-only signals, and directions that should be stopped. This is useful because it prevents the next month from spending compute on mechanisms that are already contradicted by matched evidence.
+
+\section{Papers and Method Families Reviewed During the Month}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sub-center prototype and angular-margin methods.}
+    I continued using sub-center and margin-based recognition ideas as the motivation for prototype capacity and local pair margins. The May result shows that these ideas are not enough for the current $E2$ collapse when applied only as source-side geometry repair.
+
+    \item \textbf{V-REx / risk extrapolation ideas.}
+    I tested whether class-conditional source risk disagreement on classes 1 and 4 could improve target robustness. The smoke result was positive, but the matched full run showed that the current CC-VREx configuration is unstable.
+
+    \item \textbf{Optimal transport and target alignment.}
+    I evaluated whether unsupervised OT alignment could repair the target $1/4$ collapse without using target labels for training or selection. The full result was negative, and the target $1/4$ centroid distance became smaller rather than larger.
+
+    \item \textbf{MMD/CORAL-style alignment as follow-up candidates.}
+    These remain possible alignment baselines, but May OT results suggest that they should not be run as automatic sensitivity experiments. A new representation or pseudo-label mechanism is needed first.
+
+    \item \textbf{PA-CSI and SupCon as anchor methods.}
+    The clean PA-CSI + SupCon result remains the most useful anchor. May work reinforced that clean class-aware SupCon is not the problem; the failed add-ons are the problem.
+\end{itemize}
+
+\section{What I Learned}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Matched baselines matter more than isolated numbers.} Several May methods look good when compared to a weak or unrelated baseline, but fail when compared against their own matched control.
+
+    \item \textbf{Smoke runs are not evidence of success.} K=1 PairMargin and CC-VREx both had useful smoke signals. Later checks showed that the PairMargin smoke hurt class balance and the CC-VREx full run failed across three seeds.
+
+    \item \textbf{The $E2$ class $1/4$ issue is target-side collapse.} Source class 1 and class 4 are well separated, while target class 1 and class 4 are compressed into a shared region. This is stronger evidence than any single method result.
+
+    \item \textbf{More prototypes do not solve the current failure.} $K=3$ is not significantly better than $K=1$, and geometry-balanced multi-center variants lose active occupancy during training.
+
+    \item \textbf{Manual pair margins can make the wrong trade-off.} The K=1 PairMargin smoke improved accuracy and macro-F1 but reduced $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ from 0.5368 to 0.3654.
+
+    \item \textbf{Ordinary OT alignment is not enough.} OT did not improve the target $1/4$ geometry. It compressed the final target centroids and reduced the focus-pair F1 metric on average.
+
+    \item \textbf{The next step is diagnosis, not another small regularizer.} The project should now ask whether the collapse is caused by data/semantic noise or representation-level domain shift.
+\end{enumerate}
+
+\section{Main Experimental Results}
+
+\subsection{Current Reference Lines}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Clean reference lines for interpreting May experiments on target $E2$.}
+\label{tab:anchors}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccl}
+\toprule
+Anchor & Scope & Seeds & Acc. & Macro-F1 & Note \\
+\midrule
+\code{baseline_pa_csi_dg_paper_aligned} & CE baseline, $E2$ & 42 & 0.8547 & 0.8304 & clean single-seed CE anchor \\
+\code{pa_csi_dg_supcon_paper_aligned} & SupCon, $E2$ & 42 & 0.8953 & 0.8763 & cleanest single-seed SupCon anchor \\
+\code{control_new_kall1} & K=1 source-only control, $E2$ & 42/52/62 & 0.8821 & 0.8582 & matched control for geometry-balance cycle \\
+\code{e2_14_phase1_k1_source_only} & K=1 source-only control, $E2$ & 42/52/62 & 0.8508 & 0.8302 & matched control for OT cycle \\
+\bottomrule
+\end{tabular}
+}%
+\end{table}
+
+\subsection{May Method Inventory}
+
+\begin{table}[H]
+\centering
+\small
+\caption{May method results and decisions.}
+\label{tab:method_inventory}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{p{1.65in}p{1.25in}p{2.75in}p{1.2in}}
+\toprule
+Method & Evidence level & Key result & Decision \\
+\midrule
+Sub-center prototype + PairMargin & Single-target / historical positive & $K=3$ + PairMargin reached 0.9023 accuracy and 0.8824 macro-F1 on $E2$ seed 42, but later matched checks did not support multi-center as a robust explanation. & Do not promote as main line \\
+$K=3$ vs. $K=1$ paired check & Matched 3-seed diagnostic & Accuracy delta $K3-K1=-0.0033$, macro-F1 delta $=-0.0030$, both with $p>0.7$. & Reject K>1 premise \\
+Geometry balance / diversity & Matched 3-seed operational gate & \code{geom_balance} and \code{geom_balance_div} aborted at epoch 100 for all seeds due active occupancy below 0.05. & Stop \\
+K=1 PairMargin & Smoke / direction check & Accuracy rose, but $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ fell from 0.5368 to 0.3654 and class 1 collapsed further. & Stop this form \\
+Dynamic margin / LCA-KM & Single-seed / exploratory & Dynamic and adaptive variants ran, but did not beat the clean SupCon anchor on focus-pair balance. & Keep as future idea only \\
+OT alignment & Matched 3-seed full run & Baseline focus-pair F1 mean 0.5888; unfiltered OT 0.5433; prefiltered OT 0.5504. Target $1/4$ geometry compressed. & Stop ordinary OT line \\
+CC-VREx focus 1/4 & Matched 3-seed full run & Baseline accuracy/macro-F1/focus-F1: 0.8779/0.8529/0.5996. CC-VREx: 0.8339/0.8001/0.5530. & Stop this configuration \\
+\bottomrule
+\end{tabular}
+}%
+\end{table}
+
+\subsection{Matched Negative Results}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Matched full or matched diagnostic results that changed the May decision.}
+\label{tab:matched_negative}
+\begin{tabular}{lrrr}
+\toprule
+Comparison & Metric & Baseline / control & Proposed / delta \\
+\midrule
+$K=3$ vs. $K=1$ & Accuracy delta & -- & -0.0033 \\
+$K=3$ vs. $K=1$ & Macro-F1 delta & -- & -0.0030 \\
+Unfiltered OT vs. baseline & $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ & 0.5888 & 0.5433 \\
+Prefiltered OT vs. baseline & $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ & 0.5888 & 0.5504 \\
+CC-VREx vs. matched baseline & Accuracy & 0.8779 & 0.8339 \\
+CC-VREx vs. matched baseline & Macro-F1 & 0.8529 & 0.8001 \\
+CC-VREx vs. matched baseline & $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ & 0.5996 & 0.5530 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Representation Collapse Evidence}
+
+\begin{table}[H]
+\centering
+\small
+\caption{Centroid distance evidence for target $E2$ class $1/4$ collapse under the $K=1$ diagnostic line.}
+\label{tab:collapse}
+\begin{tabular}{rrrr}
+\toprule
+Seed & Source $1\leftrightarrow4$ distance & Target $1\leftrightarrow4$ distance & Target/source ratio \\
+\midrule
+42 & 1.2177 & 0.2722 & 0.224 \\
+52 & 1.2045 & 0.1528 & 0.127 \\
+62 & 1.2540 & 0.2076 & 0.166 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The collapse evidence is the most important May result. It explains why source-side prototype and margin methods keep failing. The source representation separates class 1 and class 4, but target $E2$ maps them into a much tighter shared region. A method that only changes source geometry cannot reliably unfold a collapsed target representation.
+
+\section{Identified Problems / Questions}
+
+\begin{itemize}[leftmargin=*]
+    \item The current evidence cannot distinguish label/semantic noise from severe target-domain covariate shift. Both would produce high-confidence target mismatches.
+    \item The manual-review step is now a blocker. I need to inspect high-confidence unanimous mismatch samples before running another large training sweep.
+    \item The success metric should include geometry, not only F1. A future method should show that target class $1/4$ centroid distance increases before it is treated as a real fix.
+    \item The project needs a clearer artifact boundary: clean anchors, stopped methods, smoke-only probes, and future candidates should not be mixed in one table.
+    \item The final contribution may shift from ``new prototype method'' to ``protocol-aware diagnosis of PA-CSI DG failure plus a more justified representation/alignment method.''
+    \item Cross-dataset validation should become the June priority. A new dataset such as StanFi can test whether the current conclusions are specific to PA-CSI MultiEnv $E2$ or reflect a broader domain-generalization issue.
+\end{itemize}
+
+\section{Potential Research Directions}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Manual target audit:} inspect high-confidence unanimous $1\rightarrow4$ and $4\rightarrow1$ mismatch samples to decide whether the labels/semantics are questionable.
+    \item \textbf{Representation-level domain-shift diagnosis:} track raw-space, fused-feature, projection-space, and classifier-logit separation for classes 1 and 4.
+    \item \textbf{Pseudo-label construction with confidence and geometry checks:} if the issue is representation shift, design a pseudo-label mechanism that first improves target $1/4$ geometry.
+    \item \textbf{Cross-dataset validation with StanFi or a similar CSI HAR dataset:} use a new dataset to check whether the clean SupCon anchor, stopped methods, and collapse diagnostics transfer beyond the current PA-CSI MultiEnv split.
+    \item \textbf{Source-only adaptive calibration, redesigned:} keep LCA-KM-style calibration only if it is rebuilt around the collapse evidence instead of reused as another margin grid.
+    \item \textbf{Negative-result manuscript material:} the May results can become a useful section on why several intuitive DG fixes fail under matched baselines.
+    \item \textbf{Clean SupCon as the stable baseline:} continue treating PA-CSI + SupCon as the anchor unless a matched rerun disproves it.
+\end{itemize}
+
+\clearpage
+\section{Goals for Next Month}
+
+\begin{longtable}{@{}cp{5.75in}@{}}
+\toprule
+\# & Goal \\
+\midrule
+\endhead
+1 & Manually review high-confidence unanimous $E2$ class $1/4$ mismatch samples, balanced between $1\rightarrow4$ and $4\rightarrow1$, so the PA-CSI MultiEnv failure has a clear interpretation before external validation. \\
+2 & Select and prepare a new CSI HAR validation dataset, with StanFi as the first candidate if the data format and labels can be mapped cleanly to the current pipeline. \\
+3 & Implement a dataset adapter and preprocessing bridge for the new dataset: sample tensor shape, amplitude/phase handling, labels, subject/environment split metadata, and train/validation/test manifests. \\
+4 & Run the clean baseline and clean SupCon anchor on the new dataset before testing any May add-on method. The first goal is to establish whether the source-only SupCon advantage transfers. \\
+5 & Compare PA-CSI MultiEnv and the new dataset using the same reporting discipline: matched baselines, class-wise F1, confusion matrices, and geometry diagnostics. \\
+6 & Freeze the stopped-method list for PA-CSI MultiEnv: multi-center repair, occupancy-floor tuning, K1 PairMargin grids, ordinary OT sensitivity, and the current CC-VREx configuration should not be resumed without a new mechanism reason. \\
+7 & Rebuild the report tables so that every future result is grouped by dataset, clean anchor, matched full validation, smoke-only probe, or stopped/debug artifact. \\
+\bottomrule
+\end{longtable}
+
+\clearpage
+\section{Six-Month Research and Publication Plan}
+
+\begin{longtable}{@{}p{0.95in}p{5.35in}@{}}
+\toprule
+Period & Plan \\
+\midrule
+\endhead
+June 2026 & Complete the $E2$ class $1/4$ manual audit, freeze stopped May methods, and prepare a new validation dataset such as StanFi. Build the adapter, split manifests, and first baseline run path. \\
+July 2026 & Run clean baseline and clean SupCon experiments on the new dataset. Compare whether the PA-CSI MultiEnv conclusions transfer under the same reporting discipline. \\
+August 2026 & If the new dataset confirms a similar failure mode, design one representation/pseudo-label diagnostic and evaluate it on both PA-CSI MultiEnv and the new dataset. \\
+September 2026 & Expand only the surviving method to additional seeds, LOEO or cross-subject targets, and geometry metrics. Add robustness checks only after cross-dataset behavior is understood. \\
+October 2026 & Decide the final contribution boundary: cross-dataset method, diagnostic benchmark, or negative-result plus practical protocol paper. Draft the manuscript and supplement. \\
+November 2026 & Finalize reproducibility materials, dataset adapters, run logs, split manifests, and submission package. Select venue path based on method strength and evaluation breadth. \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Target Venues}
+
+\begin{longtable}{@{}p{1.25in}p{1.35in}p{3.55in}@{}}
+\toprule
+Venue & Priority & Reason \\
+\midrule
+\endhead
+IMWUT / UbiComp & Primary long-term target & Best fit if the work becomes a strong sensing paper with convincing domain-generalization analysis, cross-environment evidence, and a clearly justified method. \\
+Sensors & Practical fallback journal route & Suitable if the final contribution is a reproducible PA-CSI DG study with careful baselines, diagnostics, and moderate method novelty. \\
+IEEE Access & Backup journal route & Useful if the main value is broad empirical evaluation, reproducibility, and engineering guidance rather than a highly novel algorithm. \\
+\bottomrule
+\end{longtable}
+
+\section{Self-Assessment}
+
+\paragraph{What went well.}
+I made the research process stricter. May began with several plausible method ideas, but I did not keep them just because they had positive smoke results. The matched full checks, diagnostic reports, and abandonment memo make the current evidence much cleaner.
+
+\paragraph{What still needs improvement.}
+I still spent too much effort on method variations before fully answering the data/representation question. The next stage should start from the failure mode and only then choose the method. I also need to keep all comparisons matched by seed, config family, and selection rule from the beginning of each experiment.
+
+\paragraph{Main priority going forward.}
+The main priority is to resolve the $E2$ class $1/4$ collapse question while moving beyond a single dataset. If manual review indicates data or semantic ambiguity, the project should handle that explicitly. In parallel, June should introduce a new dataset such as StanFi to check whether the clean SupCon baseline and the May negative conclusions transfer. In both cases, the May stopped-method list should remain closed unless a new mechanism or cross-dataset evidence changes the premise.
+
+\vfill
+\begin{center}
+End of Report
+\end{center}
+
+\end{document}

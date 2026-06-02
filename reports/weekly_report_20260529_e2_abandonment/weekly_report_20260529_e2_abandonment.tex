@@ -1,0 +1,237 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[hidelinks,pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\pct}[1]{#1\%}
+\newcommand{\loss}{\mathcal{L}}
+\setlength{\emergencystretch}{3em}
+
+\title{Biweekly Report: E2 Class 1/4 Collapse and Abandoned Directions}
+\author{Zihao Wang}
+\date{May 29, 2026}
+
+\begin{document}
+\maketitle
+
+\section{Progress: What Changed in the Last Two Weeks}
+
+This two-week period moved the project from ``try to repair the $E2$ failure with more contrastive geometry'' to a stricter conclusion: the current source-side repair directions are not solving the $E2$ class $1/4$ collapse. The main target was still the leave-one-environment-out setting with $E2$ held out. The failure metric was not only overall accuracy, but also the focus-pair balance metric
+\[
+\min(\mathrm{F1}_{1}, \mathrm{F1}_{4}),
+\]
+because the dominant error is the bidirectional confusion between class 1 and class 4.
+
+The important discipline this period was to stop comparing methods against unrelated weak baselines. Each method is interpreted only against its matched baseline: same target environment, same seed set, same epoch budget, same model family, and same selection protocol. Smoke runs are treated as direction checks only. Matched multi-seed full runs are the only results used for stop/continue decisions.
+
+\section{Reference Lines}
+
+Table~\ref{tab:anchors} lists the current clean anchors used to interpret the recent experiments. The strongest clean single-seed reference remains the paper-aligned SupCon result on $E2$; recent add-on methods must beat this line or beat their own matched full baseline to be considered useful.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Clean reference lines for recent $E2$ work.}
+\label{tab:anchors}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llcccl}
+\toprule
+Anchor & Scope & Seeds & Acc. & Macro-F1 & Note \\
+\midrule
+\code{baseline_pa_csi_dg_paper_aligned} & CE baseline, $E2$ & 42 & 0.8547 & 0.8304 & clean single-seed CE anchor \\
+\code{pa_csi_dg_supcon_paper_aligned} & SupCon, $E2$ & 42 & 0.8953 & 0.8763 & cleanest single-seed SupCon anchor \\
+\code{control_new_kall1} & K=1 source-only control, $E2$ & 42/52/62 & 0.8821 & 0.8582 & matched control for geometry-balance cycle \\
+\code{e2_14_phase1_k1_source_only} & K=1 source-only control, $E2$ & 42/52/62 & 0.8508 & 0.8302 & matched control for OT cycle \\
+\bottomrule
+\end{tabular}
+}%
+\end{table}
+
+The clean SupCon line is important because it shows that supervised contrastive learning itself is not the problem. The failures below are failures of added mechanisms: multi-center geometry, manual margins, ordinary OT alignment, and class-conditional V-REx under the tested configurations.
+
+\section{Methods Tried and Experimental Results}
+
+\subsection{Multi-center Geometry and Geometry Balance}
+
+The first direction was to test whether class 1 and class 4 needed more internal prototype capacity. This included $K=3$ current-code baselines, $K=1$ controls, geometry-balanced variants, and occupancy guards. The method assumption was:
+\[
+\text{stable class submodes exist} \quad \Rightarrow \quad K>1 \text{ prototypes should improve } E2.
+\]
+
+The matched three-seed result does not support this assumption. Table~\ref{tab:k3_k1} shows that $K=3$ and $K=1$ are statistically tied under the current codebase.
+
+\begin{table}[H]
+\centering
+\small
+\caption{$K=3$ versus $K=1$ paired check on target $E2$, 200 epochs, seeds 42/52/62.}
+\label{tab:k3_k1}
+\begin{tabular}{lrrrr}
+\toprule
+Metric & Mean delta ($K3-K1$) & Std. & $t(2)$ & $p$-value \\
+\midrule
+Accuracy & -0.0033 & 0.0153 & -0.3768 & 0.7425 \\
+Macro-F1 & -0.0030 & 0.0138 & -0.3819 & 0.7393 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The geometry-balance variants also failed the operational gate. Both \code{geom_balance} and \code{geom_balance_div} aborted at epoch 100 for all three seeds because the final source-validation active occupancy for class 1 or class 4 dropped below the 0.05 abort threshold. In contrast, the clean $K=1$ control completed all three seeds.
+
+This result changes the interpretation of the earlier single-seed $K=3$ improvement. That point should now be treated as historical and non-robust, not as evidence that multi-center repair is the right main direction.
+
+\subsection{Data and Representation Diagnostics}
+
+After the multi-center gate failed, I checked whether the failure was actually caused by target-side representation collapse. The evidence is much stronger than the method results.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Centroid distance evidence for $E2$ class $1/4$ collapse under the $K=1$ diagnostic line.}
+\label{tab:centroid}
+\begin{tabular}{rrrrr}
+\toprule
+Seed & Source $1\leftrightarrow4$ & Target $1\leftrightarrow4$ & Target/source ratio & Directional symptom \\
+\midrule
+42 & 1.2177 & 0.2722 & 0.224 & target pair compressed \\
+52 & 1.2045 & 0.1528 & 0.127 & target pair compressed \\
+62 & 1.2540 & 0.2076 & 0.166 & target pair compressed \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+On seed 42, the target class $1/4$ distance is only about \pct{22.4} of the source class $1/4$ distance. The same pattern holds for seeds 52 and 62. Therefore the main failure is not that source class 1 or class 4 needs more centers. The main failure is that, in the learned representation, target-domain class 1 and class 4 are mapped into a much tighter shared region than the corresponding source classes.
+
+The warm-up k-means evidence points in the same direction. A real two-mode structure should produce stable split ratios across seeds, but the observed minority fractions were highly unstable. For example, under \code{geom_balance}, class 1 minority fraction moved from \pct{40.00} to \pct{0.78} to \pct{26.09} across seeds 42/52/62. Under \code{geom_balance_div}, class 4 moved from \pct{0.31} to \pct{6.72} to \pct{27.97}. This looks like seed-dependent cutting of a continuous distribution, not recovery of stable semantic submodes.
+
+The misclassification diagnostics also show that the class $1/4$ mistakes are not low-confidence boundary cases. For K=1 target pair diagnostics, the mean counts were 129.33 for $1\rightarrow4$ and 111.33 for $4\rightarrow1$. Only \pct{0.85} of $1\rightarrow4$ errors and \pct{0.00} of $4\rightarrow1$ errors had maximum confidence below 0.5. Most mistakes were closer to the predicted source centroid and had predicted-class source nearest neighbors. The model is not merely uncertain near a boundary; in the current geometry, these target samples genuinely look like the opposite class.
+
+\subsection{K=1 PairMargin}
+
+The next cheaper idea was to keep $K=1$ and add a symmetric class $1\leftrightarrow4$ pair margin. This was intended to avoid multi-center occupancy collapse while directly pushing the difficult pair apart.
+
+\begin{table}[H]
+\centering
+\small
+\caption{K=1 symmetric PairMargin smoke result on target $E2$, seed 42.}
+\label{tab:k1_pairmargin}
+\begin{tabular}{lrrrrr}
+\toprule
+Case & Acc. & Macro-F1 & $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ & $1\rightarrow4$ & $4\rightarrow1$ \\
+\midrule
+Matched baseline & 0.8273 & 0.7792 & 0.5368 & 167 & 102 \\
+K=1 PairMargin & 0.8447 & 0.8097 & 0.3654 & 227 & 42 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This is a useful negative result. Accuracy and macro-F1 improved, but the focus-pair balance became much worse. The margin reduced $4\rightarrow1$ errors from 102 to 42, but increased $1\rightarrow4$ errors from 167 to 227 and collapsed class-1 F1. Therefore this exact K=1 symmetric margin should not be promoted to a full run.
+
+\subsection{OT Alignment}
+
+The next direction tested whether the $E2$ class $1/4$ collapse could be repaired by target alignment. The OT cycle used $E2$ target inputs for unsupervised alignment but did not use $E2$ labels for training, selection, or calibration. Two variants were tested in a matched full run: unfiltered OT and prefiltered OT.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Full matched OT result on target $E2$, seeds 42/52/62.}
+\label{tab:ot}
+\begin{tabular}{lrrr}
+\toprule
+Case & Mean $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ & Std. & Paired delta vs. baseline \\
+\midrule
+Baseline & 0.5888 & 0.0509 & -- \\
+Unfiltered OT & 0.5433 & 0.0488 & -0.0454 \\
+Prefiltered OT & 0.5504 & 0.0321 & -0.0383 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The result failed both the performance criterion and the mechanism criterion. Unfiltered OT only improved seed 52 slightly; seeds 42 and 62 became worse. Prefiltered OT followed the same pattern and remained below baseline on average. More importantly, OT did not increase the final target class $1/4$ centroid distance. It compressed the geometry relative to the source-only baseline, so the problem was not ``geometry improved but labels capped F1.'' The intended alignment mechanism did not happen.
+
+\subsection{Class-conditional V-REx on Classes 1 and 4}
+
+CC-VREx was the last positive signal from smoke testing. The idea was to regularize class-conditional source risk disagreement for the failure classes 1 and 4, without using multi-center geometry.
+
+The smoke result for $\lambda=0.2$ looked promising: the matched smoke baseline had $\min(\mathrm{F1}_1,\mathrm{F1}_4)=0.4237$, while CC-VREx reached 0.6592. However, the full matched validation reversed the conclusion.
+
+\begin{table}[H]
+\centering
+\small
+\caption{CC-VREx full validation on target $E2$, seeds 42/52/62.}
+\label{tab:ccvrex}
+\begin{tabular}{lrrr}
+\toprule
+Case & Accuracy & Macro-F1 & $\min(\mathrm{F1}_1,\mathrm{F1}_4)$ \\
+\midrule
+Matched baseline & 0.8779 & 0.8529 & 0.5996 \\
+CC-VREx & 0.8339 & 0.8001 & 0.5530 \\
+Delta & -0.0440 & -0.0528 & -0.0465 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Seed-wise, CC-VREx had small positive class $1/4$ effects on seeds 42 and 62, but seed 52 collapsed badly. The matched three-seed mean is negative across accuracy, macro-F1, and the focus-pair metric. This means the smoke signal was unstable rather than robust. The current CC-VREx configuration should not be treated as a successful fix.
+
+\subsection{Adaptive and Dynamic Margins}
+
+The adaptive-margin line remains useful conceptually because it tries to discover hard negative pairs from source calibration rather than manually naming pairs from target diagnostics. However, the available results do not make it a current main-line success.
+
+The LCA-KM paper-aligned $E2$ run reached 0.8980 accuracy and 0.8765 macro-F1 with $\min(\mathrm{F1}_1,\mathrm{F1}_4)=0.6574$ on seed 42. This is close to the clean SupCon anchor but does not beat its focus-pair score of 0.6970. Dynamic margin variants also remained below the clean single-seed SupCon anchor on class $1/4$ balance. These methods should be kept as ideas for future source-only calibration, not as validated fixes.
+
+\section{What I Should Abandon}
+
+The main fact I need to accept is that the current $E2$ problem is not primarily a lack of source-side prototype capacity or a simple local-margin boundary problem. The evidence points to target-domain class $1/4$ representation collapse. Source class 1 and class 4 are well separated, but target class 1 and class 4 collapse into a shared region. This is why source-side geometry engineering keeps failing to transfer.
+
+Concretely, I should abandon the following directions as main-line experiments:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Multi-center repair as the main explanation.} $K=3$ is not significantly better than $K=1$ under matched seeds, and geometry-balance variants collapse active occupancy. The premise that stable class $1/4$ submodes can be recovered by adding centers is not supported.
+
+    \item \textbf{Occupancy-floor and k-means warm-up tuning.} Warm-up splits are unstable across seeds, and trained multi-center structure collapses. More tuning of occupancy penalties is likely to optimize an artifact rather than recover a real structure.
+
+    \item \textbf{Hand-built asymmetric margin grids.} The K=1 PairMargin smoke result shows that a margin can improve aggregate accuracy while hurting the class-balance objective. The direction of $1\leftrightarrow4$ confusion is also seed-sensitive, so single-seed asymmetric grids are likely to chase seed noise.
+
+    \item \textbf{Ordinary OT or prefiltered OT sensitivity as the next step.} The full OT result is negative and the centroid geometry becomes more compressed, not less. More small OT hyperparameter sweeps are not justified without a new pseudo-label or representation mechanism.
+
+    \item \textbf{Current CC-VREx as a fix.} The full three-seed validation failed despite a positive smoke result. This configuration should be stopped as a main candidate.
+
+    \item \textbf{Claiming success from smoke or single-seed results.} The last two weeks repeatedly show that smoke improvements can vanish or reverse under matched seeds. Future claims should start from a matched clean baseline and report the same seed set.
+\end{enumerate}
+
+This does not prove that $E2$ labels are wrong. The current evidence cannot separate label noise from severe covariate shift. What it does show is that the model's source-trained representation consistently maps many target class 1 and class 4 samples into the opposite-class region with high confidence. Therefore the next question is not ``which margin value fixes it?'' but:
+\begin{quote}
+\emph{Is the $E2$ class $1/4$ collapse caused by label/semantic noise, or by representation-level domain shift?}
+\end{quote}
+
+\section{Next Steps}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Manual review first.} Review high-confidence unanimous mismatch samples from \path{analysis/data_issue_diagnostics/k1_ensemble_target_unanimous_highconf_mismatches.csv}, balanced between $1\rightarrow4$ and $4\rightarrow1$. The goal is to decide whether the samples visually or semantically resemble the predicted class.
+
+    \item \textbf{If the issue is data quality, audit E2 labels or collection metadata.} In that case, another source-side model modification is the wrong response.
+
+    \item \textbf{If the issue is representation-level domain shift, restart from representation learning or pseudo-label construction.} A future alignment method should first show that it increases target class $1/4$ separation before using F1 as the final metric.
+
+    \item \textbf{Keep clean SupCon as the anchor.} Every future method table should begin with the matched clean baseline and the clean SupCon reference. Do not compare a new method to a weaker baseline from a different run family.
+
+    \item \textbf{Use source-only adaptive calibration only if the mechanism is new.} LCA-KM-style source calibration is still a reasonable long-term direction, but only if it is redesigned around the collapse evidence rather than reused as another margin grid.
+\end{enumerate}
+
+\section{Current Conclusion}
+
+The last two weeks produced a negative but useful result. The project should stop spending compute on multi-center geometry, occupancy tuning, K1 PairMargin variants, ordinary OT alignment, and the current CC-VREx configuration. The strongest supported statement is that $E2$ class $1/4$ is a target representation collapse problem: source class 1 and class 4 are separable, but target class 1 and class 4 are compressed into a shared region and many mistakes are high-confidence. The next stage should therefore be a data/semantic audit and a representation-level diagnostic, not another small regularization sweep.
+
+\vfill
+\begin{center}
+End of Report
+\end{center}
+
+\end{document}

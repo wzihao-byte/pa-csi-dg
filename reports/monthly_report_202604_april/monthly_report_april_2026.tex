@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage[hidelinks,pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\pct}[1]{#1\%}
+
+\title{Monthly Milestone Report -- April 2026}
+\author{Zihao Wang}
+\date{}
+
+\begin{document}
+\maketitle
+
+\noindent\begin{tabular}{@{}>{\bfseries}p{1.35in}p{4.75in}@{}}
+Research Area: & WiFi CSI human activity recognition, PA-CSI domain generalization, amplitude-phase modeling, and cross-environment evaluation \\
+Main Focus This Month: & Building a PA-CSI DG pipeline, completing paper-aligned LOEO ablations, interpreting SupCon/NARC/AdaIN behavior, and starting prototype-based contrastive extensions \\
+\end{tabular}
+
+\paragraph{Monthly Summary.}
+This month, I made substantial progress in four directions: (1) building a separate PyTorch PA-CSI domain-generalization path with clean leave-one-environment-out (LOEO) splits; (2) completing comparable paper-aligned ablations for baseline, SupCon, NARC, SupCon+NARC, and SupCon+NARC+AdaIN; (3) analyzing why class-aware SupCon is stronger than the current view/instance-centered objectives; and (4) starting a new sub-center prototype SupCon direction with a small confusion-aware pair-margin term. The most important outcome is that the project now has a clearer empirical direction: SupCon is the strongest completed full-LOEO objective, while the next improvement should target multimodal class geometry and local confused boundaries instead of simply adding more global regularization.
+
+\section{Review of Previously Defined Goals and Progress}
+
+\begin{longtable}{@{}p{1.55in}p{1.0in}p{3.55in}@{}}
+\toprule
+Previous Goal & Status & Progress Summary \\
+\midrule
+\endhead
+Implement a lightweight subcarrier/channel attention module and compare it under strict evaluation & Reframed with strong progress & The work moved from ARIL-only protocol closure to a PA-CSI MultiEnv LOEO setting. I implemented and tested natural antenna-view contrastive paths, NARC, SupCon, and AdaIN under paper-aligned PA-CSI configs. The current evidence shows that class-aware SupCon is stronger than the current instance/view NARC formulation. \\
+\addlinespace
+Complete a fair amplitude-phase fusion comparison with controlled parameter budget & Partially completed & The PA-CSI DG path now uses separate amplitude and phase inputs, phase unwrapping, dual-stream temporal encoding, gated fusion, and a shared projection path. A fully closed comparison of alternate fusion designs is still unfinished, but the main amplitude-phase backbone is now available for controlled DG experiments. \\
+\addlinespace
+Extend the stricter evaluation pipeline to at least one additional dataset & Completed in a new setting & I established a MultiEnv LOEO protocol over target environments $E1$, $E2$, and $E3$, with source-only validation, seed control, split manifests, metrics files, confusion matrices, and experiment summaries. This became the main April evaluation setting. \\
+\addlinespace
+Run a first robustness evaluation under noise, temporal disturbance, or feature dropout & Not completed & I did not complete perturbation-based robustness experiments. Instead, I added domain-shift diagnostics using raw-space and fused-feature MMD/CORAL/centroid distances plus t-SNE plots. This is useful, but it does not replace true corruption robustness. \\
+\addlinespace
+Write an internal technical note separating supported conclusions, preliminary observations, and open questions & Completed & I wrote weekly reports, output summaries, PA-CSI DG documentation, and domain-shift diagnostic notes. These reports now separate canonical full-LOEO results from earlier exploratory or mixed-branch runs. \\
+\bottomrule
+\end{longtable}
+
+\paragraph{Overall assessment.}
+The April work did not follow the March plan literally, because the main project shifted from ARIL extension to PA-CSI domain generalization. However, the underlying goal was preserved: build a defensible protocol, compare lightweight extensions fairly, and identify which method direction is actually supported by evidence. The strongest achievement this month is the establishment of a reproducible PA-CSI DG workflow and a clear full-LOEO baseline table.
+
+\section{Papers Read During the Month}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{ArcFace: Additive Angular Margin Loss for Deep Face Recognition}
+
+    I studied this paper as a low-risk way to sharpen class boundaries through angular margins. It is relevant because April confusion matrices show persistent local errors among activity pairs such as fall/standup and run/standup.
+
+    \item \textbf{Sub-center ArcFace: Boosting Face Recognition by Large-Scale Noisy Web Faces}
+
+    This paper motivated the sub-center prototype direction. The key idea is that one class may need multiple centers. This matches PA-CSI, where the same activity can have several stable modes caused by different propagation paths, antenna views, and body orientations.
+
+    \item \textbf{Multimodal Contrastive Learning with Hard Negative Sampling for Human Activity Recognition}
+
+    I used this work to think about hard negatives in HAR, especially whether the model should spend more contrastive pressure on repeatedly confused activity pairs rather than all negative pairs equally.
+
+    \item \textbf{SimMMDG: A Simple and Effective Framework for Multi-modal Domain Generalization}
+
+    This paper was useful for reasoning about shared/specific decomposition. It suggested that not all antenna-view or environment-specific CSI information should be forced into one shared invariant representation.
+
+    \item \textbf{Enhanced Human Activity Recognition Using Wi-Fi Sensing: Leveraging Phase and Amplitude with Attention Mechanisms (PA-CSI)}
+
+    I used the PA-CSI paper and local implementation as the backbone reference for amplitude-phase feature modeling, gated fusion, temporal/channel processing, and the new PyTorch DG path.
+\end{itemize}
+
+\section{What I Learned}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{A clean LOEO protocol is now more important than adding another branch.} The most useful April work was the split-controlled, paper-aligned experiment table across $E1$, $E2$, and $E3$.
+
+    \item \textbf{SupCon is the strongest completed full-LOEO objective.} The canonical paper-aligned result is 90.27\% mean accuracy and 88.20\% mean macro-F1, compared with 87.87\% and 85.15\% for the CE-only baseline.
+
+    \item \textbf{NARC and AdaIN are not automatically helpful.} NARC-only is weaker than baseline, SupCon+NARC remains below SupCon-only, and AdaIN improves some targets or classes but is unstable, especially on $E2$.
+
+    \item \textbf{The remaining errors are local and class-pair specific.} The dominant confusions are not uniformly distributed across all classes. This makes local boundary methods more attractive than another global contrastive-weight increase.
+
+    \item \textbf{Prototype geometry is promising but not yet closed.} The sub-center prototype + PairMargin run reached 90.23\% accuracy and 88.24\% macro-F1 on target $E2$, improving over the old SupCon $E2$ accuracy of 89.53\%. However, this is still a single-target result and must be tested on full LOEO.
+
+    \item \textbf{Result organization affects research quality.} The repository now has clearer configs, summaries, run logs, dashboards, and reports, which makes it easier to separate supported evidence from exploratory runs.
+\end{enumerate}
+
+\begin{table}[h]
+\centering
+\caption{Canonical paper-aligned LOEO ablations, seed 42.}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Method & Mean Acc. & Mean Macro-F1 & $E1$ Acc. & $E2$ Acc. & $E3$ Acc. \\
+\midrule
+Baseline & 87.87 & 85.15 & 90.07 & 85.47 & 88.07 \\
+SupCon only & \textbf{90.27} & \textbf{88.20} & \textbf{91.47} & \textbf{89.53} & \textbf{89.80} \\
+NARC only & 86.16 & 83.77 & 89.67 & 86.20 & 82.60 \\
+SupCon + NARC & 88.44 & 86.17 & 88.13 & 88.30 & 88.90 \\
+SupCon + NARC + AdaIN & 88.99 & 86.18 & 91.03 & 87.37 & 88.57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Prototype SupCon progress on target $E2$, seed 42.}
+\small
+\begin{tabular}{lccc}
+\toprule
+Method & Epochs & $E2$ Acc. & Macro-F1 \\
+\midrule
+Old pairwise SupCon reference & 200 & 89.53 & 87.63 \\
+Sub-center prototype, $K=2$, no PairMargin & 40 & 88.17 & 86.08 \\
+Sub-center prototype, $K=3$, no PairMargin & 40 & 86.30 & 83.51 \\
+Sub-center prototype, $K=3$, PairMargin & 40 & 88.73 & 86.73 \\
+Sub-center prototype, $K=3$, PairMargin & 200 & \textbf{90.23} & \textbf{88.24} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Identified Problems / Questions}
+
+\begin{itemize}[leftmargin=*]
+    \item The current strongest full-LOEO result is still single-seed. Multi-seed validation is needed before treating the SupCon ranking or prototype improvement as final.
+    \item The prototype method is currently validated only on $E2$. It may overfit the known $E2$ confusion structure unless it also improves or at least preserves $E1$ and $E3$.
+    \item PairMargin helped class 4 more than class 1. The method reduced one direction of the $1 \leftrightarrow 4$ confusion but increased the other, so the margin design may need class-conditional tuning.
+    \item The current NARC implementation uses transmitter-view masking because the processed MultiEnv tensors preserve one receive chain. This is a useful natural-view approximation, but it is not the same as a richer receiver/link-view ARC setting.
+    \item AdaIN remains fragile. It can improve selected classes or targets, but its $E2$ behavior suggests that feature-statistic mixing may disturb discriminative information.
+    \item Domain-shift diagnostics are useful, but I still need to connect MMD/CORAL/t-SNE observations to concrete prediction errors and method choices.
+    \item Robustness under corruption, dropout, and temporal disturbance remains open.
+\end{itemize}
+
+\section{Potential Research Directions}
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Sub-center prototype SupCon for PA-CSI DG:} replace pairwise same-class SupCon with class prototypes that allow multiple modes per activity class.
+    \item \textbf{Confusion-aware local boundary regularization:} use pair-specific margins or hard-negative weights for repeated error pairs rather than increasing contrastive pressure globally.
+    \item \textbf{Shared/private CSI representation decomposition:} keep action-invariant information in a shared branch while preserving antenna or environment-specific variation in a private branch.
+    \item \textbf{Protocol-aware PA-CSI DG benchmark:} turn the current experiment organization into a reproducible study of split protocol, validation policy, objective design, and result interpretation.
+    \item \textbf{Domain-shift and class-confusion diagnostics:} combine raw/fused feature distances, t-SNE, and confusion matrices to explain when a method helps or hurts.
+    \item \textbf{Richer natural-view contrastive learning:} revisit NARC only after confirming whether richer antenna/link views or class-aware positives are available.
+\end{itemize}
+
+\section{Goals for Next Month}
+
+\begin{longtable}{@{}cp{5.75in}@{}}
+\toprule
+\# & Goal \\
+\midrule
+\endhead
+1 & Run the selected \code{K=3 + PairMargin} prototype configuration on full LOEO targets $E1$, $E2$, and $E3$ with seed 42, keeping the same backbone, sampler, optimizer, epoch budget, and no NARC/AdaIN. \\
+2 & Compare the full-LOEO prototype result against the old SupCon reference: 90.27\% mean accuracy and 88.20\% mean macro-F1. \\
+3 & If the full-LOEO result is positive, repeat the main comparison with additional seeds; if it is mixed, run a focused ablation separating the effect of sub-centers from the hand-selected PairMargin term. \\
+4 & Analyze the asymmetric $1 \leftrightarrow 4$ behavior on $E2$ and decide whether class-conditional margins, different $K$, or a softer hard-negative weighting scheme is more appropriate. \\
+5 & Convert the April results into manuscript-ready tables and figures, including a clear method diagram, full-LOEO result table, and a supported/preliminary/open-questions summary. \\
+6 & Start a first robustness pass after the full-LOEO prototype result is known, using noise perturbation, temporal disturbance, or feature dropout. \\
+\bottomrule
+\end{longtable}
+
+\section{Six-Month Research and Publication Plan}
+
+\begin{longtable}{@{}p{0.95in}p{5.35in}@{}}
+\toprule
+Period & Plan \\
+\midrule
+\endhead
+May 2026 & Finish the full-LOEO validation of sub-center prototype SupCon with PairMargin. Decide whether this becomes the main method or only an $E2$ diagnostic. Start multi-seed validation if the seed-42 result is positive. \\
+June 2026 & Complete focused ablations on prototype count, PairMargin design, hard-negative weighting, and possibly ArcFace-style angular margins. Add the first robustness experiments. \\
+July 2026 & Extend the evaluation beyond the current main table: additional seeds, cross-dataset or cross-protocol checks, and stronger domain-shift/error analysis. \\
+August 2026 & Finalize the method contribution boundary and produce manuscript-ready figures, tables, and reproducibility materials. \\
+September 2026 & Draft the main manuscript and organize supplementary materials, including configs, run logs, split manifests, and analysis scripts. \\
+October 2026 & Finalize the submission package and decide the best venue path based on the strength of full-LOEO, multi-seed, robustness, and cross-dataset evidence. \\
+\bottomrule
+\end{longtable}
+
+\subsection*{Target Venues}
+
+\begin{longtable}{@{}p{1.25in}p{1.35in}p{3.55in}@{}}
+\toprule
+Venue & Priority & Reason \\
+\midrule
+\endhead
+IMWUT / UbiComp & Primary long-term target & Best fit if the work matures into a strong protocol-aware sensing paper with convincing cross-environment and cross-dataset evidence. \\
+Sensors & Practical fallback journal route & Suitable if the work becomes a solid empirical and engineering-focused PA-CSI DG study with reproducible evaluations and moderate method novelty. \\
+IEEE Access & Backup journal route & Useful as a faster publication path if the main contribution is reproducibility, protocol analysis, and lightweight method extension. \\
+\bottomrule
+\end{longtable}
+
+\section{Self-Assessment}
+
+\paragraph{What went well.}
+This month, I moved from scattered extension ideas to a concrete PA-CSI DG research workflow. I implemented the PyTorch DG path, completed the main LOEO ablation table, documented outputs, wrote weekly reports, and identified a plausible next method direction from actual confusion behavior instead of only from paper intuition.
+
+\paragraph{What still needs improvement.}
+I need to close experiments more completely before treating a direction as successful. The prototype result is promising, but it is still only an $E2$ result. I also need to avoid mixing several changes in one branch, because that makes it hard to know whether the gain comes from the sampler, objective, margin, view construction, or training budget.
+
+\paragraph{Main priority going forward.}
+My next priority is to validate the sub-center prototype + PairMargin method under the same full-LOEO protocol as SupCon. If it improves the full mean result without introducing new target-specific failures, I can build the next phase around prototype geometry and local boundary regularization. If it does not, the result should be treated as an $E2$ diagnostic and the project should return to a cleaner shared/private or angular-margin direction.
+
+\vfill
+\begin{center}
+End of Report
+\end{center}
+
+\end{document}

@@ -1,0 +1,165 @@
+{
+  "matched_seeds": [
+    42,
+    52,
+    62
+  ],
+  "rows": [
+    {
+      "case": "baseline",
+      "seed": 42,
+      "status": "complete",
+      "accuracy": 0.876,
+      "macro_f1": 0.8482816549711268,
+      "c1_to_c4": 179,
+      "c4_to_c1": 94,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_nomargin_dcb_nogeom_e2_full\\target_E2\\seed_42",
+      "f1_class_0": 0.9945945945945946,
+      "f1_class_1": 0.5626666666666666,
+      "f1_class_2": 0.901639344262295,
+      "f1_class_3": 0.9801488833746899,
+      "f1_class_4": 0.6556655665566555,
+      "f1_class_5": 0.9949748743718593,
+      "min_class_f1": 0.5626666666666666,
+      "min_f1_1_4": 0.5626666666666666
+    },
+    {
+      "case": "baseline",
+      "seed": 52,
+      "status": "complete",
+      "accuracy": 0.8876666666666667,
+      "macro_f1": 0.8653597838559811,
+      "c1_to_c4": 104,
+      "c4_to_c1": 139,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_nomargin_dcb_nogeom_e2_full\\target_E2\\seed_52",
+      "f1_class_0": 0.9884488448844885,
+      "f1_class_1": 0.6468571428571429,
+      "f1_class_2": 0.9322709163346613,
+      "f1_class_3": 0.9796437659033079,
+      "f1_class_4": 0.6474442988204456,
+      "f1_class_5": 0.9974937343358395,
+      "min_class_f1": 0.6468571428571429,
+      "min_f1_1_4": 0.6468571428571429
+    },
+    {
+      "case": "baseline",
+      "seed": 62,
+      "status": "complete",
+      "accuracy": 0.87,
+      "macro_f1": 0.8451947192643038,
+      "c1_to_c4": 125,
+      "c4_to_c1": 140,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_nomargin_dcb_nogeom_e2_full\\target_E2\\seed_62",
+      "f1_class_0": 0.987603305785124,
+      "f1_class_1": 0.5891829689298043,
+      "f1_class_2": 0.9006802721088435,
+      "f1_class_3": 0.9730423620025674,
+      "f1_class_4": 0.628140703517588,
+      "f1_class_5": 0.9925187032418954,
+      "min_class_f1": 0.5891829689298043,
+      "min_f1_1_4": 0.5891829689298043
+    },
+    {
+      "case": "proposed",
+      "seed": 42,
+      "status": "complete",
+      "accuracy": 0.875,
+      "macro_f1": 0.8521286371794319,
+      "c1_to_c4": 135,
+      "c4_to_c1": 71,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_cc_vrex_focus14_nogeom_e2_full\\target_E2\\seed_42",
+      "f1_class_0": 0.9575660528422738,
+      "f1_class_1": 0.5820256776034236,
+      "f1_class_2": 0.9090909090909092,
+      "f1_class_3": 0.9803439803439804,
+      "f1_class_4": 0.6862514688601645,
+      "f1_class_5": 0.9974937343358395,
+      "min_class_f1": 0.5820256776034236,
+      "min_f1_1_4": 0.5820256776034236
+    },
+    {
+      "case": "proposed",
+      "seed": 52,
+      "status": "complete",
+      "accuracy": 0.743,
+      "macro_f1": 0.6860193213406882,
+      "c1_to_c4": 54,
+      "c4_to_c1": 125,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_cc_vrex_focus14_nogeom_e2_full\\target_E2\\seed_52",
+      "f1_class_0": 0.8768436578171093,
+      "f1_class_1": 0.6125137211855104,
+      "f1_class_2": 0.8476454293628808,
+      "f1_class_3": 0.3055555555555555,
+      "f1_class_4": 0.47606382978723405,
+      "f1_class_5": 0.9974937343358395,
+      "min_class_f1": 0.3055555555555555,
+      "min_f1_1_4": 0.47606382978723405
+    },
+    {
+      "case": "proposed",
+      "seed": 62,
+      "status": "complete",
+      "accuracy": 0.8836666666666667,
+      "macro_f1": 0.86218107248044,
+      "c1_to_c4": 122,
+      "c4_to_c1": 77,
+      "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\codex_isolated\\cc_vrex_focus14_e2_fullprep\\outputs_full_20260525_retry2\\dg_loeo\\pa_csi_dg_k1_cc_vrex_focus14_nogeom_e2_full\\target_E2\\seed_62",
+      "f1_class_0": 0.9708658186294624,
+      "f1_class_1": 0.6010498687664042,
+      "f1_class_2": 0.9367088607594937,
+      "f1_class_3": 0.963151207115629,
+      "f1_class_4": 0.7063106796116505,
+      "f1_class_5": 0.995,
+      "min_class_f1": 0.6010498687664042,
+      "min_f1_1_4": 0.6010498687664042
+    }
+  ],
+  "metrics": {
+    "baseline": {
+      "accuracy": {
+        "mean": 0.8778888888888889,
+        "std": 0.00898352401364321
+      },
+      "macro_f1": {
+        "mean": 0.8529453860304705,
+        "std": 0.01086141096000171
+      },
+      "min_class_f1": {
+        "mean": 0.5995689261512046,
+        "std": 0.043045442858081456
+      },
+      "min_f1_1_4": {
+        "mean": 0.5995689261512046,
+        "std": 0.043045442858081456
+      }
+    },
+    "proposed": {
+      "accuracy": {
+        "mean": 0.8338888888888889,
+        "std": 0.07883127786843477
+      },
+      "macro_f1": {
+        "mean": 0.8001096770001866,
+        "std": 0.09893290557116666
+      },
+      "min_class_f1": {
+        "mean": 0.49621036730846113,
+        "std": 0.16538567923418673
+      },
+      "min_f1_1_4": {
+        "mean": 0.5530464587190206,
+        "std": 0.0673440704909368
+      }
+    }
+  },
+  "deltas": {
+    "accuracy": -0.04400000000000004,
+    "macro_f1": -0.052835709030283895,
+    "min_class_f1": -0.10335855884274348,
+    "min_f1_1_4": -0.04652246743218402
+  },
+  "success_gate": {
+    "decision_ready": true,
+    "pass": false
+  }
+}
