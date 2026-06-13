@@ -26,6 +26,7 @@ results/
 # Generated reports and temporary artifacts
 reports/
 archives/
+logs/
 analysis/domain_shift/
 analysis/k_estimate/
 *.zip

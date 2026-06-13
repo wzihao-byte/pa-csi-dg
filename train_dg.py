@@ -29,11 +29,19 @@ from dg_losses import (
     AdaptiveKMarginLoss,
     DomainAwareSupConLoss,
     SubCenterPrototypeContrastiveLoss,
+    supcon_positive_pair_diagnostics,
 )
 from dg_models import PaCsiDGLite
 
 
 SUPPORTED_CONTRASTIVE_LOSS_TYPES = {"pairwise_supcon", "subcenter_prototype"}
+SUPCON_DIAGNOSTIC_KEYS = (
+    "supcon_num_anchors",
+    "supcon_mean_positives_per_anchor",
+    "supcon_min_positives_per_anchor",
+    "supcon_frac_anchors_with_positive",
+    "supcon_num_valid_positive_pairs",
+)
 
 
 REPO_ROOT = Path(__file__).resolve().parent
@@ -48,6 +56,42 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--output-root", help="Override the configured output directory.")
     parser.add_argument("--seeds", nargs="+", type=int, help="Override the configured seed list.")
     parser.add_argument("--epochs", type=int, help="Override the configured epoch count.")
+    parser.add_argument("--lambda-supcon", type=float, help="Override losses.lambda_supcon.")
+    parser.add_argument(
+        "--lambda-supcon-warmup-epochs",
+        type=int,
+        help="Override losses.lambda_supcon_warmup_epochs.",
+    )
+    parser.add_argument("--temperature", type=float, help="Override losses.temperature.")
+    parser.add_argument(
+        "--supcon-positive-mode",
+        choices=["all_views", "global_class_instance_views"],
+        help="Override losses.supcon_positive_mode.",
+    )
+    parser.add_argument(
+        "--include-same-domain-same-class",
+        type=int,
+        choices=[0, 1],
+        help="Override losses.include_same_domain_same_class.",
+    )
+    parser.add_argument("--batch-size", type=int, help="Override training.batch_size.")
+    parser.add_argument(
+        "--sampler",
+        choices=["none", "domain_balanced", "domain_class_balanced"],
+        help="Override training.sampler.",
+    )
+    parser.add_argument("--experiment-name", help="Override experiment_name.")
+    parser.add_argument(
+        "--contrastive-loss-type",
+        choices=sorted(SUPPORTED_CONTRASTIVE_LOSS_TYPES),
+        help="Override losses.contrastive_loss_type.",
+    )
+    parser.add_argument("--lambda-pair-margin", type=float, help="Override losses.lambda_pair_margin.")
+    parser.add_argument(
+        "--prototype-num-subcenters",
+        type=int,
+        help="Override model.prototype_num_subcenters.",
+    )
     return parser.parse_args()
 
 
@@ -85,6 +129,10 @@ def save_confusion_csv(path: Path, matrix: np.ndarray) -> None:
         writer.writerows(matrix.tolist())
 
 
+def zero_supcon_diagnostics() -> Dict[str, float]:
+    return {key: 0.0 for key in SUPCON_DIAGNOSTIC_KEYS}
+
+
 def resolve_runtime_config(raw_config: Dict[str, Any], args: argparse.Namespace) -> Dict[str, Any]:
     config = copy.deepcopy(raw_config)
     config["mode"] = args.mode or config.get("mode", "dg_loeo")
@@ -98,6 +146,30 @@ def resolve_runtime_config(raw_config: Dict[str, Any], args: argparse.Namespace)
         config["seed_list"] = args.seeds
     if args.epochs is not None:
         config.setdefault("training", {})["epochs"] = args.epochs
+    if getattr(args, "experiment_name", None) is not None:
+        config["experiment_name"] = args.experiment_name
+    if getattr(args, "batch_size", None) is not None:
+        config.setdefault("training", {})["batch_size"] = args.batch_size
+    if getattr(args, "sampler", None) is not None:
+        config.setdefault("training", {})["sampler"] = args.sampler
+    if getattr(args, "lambda_supcon", None) is not None:
+        config.setdefault("losses", {})["lambda_supcon"] = args.lambda_supcon
+    if getattr(args, "lambda_supcon_warmup_epochs", None) is not None:
+        config.setdefault("losses", {})["lambda_supcon_warmup_epochs"] = args.lambda_supcon_warmup_epochs
+    if getattr(args, "temperature", None) is not None:
+        config.setdefault("losses", {})["temperature"] = args.temperature
+    if getattr(args, "supcon_positive_mode", None) is not None:
+        config.setdefault("losses", {})["supcon_positive_mode"] = args.supcon_positive_mode
+    if getattr(args, "include_same_domain_same_class", None) is not None:
+        config.setdefault("losses", {})["include_same_domain_same_class"] = bool(
+            args.include_same_domain_same_class
+        )
+    if getattr(args, "contrastive_loss_type", None) is not None:
+        config.setdefault("losses", {})["contrastive_loss_type"] = args.contrastive_loss_type
+    if getattr(args, "lambda_pair_margin", None) is not None:
+        config.setdefault("losses", {})["lambda_pair_margin"] = args.lambda_pair_margin
+    if getattr(args, "prototype_num_subcenters", None) is not None:
+        config.setdefault("model", {})["prototype_num_subcenters"] = args.prototype_num_subcenters
     return config
 
 
@@ -136,6 +208,25 @@ def metric_dict(labels: np.ndarray, predictions: np.ndarray) -> Dict[str, float]
     }
 
 
+def scheduled_lambda_supcon(loss_config: Mapping[str, Any], epoch: int) -> float:
+    target_lambda = float(loss_config.get("lambda_supcon", 0.0))
+    warmup_epochs = int(loss_config.get("lambda_supcon_warmup_epochs", 0))
+    if warmup_epochs <= 0:
+        return target_lambda
+    return target_lambda * min(1.0, float(epoch) / float(warmup_epochs))
+
+
+def loss_config_for_lambda(loss_config: Mapping[str, Any], effective_lambda_supcon: float) -> Dict[str, Any]:
+    epoch_loss_config = dict(loss_config)
+    epoch_loss_config["lambda_supcon_target"] = float(loss_config.get("lambda_supcon", 0.0))
+    epoch_loss_config["lambda_supcon"] = float(effective_lambda_supcon)
+    epoch_loss_config["lambda_supcon_effective"] = float(effective_lambda_supcon)
+    epoch_loss_config["lambda_supcon_warmup_epochs"] = int(
+        loss_config.get("lambda_supcon_warmup_epochs", 0)
+    )
+    return epoch_loss_config
+
+
 def run_epoch(
     model: PaCsiDGLite,
     loader: DataLoader,
@@ -160,10 +251,18 @@ def run_epoch(
     total_supcon = 0.0
     total_akm = 0.0
     total_pair_margin = 0.0
+    total_supcon_diag_anchors = 0.0
+    total_supcon_diag_positive_pairs = 0.0
+    total_supcon_diag_anchors_with_positive = 0.0
+    min_supcon_diag_positives = math.inf
     all_predictions: List[np.ndarray] = []
     all_labels: List[np.ndarray] = []
     shape_debug: Optional[Dict[str, List[int]]] = None
     lambda_supcon = float(loss_config.get("lambda_supcon", 0.0))
+    lambda_supcon_target = float(loss_config.get("lambda_supcon_target", lambda_supcon))
+    lambda_supcon_warmup_epochs = int(loss_config.get("lambda_supcon_warmup_epochs", 0))
+    lambda_pair_margin = float(loss_config.get("lambda_pair_margin", 0.0))
+    effective_pair_margin_weight = lambda_supcon * lambda_pair_margin
     adaptive_config = loss_config.get("adaptive_kmargin", {}) or {}
     lambda_akm = float(adaptive_config.get("lambda_akm", 0.0)) if bool(adaptive_config.get("enabled", False)) else 0.0
 
@@ -182,6 +281,7 @@ def run_epoch(
             supcon_loss = torch.zeros((), device=device)
             supcon_views = outputs["projection"].unsqueeze(1)
             view_outputs: Optional[Dict[str, torch.Tensor]] = None
+            supcon_diag = zero_supcon_diagnostics()
 
             if lambda_supcon > 0.0:
                 if model.view_builder is not None:
@@ -212,6 +312,17 @@ def run_epoch(
                         domains=domains,
                         sample_ids=sample_ids,
                     )
+                    with torch.no_grad():
+                        supcon_diag = supcon_positive_pair_diagnostics(
+                            supcon_views,
+                            labels=labels,
+                            domains=domains,
+                            sample_ids=sample_ids,
+                            include_same_domain_same_class=bool(
+                                loss_config.get("include_same_domain_same_class", True)
+                            ),
+                            positive_mode=str(loss_config.get("supcon_positive_mode", "all_views")),
+                        )
                 else:
                     raise ValueError(
                         f"Unsupported contrastive_loss_type '{contrastive_loss_type}'. "
@@ -253,6 +364,17 @@ def run_epoch(
         total_ce += float(ce_loss.item())
         total_supcon += float(supcon_loss.item())
         total_akm += float(akm_loss.item())
+        supcon_diag_anchors = float(supcon_diag["supcon_num_anchors"])
+        total_supcon_diag_anchors += supcon_diag_anchors
+        total_supcon_diag_positive_pairs += float(supcon_diag["supcon_num_valid_positive_pairs"])
+        total_supcon_diag_anchors_with_positive += (
+            float(supcon_diag["supcon_frac_anchors_with_positive"]) * supcon_diag_anchors
+        )
+        if supcon_diag_anchors > 0:
+            min_supcon_diag_positives = min(
+                min_supcon_diag_positives,
+                float(supcon_diag["supcon_min_positives_per_anchor"]),
+            )
         if contrastive_loss_type == "subcenter_prototype" and isinstance(
             contrastive_loss_fn,
             SubCenterPrototypeContrastiveLoss,
@@ -278,6 +400,13 @@ def run_epoch(
             "loss_total": 0.0,
             "loss_ce": 0.0,
             "loss_supcon": 0.0,
+            "loss_supcon_weighted": 0.0,
+            "loss_supcon_to_ce": 0.0,
+            "lambda_supcon_target": lambda_supcon_target,
+            "lambda_supcon_effective": lambda_supcon,
+            "lambda_supcon_warmup_epochs": lambda_supcon_warmup_epochs,
+            "effective_pair_margin_weight": effective_pair_margin_weight,
+            **zero_supcon_diagnostics(),
             "loss_pair_margin": 0.0,
             "akm_loss": 0.0,
             "labels": [],
@@ -285,14 +414,39 @@ def run_epoch(
             "shape_debug": shape_debug or {},
         }
 
+    mean_ce = total_ce / max(1, len(loader))
+    mean_supcon = total_supcon / max(1, len(loader))
+    weighted_supcon = lambda_supcon * mean_supcon
+    supcon_to_ce = weighted_supcon / (mean_ce + 1e-12)
+    if total_supcon_diag_anchors > 0:
+        supcon_diagnostics = {
+            "supcon_num_anchors": total_supcon_diag_anchors,
+            "supcon_mean_positives_per_anchor": (
+                total_supcon_diag_positive_pairs / total_supcon_diag_anchors
+            ),
+            "supcon_min_positives_per_anchor": min_supcon_diag_positives,
+            "supcon_frac_anchors_with_positive": (
+                total_supcon_diag_anchors_with_positive / total_supcon_diag_anchors
+            ),
+            "supcon_num_valid_positive_pairs": total_supcon_diag_positive_pairs,
+        }
+    else:
+        supcon_diagnostics = zero_supcon_diagnostics()
     labels_np = np.concatenate(all_labels, axis=0)
     predictions_np = np.concatenate(all_predictions, axis=0)
     metrics = metric_dict(labels_np, predictions_np)
     metrics.update(
         {
             "loss_total": total_loss / max(1, len(loader)),
-            "loss_ce": total_ce / max(1, len(loader)),
-            "loss_supcon": total_supcon / max(1, len(loader)),
+            "loss_ce": mean_ce,
+            "loss_supcon": mean_supcon,
+            "loss_supcon_weighted": weighted_supcon,
+            "loss_supcon_to_ce": supcon_to_ce,
+            "lambda_supcon_target": lambda_supcon_target,
+            "lambda_supcon_effective": lambda_supcon,
+            "lambda_supcon_warmup_epochs": lambda_supcon_warmup_epochs,
+            "effective_pair_margin_weight": effective_pair_margin_weight,
+            **supcon_diagnostics,
             "loss_pair_margin": total_pair_margin / max(1, len(loader)),
             "akm_loss": total_akm / max(1, len(loader)),
             "labels": labels_np.tolist(),
@@ -723,6 +877,10 @@ def run_single_experiment(
     history: List[Dict[str, Any]] = []
 
     for epoch in range(1, epochs + 1):
+        epoch_loss_config = loss_config_for_lambda(
+            loss_config,
+            scheduled_lambda_supcon(loss_config, epoch),
+        )
         train_metrics = run_epoch(
             model,
             train_loader,
@@ -730,7 +888,7 @@ def run_single_experiment(
             scheduler,
             scheduler_step_mode,
             device,
-            loss_config,
+            epoch_loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
             adaptive_kmargin_loss_fn,
@@ -745,7 +903,7 @@ def run_single_experiment(
                 scheduler,
                 scheduler_step_mode,
                 device,
-                loss_config,
+                epoch_loss_config,
                 contrastive_loss_type,
                 contrastive_loss_fn,
                 adaptive_kmargin_loss_fn,
@@ -820,6 +978,10 @@ def run_single_experiment(
         raise RuntimeError("Training completed without producing a checkpoint.")
 
     model.load_state_dict(best_state)
+    test_loss_config = loss_config_for_lambda(
+        loss_config,
+        float(loss_config.get("lambda_supcon", 0.0)),
+    )
     with torch.no_grad():
         test_metrics = run_epoch(
             model,
@@ -828,7 +990,7 @@ def run_single_experiment(
             scheduler,
             scheduler_step_mode,
             device,
-            loss_config,
+            test_loss_config,
             contrastive_loss_type,
             contrastive_loss_fn,
             adaptive_kmargin_loss_fn,
@@ -857,6 +1019,13 @@ def run_single_experiment(
         "losses_enabled": {
             "contrastive_loss_type": contrastive_loss_type,
             "lambda_supcon": config["losses"].get("lambda_supcon", 0.0),
+            "lambda_supcon_warmup_epochs": int(
+                config["losses"].get("lambda_supcon_warmup_epochs", 0)
+            ),
+            "temperature": float(config["losses"].get("temperature", 0.2)),
+            "include_same_domain_same_class": bool(
+                config["losses"].get("include_same_domain_same_class", True)
+            ),
             "supcon_positive_mode": (
                 config["losses"].get("supcon_positive_mode", "all_views")
                 if contrastive_loss_type == "pairwise_supcon"
@@ -864,6 +1033,10 @@ def run_single_experiment(
             ),
             "prototype_num_subcenters": int(config["model"].get("prototype_num_subcenters", 0)),
             "lambda_pair_margin": float(config["losses"].get("lambda_pair_margin", 0.0)),
+            "effective_pair_margin_weight": (
+                float(config["losses"].get("lambda_supcon", 0.0))
+                * float(config["losses"].get("lambda_pair_margin", 0.0))
+            ),
             "prototype_pair_margins": list(config["losses"].get("prototype_pair_margins", []) or []),
             "dynamic_pair_margin": {
                 "enabled": bool(dynamic_pair_margin_enabled),
@@ -933,13 +1106,19 @@ def main() -> None:
     all_results: List[Dict[str, Any]] = []
     for target_env in target_envs:
         for seed in config.get("seed_list", [42]):
+            run_seed = int(seed)
             env_name = target_env or "random_split"
-            run_dir = output_root / config["mode"] / experiment_name / f"target_{env_name}" / f"seed_{seed}"
+            run_dir = output_root / config["mode"] / experiment_name / f"target_{env_name}" / f"seed_{run_seed}"
             run_dir.mkdir(parents=True, exist_ok=True)
+            run_config = copy.deepcopy(config)
+            run_config["target_env"] = target_env
+            run_config["seed_list"] = [run_seed]
+            run_config["device_actual"] = str(device)
+            save_json(run_dir / "resolved_config.json", run_config)
             result = run_single_experiment(
                 dataset=dataset,
-                config=config,
-                seed=int(seed),
+                config=run_config,
+                seed=run_seed,
                 target_env=target_env,
                 output_dir=run_dir,
                 device=device,
