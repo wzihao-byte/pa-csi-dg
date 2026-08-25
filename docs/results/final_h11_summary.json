@@ -1,0 +1,41 @@
+{
+  "schema_version": "published-pa-csi-dg-summary/v1",
+  "status": "complete",
+  "protocol": {
+    "targets": ["E1", "E2", "E3"],
+    "seeds": [42, 52, 62],
+    "factorial_runs": 36,
+    "level8_runs": 9,
+    "checkpoint_selection": "source validation accuracy",
+    "target_evaluation": "after checkpoint freeze"
+  },
+  "macro_f1_percent": {
+    "H00_global_CE": 84.92,
+    "H01_global_SupCon": 84.56,
+    "H10_residual_TPP_CE": 88.59,
+    "H11_residual_TPP_SupCon": 90.26
+  },
+  "paired_effects_percentage_points": {
+    "TPP_without_SupCon": 3.68,
+    "TPP_with_SupCon": 5.70,
+    "SupCon_on_global": -0.36,
+    "SupCon_on_TPP": 1.66,
+    "TPP_x_SupCon_interaction": 2.02
+  },
+  "class_f1_percent": [
+    {"class_id": 0, "class_name": "No movement", "H00": 96.66, "H11": 98.25, "delta": 1.59},
+    {"class_id": 1, "class_name": "Falling", "H00": 58.71, "H11": 73.41, "delta": 14.70},
+    {"class_id": 2, "class_name": "Walking", "H00": 92.03, "H11": 96.86, "delta": 4.83},
+    {"class_id": 3, "class_name": "Sitting / standing", "H00": 96.13, "H11": 96.55, "delta": 0.41},
+    {"class_id": 4, "class_name": "Turning", "H00": 66.18, "H11": 77.75, "delta": 11.57},
+    {"class_id": 5, "class_name": "Picking up a pen", "H00": 99.78, "H11": 98.72, "delta": -1.06}
+  ],
+  "h11_row_normalized_confusion_percent": [
+    [98.685185, 0.083333, 0.009259, 0.027778, 0.953704, 0.240741],
+    [2.472222, 66.972222, 1.000000, 0.194444, 29.250000, 0.111111],
+    [0.527778, 1.944444, 95.194444, 0.000000, 2.305556, 0.027778],
+    [2.444444, 1.222222, 0.000000, 94.111111, 2.222222, 0.000000],
+    [0.972222, 11.388889, 0.250000, 0.138889, 87.166667, 0.083333],
+    [0.444444, 0.111111, 0.000000, 0.166667, 0.055556, 99.222222]
+  ]
+}
