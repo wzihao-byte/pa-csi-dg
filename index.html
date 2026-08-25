@@ -3,353 +3,267 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PA-CSI Domain Generalization</title>
+  <meta name="description" content="PA-CSI domain generalization with residual temporal pyramid pooling and supervised contrastive learning.">
+  <title>PA-CSI DG · Residual TPP × SupCon</title>
   <style>
     :root {
       color-scheme: light;
-      --ink: #18212f;
-      --muted: #5d6978;
-      --line: #d9e0e8;
+      --ink: #182235;
+      --muted: #5c6a7d;
+      --line: #d8e0e9;
+      --wash: #f4f7fb;
       --panel: #ffffff;
-      --wash: #f4f7fa;
-      --blue: #1e63b6;
-      --green: #23715b;
-      --red: #9a3e3e;
+      --navy: #111c2e;
+      --blue: #2f63d8;
+      --purple: #7450b8;
+      --green: #16765d;
+      --soft-purple: #f1ecfa;
     }
-
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       background: var(--wash);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
     }
-
-    a {
-      color: var(--blue);
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .hero {
-      background: #101820;
-      color: #fff;
-      border-bottom: 1px solid #0b1118;
-    }
-
-    .wrap {
-      width: min(1120px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .hero .wrap {
-      min-height: 68vh;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
-      gap: 48px;
-      align-items: center;
-      padding: 56px 0 48px;
-    }
-
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1120px, calc(100% - 40px)); margin: 0 auto; }
+    .hero { color: #fff; background: var(--navy); border-bottom: 4px solid var(--purple); }
+    .hero .wrap { padding: 64px 0 56px; }
     .eyebrow {
-      margin: 0 0 16px;
-      color: #9cc8ff;
+      margin: 0 0 12px;
+      color: #a8c7ff;
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
-
     h1 {
+      max-width: 920px;
       margin: 0;
-      max-width: 760px;
-      font-size: clamp(42px, 7vw, 78px);
-      line-height: 0.95;
-      letter-spacing: 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1;
+      letter-spacing: -.045em;
     }
-
-    .lead {
-      max-width: 690px;
-      margin: 24px 0 0;
-      color: #ced9e6;
-      font-size: 19px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
+    .lead { max-width: 820px; margin: 24px 0 0; color: #cdd8e7; font-size: 19px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .button {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
       min-height: 42px;
       padding: 0 16px;
-      border: 1px solid #6ba4e8;
-      border-radius: 6px;
       color: #fff;
+      border: 1px solid #7ea8ef;
+      border-radius: 6px;
       font-weight: 700;
     }
-
-    .button.secondary {
-      border-color: #52606f;
-      color: #dbe5ef;
-    }
-
-    .system-map {
-      display: grid;
-      gap: 12px;
-      padding: 18px;
-      background: #162230;
-      border: 1px solid #29394c;
-      border-radius: 8px;
-    }
-
-    .node {
-      padding: 14px;
-      border: 1px solid #314459;
-      border-radius: 6px;
-      background: #1d2b3a;
-    }
-
-    .node strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #fff;
-    }
-
-    .node span {
-      color: #b9c7d5;
-      font-size: 14px;
-    }
-
-    main {
-      padding: 48px 0 68px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 20px;
-    }
-
-    section + section {
-      margin-top: 48px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 28px;
-      letter-spacing: 0;
-    }
-
-    .section-lead {
-      margin: 8px 0 0;
-      max-width: 780px;
-      color: var(--muted);
-    }
-
-    .card {
-      min-height: 186px;
-      padding: 20px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: 8px;
-    }
-
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      letter-spacing: 0;
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--muted);
-    }
-
-    .tag {
-      display: inline-flex;
-      margin-top: 18px;
-      padding: 3px 9px;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .commands {
-      display: grid;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    pre {
-      overflow-x: auto;
-      margin: 0;
-      padding: 16px;
-      background: #101820;
-      color: #edf4fb;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-
-    .status {
+    .button.secondary { border-color: #607086; color: #dce6f2; }
+    main { padding: 44px 0 72px; }
+    section + section { margin-top: 52px; }
+    h2 { margin: 0; font-size: 29px; letter-spacing: -.02em; }
+    .section-lead { max-width: 820px; margin: 8px 0 0; color: var(--muted); }
+    .metrics {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 20px;
+      gap: 14px;
+      margin-top: 22px;
     }
-
-    .metric {
+    .metric, .panel, .code-card { background: var(--panel); border: 1px solid var(--line); border-radius: 9px; }
+    .metric { padding: 18px; }
+    .metric b { display: block; color: var(--green); font-size: 28px; line-height: 1.2; }
+    .metric span { color: var(--muted); font-size: 13px; }
+    .result-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(300px, .75fr);
+      gap: 18px;
+      margin-top: 22px;
+      align-items: start;
+    }
+    .panel { padding: 20px; }
+    .panel h3 { margin: 0 0 8px; font-size: 20px; }
+    .panel p { margin: 0; color: var(--muted); }
+    .arm-list { display: grid; gap: 11px; margin-top: 18px; }
+    .arm { display: grid; grid-template-columns: 54px 1fr auto; gap: 12px; align-items: center; }
+    .arm-label { font-weight: 700; }
+    .arm-name { color: var(--muted); }
+    .arm-score { font-variant-numeric: tabular-nums; font-weight: 700; }
+    .bar-track { grid-column: 2 / 4; height: 8px; background: #edf1f6; border-radius: 99px; overflow: hidden; }
+    .bar { height: 100%; background: var(--blue); }
+    .bar.h11 { background: var(--purple); }
+    .effect {
+      margin-top: 18px;
+      padding: 14px;
+      color: #3d2c67;
+      background: var(--soft-purple);
+      border-left: 4px solid var(--purple);
+    }
+    .figure {
+      margin: 22px 0 0;
       padding: 16px;
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 8px;
+      border-radius: 9px;
     }
-
-    .metric b {
-      display: block;
-      font-size: 24px;
-      color: var(--green);
+    .figure img { display: block; width: 100%; height: auto; }
+    figcaption { margin-top: 10px; color: var(--muted); font-size: 14px; }
+    .table-wrap { margin-top: 20px; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; background: var(--panel); }
+    th, td { padding: 11px 12px; border-bottom: 1px solid var(--line); text-align: right; }
+    th:first-child, td:first-child { text-align: left; }
+    th { color: var(--muted); font-size: 13px; }
+    td { font-variant-numeric: tabular-nums; }
+    .positive { color: var(--green); font-weight: 700; }
+    .negative { color: #a04444; }
+    .code-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
     }
-
-    .metric span {
-      color: var(--muted);
-      font-size: 13px;
+    .code-card { padding: 18px; }
+    .code-card h3 { margin: 0 0 8px; font-size: 18px; }
+    .code-card p { margin: 0 0 13px; color: var(--muted); }
+    .code-card a { font-weight: 700; }
+    .downloads { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .downloads a {
+      padding: 7px 11px;
+      color: var(--ink);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      font-weight: 600;
     }
-
     footer {
       padding: 26px 0;
-      border-top: 1px solid var(--line);
       color: var(--muted);
       background: #fff;
+      border-top: 1px solid var(--line);
       font-size: 14px;
     }
-
-    @media (max-width: 820px) {
-      .hero .wrap,
-      .grid,
-      .status {
-        grid-template-columns: 1fr;
-      }
-
-      .hero .wrap {
-        min-height: auto;
-        gap: 28px;
-        padding-top: 40px;
-      }
-
-      h1 {
-        font-size: clamp(38px, 13vw, 58px);
-      }
+    @media (max-width: 860px) {
+      .metrics, .code-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .result-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 580px) {
+      .wrap { width: min(100% - 24px, 1120px); }
+      .hero .wrap { padding: 44px 0 40px; }
+      .metrics, .code-grid { grid-template-columns: 1fr; }
+      .arm { grid-template-columns: 48px 1fr auto; }
     }
   </style>
 </head>
 <body>
   <header class="hero">
     <div class="wrap">
-      <div>
-        <p class="eyebrow">Wi-Fi CSI Human Activity Recognition</p>
-        <h1>PA-CSI Domain Generalization</h1>
-        <p class="lead">
-          A focused PyTorch experiment path for leave-one-environment-out PA-CSI research,
-          currently centered on baseline training, supervised contrastive learning, and
-          subcenter prototype SupCon with directed pair margins.
-        </p>
-        <div class="actions">
-          <a class="button" href="PA_CSI_DG.md">Read DG Notes</a>
-          <a class="button secondary" href="https://github.com/wzihao-byte/pa-csi-dg">Open Repository</a>
-        </div>
-      </div>
-      <div class="system-map" aria-label="Experiment pipeline">
-        <div class="node">
-          <strong>MultiEnv CSI</strong>
-          <span>Amplitude, phase, and label arrays per environment.</span>
-        </div>
-        <div class="node">
-          <strong>LOEO Protocol</strong>
-          <span>One target environment is held out for testing.</span>
-        </div>
-        <div class="node">
-          <strong>PA-CSI Encoder</strong>
-          <span>Temporal and channel modeling with fused amplitude-phase features.</span>
-        </div>
-        <div class="node">
-          <strong>DG Objective</strong>
-          <span>CE, SupCon, or subcenter prototype SupCon.</span>
-        </div>
+      <p class="eyebrow">Wi-Fi CSI · Leave-one-environment-out HAR</p>
+      <h1>Residual TPP × SupCon for PA-CSI domain generalization</h1>
+      <p class="lead">
+        A matched 2×2 study showing that bounded multi-resolution temporal structure and
+        supervised contrastive learning are complementary under a locked three-environment protocol.
+      </p>
+      <div class="actions">
+        <a class="button" href="https://github.com/wzihao-byte/pa-csi-dg/tree/codex/supcon-sweep-results">Browse current code</a>
+        <a class="button secondary" href="#results">View results</a>
       </div>
     </div>
   </header>
-
   <main>
     <div class="wrap">
-      <section>
-        <h2>Retained Experiment Lines</h2>
+      <section id="results">
+        <h2>Completed matched experiment</h2>
         <p class="section-lead">
-          The active codebase has been reduced to the methods currently used for the DG study.
+          Three held-out environments, three seeds, domain-class-balanced batches, 200 epochs,
+          matched splits and sampler draws, and delayed target evaluation after checkpoint freeze.
         </p>
-        <div class="grid">
-          <article class="card">
-            <h3>Baseline</h3>
-            <p>Cross-entropy training on source environments, evaluated on the held-out target environment.</p>
-            <span class="tag">CE</span>
-          </article>
-          <article class="card">
-            <h3>SupCon</h3>
-            <p>Projection embeddings are trained with supervised contrastive learning alongside classification.</p>
-            <span class="tag">CE + SupCon</span>
-          </article>
-          <article class="card">
-            <h3>Subcenter SupCon</h3>
-            <p>Class geometry is represented by learnable subcenters, with optional directed pair margins.</p>
-            <span class="tag">K centers + margins</span>
-          </article>
+        <div class="metrics">
+          <div class="metric"><b>90.26%</b><span>H11 mean macro-F1</span></div>
+          <div class="metric"><b>+5.34 pp</b><span>H11 over global CE</span></div>
+          <div class="metric"><b>+2.02 pp</b><span>TPP × SupCon interaction</span></div>
+          <div class="metric"><b>36</b><span>matched factorial runs</span></div>
+        </div>
+        <div class="result-grid">
+          <div class="panel">
+            <h3>Macro-F1 by factorial arm</h3>
+            <p>Residual TPP supplies the main gain; SupCon becomes beneficial after temporal structure is exposed.</p>
+            <div class="arm-list">
+              <div class="arm"><span class="arm-label">H00</span><span class="arm-name">Global CE</span><span class="arm-score">84.92%</span><div class="bar-track"><div class="bar" style="width:84.92%"></div></div></div>
+              <div class="arm"><span class="arm-label">H01</span><span class="arm-name">Global + SupCon</span><span class="arm-score">84.56%</span><div class="bar-track"><div class="bar" style="width:84.56%"></div></div></div>
+              <div class="arm"><span class="arm-label">H10</span><span class="arm-name">Residual TPP</span><span class="arm-score">88.59%</span><div class="bar-track"><div class="bar" style="width:88.59%"></div></div></div>
+              <div class="arm"><span class="arm-label">H11</span><span class="arm-name">Residual TPP + SupCon</span><span class="arm-score">90.26%</span><div class="bar-track"><div class="bar h11" style="width:90.26%"></div></div></div>
+            </div>
+          </div>
+          <aside class="panel">
+            <h3>Final H11 carrier</h3>
+            <p>TPP levels {1, 2, 4, 8}, max pooling, preserved global representation, residual scale 0.25, SupCon λ=0.05 and τ=0.2.</p>
+            <div class="effect"><strong>Hard-pair gain</strong><br>Falling +14.70 pp F1<br>Turning +11.57 pp F1</div>
+          </aside>
         </div>
       </section>
-
       <section>
-        <h2>Run Entry Points</h2>
-        <p class="section-lead">Use the retained JSON presets under <code>configs/</code>.</p>
-        <div class="commands">
-          <pre><code>python train_dg.py --config configs/baseline_pa_csi_dg_paper_aligned.json</code></pre>
-          <pre><code>python train_dg.py --config configs/pa_csi_dg_supcon_paper_aligned.json</code></pre>
-          <pre><code>python train_dg.py --config configs/pa_csi_dg_subcenter_proto_layer2_200e_k3_margin_e2.json --target-env E2</code></pre>
+        <h2>All-class confusion matrix</h2>
+        <p class="section-lead">Aggregated over E1–E3 and seeds 42/52/62, then normalized within each true class.</p>
+        <figure class="figure">
+          <img src="assets/new_experiment_h11_confusion_matrix.png" alt="Row-normalized six-class H11 confusion matrix">
+          <figcaption>
+            The remaining error is concentrated in falling → turning (29.25%) and turning → falling (11.39%);
+            the other four diagonal recalls are at least 94.11%.
+          </figcaption>
+        </figure>
+      </section>
+      <section>
+        <h2>Class-level results</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Class</th><th>H00 F1</th><th>H11 F1</th><th>Change</th></tr></thead>
+            <tbody>
+              <tr><td>C0 No movement</td><td>96.66%</td><td>98.25%</td><td class="positive">+1.59 pp</td></tr>
+              <tr><td>C1 Falling</td><td>58.71%</td><td>73.41%</td><td class="positive">+14.70 pp</td></tr>
+              <tr><td>C2 Walking</td><td>92.03%</td><td>96.86%</td><td class="positive">+4.83 pp</td></tr>
+              <tr><td>C3 Sitting / standing</td><td>96.13%</td><td>96.55%</td><td class="positive">+0.41 pp</td></tr>
+              <tr><td>C4 Turning</td><td>66.18%</td><td>77.75%</td><td class="positive">+11.57 pp</td></tr>
+              <tr><td>C5 Picking up a pen</td><td>99.78%</td><td>98.72%</td><td class="negative">−1.06 pp</td></tr>
+            </tbody>
+          </table>
         </div>
       </section>
-
-      <section>
-        <h2>Current Scope</h2>
-        <p class="section-lead">
-          AdaIN, NARC, SimMMDG, and bridge ablations have been removed from the active path to keep
-          the project aligned with the current baseline/SupCon/subcenter SupCon study.
-        </p>
-        <div class="status">
-          <div class="metric"><b>3</b><span>active method families</span></div>
-          <div class="metric"><b>LOEO</b><span>primary DG protocol</span></div>
-          <div class="metric"><b>E1-E3</b><span>environment presets</span></div>
-          <div class="metric"><b>200e</b><span>full-run comparison presets</span></div>
+      <section id="code">
+        <h2>Published code and configuration</h2>
+        <p class="section-lead">The first release focuses on the core implementation, locked experiment runners, portable configuration, and compact result summaries.</p>
+        <div class="code-grid">
+          <article class="code-card">
+            <h3>Core training logic</h3>
+            <p>Dataset/split logic, model carrier, DG losses, samplers, training and evaluation.</p>
+            <a href="https://github.com/wzihao-byte/pa-csi-dg/tree/codex/supcon-sweep-results">Open source tree →</a>
+          </article>
+          <article class="code-card">
+            <h3>Matched factorial</h3>
+            <p>Audited H00/H01/H10/H11 generation, execution, checkpoint replay and analysis.</p>
+            <a href="https://github.com/wzihao-byte/pa-csi-dg/tree/codex/supcon-sweep-results/experiments/supcon_tpp_legacy_reproduction">Open experiment →</a>
+          </article>
+          <article class="code-card">
+            <h3>Level-8 ablation</h3>
+            <p>Locked L1248 follow-up with paired target-by-seed analysis and safety checks.</p>
+            <a href="https://github.com/wzihao-byte/pa-csi-dg/tree/codex/supcon-sweep-results/experiments/tpp_level8_ablation">Open experiment →</a>
+          </article>
+        </div>
+        <div class="downloads">
+          <a href="https://github.com/wzihao-byte/pa-csi-dg/blob/codex/supcon-sweep-results/configs/published_h11_l1248_config.json">Final configuration</a>
+          <a href="results/final_h11_summary.json">Result summary JSON</a>
+          <a href="results/class_f1.csv">Class F1 CSV</a>
+          <a href="assets/new_experiment_h11_confusion_matrix.csv">Confusion CSV</a>
+          <a href="assets/new_experiment_h11_confusion_matrix.pdf">Confusion PDF</a>
+          <a href="assets/new_experiment_h11_confusion_matrix.svg">Confusion SVG</a>
         </div>
       </section>
     </div>
   </main>
-
   <footer>
     <div class="wrap">
-      PA-CSI DG research workspace. Source: <a href="https://github.com/wzihao-byte/pa-csi-dg">github.com/wzihao-byte/pa-csi-dg</a>
+      PA-CSI DG research code and compact results · Updated August 25, 2026 ·
+      <a href="https://github.com/wzihao-byte/pa-csi-dg">GitHub repository</a>
     </div>
   </footer>
 </body>
