@@ -783,6 +783,8 @@ def run_single_experiment(
         val_ratio=float(config["split"].get("val_ratio", 0.2)),
         test_ratio=float(config["split"].get("test_ratio", 0.2)),
         target_env=target_env,
+        inner_validation=str(config["split"].get("inner_validation", "stratified_holdout")),
+        loso_validation_env=config["split"].get("loso_validation_env"),
     )
     split_manifest = build_split_manifest(dataset, split)
     save_json(output_dir / "split_manifest.json", split_manifest)

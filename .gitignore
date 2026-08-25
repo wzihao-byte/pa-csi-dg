@@ -19,6 +19,8 @@ outputs/
 outputs_*/
 experiment_outputs/
 results/
+!docs/results/
+!docs/results/**
 *.pt
 *.pth
 *.npy
@@ -27,6 +29,8 @@ results/
 reports/
 archives/
 logs/
+tmp/
+output/
 analysis/domain_shift/
 analysis/k_estimate/
 *.zip
