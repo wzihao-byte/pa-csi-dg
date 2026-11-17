@@ -1,0 +1,8 @@
+{
+  "schema_version": "tpp-level8-h10-bundle/v1",
+  "protocol_lock_sha256": "5e6b9e3651ea1c12acf90443e9b2a05ef68ba68e053f8bbbd6ddf3f0932de17e",
+  "registry_sha256": "c80449ff3fb036e085d90a2032d9f2a9f94db5b1797eb8bb09064f549682daa6",
+  "reference_registry_sha256": "66364dcc91cde34247baf33060d51e3b4c93d0e450bee0cd4acb9af7f33b0a8b",
+  "execution_lock_sha256": "fb488b78eec60a54454efefbae2115fd9faf7635b2cfe45176eb148bf28cda7c",
+  "job_count": 9
+}

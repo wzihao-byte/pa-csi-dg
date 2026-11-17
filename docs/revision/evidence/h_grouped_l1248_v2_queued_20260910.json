@@ -1,0 +1,47 @@
+{
+  "at": "2026-09-10T09:34:41.327325+00:00",
+  "status": "queued_after_multienv_inputs",
+  "jobs": 18,
+  "widar_excluded_by_user": true,
+  "bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+  "qa_approval_sha256": "6b495b82feaffd6bb25c495ebe8120b31dc27a60d917d6dc63cd51afd74cf26d",
+  "queue_owner": {
+    "pid": 24076,
+    "process_create_time": 1789032829.9736595,
+    "bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+    "command": [
+      "C:\\ProgramData\\anaconda3\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\bundle\\code\\queue_after_inputs.py"
+    ],
+    "waiting_for": {
+      "pid": 18384,
+      "process_create_time": 1789026459.2377293,
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "-X",
+        "utf8",
+        "analysis/continue_inputs_after_controls.py",
+        "--controls-pid",
+        "5532",
+        "--controls-bundle",
+        "D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1",
+        "--input-bundle",
+        "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+        "--output",
+        "D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v2"
+      ],
+      "coordinator_output": "D:/pa-csi-dg-revision-runtime/coordinators/controls_to_inputs_v2",
+      "input_bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "input_bundle_sha256": "4c49208ea104e05f18f338501342dcdc73aa03fe836c95cc1a56dcd0479d6619",
+      "widar_cancelled_by_user": true
+    }
+  },
+  "queue_owner_sha256": "73f3882b1adbdecde194b8a9885604412a0e12f83260807acfb7430f7dd05a53",
+  "formal_h_training_started": false,
+  "widar_training_started": false,
+  "obsolete_publication_waiters_retired": true,
+  "heartbeat_updated_to_exclude_widar": true
+}

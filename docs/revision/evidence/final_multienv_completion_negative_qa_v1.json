@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-09-10T12:59:49.2787047Z",
+  "passed": true,
+  "scope": "Current-scope terminal verifier rejects incomplete upstream evidence",
+  "return_code": 1,
+  "completion_record_created": false,
+  "verifier_sha256": "cb305b9df4aee38dd26de62aeb0749a8062b1f52fdeb240fbf3de59e35cf59d5",
+  "log": "D:\\pa-csi-dg-revision-runtime\\qa\\final_multienv_completion_negative_v1.log",
+  "log_sha256": "aa475797be43570a07fb22ed6bcf68275aaf964cc4adf840f3461550d70d337d",
+  "required_multienv_runs": 180,
+  "required_source_analyses": 117,
+  "required_h_supplement_runs": 18,
+  "widar_performance_required": false
+}

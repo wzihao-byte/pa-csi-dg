@@ -1,0 +1,82 @@
+{
+  "schema": "h-grouped-sealed-pair-verified/v1",
+  "verified_at": "2026-09-21T02:19:55.360711+00:00",
+  "target": "E3",
+  "seed": 62,
+  "bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+  "automatic_pair_barrier_sha256": "9873fd2a0fae170cdaa04bc7e8d61c6f6926a69cdfd7a4debb7a9b513bb0c2e0",
+  "paired_initialization_verified": true,
+  "complete_paired_sampler_verified": true,
+  "source_train_val_identity_disjoint": true,
+  "runs": {
+    "H10": {
+      "job_id": "E3_HG_H10_62",
+      "completion_sha256": "58eccf9332d73010c338a41c687234e1c03ac330bd0e7f5dba53bd69410d8ae9",
+      "seal_sha256": "40f38455f695e9fa93d6bb834b942765d39edb194ee8a3ca882e1cd6d42ca52b",
+      "health": {
+        "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H10\\attempt_001\\payload\\run",
+        "checkpoint_sha256": "861f9acbf180491095b14a6f5eca2cf0a458b8ca59e0e63c1270ad72371a3be0",
+        "parameter_count": 4786294,
+        "sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86",
+        "split_hashes": {
+          "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+          "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+          "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+        },
+        "target_prediction_count": 3000,
+        "target_predictions_sha256": "1e74993a6ea4448e357b78025e18ce4f39f2a8daae35cbb52bebfc3c653f482f",
+        "confusion_sha256": "edd72322a346ab7830cd705d2e4bb1dad595b68bab571f8090db0dc9b6372484",
+        "metrics_sha256": "52b2f0af900a920e0130cc9e725ceb435cb452012975486d04708a0104cb6bab",
+        "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+        "last_tied_best_source_epoch": 116,
+        "group_identity_overlap": false
+      },
+      "test_metrics": {
+        "accuracy": 0.8623333333333333,
+        "precision_macro": 0.8787273403372234,
+        "recall_macro": 0.8670833333333333,
+        "f1_macro": 0.8595431064100693
+      },
+      "completed_at": "2026-09-20T19:17:23.554732+00:00"
+    },
+    "H11": {
+      "job_id": "E3_HG_H11_62",
+      "completion_sha256": "336cff7a858c2ac5f189c213de399a9f510580c711372b6701cb08320bbc8ba0",
+      "seal_sha256": "573cbdb3e66cdadb00bb0e74de583243364dce5784504855a58ed62c8baba9f6",
+      "health": {
+        "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H11\\attempt_001\\payload\\run",
+        "checkpoint_sha256": "d5f44d28351a9986c7303bfc7e194ef69e6ceef5547a8f1bd172567bd3895ae0",
+        "parameter_count": 4786294,
+        "sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86",
+        "split_hashes": {
+          "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+          "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+          "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+        },
+        "target_prediction_count": 3000,
+        "target_predictions_sha256": "c8dba1ede4e81e91a66d22ddad94476dc9eb4cb3e568af665893ebd621ebf407",
+        "confusion_sha256": "d613387dd9dac77278d0f586b271088ee7ab464825c58cf9110d241584647519",
+        "metrics_sha256": "9a1f04d370dafa0366fac1a1409090730e5ec1635ec1fcf56c13601025bce9e8",
+        "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+        "last_tied_best_source_epoch": 39,
+        "group_identity_overlap": false
+      },
+      "test_metrics": {
+        "accuracy": 0.9106666666666666,
+        "precision_macro": 0.9076740232696249,
+        "recall_macro": 0.8944444444444444,
+        "f1_macro": 0.8942941183888241
+      },
+      "completed_at": "2026-09-21T02:18:57.963484+00:00"
+    }
+  },
+  "signed_H11_minus_H10_percentage_points": {
+    "accuracy": 4.833333333333334,
+    "precision_macro": 2.8946682932401435,
+    "recall_macro": 2.736111111111106,
+    "f1_macro": 3.4751011978754853
+  },
+  "population_inference_performed": false,
+  "aggregate_conclusion_available": false,
+  "limitation": "One target/seed pair; preserve signed differences and await all nine pairs."
+}

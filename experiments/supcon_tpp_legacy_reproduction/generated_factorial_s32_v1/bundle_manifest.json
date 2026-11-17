@@ -1,0 +1,7 @@
+{
+  "schema_version": "factorial-s32-bundle/v1",
+  "protocol_lock_sha256": "2f0b2f25556bca98044354ea21bbfdc50f252242d4aae627dd4fac1e735e96e3",
+  "registry_sha256": "61b77bd6b3da7b14e7c201587e0f32b02dd1685fb4c8c0b4c35f003481e2bdd5",
+  "execution_lock_sha256": "916a4bc3ee24c11b135ec6d35ce7692e2d4b042e953cb5fa3b4b8984ef552ec2",
+  "job_count": 36
+}

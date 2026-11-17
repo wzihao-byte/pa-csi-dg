@@ -1,0 +1,67 @@
+{
+  "schema": "csi-revision-runtime-recovery/v1",
+  "recorded_at": "2026-09-11T06:14:49.0824938Z",
+  "reason": "Previously recorded active owners were no longer live; the interrupted current-scope chain was recovered without starting Widar or duplicating a live owner.",
+  "previous_owners_observed_dead": {
+    "controls_pid": 5532,
+    "inputs_pid": 18384,
+    "source_analysis_pid": 14820,
+    "h_queue_pid": 24076,
+    "final_evidence_pid": 24124,
+    "paper_assets_pid": 22196,
+    "fragment_pid": 27856,
+    "manuscript_pid": 30448,
+    "release_pid": 32360
+  },
+  "pre_recovery_progress": {
+    "controls_completed": 48,
+    "source_analyses_completed": 84,
+    "interrupted_control_job": "E2_C_MASK_REMOVE_501",
+    "committed_epoch_before_resume": 10
+  },
+  "controls_resume": {
+    "stale_lock_path": "D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1\\stale_runner_lock_1789106928925622100.json",
+    "stale_lock_sha256": "f073d7182b5c59abb60e514362c6fbd4dce5e1e38dc5c8533c6d75959b28d8f0",
+    "checkpoint": "resume_epoch_0010.pt",
+    "checkpoint_sha256": "75f5edfce0574f042d393f09171c86a7c4d06122fe162bae7865cfeeab3d2a84",
+    "resume_state_audit": {
+      "model_exact": true,
+      "optimizer_exact": true,
+      "rng_exact": true
+    },
+    "resumed_event_time": "2026-09-11T15:09:19.077862+09:00",
+    "latest_append_event": {
+      "time": "2026-09-11T15:14:31.234565+09:00",
+      "event": "epoch_committed",
+      "epoch": 14,
+      "source_macro_f1": 0.6745738991843586
+    }
+  },
+  "h_queue_recovery": {
+    "frozen_bundle": "outputs_h_grouped_l1248/v2/bundle",
+    "frozen_bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+    "qa_approval_sha256": "6b495b82feaffd6bb25c495ebe8120b31dc27a60d917d6dc63cd51afd74cf26d",
+    "superseded_owner_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\queue\\owner.interrupted_20260911_0605Z.json",
+    "superseded_owner_sha256": "73f3882b1adbdecde194b8a9885604412a0e12f83260807acfb7430f7dd05a53",
+    "current_owner_sha256": "fccee8a8b702fcd97fbfea74a81d3da4b46514499c1f86d1e837eac4322ebae8",
+    "training_started": false,
+    "widar_dependency": false
+  },
+  "current_owners": null,
+  "waiting_status_sha256": {
+    "coordinators/controls_to_inputs_v3/status.json": "6f53bcb0254fbabe4523afce79a06ab90ce4654a898609dc1eb5e42621045b42",
+    "coordinators/multienv_final_evidence_v2/status.json": "9a6a25ea227248a06f0d60dd759eca99d8723c1318ba052e073ffd3d56edc857",
+    "coordinators/multienv_paper_assets_v2/status.json": "8926ce0020d2e91919f141e5233bcae019938dfa34ec5c747038f97b75b26ca0",
+    "coordinators/multienv_fragment_v2/status.json": "0d00aa3ee11fc96e455c28387769d118d388d3f0879c703286ad70e2cc53fa9d",
+    "coordinators/multienv_manuscript_v2/status.json": "3ad59a40f365745b73efa219ca813337e8208faa5559ae84222492eac842a156",
+    "coordinators/multienv_release_v2/status.json": "0f34e7e36fda7d91c8ec144d446fa88934cb86ab93aa3a48d7be0f4e7624a186"
+  },
+  "widar_training_process_count": 0,
+  "recovery_guarantees": {
+    "mutable_training_json_used_for_live_progress": false,
+    "completed_artifacts_preserved": true,
+    "frozen_h_bundle_modified": false,
+    "widar_started": false,
+    "duplicate_owner_started": false
+  }
+}

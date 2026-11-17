@@ -1,0 +1,106 @@
+{
+  "checked_at_utc": "2026-10-14T07:29:24.828384+00:00",
+  "status": "passed_preview_only",
+  "full_input_qa_passed": false,
+  "records": [
+    {
+      "sample_id": "act_19_1",
+      "raw_sha256": "6cb50b8bfee290083bcdaf4cb23db3c82f8972cd4d18a83a04f0b075ce49f6f3",
+      "amplitude_max_abs_error_against_existing_scipy_helper": 0.0,
+      "phase_max_abs_error_against_existing_independent_formula": 0.0,
+      "wrap_count": 0,
+      "duplicate_timestamp_count": 0,
+      "duration_microseconds": 2997995,
+      "max_gap_microseconds": 13999,
+      "packets": 2825,
+      "raw_csi_shape": [
+        2825,
+        3,
+        3,
+        30
+      ],
+      "selected_csi_shape": [
+        2825,
+        90
+      ],
+      "selected_zero_amplitude_values": 77,
+      "perm_counts": {
+        "3,1,2": 2759,
+        "3,2,1": 65,
+        "1,2,3": 1
+      },
+      "perm_reapplied": false,
+      "physical_axis_export_confirmed": false
+    },
+    {
+      "sample_id": "act_55_1",
+      "raw_sha256": "1f965487d0a495f2f609966a8bfd7cda95e4637b722c616c4c25705c2baa77da",
+      "amplitude_max_abs_error_against_existing_scipy_helper": 0.0,
+      "phase_max_abs_error_against_existing_independent_formula": 0.0,
+      "wrap_count": 0,
+      "duplicate_timestamp_count": 0,
+      "duration_microseconds": 2999128,
+      "max_gap_microseconds": 3413,
+      "packets": 2945,
+      "raw_csi_shape": [
+        2945,
+        3,
+        3,
+        30
+      ],
+      "selected_csi_shape": [
+        2945,
+        90
+      ],
+      "selected_zero_amplitude_values": 39,
+      "perm_counts": {
+        "2,3,1": 2945
+      },
+      "perm_reapplied": false,
+      "physical_axis_export_confirmed": false
+    },
+    {
+      "sample_id": "act_91_1",
+      "raw_sha256": "a3a465e6d2e139d13491713b6746e44cecd85367df226a8ea4c67371945cfc5d",
+      "amplitude_max_abs_error_against_existing_scipy_helper": 0.0,
+      "phase_max_abs_error_against_existing_independent_formula": 0.0,
+      "wrap_count": 0,
+      "duplicate_timestamp_count": 0,
+      "duration_microseconds": 2999229,
+      "max_gap_microseconds": 3987,
+      "packets": 2959,
+      "raw_csi_shape": [
+        2959,
+        3,
+        3,
+        30
+      ],
+      "selected_csi_shape": [
+        2959,
+        90
+      ],
+      "selected_zero_amplitude_values": 9,
+      "perm_counts": {
+        "2,3,1": 2912,
+        "3,2,1": 47
+      },
+      "perm_reapplied": false,
+      "physical_axis_export_confirmed": false
+    }
+  ],
+  "boundary_tests_passed": 5,
+  "model_scores_read": false,
+  "gpu_used": false,
+  "references": {
+    "historical_independent_formula_sha256": "0dfcb0d07e2abd3cd2f6f505fdf32a68a7f266a6d0ed8174555e7c26b395204e",
+    "native_grid_helper_sha256": "c0fe31b8d6dbf41b5cec24858787603046c3f58b2411bfe2836cfc7dcd2ce8eb"
+  },
+  "software_sha256": {
+    "raw_io.py": "d9063c94a80a83e0980a3dc57cad1b47dc108c55a51bb3147a1167713fba26f1",
+    "prepare_inputs.py": "410034f640b1e01adb60ee4179f1dd99169d0e36ed21060127bb71f92816c5da",
+    "test_raw_io.py": "f04f331e129008ecdc5ce1998ecc523c9658367c1de070bce09543b1ed1859cf",
+    "acquisition.py": "1c56724a7e4a0460c8c5edf67255432c6fee4dfb4817246c9e018cc50dfb741c",
+    "test_acquisition.py": "8a7dc715f50908871023f803d65a20ec1323a1e7cc0f957104ddb2e33d63e214"
+  },
+  "acquisition_recovery_tests_passed": 3
+}

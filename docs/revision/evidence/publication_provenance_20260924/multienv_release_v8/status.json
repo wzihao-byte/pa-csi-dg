@@ -1,0 +1,18 @@
+{
+  "zip_verification": {
+    "all_member_bytes_verified": true,
+    "file_members": 13318,
+    "duplicate_or_extra_members": false,
+    "manifest_member_verified": true
+  },
+  "status": "completed",
+  "completed_at": "2026-09-24T06:05:00.641345+00:00",
+  "release": "D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v2",
+  "release_manifest_sha256": "a032223ed056026b7516ff8104d4acb6b499fa986a2b917d732908eca0c4ce2b",
+  "release_file_count": 13317,
+  "release_total_bytes": 768837416,
+  "archive": "D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v2.zip",
+  "archive_sha256": "ec9ea351ed0bc699958128e36e8c8472c72c5ac00060a4e4f7b8910b902222cf",
+  "published_externally": false,
+  "public_identifier": "AUTHOR_TO_SUPPLY_BEFORE_SUBMISSION"
+}

@@ -1,0 +1,572 @@
+{
+  "schema": "wimans-iotj-ojcoms-prospective-plan/v2",
+  "status": "full_storage_input_qa_passed_candidates_prepared_formal_source_qa_pending",
+  "venues": {
+    "primary": "IEEE Internet of Things Journal",
+    "backup": "IEEE Open Journal of the Communications Society"
+  },
+  "dataset": {
+    "wifi_band": "5",
+    "number_of_users": 1,
+    "classes": [
+      "nothing",
+      "walk",
+      "rotation",
+      "jump",
+      "wave",
+      "lie_down",
+      "pick_up",
+      "sit_down",
+      "stand_up"
+    ],
+    "expected_rows": 1782,
+    "input_subcarrier_count": 30,
+    "input_length": 850,
+    "raw_axes_and_export_permutation_audit": "completed_with_unresolved_physical_export_and_registered_storage_order_fallback",
+    "input_stored_first_axis_index": 0,
+    "input_stored_second_axis_count": 3,
+    "physical_axis_export_status": "unresolved",
+    "dataset_version": 1
+  },
+  "scope": {
+    "primary_claim": "cross_room_method_validation_after_retraining",
+    "unseen_subject_claim_supported_by_primary_folds": false,
+    "physical_phase_calibration_claimed": false
+  },
+  "input": {
+    "amplitude": "absolute complex CSI, arithmetic duplicate-time mean, native-time linear interpolation",
+    "phase": "float64 wrapped angle, arithmetic duplicate-time mean, same-grid linear interpolation, feature-axis unwrap, float32",
+    "phase_unwrap_axis": -1,
+    "loader_unwrap_phase": false,
+    "train_fitted_normalization": "none in primary inherited representation",
+    "grid": "850 endpoint-inclusive points over actual within-record relative timestamps",
+    "representation_version": "storage_order_v2",
+    "axis_storage_protocol": {
+      "file": "axis_storage_protocol.json",
+      "sha256": "44cda0fc868c6bf286af94730386c6be99f8ec26d237827f950c943b2782a1cf"
+    },
+    "perm_reapplied": false,
+    "physical_tx_rx_order_claimed": false
+  },
+  "main_training": {
+    "seeds": [
+      42,
+      52,
+      62
+    ],
+    "batch_size": 32,
+    "source_examples_per_environment_per_batch": 16,
+    "optimizer_steps": 30000,
+    "virtual_epochs": 200,
+    "updates_per_virtual_epoch": 150,
+    "optimizer": "Adam",
+    "initial_lr": 0.001,
+    "weight_decay": 0,
+    "lr_schedule": "0.001*0.9**(step/10000)",
+    "gradient_clip": 0,
+    "temperature": 0.2,
+    "supcon_lambda": 0.05,
+    "warmup_updates": 0,
+    "positive_mode": "historical_hybrid_global_class_instance_views",
+    "source_selection_metric": "accuracy",
+    "tie_policy": "last_tied_best",
+    "target_evaluation": "after_config_and_checkpoint_freeze"
+  },
+  "arm_definitions": {
+    "W00": "AP capacity-matched global MLP + CE",
+    "W01": "AP capacity-matched global MLP + hybrid SC",
+    "W10": "AP TPP + CE",
+    "W11": "AP TPP + hybrid SC",
+    "WC": "AP global MLP + CE + source CORAL",
+    "MC": "MultiEnv H-S AP global MLP + CE + source CORAL",
+    "MA": "MultiEnv H-S ARC-Fi fully labeled DG candidate: conditionally method-eligible, execution adaptation/source QA pending",
+    "ME": "MultiEnv H-S AP TPP + CE + identical masked-forward exposure, SC weight zero"
+  },
+  "core_jobs": [
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "classroom",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "classroom",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "classroom",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "meeting_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "meeting_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "meeting_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "empty_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "empty_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W00",
+      "target": "empty_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "classroom",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "classroom",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "classroom",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "meeting_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "meeting_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "meeting_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "empty_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "empty_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W01",
+      "target": "empty_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "classroom",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "classroom",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "classroom",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "meeting_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "meeting_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "meeting_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "empty_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "empty_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W10",
+      "target": "empty_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "classroom",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "classroom",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "classroom",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "meeting_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "meeting_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "meeting_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "empty_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "empty_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "W11",
+      "target": "empty_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "classroom",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "classroom",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "classroom",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "meeting_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "meeting_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "meeting_room",
+      "seed": 62
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "empty_room",
+      "seed": 42
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "empty_room",
+      "seed": 52
+    },
+    {
+      "dataset": "WiMANS",
+      "arm": "WC",
+      "target": "empty_room",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E1",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E1",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E1",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E2",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E2",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E2",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E3",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E3",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MC",
+      "target": "E3",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E1",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E1",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E1",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E2",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E2",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E2",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E3",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E3",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "MA",
+      "target": "E3",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E1",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E1",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E1",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E2",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E2",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E2",
+      "seed": 62
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E3",
+      "seed": 42
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E3",
+      "seed": 52
+    },
+    {
+      "dataset": "MultiEnv_HS",
+      "arm": "ME",
+      "target": "E3",
+      "seed": 62
+    }
+  ],
+  "core_formal_training_count": 72,
+  "existing_queue_remaining_at_plan": 29,
+  "source_search_budget": {
+    "seed": 20261014,
+    "coral_gamma_candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "coral_two_datasets_max_runs": 18,
+    "author_baseline_max_runs": 9,
+    "max_total_search_runs": 27,
+    "target_evaluation_permitted": false
+  },
+  "optional_formal_counts": {
+    "Wimans_AA_final_model": 9,
+    "Wimans_author_CSI_DG": 9,
+    "Wimans_differential_phase_final_model": 9,
+    "joint_unseen_room_and_subject_final_plus_baseline": 18
+  },
+  "launch": {
+    "this_artifact_is_an_executable_training_bundle": false,
+    "raw_signal_subset_downloaded_by_this_script": true,
+    "training_started": false,
+    "raw_signal_subset_acquisition_started": true,
+    "existing_training_queue_modified": false,
+    "raw_signal_subset_acquisition_complete": true,
+    "raw_signal_subset_prepared": true,
+    "prepared_by": "experiments.wimans_20261014.prepare_workflow"
+  },
+  "revision": {
+    "previous_protocol": "protocol_plan_v1.json",
+    "previous_protocol_sha256": "cc2ed7bd17e8626a1113a15210f54ee77f29543246291b8ebca0aabf8162383b",
+    "updated_at_utc": "2026-10-14T07:17:01.658332+00:00",
+    "reason": "Author MAT export provenance unresolved; use preregistered stored-order fallback before target scores",
+    "target_model_scores_read": false
+  },
+  "implementation": {
+    "path": "../../../experiments/wimans_20261014",
+    "formal_source_qa_passed": false,
+    "formal_bundle_frozen": false,
+    "author_baseline_execution_qualified": false,
+    "synthetic_cpu_tests_passed": 12,
+    "real_source_shape_qa_passed_per_fold": true
+  },
+  "acceptance_receipts": {
+    "raw_acquisition_verification.json": "1542ad6f37052e2c2c5490e9108bfc57056989a47f231dca64a39a9efe95dd5f",
+    "prepared_input_verification.json": "d88087572f40dbac0094232514a71af2d9ffbfc957fd91455ae0cfa6a3bcc9e0",
+    "candidate_configs_qa.json": "725e1c5ed63008712f5fcd14cd58c01360cffa923da3d42bc3895e793155d8cb",
+    "IMPLEMENTATION_QA.json": "f9a1d9aec6db3dcc54c02781a72be37f7f781a46aecd83f2b73ba24c3940b714",
+    "author_baseline_audit.json": "c03c6c5f871544f285605edb8535fd12b1edab06c56d44ee9a882f1aff444bfc",
+    "peer_implementation_review.json": "de8dd5624d15130bed68adf7fea02a17086ec728c13903974fba61448aa756f2"
+  }
+}

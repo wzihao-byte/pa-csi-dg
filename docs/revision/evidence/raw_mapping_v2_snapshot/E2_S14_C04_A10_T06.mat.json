@@ -1,0 +1,26 @@
+{
+  "environment": "E2",
+  "processed_index": 1145,
+  "raw_inventory_index": 1145,
+  "raw_path": "MAT/E2/E2_S14_C04_A10_T06.mat",
+  "commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+  "verifier_version": "legacy-replay-v2",
+  "processed_hashes": {
+    "amp": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+    "phase": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+    "label": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85"
+  },
+  "subject_id": "S14",
+  "experiment_id": 4,
+  "activity_id": 10,
+  "trial_id": 6,
+  "acquisition_id": "E2:S14:C04:T06",
+  "raw_sha256": "930187e0672cb2005fc835327d4e68b0a42a7ae519cf7e4b792b5c2c40106669",
+  "packets": 1005,
+  "raw_duration_seconds": 3.19989,
+  "raw_timestamp_monotonic": true,
+  "amplitude_max_absolute_error": 0.0,
+  "phase_max_absolute_error": 0.0,
+  "label_matches": true,
+  "matched": true
+}

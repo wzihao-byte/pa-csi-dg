@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-09-03T16:16:40.020734+00:00",
+  "passed": false,
+  "result": {
+    "error": "Common-error injection did not distinguish raw and differential phase as expected"
+  },
+  "case": {
+    "packets": 41,
+    "base_rx_values": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ]
+    ],
+    "odd_packet_first_rx_sign": -1,
+    "dt_us": 100000,
+    "seed": 9129
+  },
+  "max_abs_errors": {
+    "native_time_phase": 13.439340591430664,
+    "native_time_differential_phase": 35.73424530029297
+  },
+  "code_sha256": {
+    "analysis/native_phase_processing.py": "b3f35d54175c4c8d47f570adb03026cc590d9b3c88a8348c9ab29bc06626d706",
+    "analysis/verify_native_phase.py": "b8d431973377c24cca41b7b7ca805c444d51cc5fb0f9d6bc583f246b1790b127",
+    "analysis/audit_multienv_timestamps.py": "4f8656dfeef239a01faf7145b5cb49f0adf79436290e58245574f3e1688040f6",
+    "analysis/prepare_native_multienv.py": "c0fe31b8d6dbf41b5cec24858787603046c3f58b2411bfe2836cfc7dcd2ce8eb",
+    "analysis/verify_multienv_raw_mapping.py": "8f104a8dc6e0fdc72c94953bd90e506f75d8ccf969a28cfb809c9609707ad8e5"
+  }
+}

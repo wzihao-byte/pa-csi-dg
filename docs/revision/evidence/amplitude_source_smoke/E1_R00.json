@@ -1,0 +1,401 @@
+{
+  "target_name_only": "E1",
+  "arm": "R00",
+  "seed": 401,
+  "steps": 30,
+  "opened_data_paths": [
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy"
+  ],
+  "phase_files_opened": false,
+  "target_signals_or_labels_loaded": false,
+  "source_manifest_sha256": "bf15bf0b217f29edffefafb353f1047dab1bd191933b68f0e6b5e1a1fe4a63bd",
+  "batch_schedule_sha256": "768e1644062b4574706e09775b6db5f6969db29c8f74f9ca260c09f8463ad81e",
+  "first_batch_sample_ids": [
+    "E3:2977",
+    "E3:0836",
+    "E3:1821",
+    "E2:2263",
+    "E2:0712",
+    "E3:2294",
+    "E2:2888",
+    "E2:1596",
+    "E3:1182",
+    "E2:0591",
+    "E2:0859",
+    "E3:2580",
+    "E3:1800",
+    "E3:2271",
+    "E2:2728",
+    "E2:2456"
+  ],
+  "parameters_total": 1878142,
+  "training_only_projection_parameters": 98688,
+  "gradient_activity": [
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    },
+    {
+      "with_gradient_tensor": 1779454,
+      "in_tensors_with_nonzero_gradient": 1779454
+    }
+  ],
+  "positive_anchor_diagnostics": [],
+  "inference_counted_macs": {
+    "conv1d": 427540980,
+    "linear": 2071184,
+    "attention": 243780000,
+    "position_embedding": 382500,
+    "total_counted_macs": 673774664,
+    "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+    "projection_head_used": false
+  },
+  "initial_residual_norms": {
+    "temporal_pool": {
+      "zero_global_count": 0,
+      "median_residual_norm": 0.6335428953170776,
+      "median_global_norm": 9.80276107788086,
+      "median_ratio_nonzero_global": 0.06367156654596329
+    },
+    "channel_pool": {
+      "zero_global_count": 0,
+      "median_residual_norm": 0.14967744052410126,
+      "median_global_norm": 2.3529181480407715,
+      "median_ratio_nonzero_global": 0.06256161630153656
+    }
+  },
+  "inference_batch_size": 16,
+  "inference_batch_latency_ms_median": 14.801050070673227,
+  "inference_batch_latency_ms_p95": 16.17540935985744,
+  "training_step_seconds_median": 0.08378880005329847,
+  "peak_gpu_allocated_bytes": 420337152,
+  "preprocessing": "Original amplitude array cast float32; no phase, no fitted input normalization",
+  "smoke_lambda": 0.0,
+  "smoke_uses_warmup": false,
+  "loss_trace": [
+    {
+      "step": 1,
+      "ce": 2.003305435180664,
+      "supcon": 0.0,
+      "total": 2.003305435180664,
+      "optimizer_step_seconds": 0.18802590016275644
+    },
+    {
+      "step": 2,
+      "ce": 2.2048535346984863,
+      "supcon": 0.0,
+      "total": 2.2048535346984863,
+      "optimizer_step_seconds": 0.092578100040555
+    },
+    {
+      "step": 3,
+      "ce": 2.5994246006011963,
+      "supcon": 0.0,
+      "total": 2.5994246006011963,
+      "optimizer_step_seconds": 0.08454359974712133
+    },
+    {
+      "step": 4,
+      "ce": 2.149186611175537,
+      "supcon": 0.0,
+      "total": 2.149186611175537,
+      "optimizer_step_seconds": 0.08398970030248165
+    },
+    {
+      "step": 5,
+      "ce": 2.211146831512451,
+      "supcon": 0.0,
+      "total": 2.211146831512451,
+      "optimizer_step_seconds": 0.08241359982639551
+    },
+    {
+      "step": 6,
+      "ce": 2.0086915493011475,
+      "supcon": 0.0,
+      "total": 2.0086915493011475,
+      "optimizer_step_seconds": 0.08296460006386042
+    },
+    {
+      "step": 7,
+      "ce": 2.0528531074523926,
+      "supcon": 0.0,
+      "total": 2.0528531074523926,
+      "optimizer_step_seconds": 0.08339110016822815
+    },
+    {
+      "step": 8,
+      "ce": 1.6959877014160156,
+      "supcon": 0.0,
+      "total": 1.6959877014160156,
+      "optimizer_step_seconds": 0.08377609960734844
+    },
+    {
+      "step": 9,
+      "ce": 1.7429695129394531,
+      "supcon": 0.0,
+      "total": 1.7429695129394531,
+      "optimizer_step_seconds": 0.082511099986732
+    },
+    {
+      "step": 10,
+      "ce": 1.6533589363098145,
+      "supcon": 0.0,
+      "total": 1.6533589363098145,
+      "optimizer_step_seconds": 0.08385560009628534
+    },
+    {
+      "step": 11,
+      "ce": 1.6452724933624268,
+      "supcon": 0.0,
+      "total": 1.6452724933624268,
+      "optimizer_step_seconds": 0.08313160017132759
+    },
+    {
+      "step": 12,
+      "ce": 1.6461780071258545,
+      "supcon": 0.0,
+      "total": 1.6461780071258545,
+      "optimizer_step_seconds": 0.08378880005329847
+    },
+    {
+      "step": 13,
+      "ce": 1.8383384943008423,
+      "supcon": 0.0,
+      "total": 1.8383384943008423,
+      "optimizer_step_seconds": 0.08707709982991219
+    },
+    {
+      "step": 14,
+      "ce": 1.7033628225326538,
+      "supcon": 0.0,
+      "total": 1.7033628225326538,
+      "optimizer_step_seconds": 0.08810780011117458
+    },
+    {
+      "step": 15,
+      "ce": 1.5624706745147705,
+      "supcon": 0.0,
+      "total": 1.5624706745147705,
+      "optimizer_step_seconds": 0.08616689965128899
+    },
+    {
+      "step": 16,
+      "ce": 1.6834968328475952,
+      "supcon": 0.0,
+      "total": 1.6834968328475952,
+      "optimizer_step_seconds": 0.08563890028744936
+    },
+    {
+      "step": 17,
+      "ce": 1.569014549255371,
+      "supcon": 0.0,
+      "total": 1.569014549255371,
+      "optimizer_step_seconds": 0.08567170053720474
+    },
+    {
+      "step": 18,
+      "ce": 1.639962077140808,
+      "supcon": 0.0,
+      "total": 1.639962077140808,
+      "optimizer_step_seconds": 0.08271070010960102
+    },
+    {
+      "step": 19,
+      "ce": 1.6475319862365723,
+      "supcon": 0.0,
+      "total": 1.6475319862365723,
+      "optimizer_step_seconds": 0.08401009999215603
+    },
+    {
+      "step": 20,
+      "ce": 1.577368140220642,
+      "supcon": 0.0,
+      "total": 1.577368140220642,
+      "optimizer_step_seconds": 0.08303709980100393
+    },
+    {
+      "step": 21,
+      "ce": 1.7328908443450928,
+      "supcon": 0.0,
+      "total": 1.7328908443450928,
+      "optimizer_step_seconds": 0.0832446999847889
+    },
+    {
+      "step": 22,
+      "ce": 1.6934572458267212,
+      "supcon": 0.0,
+      "total": 1.6934572458267212,
+      "optimizer_step_seconds": 0.08340790029615164
+    },
+    {
+      "step": 23,
+      "ce": 1.7496721744537354,
+      "supcon": 0.0,
+      "total": 1.7496721744537354,
+      "optimizer_step_seconds": 0.08319700043648481
+    },
+    {
+      "step": 24,
+      "ce": 1.6784964799880981,
+      "supcon": 0.0,
+      "total": 1.6784964799880981,
+      "optimizer_step_seconds": 0.08380179945379496
+    },
+    {
+      "step": 25,
+      "ce": 1.7409429550170898,
+      "supcon": 0.0,
+      "total": 1.7409429550170898,
+      "optimizer_step_seconds": 0.08353660069406033
+    },
+    {
+      "step": 26,
+      "ce": 1.532700777053833,
+      "supcon": 0.0,
+      "total": 1.532700777053833,
+      "optimizer_step_seconds": 0.0824709003791213
+    },
+    {
+      "step": 27,
+      "ce": 1.51664400100708,
+      "supcon": 0.0,
+      "total": 1.51664400100708,
+      "optimizer_step_seconds": 0.08388170041143894
+    },
+    {
+      "step": 28,
+      "ce": 1.7194204330444336,
+      "supcon": 0.0,
+      "total": 1.7194204330444336,
+      "optimizer_step_seconds": 0.08553409948945045
+    },
+    {
+      "step": 29,
+      "ce": 1.633231520652771,
+      "supcon": 0.0,
+      "total": 1.633231520652771,
+      "optimizer_step_seconds": 0.08511439990252256
+    },
+    {
+      "step": 30,
+      "ce": 1.5223889350891113,
+      "supcon": 0.0,
+      "total": 1.5223889350891113,
+      "optimizer_step_seconds": 0.08422630000859499
+    }
+  ],
+  "efficacy_evaluation_performed": false
+}

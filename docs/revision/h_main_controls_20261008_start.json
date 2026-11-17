@@ -1,0 +1,184 @@
+{
+  "status": "formal_training_started",
+  "scope": "H-S only, 54 new runs; no H or new environments",
+  "queue": {
+    "status": "running",
+    "at": "2026-10-08T06:01:16.423649+00:00",
+    "pid": 18408,
+    "process_create_time": 1791439273.7093992,
+    "current_job": "HS_E1_G10_42",
+    "current_attempt": 1,
+    "completed_jobs": 0,
+    "total_jobs": 54,
+    "position": 1,
+    "manifest_sha256": "58db531376427eece15274dd3eb1dcb79d4484b284dfc499eeed6cc84cb26ac6"
+  },
+  "first_training_status": {
+    "status": "training",
+    "at": "2026-10-08T06:03:03.415754+00:00",
+    "job_id": "HS_E1_G10_42",
+    "pid": 33720,
+    "optimizer_steps": 200,
+    "total_optimizer_steps": 30000,
+    "elapsed_seconds": 102.78099999995902,
+    "lr_used": 0.0009979055222245153,
+    "target_opened": false
+  },
+  "first_initialization_audit": {
+    "status": "passed",
+    "parameter_count": 4786294,
+    "initial_state_sha256": "d97bfc210db474b1abf2616089cf8c5b13e6ad68324f6ce50c0ffeeb0c8f5875",
+    "common_state_sha256": "f4e4b32b62c57245f7646f0b8e2409fbd8f1c3ea8f24a4fc2df90d1ee28fdff9",
+    "historical_common_tensors_matched": true,
+    "pool_mode": "global_mlp",
+    "seed": 42,
+    "model_class": "CapacityMatchedH"
+  },
+  "qa": {
+    "status": "passed",
+    "at": "2026-10-08T06:00:22.275795+00:00",
+    "bundle_manifest_sha256": "58db531376427eece15274dd3eb1dcb79d4484b284dfc499eeed6cc84cb26ac6",
+    "component_test_log_sha256": "be15921f915099a15d7e13ebabf67aa3c626ddd99de0861d1d0df4a9099fc084",
+    "frozen_unique_configs_validated": 54,
+    "real_source_adapter_equivalence": {
+      "status": "passed",
+      "real_source_examples": 4,
+      "optimizer_steps": 2,
+      "complete_and_flattened_masked_forward": true,
+      "all_model_state_tensors_bitwise_equal": true,
+      "loss_metrics_and_diagnostics_bitwise_equal": true,
+      "scheduler_state_equal": true,
+      "target_arrays_opened": false,
+      "instrumented_step_does_not_change_training": true
+    },
+    "target_arrays_opened": false,
+    "torch": "2.6.0+cu124",
+    "cpu_threads": 2,
+    "new_environment_experiment": false
+  },
+  "output_root": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2",
+  "component_tests": 23,
+  "gpu_benchmark": {
+    "at": "2026-10-08T05:54:03.324637+00:00",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "gpu": "Quadro RTX 5000",
+    "threads": 4,
+    "source_only": true,
+    "new_formal_runs_completed": 0,
+    "receipts": [
+      {
+        "pool_mode": "tpp",
+        "multiview": false,
+        "batch_size": 32,
+        "timed_steps": 5,
+        "seconds_per_step": 0.2104303399566561,
+        "median_seconds_per_step": 0.2115308998618275,
+        "seconds_each_step": [
+          0.2059106999076903,
+          0.20683480007573962,
+          0.2115308998618275,
+          0.21432049991562963,
+          0.21355480002239347
+        ],
+        "losses": [
+          2.0676262378692627,
+          1.6609652042388916,
+          1.0723706483840942,
+          0.7930202484130859,
+          0.7519360780715942
+        ],
+        "finite_losses": true,
+        "30000_step_compute_hours": 1.7535861663054675,
+        "peak_memory_mib": 1041.60205078125,
+        "target_input_opened": false
+      },
+      {
+        "pool_mode": "tpp",
+        "multiview": true,
+        "batch_size": 32,
+        "timed_steps": 5,
+        "seconds_per_step": 0.811700540035963,
+        "median_seconds_per_step": 0.7887697999831289,
+        "seconds_each_step": [
+          0.7887697999831289,
+          0.7867986999917775,
+          0.7875116001814604,
+          0.8510366000700742,
+          0.8443859999533743
+        ],
+        "losses": [
+          2.363309621810913,
+          1.97589910030365,
+          1.3340193033218384,
+          1.1333537101745605,
+          1.0008761882781982
+        ],
+        "finite_losses": true,
+        "30000_step_compute_hours": 6.764171166966359,
+        "peak_memory_mib": 3776.072265625,
+        "target_input_opened": false
+      },
+      {
+        "pool_mode": "global_mlp",
+        "multiview": false,
+        "batch_size": 32,
+        "timed_steps": 5,
+        "seconds_per_step": 0.2110797400120646,
+        "median_seconds_per_step": 0.20704810018651187,
+        "seconds_each_step": [
+          0.20704810018651187,
+          0.22858019988052547,
+          0.20676929992623627,
+          0.21054610004648566,
+          0.2024550000205636
+        ],
+        "losses": [
+          1.837365746498108,
+          1.3130240440368652,
+          0.9007957577705383,
+          0.765302300453186,
+          0.7002018094062805
+        ],
+        "finite_losses": true,
+        "30000_step_compute_hours": 1.7589978334338714,
+        "peak_memory_mib": 1130.73828125,
+        "target_input_opened": false
+      },
+      {
+        "pool_mode": "global_mlp",
+        "multiview": true,
+        "batch_size": 32,
+        "timed_steps": 5,
+        "seconds_per_step": 0.8035849799867719,
+        "median_seconds_per_step": 0.7999108000658453,
+        "seconds_each_step": [
+          0.8271433000918478,
+          0.8146934998221695,
+          0.7999108000658453,
+          0.7778157000429928,
+          0.7983615999110043
+        ],
+        "losses": [
+          2.1081531047821045,
+          1.6254414319992065,
+          1.1504058837890625,
+          1.0555318593978882,
+          0.9379495978355408
+        ],
+        "finite_losses": true,
+        "30000_step_compute_hours": 6.696541499889766,
+        "peak_memory_mib": 3764.1630859375,
+        "target_input_opened": false
+      }
+    ]
+  },
+  "planned_groups": {
+    "capacity": 18,
+    "positive_rule": 18,
+    "final_model_phase": 18
+  },
+  "user_selected_scope": true,
+  "model_training_completed_this_turn": false,
+  "expected_all_runs_continuous_single_gpu_days_approx": 14
+}

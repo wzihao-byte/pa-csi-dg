@@ -1,0 +1,87 @@
+{
+  "schema": "csi-revision-runtime-recovery-addendum/v2",
+  "recorded_at": "2026-09-11T06:55:58.6873883Z",
+  "continues": {
+    "path": "docs/revision/evidence/runtime_recovery_20260911_addendum.json",
+    "sha256": "2b899157c537a933f813a5769be6bcbdfdc5185debdaee95ee1094fdce108d9e"
+  },
+  "reason": "Before H training, review found that frozen run.py directly rechecked the interrupted prerequisite identity. The first recovered waiting chain was retired, and a transparent recovered-gate wrapper was installed while retaining all scientific code and frozen artifacts.",
+  "retired_waiting_processes": {
+    "h_queue": 37576,
+    "final_evidence": 38628,
+    "paper_assets": 36972,
+    "fragment": 30152,
+    "manuscript": 25428,
+    "release": 27032
+  },
+  "retirement_boundary": {
+    "h_training_started": false,
+    "h_result_exists": false,
+    "formal_evidence_output_exists": false,
+    "paper_asset_output_exists": false,
+    "completed_or_failed_queue_record_exists": false
+  },
+  "recovered_h_gate": {
+    "current_owner_sha256": "97fe65dc10a9bdea62d79a753489f18d1e7492ec15d48e9ffe19f437d9d3df64",
+    "superseded_owner_sha256": "fccee8a8b702fcd97fbfea74a81d3da4b46514499c1f86d1e837eac4322ebae8",
+    "queue_code_sha256": "bebf1560b7fb50d66a67c44730b5f7c8ab0760a8b2ff6570876e18d5943c7670",
+    "execution_wrapper_sha256": "592bc6cabfe60fc077d3d4157448efb0289e31569db39b81da36024f2d91da3f",
+    "frozen_bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+    "frozen_bundle_modified": false,
+    "scientific_change": "none; only the interrupted prerequisite-process gate is replaced",
+    "widar_dependency": false
+  },
+  "current_owners": {
+    "controls": {
+      "pid": 39456,
+      "creation_date": "09/11/2026 15:08:45",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 -m experiments.revision_validation.extended_engine --bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1"
+    },
+    "inputs_coordinator": {
+      "pid": 11964,
+      "creation_date": "09/11/2026 15:09:10",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 analysis/continue_inputs_after_controls.py --controls-pid 39456 --controls-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1 --input-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3"
+    },
+    "source_analysis_coordinator": {
+      "pid": 16896,
+      "creation_date": "09/11/2026 15:09:10",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 analysis/continue_source_analyses.py --core D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1 --controls D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\formal_source_analysis_v3 --analysis-root D:\\pa-csi-dg-revision-runtime\\analyses\\formal_source_v1 --resume-existing"
+    },
+    "h_queue": {
+      "pid": 37704,
+      "creation_date": "09/11/2026 15:54:01",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/recover_h_grouped_l1248_queue.py --inputs-pid 11964 --inputs-output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3 --input-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1 --h-root C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2 --superseded-owner C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\queue\\owner.interrupted_20260911_0650Z.json"
+    },
+    "final_evidence": {
+      "pid": 25184,
+      "creation_date": "09/11/2026 15:54:26",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_final_evidence.py --inputs-pid 11964 --inputs-output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3 --source-pid 16896 --source-output D:\\pa-csi-dg-revision-runtime\\coordinators\\formal_source_analysis_v3 --h-pid 37704 --h-root C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2 --runtime D:\\pa-csi-dg-revision-runtime --evidence-output C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v3"
+    },
+    "paper_assets": {
+      "pid": 23988,
+      "creation_date": "09/11/2026 15:54:55",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_paper_assets_after_evidence.py --final-evidence-pid 25184 --final-evidence-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v3 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --staging D:\\pa-csi-dg-revision-runtime\\paper_assets\\multienv_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v3"
+    },
+    "fragment": {
+      "pid": 26352,
+      "creation_date": "09/11/2026 15:54:56",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_fragment_after_assets.py --assets-pid 23988 --assets-coordinator-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v3 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_fragment_v3"
+    },
+    "manuscript": {
+      "pid": 8644,
+      "creation_date": "09/11/2026 15:54:56",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_manuscript_after_fragment.py --fragment-pid 26352 --fragment-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_fragment_v3 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --build D:\\pa-csi-dg-revision-runtime\\qa\\manuscript_multienv_v3 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v3 --final-qa C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json"
+    },
+    "release": {
+      "pid": 9796,
+      "creation_date": "09/11/2026 15:54:57",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_release_after_manuscript.py --manuscript-pid 8644 --manuscript-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v3 --runtime D:\\pa-csi-dg-revision-runtime --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --final-qa C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json --release D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_release_v3"
+    }
+  },
+  "validation": {
+    "owner_count": 9,
+    "all_live": true,
+    "widar_training_process_count": 0,
+    "h_training_started": false
+  }
+}

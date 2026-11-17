@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "target_evaluator_exit_nonzero": true,
+  "prerequisite_engine_exit_nonzero": true,
+  "target_gate_created": false,
+  "prerequisite_gate_created": false,
+  "target_data_loaded": false,
+  "target_log_sha256": "32d532b94100edec097506a876a25cae6122bbe68d74cc3a95395d774f7f7008",
+  "prerequisite_log_sha256": "3b2ca20f0e20e047f6b143b5e5c3188eb53e322e01e6235a07957e1780525946"
+}

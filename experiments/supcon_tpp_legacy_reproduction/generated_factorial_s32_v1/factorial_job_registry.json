@@ -1,0 +1,478 @@
+{
+  "schema_version": "factorial-s32-bundle/v1",
+  "protocol_lock": "protocol_lock.json",
+  "protocol_lock_sha256": "2f0b2f25556bca98044354ea21bbfdc50f252242d4aae627dd4fac1e735e96e3",
+  "job_order": "target_then_seed_then_H00_H01_H10_H11",
+  "quartet_barrier": true,
+  "jobs": [
+    {
+      "job_id": "factorial_s32__target_E1__seed_42__arm_H00",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E1__seed_42__arm_H00.json",
+      "config_file_sha256": "32a4c22462f8135c613db67622146be124710647532da658496fadce06dc6134",
+      "config_payload_sha256": "240cc1ddb03d47a0337c4d1d40f96e9443f5b62fa800f3023444f72fac6eb0e2"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_42__arm_H01",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E1__seed_42__arm_H01.json",
+      "config_file_sha256": "3af4c8571b53c7cc809470a57745fa6059d2fb1e629f2e030a04a136d6c1d3c2",
+      "config_payload_sha256": "247981d3ff421215030d36eae30beff22be8a4a16c7eb2fe7f191c9507367a89"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_42__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E1__seed_42__arm_H10.json",
+      "config_file_sha256": "88d3af6d35133184974bc8d13edc70ff07763cc082d55b49894d95bac8872eeb",
+      "config_payload_sha256": "02e8d79260e39d71e0bb1aced2f5c974617e6f189b69a3d24eecd7e012013160"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_42__arm_H11",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E1__seed_42__arm_H11.json",
+      "config_file_sha256": "2b1f601e4f52decfee44bd52f3d3398cd700c84921f52d5f66f6e7fb160024c2",
+      "config_payload_sha256": "2647180112f5a1d7806c3ea4d799db92b5268d0479eb2ea25f2d4c58a9fd01af"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_52__arm_H00",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E1__seed_52__arm_H00.json",
+      "config_file_sha256": "b750debef1491925b84e64b65143938b3c69ed90b7965eb6cc2b57be88a16ed3",
+      "config_payload_sha256": "8a03437dddbe634809b345fbc4bc39baf0c9028d1803d095896f0c0c8f698e28"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_52__arm_H01",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E1__seed_52__arm_H01.json",
+      "config_file_sha256": "e32340318c25f11f8bb68ed95a8d63c81d44c3d805386588a6be0a98a5bbfe49",
+      "config_payload_sha256": "f71a2cf4485ab3c37609b2bde6413a440b056467fe729fbd2861da6410ecc752"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_52__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E1__seed_52__arm_H10.json",
+      "config_file_sha256": "284df458a3c7d79ac23d1c9c84f5de57044d4e08c3469e828dc332f43a37c3a3",
+      "config_payload_sha256": "b9e9f529b6127b92cd0fa4bfd7a2d0dee930222a2616a269cbeed5002a178560"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_52__arm_H11",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E1__seed_52__arm_H11.json",
+      "config_file_sha256": "e34ea8e0720d61e9fee9fdf58d81ad95aedfc556549a1669e499c1d698e53e2b",
+      "config_payload_sha256": "ef723771a4794bc83d0967df62921ccc52995d2c5a8642a483cce9bfce7a0131"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_62__arm_H00",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E1__seed_62__arm_H00.json",
+      "config_file_sha256": "82fcfd928abd384a41a81dcf87d9f506908005b07f470f2bf6e6ec791c0bdcb0",
+      "config_payload_sha256": "bc5465c11e9a2381fe21203e250790f05890fe71744d4c45c2c7acabbc9421a1"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_62__arm_H01",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E1__seed_62__arm_H01.json",
+      "config_file_sha256": "c5f15e86b46cd070a6d62aceab79529d35c332874f0c45c074c511332014c39e",
+      "config_payload_sha256": "0c6ff6141869a46196675e15938b3096dbd19c39a20d4a1b3bd86a2d010db64a"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_62__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E1__seed_62__arm_H10.json",
+      "config_file_sha256": "a848d9588840c33f1c0f399b2d5ee7dab12f9e8be8e57b0f6d58274e320fcc0d",
+      "config_payload_sha256": "dfbd6339b4f4a5786c0a803615b5e9a2a440ac357c004ffdcea57ce204ce92d6"
+    },
+    {
+      "job_id": "factorial_s32__target_E1__seed_62__arm_H11",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E1__seed_62__arm_H11.json",
+      "config_file_sha256": "ca5c3fd0a8ed9022fe58c7b15e495c50e493b7a794a5f4be9c9f0faa966550bc",
+      "config_payload_sha256": "36ab6aeb7fb4064db40b925838443ba20dc5ca885d9a1ac87940bb05b284adec"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_42__arm_H00",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E2__seed_42__arm_H00.json",
+      "config_file_sha256": "b4615ef8252d6d02e148b168e8a329c4dc437ad8b537589ceed11400a7c90642",
+      "config_payload_sha256": "45347325c0a183a2c4900eee1ac0a11ebaaa6032a6ef16cdd009c11ab1ee8d2b"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_42__arm_H01",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E2__seed_42__arm_H01.json",
+      "config_file_sha256": "bb80fca9bb08e279f0e49bd699961cd00a808eeddfcb3d2d5c36974ad909f612",
+      "config_payload_sha256": "f60852d958a3ece07faf02d8f4d904769250e3a30b60107556bc6dd012a8ab81"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_42__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E2__seed_42__arm_H10.json",
+      "config_file_sha256": "ad6600f78a5f8f2df6edc01043332f5b12cf3edde54c4d6906292597c85ff20c",
+      "config_payload_sha256": "5cbcbc59226552ccf1792d48c95ac9f50de5d3db8ca7f48f0c7ff2e29b1de7d3"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_42__arm_H11",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E2__seed_42__arm_H11.json",
+      "config_file_sha256": "fa8a9b1962cc3f84ac1dd57ace6880922b03de27197cf10e13a1adedd3d22add",
+      "config_payload_sha256": "53ae69758d39e4505f65c31e8ea3e6364258ccdc1949ad915ad91d6c3a244d5a"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_52__arm_H00",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E2__seed_52__arm_H00.json",
+      "config_file_sha256": "91ec04bcb8abf03b914edaa80ceb6810a09c75b3dd79f0ab381fe4727d5f373a",
+      "config_payload_sha256": "eac37448724f432b43d0db72769c3b911c275f0672f9e970909624e08d3ace7e"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_52__arm_H01",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E2__seed_52__arm_H01.json",
+      "config_file_sha256": "77328ec840dac137410c7981ced8a1563d5a3b756fa1c4aa8d429bdf58f1a3d7",
+      "config_payload_sha256": "cf4d6615addba8a59a9fb5a84f6011f664c64758caed923a8f7bbd0327fe35cf"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_52__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E2__seed_52__arm_H10.json",
+      "config_file_sha256": "ea256b6ad7ca3c0048bda09bfbc8ed38170a6ec7cd6551568479fdb1f199eef3",
+      "config_payload_sha256": "e800a77f3c5d798f1df9f6e6da79f8a657412184b71267e1241d3d4de0fba9c2"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_52__arm_H11",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E2__seed_52__arm_H11.json",
+      "config_file_sha256": "ac61e4070657242af90c8d953e0e17443f2dfd5d38de2aaf5992bd12a0a11e70",
+      "config_payload_sha256": "296f65972d41ac46b950b79a48bfc73c15d8039b06750debe3bc5f4b04ebc9ef"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_62__arm_H00",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E2__seed_62__arm_H00.json",
+      "config_file_sha256": "cc678770f6b26c30f178640cf97244b5a3fc7317337a37990ba59e53e4a006ca",
+      "config_payload_sha256": "814199e749ebf1cdadf779f91ba5a810fcf64bdc04928649c5706979b69198d9"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_62__arm_H01",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E2__seed_62__arm_H01.json",
+      "config_file_sha256": "a5f1119413fe7c96a59a529210e44709c3794f25428d314859608b4d8ff1e08c",
+      "config_payload_sha256": "26d5f7ffd4dfd9c475906f6725de5dc12c2a7bd84589475facd474aaf2c912a8"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_62__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E2__seed_62__arm_H10.json",
+      "config_file_sha256": "1345744529afe3ae3eca21de06d559a361a2c0c7c3d5eedc6098189d1130c0d5",
+      "config_payload_sha256": "dc99088603ec2e59866ac73b6ff8bed6d62a00dc7b8d52b9aeb4128944bb4dcc"
+    },
+    {
+      "job_id": "factorial_s32__target_E2__seed_62__arm_H11",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E2__seed_62__arm_H11.json",
+      "config_file_sha256": "f44c6cae28c89d3d2569b916e40b37f5122934be6cceb6c025654897c1cd4a38",
+      "config_payload_sha256": "f5ded4d252a7d62d448f9e3cce19003fa49296b4b11d645e6dc812b93b24e001"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_42__arm_H00",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 42,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E3__seed_42__arm_H00.json",
+      "config_file_sha256": "f7c5147518a568986bf05f69f346c0f4af7ec856109ec57abed144d77ea3f29b",
+      "config_payload_sha256": "6054c986484c82e559e548d31698b7c53addf5a813a45c866fb0837029442314"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_42__arm_H01",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 42,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E3__seed_42__arm_H01.json",
+      "config_file_sha256": "9020add4e2c0b215d979a24a464f935ddc201fe68f124fdfc77bc1a7132bba80",
+      "config_payload_sha256": "eb963e2305583bc463e683047988c533a964ccd231e59421af6ac2c638e9b8bf"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_42__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E3__seed_42__arm_H10.json",
+      "config_file_sha256": "7d3ff407e4a4c0c3b76d7a343357f71488043a50e44b025d94c0313307a168c7",
+      "config_payload_sha256": "fc802921d3e3afb24c76c36f7a1779b4c7bd1b5c21c3013f8e712ed0b152e898"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_42__arm_H11",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 42,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E3__seed_42__arm_H11.json",
+      "config_file_sha256": "e18849a28cad57b7c4b61de21a08d0df3a62b850c43e898f5edb9c8c9d7d3660",
+      "config_payload_sha256": "d9c8d45ba5a4701574701b860ee15301375361e748fbbde5ee42077c21f1ff53"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_52__arm_H00",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 52,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E3__seed_52__arm_H00.json",
+      "config_file_sha256": "32fb50fc9a659f96ba6611bf07db44cf090f0e410c58cfb03b22cbcd36135803",
+      "config_payload_sha256": "f525843bfce8373a50a04eb315a06c4a44151c2bdf512bcfc3f158258f087db3"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_52__arm_H01",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 52,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E3__seed_52__arm_H01.json",
+      "config_file_sha256": "2fb4eafed76f9a3642d44313c447e4949e69225be64117ced9d037e8fd0fc71e",
+      "config_payload_sha256": "27cac93df265d7fa564ec419e0aab277056fafcd253d5869dac11895159af144"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_52__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E3__seed_52__arm_H10.json",
+      "config_file_sha256": "c7db8c815ab3fc38082e58c003c3a0b04d346d55b9ea94178a1aa134fe70e73b",
+      "config_payload_sha256": "1d8b81b52a7e0c25a630d7601db3165ea95070236cb64300c11df474b831eb64"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_52__arm_H11",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 52,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E3__seed_52__arm_H11.json",
+      "config_file_sha256": "8a19e5f2a247127a49cd5906ef469faed3c2d15ea9f5bbae2f3bf86878843f74",
+      "config_payload_sha256": "0739843a26ec7c11196588de9e32f45cdfb856f268efffe661c6cc5788122f98"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_62__arm_H00",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 62,
+      "arm": "H00",
+      "config_path": "configs/factorial_s32__target_E3__seed_62__arm_H00.json",
+      "config_file_sha256": "25be22c5e349cbe09da492085c13c047a072400754db3cc89a7c2a8f70327f25",
+      "config_payload_sha256": "f845fa37b5ead3e71ad9a4bc9ab4933ccaef4db4c7bf2ecf2cf6029b15a0b964"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_62__arm_H01",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 62,
+      "arm": "H01",
+      "config_path": "configs/factorial_s32__target_E3__seed_62__arm_H01.json",
+      "config_file_sha256": "949f3fe9cac2b62596bf68b1add1dfaf28b1de8792c1ec5f102a92b25fd6d5cc",
+      "config_payload_sha256": "fdabb7519248470cd2e8e26ff9577d09541df11373662b6a207525d99d6256dd"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_62__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "config_path": "configs/factorial_s32__target_E3__seed_62__arm_H10.json",
+      "config_file_sha256": "e216b2b6b36e304fbb003b8b97a7c7346c8c30c1656646541b80e744fb5fc465",
+      "config_payload_sha256": "c6e96f2179a84dd578e41309341b6b2d539d33d8eebf5863631b43fe3e3b20e6"
+    },
+    {
+      "job_id": "factorial_s32__target_E3__seed_62__arm_H11",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 62,
+      "arm": "H11",
+      "config_path": "configs/factorial_s32__target_E3__seed_62__arm_H11.json",
+      "config_file_sha256": "599ff139da474628d6932da57b4ddaa1fd268cd012783736af6a83dee6e31f0a",
+      "config_payload_sha256": "b8c5de57e577543f3bebf1655b01b8166f0169ac6e6213871800136df2960d40"
+    }
+  ],
+  "job_count": 36
+}

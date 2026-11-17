@@ -1,0 +1,1660 @@
+{
+  "schema_version": "factorial-s32-results/v1",
+  "status": "complete",
+  "created_at_utc": "2026-09-21T02:21:38.446658+00:00",
+  "job_count": 18,
+  "bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+  "quartet_barriers": [
+    {
+      "target": "E1",
+      "seed": 42,
+      "status": "passed",
+      "sampler_schedule_sha256": "65679e2c062f7af78cef4621952552ff931c14b5362b9fe29fb02e165f41c964",
+      "split_hashes": {
+        "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+        "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "arms": [
+        {
+          "job_id": "E1_HG_H10_42",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "d5bbbbc2d9b108d8861b427e36e2ed363477cb59bcb49015725c5afcb0a88ba7",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "65679e2c062f7af78cef4621952552ff931c14b5362b9fe29fb02e165f41c964",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "588bb45fc8581387538f1ce242c200648880df26fae1108d6a232cea9fa35104",
+            "confusion_sha256": "80bdd675d2b1e2588e002bc07014f161525de51ceb2359edef51a821fb72ffc3",
+            "metrics_sha256": "c6394d8a0df44dfb9ac64fd8f85c0fc6b3aa73ce708aab88b6b3dd7726f9470f",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 116,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E1_HG_H11_42",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "1b8d946a88324c71339dccf7278cce5cde37c2cb096fe8f75557d0802cfac9be",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "65679e2c062f7af78cef4621952552ff931c14b5362b9fe29fb02e165f41c964",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "9a371ec60411ffc62325b6470b877a23e53f6014701504a13f3fff08ccf2dd84",
+            "confusion_sha256": "7092ce18f04e8c154612dad65cbd44e2522ab764b4de70ef61d6377c1ebd0f25",
+            "metrics_sha256": "2b7a6a27e11207681018f9283cac6090e000cdd1341c33e30f53021ce08d98b7",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 160,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E1",
+      "seed": 52,
+      "status": "passed",
+      "sampler_schedule_sha256": "a9789d7913a6d1459de414904fc3bbddbcd268d06c7f4ce54c970fcd27d1a093",
+      "split_hashes": {
+        "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+        "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "arms": [
+        {
+          "job_id": "E1_HG_H10_52",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "6899adbab01731e81574722bc166ba13006495076fceb1e57ae942359b7c02dc",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "a9789d7913a6d1459de414904fc3bbddbcd268d06c7f4ce54c970fcd27d1a093",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "f3ca57a6d54d2ce2fbcfbd1dc0ba49e81877d8211f871c9b65f3e89901a9262c",
+            "confusion_sha256": "bab6c54f63e940dd94b044cc50e83de5c47121eaba66bba8d243089b79553381",
+            "metrics_sha256": "972e688304a9edca72dc360093a0b93db02a7f49e78132d3052b031c0a25ac3e",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 99,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E1_HG_H11_52",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "95d94ef8d9db6a2b376d570ba9f3a393eb80505f808f27eb74a0bd5c4a6055cc",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "a9789d7913a6d1459de414904fc3bbddbcd268d06c7f4ce54c970fcd27d1a093",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "e06bb80a28dfdaa15a1ec4ad43d2399308689e240d2de61278e86cece881f795",
+            "confusion_sha256": "7202e63db6f648be7eb21cb7f1e5eadd49c740c79e4288059fd68803bbecd741",
+            "metrics_sha256": "7e956ef3ccc0011b3edecdec0ab65c156db5fc5a8f1ad15214f2732c218fc89a",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 179,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E1",
+      "seed": 62,
+      "status": "passed",
+      "sampler_schedule_sha256": "45c96778dfba9e0fbfcc7906c41f440e93821f3581149e01c5478bed15084fd8",
+      "split_hashes": {
+        "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+        "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "arms": [
+        {
+          "job_id": "E1_HG_H10_62",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "b8462816ee678c9d9ae82f42ba9f1c28805899f1c2c8815dc41fa98162f4bcac",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "45c96778dfba9e0fbfcc7906c41f440e93821f3581149e01c5478bed15084fd8",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "db704857957786a177ffaeeee083c8251437241dad5ca0ddeca15991821709b8",
+            "confusion_sha256": "5513276fde947c079ef0f2559367242e0ea6e041c72857f8bf2e602296688a6e",
+            "metrics_sha256": "f01dbebfa73b8f6485610e955dccd30c013858e426c2ebf4ddb912a6c7baa929",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 160,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E1_HG_H11_62",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "715c066dd02ff41e39a618a69c2735d3cb81817cbaef8d2455a32f3f53d707ad",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "45c96778dfba9e0fbfcc7906c41f440e93821f3581149e01c5478bed15084fd8",
+            "split_hashes": {
+              "train": "a34f41679a04d2933544348bf56e3a47653c786f4537f54877e677b1b7694db5",
+              "val": "86d4b957384a371a0ee1026e16d62dd4698e56c08a5cab7f6fbe019545df12c2",
+              "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "b121a1b188c622138dd164c5f05271734c7d122623bef086e4a3e4eeb7580f21",
+            "confusion_sha256": "e3e47386541f5d9f064f64212d793ee8e256769e3a9789d455be53223a8398e2",
+            "metrics_sha256": "b29c25ac632f0b0b6ba548f42db2c22941f4fdd34d6a6f05ea21a90fcb7ca3fd",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 129,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E2",
+      "seed": 42,
+      "status": "passed",
+      "sampler_schedule_sha256": "3f47568ec3742aacf07da23ad9bf1a301cd7588787e4458069f33113ef3ec2d6",
+      "split_hashes": {
+        "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+        "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "arms": [
+        {
+          "job_id": "E2_HG_H10_42",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "46c4de8c070d6c355f96c9c0e230bf9836d20606e1180a78f82c5cfd695bdc48",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "3f47568ec3742aacf07da23ad9bf1a301cd7588787e4458069f33113ef3ec2d6",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "a35899a33c866a9d33042751957fcab2ee5965c7bcc7b52f092208371a80c7fe",
+            "confusion_sha256": "af0d017d8cda61bc69bbf6967bd57039796d3617dacc60d7202fcdec34b6c8ac",
+            "metrics_sha256": "0732b005b06c8c554dfd1d8f210dbb8665bbccee6f18ce5a583bd2f076987503",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 32,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E2_HG_H11_42",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "e7e93da614605f0ac5dc2f2e04a789ceaa7c6dc434def7e5033591c56a7db78a",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "3f47568ec3742aacf07da23ad9bf1a301cd7588787e4458069f33113ef3ec2d6",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "06b877d3ee870d41c57aae628d33ea3e8030a3c0a9dc5d5bbf9d37b6ece0ab6c",
+            "confusion_sha256": "6443375e7f6988d8c8afc4506c6667d3aadf0ec8edc5c123a468cf77b6f62415",
+            "metrics_sha256": "a0b4453a9c02701e2ff58f88ff82618a268b35aa3a1049cc2d3913256e5dbc95",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 11,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E2",
+      "seed": 52,
+      "status": "passed",
+      "sampler_schedule_sha256": "8325757890d50373e317221a5e95b30a2df97bda6c46b835479fdb4f26ecba06",
+      "split_hashes": {
+        "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+        "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "arms": [
+        {
+          "job_id": "E2_HG_H10_52",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "5aad47bcab90624782abfdd7fe780702ce98c0c5d418aa476817eee136ebb7a1",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "8325757890d50373e317221a5e95b30a2df97bda6c46b835479fdb4f26ecba06",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "8ce141313b49dc8f30f65aee6b95d578753a3b413aecf7698f62c0af857b6ca8",
+            "confusion_sha256": "aabbec2c736d4c87f9af2ae188207451d165d7b4417430875272929254277f9e",
+            "metrics_sha256": "5b1a1ac9af76dbe99c3fb5d8f7bc0a27ecfcbcb048afbd6ca89bcc2293947a9c",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 68,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E2_HG_H11_52",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "529c8b8103cae80d1121904b39b7b1e236e76cf8d1a649956af36e3cbef8dd55",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "8325757890d50373e317221a5e95b30a2df97bda6c46b835479fdb4f26ecba06",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "84202e4496b13e2e63ea01d84d8301ca66ebb3ccb3021e3192fcd63e75f32dd8",
+            "confusion_sha256": "e339edafb864f9beece18a6a2bdecf627ffb55116292f1d1816029548df5f964",
+            "metrics_sha256": "744cff38cb3b95e9d076e26b042513f6ff86f0c5d833c6953c3154960ca4f47f",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 6,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E2",
+      "seed": 62,
+      "status": "passed",
+      "sampler_schedule_sha256": "be8642be9af5e9e8643f37002cfbe3114127f849015f28526b99092ac99029c9",
+      "split_hashes": {
+        "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+        "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "arms": [
+        {
+          "job_id": "E2_HG_H10_62",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "d69c104034aaf796b7c9dbb7bbfe4cbff1e89632266898e454b032f4a16e2108",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "be8642be9af5e9e8643f37002cfbe3114127f849015f28526b99092ac99029c9",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "b35bb5ed49608363fd7a33a8dac09eeb36bdc3adcf521fb25febca65ecd77e10",
+            "confusion_sha256": "9adee231124c5fbf518862e0ebe165a67ebae86a4b8c2e7736698db790463024",
+            "metrics_sha256": "4ba3b2d45851843c03477bbd76ce9ce9d94c239f4b5691924c30c14261223e2a",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 20,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E2_HG_H11_62",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "8822a6c6911e1dd254e4b317b7577b4a10dc0b31f458ccf771351b4f8252c5c7",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "be8642be9af5e9e8643f37002cfbe3114127f849015f28526b99092ac99029c9",
+            "split_hashes": {
+              "train": "5b4b1675203a9d920aa5c3797b482516e7d26cc902eff47e3903f76b72f98fbc",
+              "val": "680d35dc179421a901979bcc3f80b660880f97b53f3a403afac4aaaf2ad10a0b",
+              "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "3437658db4fbdbd7aeccf2fd6c1dbefab03bc05ac7343ff23fe55f32c5c3d397",
+            "confusion_sha256": "6d20b5873dc78e6cf931ce1d0a5cee84eda8699e9980b6c23355e9a31133f6cb",
+            "metrics_sha256": "52eb8d5559b5f4343221bc34bd8d15d28da4952d75fa00cc045cacc9fa4bdf97",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 190,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E3",
+      "seed": 42,
+      "status": "passed",
+      "sampler_schedule_sha256": "17ebb62d75e9f8a9e27f4609e069c6dd562420a26973ffaa15ab03434003f1a8",
+      "split_hashes": {
+        "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+        "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "arms": [
+        {
+          "job_id": "E3_HG_H10_42",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "da7dd01af9f99f0626e027a99c80fdf118b8aef351b32ca1ded5814055221d8d",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "17ebb62d75e9f8a9e27f4609e069c6dd562420a26973ffaa15ab03434003f1a8",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "fc516d0c7d4c3e023d0a00e6739927d2d53f400ac1bb3706ec2cd3bdb85f6586",
+            "confusion_sha256": "ae427ef6e429213b4e5af2a1ce2d6d912b834f7b575e681bf9cd9746d9941de9",
+            "metrics_sha256": "cbf205c9ab7eb75c2b156ee53336dda8263d6a2607b27df73b6e38bf0a91a59d",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 18,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E3_HG_H11_42",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "7b901a6f2d821a887b737de6776b5cfb5a21bee1752894594f78b181d0d22115",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "17ebb62d75e9f8a9e27f4609e069c6dd562420a26973ffaa15ab03434003f1a8",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "0e427795a257e3fbebe4e82906315c44ad8fd2f749db49bda70e2b6ff3206479",
+            "confusion_sha256": "bacec77b77955136b6f60cfd44ecdebfcbba422c97ee1eb0ff9a91f2bd671c54",
+            "metrics_sha256": "ff5982d0d69e6440b1eb45c32c904aad32c83278535b0722dcce6a36fb5bdb79",
+            "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+            "last_tied_best_source_epoch": 71,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E3",
+      "seed": 52,
+      "status": "passed",
+      "sampler_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10",
+      "split_hashes": {
+        "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+        "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "arms": [
+        {
+          "job_id": "E3_HG_H10_52",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "b8e0c830e7b72ea6dec55ddbc9f9713b8e263a876e54f45f7bd491a5693ba371",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "669a74fc64d8068a6017db2792eec0ac5e3e0d75fee4b13a409bf21fdf12893d",
+            "confusion_sha256": "bc66834397a51df39eb6d32aaf767cfc1ade2d7936f2d2c8aea083a24536c927",
+            "metrics_sha256": "75c056d69458a2e667c20411b6f77602dde6cba60b3f1846d5e22e1a5df1a341",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 184,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E3_HG_H11_52",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "b786b63d3a67b7928e2556579c95bc523c0b4b293385cb5db8263aa1eb9b4671",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "1f5d22ddbed7702fb2364a29d776fdee697dd588e03158eabac4bd6c113fd212",
+            "confusion_sha256": "b0f9041dfc96187ac6bc944bd2867862b7c07d191b7edc350e54614c07caca5f",
+            "metrics_sha256": "e47469e288d9d6f17ead7a838e4d46272cbc2c13204710de21b6fed289197c46",
+            "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+            "last_tied_best_source_epoch": 46,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    },
+    {
+      "target": "E3",
+      "seed": 62,
+      "status": "passed",
+      "sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86",
+      "split_hashes": {
+        "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+        "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "arms": [
+        {
+          "job_id": "E3_HG_H10_62",
+          "arm": "H10",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H10\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H10\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "861f9acbf180491095b14a6f5eca2cf0a458b8ca59e0e63c1270ad72371a3be0",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "1e74993a6ea4448e357b78025e18ce4f39f2a8daae35cbb52bebfc3c653f482f",
+            "confusion_sha256": "edd72322a346ab7830cd705d2e4bb1dad595b68bab571f8090db0dc9b6372484",
+            "metrics_sha256": "52b2f0af900a920e0130cc9e725ceb435cb452012975486d04708a0104cb6bab",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 116,
+            "group_identity_overlap": false
+          }
+        },
+        {
+          "job_id": "E3_HG_H11_62",
+          "arm": "H11",
+          "attempt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H11\\attempt_001",
+          "health": {
+            "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H11\\attempt_001\\payload\\run",
+            "checkpoint_sha256": "d5f44d28351a9986c7303bfc7e194ef69e6ceef5547a8f1bd172567bd3895ae0",
+            "parameter_count": 4786294,
+            "sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86",
+            "split_hashes": {
+              "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+              "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+              "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+            },
+            "target_prediction_count": 3000,
+            "target_predictions_sha256": "c8dba1ede4e81e91a66d22ddad94476dc9eb4cb3e568af665893ebd621ebf407",
+            "confusion_sha256": "d613387dd9dac77278d0f586b271088ee7ab464825c58cf9110d241584647519",
+            "metrics_sha256": "9a1f04d370dafa0366fac1a1409090730e5ec1635ec1fcf56c13601025bce9e8",
+            "initial_state_sha256": "30bf6c681d03bd4af5fd32bd1b07d9b1439e9343dff89965c5480f1735bca245",
+            "last_tied_best_source_epoch": 39,
+            "group_identity_overlap": false
+          }
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "job_id": "E1_HG_H10_42",
+      "target_env": "E1",
+      "seed": 42,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "7f4c4452e012ba0799831e8d5e9eb5e01ba2332359cf4d372dafc47a6d4cd8f6",
+      "metrics_file_sha256": "c6394d8a0df44dfb9ac64fd8f85c0fc6b3aa73ce708aab88b6b3dd7726f9470f",
+      "checkpoint_sha256": "d5bbbbc2d9b108d8861b427e36e2ed363477cb59bcb49015725c5afcb0a88ba7",
+      "target_predictions_file_sha256": "588bb45fc8581387538f1ce242c200648880df26fae1108d6a232cea9fa35104",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9133333333333333,
+        "precision_macro": 0.9170278498203058,
+        "recall_macro": 0.9013888888888889,
+        "f1_macro": 0.9018666032145178
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9660033167495854,
+          "recall": 0.9708333333333333,
+          "f1": 0.9684123025768911
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8660130718954249,
+          "recall": 0.6625,
+          "f1": 0.7507082152974504
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9732360097323601,
+          "recall": 1.0,
+          "f1": 0.9864364981504316
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.815,
+          "f1": 0.8980716253443526
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6969147005444646,
+          "recall": 0.96,
+          "f1": 0.8075709779179809
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E1_HG_H11_42",
+      "target_env": "E1",
+      "seed": 42,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "cd1267f8e4df640953ab7b37b3ec911bffb6ad657776673e3e5b2efe7ac9c254",
+      "metrics_file_sha256": "2b7a6a27e11207681018f9283cac6090e000cdd1341c33e30f53021ce08d98b7",
+      "checkpoint_sha256": "1b8d946a88324c71339dccf7278cce5cde37c2cb096fe8f75557d0802cfac9be",
+      "target_predictions_file_sha256": "9a371ec60411ffc62325b6470b877a23e53f6014701504a13f3fff08ccf2dd84",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8976666666666666,
+        "precision_macro": 0.9112163991071519,
+        "recall_macro": 0.8856944444444445,
+        "f1_macro": 0.8835149275995114
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9551867219917013,
+          "recall": 0.9591666666666666,
+          "f1": 0.9571725571725571
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.905982905982906,
+          "recall": 0.53,
+          "f1": 0.668769716088328
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.963855421686747,
+          "recall": 1.0,
+          "f1": 0.9815950920245399
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9970588235294118,
+          "recall": 0.8475,
+          "f1": 0.9162162162162162
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6452145214521452,
+          "recall": 0.9775,
+          "f1": 0.7773359840954274
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E1_HG_H10_52",
+      "target_env": "E1",
+      "seed": 52,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "a873d02d80ed703305dda5deeb0f3d6444e6b187dc4e5bef3f70fad44b36b7ea",
+      "metrics_file_sha256": "972e688304a9edca72dc360093a0b93db02a7f49e78132d3052b031c0a25ac3e",
+      "checkpoint_sha256": "6899adbab01731e81574722bc166ba13006495076fceb1e57ae942359b7c02dc",
+      "target_predictions_file_sha256": "f3ca57a6d54d2ce2fbcfbd1dc0ba49e81877d8211f871c9b65f3e89901a9262c",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8816666666666667,
+        "precision_macro": 0.8933496522540639,
+        "recall_macro": 0.8761111111111112,
+        "f1_macro": 0.8708968198204246
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9884444444444445,
+          "recall": 0.9266666666666666,
+          "f1": 0.9565591397849463
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8333333333333334,
+          "recall": 0.575,
+          "f1": 0.6804733727810651
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9591346153846154,
+          "recall": 0.9975,
+          "f1": 0.9779411764705883
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8025,
+          "f1": 0.8904299583911235
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.579185520361991,
+          "recall": 0.96,
+          "f1": 0.7224835371589841
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "job_id": "E1_HG_H11_52",
+      "target_env": "E1",
+      "seed": 52,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "de447bf20c2f80f02594cf768955867842174c42fe24cb0a52ab350ed46ffcbc",
+      "metrics_file_sha256": "7e956ef3ccc0011b3edecdec0ab65c156db5fc5a8f1ad15214f2732c218fc89a",
+      "checkpoint_sha256": "95d94ef8d9db6a2b376d570ba9f3a393eb80505f808f27eb74a0bd5c4a6055cc",
+      "target_predictions_file_sha256": "e06bb80a28dfdaa15a1ec4ad43d2399308689e240d2de61278e86cece881f795",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.913,
+        "precision_macro": 0.9132693471637744,
+        "recall_macro": 0.8929166666666667,
+        "f1_macro": 0.893980324199202
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9867109634551495,
+          "recall": 0.99,
+          "f1": 0.9883527454242927
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8383838383838383,
+          "recall": 0.6225,
+          "f1": 0.714490674318508
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9826732673267327,
+          "recall": 0.9925,
+          "f1": 0.9875621890547265
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1": 0.888888888888889
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6718480138169257,
+          "recall": 0.9725,
+          "f1": 0.7946884576098059
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.98,
+          "f1": 0.98989898989899
+        }
+      ]
+    },
+    {
+      "job_id": "E1_HG_H10_62",
+      "target_env": "E1",
+      "seed": 62,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "b417da9f54337e489328de90553c46f7f8813a436f02e6bc8b75807eda3226a9",
+      "metrics_file_sha256": "f01dbebfa73b8f6485610e955dccd30c013858e426c2ebf4ddb912a6c7baa929",
+      "checkpoint_sha256": "b8462816ee678c9d9ae82f42ba9f1c28805899f1c2c8815dc41fa98162f4bcac",
+      "target_predictions_file_sha256": "db704857957786a177ffaeeee083c8251437241dad5ca0ddeca15991821709b8",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8893333333333333,
+        "precision_macro": 0.9011564606976084,
+        "recall_macro": 0.876388888888889,
+        "f1_macro": 0.8692290605887801
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9777777777777777,
+          "recall": 0.9533333333333334,
+          "f1": 0.9654008438818567
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8701923076923077,
+          "recall": 0.4525,
+          "f1": 0.5953947368421053
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9568345323741008,
+          "recall": 0.9975,
+          "f1": 0.9767441860465116
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8775,
+          "f1": 0.9347536617842875
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6021341463414634,
+          "recall": 0.9875,
+          "f1": 0.7481060606060607
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.99,
+          "f1": 0.9949748743718593
+        }
+      ]
+    },
+    {
+      "job_id": "E1_HG_H11_62",
+      "target_env": "E1",
+      "seed": 62,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "0404063b4c8bf625fe224d0ab699d096a4ab54cc75f38563e52115b134e0b0a5",
+      "metrics_file_sha256": "b29c25ac632f0b0b6ba548f42db2c22941f4fdd34d6a6f05ea21a90fcb7ca3fd",
+      "checkpoint_sha256": "715c066dd02ff41e39a618a69c2735d3cb81817cbaef8d2455a32f3f53d707ad",
+      "target_predictions_file_sha256": "b121a1b188c622138dd164c5f05271734c7d122623bef086e4a3e4eeb7580f21",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.921,
+        "precision_macro": 0.9194485114113652,
+        "recall_macro": 0.9040277777777778,
+        "f1_macro": 0.9039422416348469
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9924937447873228,
+          "recall": 0.9916666666666667,
+          "f1": 0.992080033347228
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8461538461538461,
+          "recall": 0.66,
+          "f1": 0.7415730337078651
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9975062344139651,
+          "recall": 1.0,
+          "f1": 0.9987515605493134
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8025,
+          "f1": 0.8904299583911235
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6855123674911661,
+          "recall": 0.97,
+          "f1": 0.8033126293995859
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1": 0.9975062344139651
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H10_42",
+      "target_env": "E2",
+      "seed": 42,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "ed7733534dd09b01947b39123e2cf32ab4d9b30f470e05a6523f793d6e446c42",
+      "metrics_file_sha256": "0732b005b06c8c554dfd1d8f210dbb8665bbccee6f18ce5a583bd2f076987503",
+      "checkpoint_sha256": "46c4de8c070d6c355f96c9c0e230bf9836d20606e1180a78f82c5cfd695bdc48",
+      "target_predictions_file_sha256": "a35899a33c866a9d33042751957fcab2ee5965c7bcc7b52f092208371a80c7fe",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.883,
+        "precision_macro": 0.8914266366478962,
+        "recall_macro": 0.855,
+        "f1_macro": 0.8696490731750162
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.8721694667640614,
+          "recall": 0.995,
+          "f1": 0.9295445698715453
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7345844504021448,
+          "recall": 0.685,
+          "f1": 0.7089262613195344
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9840848806366048,
+          "recall": 0.9275,
+          "f1": 0.954954954954955
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9921671018276762,
+          "recall": 0.95,
+          "f1": 0.9706257982120051
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7804054054054054,
+          "recall": 0.5775,
+          "f1": 0.6637931034482759
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9851485148514851,
+          "recall": 0.995,
+          "f1": 0.9900497512437811
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H11_42",
+      "target_env": "E2",
+      "seed": 42,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "a200477c63e4793deafa7c38e17f53e13617e4c40f9d965b8e18614be13edfab",
+      "metrics_file_sha256": "a0b4453a9c02701e2ff58f88ff82618a268b35aa3a1049cc2d3913256e5dbc95",
+      "checkpoint_sha256": "e7e93da614605f0ac5dc2f2e04a789ceaa7c6dc434def7e5033591c56a7db78a",
+      "target_predictions_file_sha256": "06b877d3ee870d41c57aae628d33ea3e8030a3c0a9dc5d5bbf9d37b6ece0ab6c",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9216666666666666,
+        "precision_macro": 0.9260214253040374,
+        "recall_macro": 0.9016666666666667,
+        "f1_macro": 0.9116645078217912
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9322429906542056,
+          "recall": 0.9975,
+          "f1": 0.9637681159420289
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7844036697247706,
+          "recall": 0.855,
+          "f1": 0.8181818181818182
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8625,
+          "f1": 0.9261744966442953
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9949748743718593,
+          "recall": 0.99,
+          "f1": 0.9924812030075189
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.8495575221238938,
+          "recall": 0.72,
+          "f1": 0.7794316644113668
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9949494949494949,
+          "recall": 0.985,
+          "f1": 0.9899497487437187
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H10_52",
+      "target_env": "E2",
+      "seed": 52,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "b89bab6fd39a5377931630fde82ae8120ef10bee04bc5894e7be63a01b93a765",
+      "metrics_file_sha256": "5b1a1ac9af76dbe99c3fb5d8f7bc0a27ecfcbcb048afbd6ca89bcc2293947a9c",
+      "checkpoint_sha256": "5aad47bcab90624782abfdd7fe780702ce98c0c5d418aa476817eee136ebb7a1",
+      "target_predictions_file_sha256": "8ce141313b49dc8f30f65aee6b95d578753a3b413aecf7698f62c0af857b6ca8",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9103333333333333,
+        "precision_macro": 0.9012980809497622,
+        "recall_macro": 0.9029166666666666,
+        "f1_macro": 0.9009090920024803
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9896373056994818,
+          "recall": 0.955,
+          "f1": 0.9720101781170483
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7388235294117647,
+          "recall": 0.785,
+          "f1": 0.7612121212121212
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.895,
+          "f1": 0.9445910290237467
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9900497512437811,
+          "recall": 0.995,
+          "f1": 0.9925187032418954
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6892778993435449,
+          "recall": 0.7875,
+          "f1": 0.73512252042007
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H11_52",
+      "target_env": "E2",
+      "seed": 52,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "3e5f84f52f9a0456e76869db35c609e634db2efeadf2c0c9dd68b418d7abfe0c",
+      "metrics_file_sha256": "744cff38cb3b95e9d076e26b042513f6ff86f0c5d833c6953c3154960ca4f47f",
+      "checkpoint_sha256": "529c8b8103cae80d1121904b39b7b1e236e76cf8d1a649956af36e3cbef8dd55",
+      "target_predictions_file_sha256": "84202e4496b13e2e63ea01d84d8301ca66ebb3ccb3021e3192fcd63e75f32dd8",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9173333333333333,
+        "precision_macro": 0.9045440840106028,
+        "recall_macro": 0.9018055555555556,
+        "f1_macro": 0.9021658560350586
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9735973597359736,
+          "recall": 0.9833333333333333,
+          "f1": 0.978441127694859
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7339246119733924,
+          "recall": 0.8275,
+          "f1": 0.7779083431257343
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9919137466307277,
+          "recall": 0.92,
+          "f1": 0.9546044098573282
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.9675,
+          "f1": 0.9834815756035579
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7756756756756756,
+          "recall": 0.7175,
+          "f1": 0.7454545454545454
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9521531100478469,
+          "recall": 0.995,
+          "f1": 0.9731051344743276
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H10_62",
+      "target_env": "E2",
+      "seed": 62,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "36b240f9201db5dba33468cf7a60df3cb3eff7f30cf4b98250ed61170dbc014a",
+      "metrics_file_sha256": "4ba3b2d45851843c03477bbd76ce9ce9d94c239f4b5691924c30c14261223e2a",
+      "checkpoint_sha256": "d69c104034aaf796b7c9dbb7bbfe4cbff1e89632266898e454b032f4a16e2108",
+      "target_predictions_file_sha256": "b35bb5ed49608363fd7a33a8dac09eeb36bdc3adcf521fb25febca65ecd77e10",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9116666666666666,
+        "precision_macro": 0.9084349576533829,
+        "recall_macro": 0.8911111111111111,
+        "f1_macro": 0.8967000243386446
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9652103559870551,
+          "recall": 0.9941666666666666,
+          "f1": 0.9794745484400658
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7829268292682927,
+          "recall": 0.8025,
+          "f1": 0.7925925925925925
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9967320261437909,
+          "recall": 0.7625,
+          "f1": 0.8640226628895183
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9975,
+          "recall": 0.9975,
+          "f1": 0.9975
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7082405345211581,
+          "recall": 0.795,
+          "f1": 0.7491166077738516
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "job_id": "E2_HG_H11_62",
+      "target_env": "E2",
+      "seed": 62,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E2\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "8c6fdf25c52188934192b51d78804db4721759574aebe727c936c44e18c042c5",
+      "metrics_file_sha256": "52eb8d5559b5f4343221bc34bd8d15d28da4952d75fa00cc045cacc9fa4bdf97",
+      "checkpoint_sha256": "8822a6c6911e1dd254e4b317b7577b4a10dc0b31f458ccf771351b4f8252c5c7",
+      "target_predictions_file_sha256": "3437658db4fbdbd7aeccf2fd6c1dbefab03bc05ac7343ff23fe55f32c5c3d397",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9216666666666666,
+        "precision_macro": 0.9143654944899208,
+        "recall_macro": 0.9080555555555555,
+        "f1_macro": 0.9102546615908312
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9727272727272728,
+          "recall": 0.9808333333333333,
+          "f1": 0.9767634854771785
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7466666666666667,
+          "recall": 0.84,
+          "f1": 0.7905882352941176
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9944903581267218,
+          "recall": 0.9025,
+          "f1": 0.9462647444298821
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9850746268656716,
+          "recall": 0.99,
+          "f1": 0.9875311720698254
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7872340425531915,
+          "recall": 0.74,
+          "f1": 0.7628865979381443
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H10_42",
+      "target_env": "E3",
+      "seed": 42,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "23df9608b547e3790d6964d8b06df4b9af16afd4bf792cd3175b891cb46d9ccc",
+      "metrics_file_sha256": "cbf205c9ab7eb75c2b156ee53336dda8263d6a2607b27df73b6e38bf0a91a59d",
+      "checkpoint_sha256": "da7dd01af9f99f0626e027a99c80fdf118b8aef351b32ca1ded5814055221d8d",
+      "target_predictions_file_sha256": "fc516d0c7d4c3e023d0a00e6739927d2d53f400ac1bb3706ec2cd3bdb85f6586",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8963333333333333,
+        "precision_macro": 0.9018594716614916,
+        "recall_macro": 0.8873611111111112,
+        "f1_macro": 0.8836034820709577
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.993025283347864,
+          "recall": 0.9491666666666667,
+          "f1": 0.9706007669365146
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8435114503816794,
+          "recall": 0.5525,
+          "f1": 0.6676737160120846
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9946524064171123,
+          "recall": 0.93,
+          "f1": 0.9612403100775193
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5799676898222941,
+          "recall": 0.8975,
+          "f1": 0.7046123650637881
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H11_42",
+      "target_env": "E3",
+      "seed": 42,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "069d08b31a607033f9dc25d655aff5d2186bbb45f79c063b8329a1b7650247b9",
+      "metrics_file_sha256": "ff5982d0d69e6440b1eb45c32c904aad32c83278535b0722dcce6a36fb5bdb79",
+      "checkpoint_sha256": "7b901a6f2d821a887b737de6776b5cfb5a21bee1752894594f78b181d0d22115",
+      "target_predictions_file_sha256": "0e427795a257e3fbebe4e82906315c44ad8fd2f749db49bda70e2b6ff3206479",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9056666666666666,
+        "precision_macro": 0.9052225512966176,
+        "recall_macro": 0.8965277777777777,
+        "f1_macro": 0.8944293663273903
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9973935708079931,
+          "recall": 0.9566666666666667,
+          "f1": 0.9766056997022544
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8264984227129337,
+          "recall": 0.655,
+          "f1": 0.7308228730822873
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9971671388101983,
+          "recall": 0.88,
+          "f1": 0.9349269588313412
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1": 0.9975062344139651
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6152512998266898,
+          "recall": 0.8875,
+          "f1": 0.7267144319344935
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H10_52",
+      "target_env": "E3",
+      "seed": 52,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "096dc7d916ad999a0ec9412fc287409285b608fea994695b9f036a9d32489ab5",
+      "metrics_file_sha256": "75c056d69458a2e667c20411b6f77602dde6cba60b3f1846d5e22e1a5df1a341",
+      "checkpoint_sha256": "b8e0c830e7b72ea6dec55ddbc9f9713b8e263a876e54f45f7bd491a5693ba371",
+      "target_predictions_file_sha256": "669a74fc64d8068a6017db2792eec0ac5e3e0d75fee4b13a409bf21fdf12893d",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8693333333333333,
+        "precision_macro": 0.8910870671434367,
+        "recall_macro": 0.8777777777777778,
+        "f1_macro": 0.8694112252793863
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9686924493554327,
+          "recall": 0.8766666666666667,
+          "f1": 0.9203849518810149
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9109311740890689,
+          "recall": 0.5625,
+          "f1": 0.695517774343122
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9843342036553525,
+          "recall": 0.9425,
+          "f1": 0.962962962962963
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9827160493827161,
+          "recall": 0.995,
+          "f1": 0.9888198757763975
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5289747399702823,
+          "recall": 0.89,
+          "f1": 0.663560111835974
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.970873786407767,
+          "recall": 1.0,
+          "f1": 0.9852216748768473
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H11_52",
+      "target_env": "E3",
+      "seed": 52,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "a0b9bc0291c8ce0157ffa454dd3ccf2717b3af400435a679d11ea52ce65fd190",
+      "metrics_file_sha256": "e47469e288d9d6f17ead7a838e4d46272cbc2c13204710de21b6fed289197c46",
+      "checkpoint_sha256": "b786b63d3a67b7928e2556579c95bc523c0b4b293385cb5db8263aa1eb9b4671",
+      "target_predictions_file_sha256": "1f5d22ddbed7702fb2364a29d776fdee697dd588e03158eabac4bd6c113fd212",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8936666666666667,
+        "precision_macro": 0.9033392538614967,
+        "recall_macro": 0.8984722222222222,
+        "f1_macro": 0.8906976256979718
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9972477064220183,
+          "recall": 0.9058333333333334,
+          "f1": 0.9493449781659389
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8657243816254417,
+          "recall": 0.6125,
+          "f1": 0.7174231332357248
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9948979591836735,
+          "recall": 0.975,
+          "f1": 0.984848484848485
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1": 0.9975062344139651
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5671406003159558,
+          "recall": 0.8975,
+          "f1": 0.6950629235237173
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H10_62",
+      "target_env": "E3",
+      "seed": 62,
+      "arm": "H10",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "58eccf9332d73010c338a41c687234e1c03ac330bd0e7f5dba53bd69410d8ae9",
+      "metrics_file_sha256": "52b2f0af900a920e0130cc9e725ceb435cb452012975486d04708a0104cb6bab",
+      "checkpoint_sha256": "861f9acbf180491095b14a6f5eca2cf0a458b8ca59e0e63c1270ad72371a3be0",
+      "target_predictions_file_sha256": "1e74993a6ea4448e357b78025e18ce4f39f2a8daae35cbb52bebfc3c653f482f",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.8623333333333333,
+        "precision_macro": 0.8787273403372234,
+        "recall_macro": 0.8670833333333333,
+        "f1_macro": 0.8595431064100693
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.988795518207283,
+          "recall": 0.8825,
+          "f1": 0.9326287978863937
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8296296296296296,
+          "recall": 0.56,
+          "f1": 0.6686567164179105
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9943661971830986,
+          "recall": 0.8825,
+          "f1": 0.9350993377483444
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9433962264150944,
+          "recall": 1.0,
+          "f1": 0.970873786407767
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5161764705882353,
+          "recall": 0.8775,
+          "f1": 0.65
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "job_id": "E3_HG_H11_62",
+      "target_env": "E3",
+      "seed": 62,
+      "arm": "H11",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "336cff7a858c2ac5f189c213de399a9f510580c711372b6701cb08320bbc8ba0",
+      "metrics_file_sha256": "9a1f04d370dafa0366fac1a1409090730e5ec1635ec1fcf56c13601025bce9e8",
+      "checkpoint_sha256": "d5f44d28351a9986c7303bfc7e194ef69e6ceef5547a8f1bd172567bd3895ae0",
+      "target_predictions_file_sha256": "c8dba1ede4e81e91a66d22ddad94476dc9eb4cb3e568af665893ebd621ebf407",
+      "target_prediction_count": 3000,
+      "test_metrics": {
+        "accuracy": 0.9106666666666666,
+        "precision_macro": 0.9076740232696249,
+        "recall_macro": 0.8944444444444444,
+        "f1_macro": 0.8942941183888241
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9767827529021559,
+          "recall": 0.9816666666666667,
+          "f1": 0.9792186201163757
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8628158844765343,
+          "recall": 0.5975,
+          "f1": 0.706056129985229
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9945945945945946,
+          "recall": 0.92,
+          "f1": 0.9558441558441559
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.954653937947494,
+          "recall": 1.0,
+          "f1": 0.9768009768009769
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6571969696969697,
+          "recall": 0.8675,
+          "f1": 0.7478448275862069
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    }
+  ],
+  "analysis_status": "not_yet_run",
+  "no_target_metric_tuning": true
+}

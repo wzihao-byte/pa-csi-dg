@@ -1,0 +1,298 @@
+{
+  "expected_job_count": 18,
+  "jobs": [
+    {
+      "arm": "Y00",
+      "config_content_sha256": "830f7ce8ab04319d5707026aa609b1a5ebedbd28308aeda5d7caaa5f8678b5f6",
+      "config_file_sha256": "4016d16c8acf0d912b5a9c1673255ae262b841a0a8fd3eb23176c0d37e5e3580",
+      "config_path": "screen_configs/screen__target_E1__arm_Y00__lam0000__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y00__lam0000__seed_81",
+      "lambda_supcon": 0.0,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "1d3f65c2477d057cf63f313b693f2e423088b295bdf1967fb15bd9832f5c0e47",
+      "config_file_sha256": "4f9015db9d198da92d369b0731988cab553c28133e49ac12209800a077c52e44",
+      "config_path": "screen_configs/screen__target_E1__arm_Y01__lam0010__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y01__lam0010__seed_81",
+      "lambda_supcon": 0.01,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "4bca5b7dbfa9e634c73f73bd65c531daa4919de86091c45060fe7ba9ac3ff544",
+      "config_file_sha256": "f0d5e07170a86abcda761b4b9510115108695b638efa148cbfbc355ea8dda375",
+      "config_path": "screen_configs/screen__target_E1__arm_Y01__lam0025__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y01__lam0025__seed_81",
+      "lambda_supcon": 0.025,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y10",
+      "config_content_sha256": "8227244eeab25c73aa19a8881fdaf3b1dd262073d9b15ea386ff19588a5cb8e8",
+      "config_file_sha256": "d977ddddceaf0f62ce7e1de24298956e625a1d7dd33e10e1c49741698526bbed",
+      "config_path": "screen_configs/screen__target_E1__arm_Y10__lam0000__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y10__lam0000__seed_81",
+      "lambda_supcon": 0.0,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "0fb0fb6809cf2cb2606f3f1d6f96fa7f1701bbc739b668008fb02d17f75aeb1b",
+      "config_file_sha256": "36cdf4c348cfb831cbae1211a8c28f5ab491c1f479b408a10ee763af4cd25a19",
+      "config_path": "screen_configs/screen__target_E1__arm_Y11__lam0010__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y11__lam0010__seed_81",
+      "lambda_supcon": 0.01,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "f0924873f79f3073a3575dc9dc821a021e9d3a396a6b25fd5798308c5e2ddbba",
+      "config_file_sha256": "042b733811d0655906329657b85455a94b79978b60afeeec9e72702034df5cc3",
+      "config_path": "screen_configs/screen__target_E1__arm_Y11__lam0025__seed_81.json",
+      "job_id": "screen__target_E1__arm_Y11__lam0025__seed_81",
+      "lambda_supcon": 0.025,
+      "screen_seed": 81,
+      "seed": 81,
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E1"
+    },
+    {
+      "arm": "Y00",
+      "config_content_sha256": "d60b00c856aa7f6252648fa091c1555958ddc0b761af9ad3e1556f61ec425e37",
+      "config_file_sha256": "64608d81bad934f8591b21aa4d87349c74b3f76ce2240d453e9f9efabc9ca3e9",
+      "config_path": "screen_configs/screen__target_E2__arm_Y00__lam0000__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y00__lam0000__seed_82",
+      "lambda_supcon": 0.0,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "8956342c63d52eb5008980d7b24194c995c3c83fb878a8a9227307b396113800",
+      "config_file_sha256": "1081b71981dbf88671823e2c35b25d1ec0c0d33597d349f047df7032b71b063a",
+      "config_path": "screen_configs/screen__target_E2__arm_Y01__lam0010__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y01__lam0010__seed_82",
+      "lambda_supcon": 0.01,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "dc4522d907308aa71a342a0a9ac582b36dcfc06a9acf75cc312d124896efc9f4",
+      "config_file_sha256": "16eb753ebea017bc9221f09b98cfa1195e5c17bb70fade8841cb0444605836a4",
+      "config_path": "screen_configs/screen__target_E2__arm_Y01__lam0025__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y01__lam0025__seed_82",
+      "lambda_supcon": 0.025,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y10",
+      "config_content_sha256": "ed43b897f32d932d99592a246838be7ebbb3cb23c964f293b6cd5e36c22ef5c9",
+      "config_file_sha256": "0a17cfa58feda5b295a988149f9af37e40dee5b0c5b5de88fcaf512fd95a2238",
+      "config_path": "screen_configs/screen__target_E2__arm_Y10__lam0000__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y10__lam0000__seed_82",
+      "lambda_supcon": 0.0,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "efa951d15226eef91b2bff137ffc9942c8f4731db4df0681e7e1dde309d95afa",
+      "config_file_sha256": "7f58fc8737b9ada4d8c0e2290bd85159930d97c63b7dd8c6731b3276e6240f60",
+      "config_path": "screen_configs/screen__target_E2__arm_Y11__lam0010__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y11__lam0010__seed_82",
+      "lambda_supcon": 0.01,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "3922885c96dae079b5e9c4aa685aa4779382dc92ffd71079c03aedcca058c9ba",
+      "config_file_sha256": "223494308d5edca0ae7d9d38057d902ccd99192e1db8dab7d6ee5ca2484eb6ec",
+      "config_path": "screen_configs/screen__target_E2__arm_Y11__lam0025__seed_82.json",
+      "job_id": "screen__target_E2__arm_Y11__lam0025__seed_82",
+      "lambda_supcon": 0.025,
+      "screen_seed": 82,
+      "seed": 82,
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "stage": "screen",
+      "target_env": "E2"
+    },
+    {
+      "arm": "Y00",
+      "config_content_sha256": "e9054c454cb5bf1b154ed414456db12bb6fb0400074dd100a938b0695109101b",
+      "config_file_sha256": "6021bb2c0b04fb990b3e8ab83278010f54d75566ac278ebbb24cbf7aca1e1d1f",
+      "config_path": "screen_configs/screen__target_E3__arm_Y00__lam0000__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y00__lam0000__seed_83",
+      "lambda_supcon": 0.0,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "98265c614ea60ef955feb6b90412e7e7fdab348f1d4938d50c8a3e73e1086647",
+      "config_file_sha256": "58025946c568517292de001cda1d506d806932f373634f524c2a0d10ee4a1c5b",
+      "config_path": "screen_configs/screen__target_E3__arm_Y01__lam0010__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y01__lam0010__seed_83",
+      "lambda_supcon": 0.01,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    },
+    {
+      "arm": "Y01",
+      "config_content_sha256": "dc43c9e3d81af1ce57ab380fbd47f1ffd1596b16f88cc99759c3ed0b07baaa81",
+      "config_file_sha256": "439f5d9c296a54298897fdee2d11ff1c73315895605213547bbe594a329591a4",
+      "config_path": "screen_configs/screen__target_E3__arm_Y01__lam0025__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y01__lam0025__seed_83",
+      "lambda_supcon": 0.025,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    },
+    {
+      "arm": "Y10",
+      "config_content_sha256": "4d2912e2713ad0a929d858a8f69faf422fc0caa5170bf24ecdb7f86b0e3c0642",
+      "config_file_sha256": "39e9872356e0ce7a1e19c5bbb308617dcdc96181e95f3bfac32967d165f10147",
+      "config_path": "screen_configs/screen__target_E3__arm_Y10__lam0000__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y10__lam0000__seed_83",
+      "lambda_supcon": 0.0,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "f6ce252cd4385325eca80e411ce8ba7e2766dfbbddffe20b151a4070c6297a6a",
+      "config_file_sha256": "41a18d97e643dfb16212d497b9b4485a63363914fde7adecc699fa20b437506c",
+      "config_path": "screen_configs/screen__target_E3__arm_Y11__lam0010__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y11__lam0010__seed_83",
+      "lambda_supcon": 0.01,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    },
+    {
+      "arm": "Y11",
+      "config_content_sha256": "b5d6f25c9c67bda035d0688b4983b4ef379846d79ef539636b12c6f4f0ee7b22",
+      "config_file_sha256": "f2313c145f9cf5110327fec7648f511b3170361c9805f8b09fbbfe3e9a2199b3",
+      "config_path": "screen_configs/screen__target_E3__arm_Y11__lam0025__seed_83.json",
+      "job_id": "screen__target_E3__arm_Y11__lam0025__seed_83",
+      "lambda_supcon": 0.025,
+      "screen_seed": 83,
+      "seed": 83,
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "stage": "screen",
+      "target_env": "E3"
+    }
+  ],
+  "protocol_lock_sha256": "a770e28fb3fae2d023b6e0c5ddb6e0ca0b91861300c6ac2116ef76e872e9e5b7",
+  "protocol_name": "supcon_tpp_joint",
+  "protocol_version": "1.2.0-stage0",
+  "schema_version": "supcon-tpp-job-registry/v2",
+  "stage": "screen"
+}

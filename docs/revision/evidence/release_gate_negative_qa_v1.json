@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-09-03T18:49:03.376094+00:00",
+  "passed": true,
+  "return_code": 1,
+  "release_output_absent": true,
+  "formal_evidence_absent": true,
+  "final_pdf_qa_absent": true,
+  "builder_sha256": "5ece352e1020fd2f1fd4dadcad6d6eb6e60bf8224e2db1e810dead4b7120d630",
+  "log_sha256": "90dfdb800ffe3973a5ab615582cf95445a8ca0dcc8d7985491dff210f0a65169",
+  "expected_failure_reason": "Formal evidence gate is unavailable before the 216-run/117-analysis chain and final manuscript QA complete.",
+  "scientific_completion_claimed": false
+}

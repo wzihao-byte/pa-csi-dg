@@ -1,0 +1,148 @@
+{
+  "schema": "wimans-plan-progression/v1",
+  "captured_at_utc": "2026-10-14T07:40:44.354838+00:00",
+  "captured_at_jst": "2026-10-14T16:40:44.354838+09:00",
+  "runtime": "D:\\pa-csi-dg-revision-runtime\\data\\wimans_20261014",
+  "new_formal_training_started": false,
+  "existing_training_queue_modified": false,
+  "physical_MAT_export_status": "unresolved",
+  "registered_input_protocol": "storage_order_v2",
+  "raw_acquisition": {
+    "status": "complete",
+    "expected_rows": 1782,
+    "completed_rows": 1782,
+    "failed_rows": 0,
+    "downloaded_bytes": 4317606012,
+    "complete": true,
+    "updated_at_utc": "2026-10-14T07:24:30.442959+00:00"
+  },
+  "input_qa": {
+    "status": "passed_storage_order_v2",
+    "completed_rows": 1782,
+    "candidate_rows": 1782,
+    "full_input_qa_passed": true,
+    "numerical_input_qa_passed": true,
+    "updated_at_utc": "2026-10-14T07:34:27.259945+00:00"
+  },
+  "workflow_status": {
+    "pid": 25952,
+    "started_at_utc": "2026-10-14T07:22:02.834761+00:00",
+    "stages": [
+      {
+        "stage": "acquisition",
+        "exit_code": 0,
+        "finished_at_utc": "2026-10-14T07:24:30.503960+00:00"
+      },
+      {
+        "stage": "candidate_preparation",
+        "exit_code": 0,
+        "finished_at_utc": "2026-10-14T07:34:30.371565+00:00"
+      }
+    ],
+    "training_started": false,
+    "target_model_evaluation_permitted": false,
+    "formal_input_freeze_allowed": false,
+    "status": "storage_order_inputs_prepared_source_qa_pending",
+    "stage": "candidate_preparation",
+    "updated_at_utc": "2026-10-14T07:34:30.371565+00:00"
+  },
+  "recovery_status": {
+    "started_at_utc": "2026-10-14T07:18:33.376192+00:00",
+    "pid": 9624,
+    "status": "finished",
+    "recovery_kind": "one_sequential_pass_same_manifest_same_dataset_version_path_endpoint",
+    "training_started": false,
+    "gpu_used": false,
+    "updated_at_utc": "2026-10-14T07:34:30.395565+00:00",
+    "exit_code": 0
+  },
+  "synthetic_implementation_qa": {
+    "status": "passed",
+    "tests_run": 12,
+    "failures": 0,
+    "errors": 0,
+    "real_source_qa_passed": false,
+    "execution_frozen": false,
+    "expected_nine_class_parameters": 4787065
+  },
+  "existing_queue_last_independent_audit": {
+    "captured_at_jst": "2026-10-14T16:15:10.306006+09:00",
+    "completed_new_runs": 25,
+    "total_new_runs": 54,
+    "remaining_new_runs": 29,
+    "completed_counts": {
+      "G10": 9,
+      "G11": 9,
+      "P_ALL": 4,
+      "P_REMOVE": 3
+    }
+  },
+  "author_baseline_qualification": "conditional_method_eligible_execution_not_qualified",
+  "candidate_configuration_qa": {
+    "status": "passed_candidate_registry_not_frozen",
+    "config_count": 45,
+    "formal_four_arm_candidates": 36,
+    "source_coral_search_candidates": 9,
+    "formal_executable_configs": 0,
+    "input_qa_passed": true,
+    "real_source_training_qa_passed": false,
+    "source_shape_qa": {
+      "classroom": {
+        "path": "D:\\pa-csi-dg-revision-runtime\\data\\wimans_20261014\\source_shape_qa_v1\\classroom\\source_shape_qa.json",
+        "sha256": "1b9f79df8582cac31e99adf1b0c219019ebce32f41bc66632cca9225e47fd834",
+        "sample_id": "act_57_1",
+        "target_signal_rows_read": 0,
+        "fresh_reload_exact": true
+      },
+      "meeting_room": {
+        "path": "D:\\pa-csi-dg-revision-runtime\\data\\wimans_20261014\\source_shape_qa_v1\\meeting_room\\source_shape_qa.json",
+        "sha256": "34292ea122e8588c222c6f12033619048d904b5a7830c11b1c5dd12228cce0c4",
+        "sample_id": "act_19_1",
+        "target_signal_rows_read": 0,
+        "fresh_reload_exact": true
+      },
+      "empty_room": {
+        "path": "D:\\pa-csi-dg-revision-runtime\\data\\wimans_20261014\\source_shape_qa_v1\\empty_room\\source_shape_qa.json",
+        "sha256": "8ed607a22fad7dd750ee235a81aca31301f16259dbb52c4bed50df64382fb711",
+        "sample_id": "act_19_1",
+        "target_signal_rows_read": 0,
+        "fresh_reload_exact": true
+      }
+    }
+  },
+  "author_optimizer_prototype": {
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\arcfi_hs_20261014\\PROTOTYPE_QA.json",
+    "sha256": "cd0df9c15f9d608ecf26e7f222c09ebaf3b0211a0bad3ff45b5609de48e6dda9"
+  },
+  "remaining_acceptance": [
+    "per-fold real source W11 full-batch short-training and strict reload QA",
+    "exclusive GPU source timing after existing queue",
+    "MultiEnv MC and ME adapter/source QA",
+    "author baseline execution adaptation and source QA",
+    "source CORAL gamma search before WC/MC formal jobs",
+    "formal code/config/job bundle freeze",
+    "72 formal training jobs and offline target evaluation",
+    "system measurement, updated manuscripts/PDFs and rebuilt supplement"
+  ],
+  "artifact_sha256": {
+    "PLAN.md": "e0dc43a44f36a697a39888695503e4b2cdbe75a370f57058c3038d7899d42416",
+    "protocol_plan.json": "b8d004f441a29297b991eea0b10a14e848eee49cba21fdfd767eb8094e939aa7",
+    "protocol_plan_v1.json": "cc2ed7bd17e8626a1113a15210f54ee77f29543246291b8ebca0aabf8162383b",
+    "metadata_verification.json": "d79a7440470f474b2e4dd91599081fb7533461e61a984329745c0a80159837d7",
+    "subset_manifest.csv": "073dfbaf9d44bfc03adecdaa9e103855009e160dd81ae9a4b10db01eebb3007d",
+    "fold_manifest.json": "b5d7d325b1f79bb858b790c69c021408ccfdb5668948ca104ca5edcdfd13aa8d",
+    "axis_storage_protocol.json": "44cda0fc868c6bf286af94730386c6be99f8ec26d237827f950c943b2782a1cf",
+    "input_axis_audit.json": "aecc8c4eda364446aa80192dff3ae480f66fd429530f0e9cc5452812bdb35d8a",
+    "preprocessing_qa.json": "2f257fd76eb93ef0b002399dbc46a4a76acd3b5facfc381ae180dda41302d001",
+    "IMPLEMENTATION_QA.json": "f9a1d9aec6db3dcc54c02781a72be37f7f781a46aecd83f2b73ba24c3940b714",
+    "author_baseline_audit.json": "c03c6c5f871544f285605edb8535fd12b1edab06c56d44ee9a882f1aff444bfc",
+    "MANUSCRIPT_STRUCTURE.md": "928e3999acbc0f3e710a21de0a723917b803df949e3ce10ced893a5fd1b2c81b",
+    "existing_queue_snapshot.json": "9b28fbb6aac80cdb7be4b1e744df731f989c8314f7979ed8215151412bdab901",
+    "hs_four_arm_provenance.json": "01c118ad5dc69e5cb0633ac5ef45f513e7c72703fcbe0c14b5a53ab2bd50f72e",
+    "peer_implementation_review.json": "de8dd5624d15130bed68adf7fea02a17086ec728c13903974fba61448aa756f2",
+    "raw_acquisition_verification.json": "1542ad6f37052e2c2c5490e9108bfc57056989a47f231dca64a39a9efe95dd5f",
+    "prepared_input_verification.json": "d88087572f40dbac0094232514a71af2d9ffbfc957fd91455ae0cfa6a3bcc9e0",
+    "candidate_configs_qa.json": "725e1c5ed63008712f5fcd14cd58c01360cffa923da3d42bc3895e793155d8cb",
+    "PREPARATION_EXECUTION.md": "debb9a46008714874149dd5757309e431cfd1e9dc7e27bc7dd1b363e5a3fe8f5"
+  }
+}

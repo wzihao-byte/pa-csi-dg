@@ -1,0 +1,8 @@
+{
+  "passed": false,
+  "checked_at": "2026-09-03T16:27:18.319185+00:00",
+  "test": "atomic os.replace while a FILE_SHARE_READ|WRITE|DELETE observer handle remains open",
+  "error": "PermissionError WinError 5",
+  "observer_sha256": "ec199a79bff62a973a1f56b72624cbf3580b40fc7370dc073aef2ae4d8ffa943",
+  "decision": "Do not observe any mutable atomically replaced JSON file while its writer is active; observe append-only logs and OS process state instead"
+}

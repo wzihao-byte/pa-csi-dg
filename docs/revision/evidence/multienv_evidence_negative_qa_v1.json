@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-10T10:39:12.1505315Z",
+  "passed": true,
+  "scope": "Revised MultiEnv-only evidence compiler rejects active formal writers",
+  "return_code": 1,
+  "output_created": false,
+  "active_bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1",
+  "active_pid": 5532,
+  "compiler_sha256": "4fd46d4bb7b7f71b632fa75b83888acd93916611a7ffeb292141e878e4e4aac8",
+  "log": "D:\\pa-csi-dg-revision-runtime\\qa\\multienv_evidence_negative_v1.log",
+  "log_sha256": "3110cfbea8b7e41533739783b3e30dc93e4eda9e6603554e7a4d7160cf1b5cde",
+  "widar_accepted_as_performance_evidence": false
+}

@@ -1,0 +1,656 @@
+{
+  "schema_version": "tpp-residual-scale-reference-registry/v1",
+  "reference_bundle_manifest_sha256": "f675e34abca6d206db72d885f3bf44352ec4f79d2363a3ba06188d2f5e1aab35",
+  "reference_results_sha256": "03530439f7e44d9bf01b9b4d6554dc20cae396ab95aaf09bee3823d8f1197a54",
+  "rows": [
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E1__seed_42",
+      "target_env": "E1",
+      "seed": 42,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E1__seed_42__arm_H11.json",
+      "source_config_file_sha256": "429a14692ced314444a7f5491f274350f39fba064989caad444f36f0a5f65867",
+      "source_config_payload_sha256": "89d0c4d8775a83396b0e6531b49be6d6748d919f1ac93e4bdd491215f470f8f3",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E1\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "2420e317f474921a3d4eb831f4fc106bf29afdac7737adbcf474077c19e037dc",
+      "attempt_seal_sha256": "6bbd6f77a75d3f3dfe470dbd0726781fc14a363518e67964891b1dbb1e5bfab4",
+      "metrics_sha256": "6658a435b88713bd41e2c2866a2d6325edbfeef9f92976d4616235b7b9cbb43a",
+      "checkpoint_sha256": "005a4402ea659b4e5d7c26df369e0e14b465205b6cf2e805143068d40599f52c",
+      "target_predictions_sha256": "3050411cfbb4bf72ac2cd63416368ec967d366002b25d56afa743245839fb468",
+      "sampler_schedule_sha256": "d29837557c9b4847e3c875a3be1c074db7e80c4e40303c1c39a9e5dc24e7b7b0",
+      "split_hashes": {
+        "train": "0f44ac7f25e1290a06d05323aafeb573bf3ed8ee5b09659577e41bc1935e7cb8",
+        "val": "ca8b840cbcdca4d3481eab3bc80597ca3d259e4411bfd5ead66a9298a674bb13",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.9196666666666666,
+        "precision_macro": 0.9251415936757902,
+        "recall_macro": 0.9016666666666667,
+        "f1_macro": 0.9034320827404762
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9690805532953621,
+          "recall": 0.9925,
+          "f1": 0.9806504734458626
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9018181818181819,
+          "recall": 0.62,
+          "f1": 0.7348148148148147
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9876543209876543,
+          "recall": 1.0,
+          "f1": 0.9937888198757764
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9969418960244648,
+          "recall": 0.815,
+          "f1": 0.8968363136176065
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.700354609929078,
+          "recall": 0.9875,
+          "f1": 0.8195020746887967
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.995,
+          "recall": 0.995,
+          "f1": 0.995
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E1__seed_52",
+      "target_env": "E1",
+      "seed": 52,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E1__seed_52__arm_H11.json",
+      "source_config_file_sha256": "f93aa6930937f3d110847c74628c5a1ba1eace175b9b74a3f3688de99dba3a8d",
+      "source_config_payload_sha256": "9b260faa5cef9db7872442ada45f1454a2e39b55d3db193db6ca963a527aa320",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E1\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "4544d0a54c6cd2ffe164df01c206bf39661391d2d804fca620b1ff530614dbec",
+      "attempt_seal_sha256": "a373bf832b48fd0c1766244e694b9f7083df38021d654dfa743c69b7b0ce6de4",
+      "metrics_sha256": "592732316bd1346c5fa79f8283f7febac86aaee31fbc95b671612a00baa5a243",
+      "checkpoint_sha256": "a3c72efacfa0558f17307b051b8666c19a19410b522fab4f84a3ebae5ba3a81a",
+      "target_predictions_sha256": "56c63fe9d5efd58827fbbaad4fad2ee169a867340b685b5bf54536280ef1b642",
+      "sampler_schedule_sha256": "5025e72cc5ee121d33fa06b94ffcd7a15aa7ca038259f5678d542708a946a0b9",
+      "split_hashes": {
+        "train": "d2ca290230c040220cbaee77a5e1617e92f106b66f055933bb5d0f5d4d79c5fe",
+        "val": "086d9fe9592ebb6b7dfe398ea566b7336ed128dd2ef5c5537e359ff452b15d48",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.9176666666666666,
+        "precision_macro": 0.924922086699742,
+        "recall_macro": 0.9025000000000002,
+        "f1_macro": 0.9018860110693238
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9924242424242424,
+          "recall": 0.9825,
+          "f1": 0.9874371859296482
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9176029962546817,
+          "recall": 0.6125,
+          "f1": 0.7346326836581709
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9970588235294118,
+          "recall": 0.8475,
+          "f1": 0.9162162162162162
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6474464579901154,
+          "recall": 0.9825,
+          "f1": 0.7805362462760674
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.995,
+          "recall": 0.995,
+          "f1": 0.995
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E1__seed_62",
+      "target_env": "E1",
+      "seed": 62,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E1__seed_62__arm_H11.json",
+      "source_config_file_sha256": "41da80653fe2586544415a082dc3c25b8013c5c56680fec7714d7c65c5b5253b",
+      "source_config_payload_sha256": "7fddc75b63874af4ee92dbb7f833f1d1a2e7436580678848c8ad9046106cf7fb",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E1\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "0d78f29f8434438baec5522453f1be2c700269700fd4cf87e13eeeb8eee1a6a1",
+      "attempt_seal_sha256": "0f075df144da1ce3a4f10766a6b284b67da1a095700f8e6554a72901a7cbee63",
+      "metrics_sha256": "a24dfcb4008393df7d6f366ba0e7448609443bfe55524fad98b3265180b1c025",
+      "checkpoint_sha256": "3d8a1cbe8fefe02db2963f137eb6f39cea1c9b5aed429e72e5b3cfb9b7a7f753",
+      "target_predictions_sha256": "b86a26d9a83f63dacd314fbab6e1595bc54012c5aaf6c1f76d8fe2eb8048992e",
+      "sampler_schedule_sha256": "312475a5e73843d13694f58c785a9eff090841309e57ad3f4f5a0df39520d1e3",
+      "split_hashes": {
+        "train": "0c4984898b48b59c4b3ce83e127cf610e7273a4fd44b86dae445aec66c24842c",
+        "val": "cfcc0fff9f4ff1094754ec8f572899d8a38becd304bd9ca26a1a8822dffbe173",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.8996666666666666,
+        "precision_macro": 0.9175344528690471,
+        "recall_macro": 0.8793055555555555,
+        "f1_macro": 0.8808267353714493
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.932806324110672,
+          "recall": 0.9833333333333333,
+          "f1": 0.9574036511156186
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9473684210526315,
+          "recall": 0.495,
+          "f1": 0.6502463054187192
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9432624113475178,
+          "recall": 0.9975,
+          "f1": 0.9696233292831107
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9970059880239521,
+          "recall": 0.8325,
+          "f1": 0.9073569482288828
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6847635726795096,
+          "recall": 0.9775,
+          "f1": 0.8053553038105046
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.99,
+          "f1": 0.9949748743718593
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E2__seed_42",
+      "target_env": "E2",
+      "seed": 42,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E2__seed_42__arm_H11.json",
+      "source_config_file_sha256": "7c277a9b3fe4a219e4d3d73fab86e9df326c189463b2a0f6f1bb7769d29da0bf",
+      "source_config_payload_sha256": "9f47604d383128d859708690e22175ec901b73ee03697c366ed103c5d69e20b4",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E2\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "ae0aa59a66ede9f11973c1120dc715da5ec528e445361eb01f0bd63dab8d2e24",
+      "attempt_seal_sha256": "2c6f6bc4a81738e6c2867bec2996d3d8476f9a19a35f44546e6a36296d950959",
+      "metrics_sha256": "e37191b891cdf59168d187b296ce25a3939aa800d385be231fc883ffc155c35e",
+      "checkpoint_sha256": "4124ab88870465d5c71eb7861fdcf80f29467d0db26c690ee99f9ac9cd838583",
+      "target_predictions_sha256": "10db07f47a731aa0cfecd5e3f6a2df366d314c8a3069d9801c961aad36bf2077",
+      "sampler_schedule_sha256": "690e72b2d9639403a53ac60a7fc78ca86f73778f773123fcce36ccca44fc8596",
+      "split_hashes": {
+        "train": "865d9a94823fdc43ae78674eb55a103c027764713a4f859acb0bd071dca2a48d",
+        "val": "251e39c0fe93bbf1427f1b99f00e1427fe504941f4df323b64fa4babb777c300",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.9233333333333333,
+        "precision_macro": 0.9147918721097322,
+        "recall_macro": 0.9045833333333334,
+        "f1_macro": 0.907985136117993
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9763458401305057,
+          "recall": 0.9975,
+          "f1": 0.9868095630667766
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7300215982721382,
+          "recall": 0.845,
+          "f1": 0.7833140208574739
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9917808219178083,
+          "recall": 0.905,
+          "f1": 0.94640522875817
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9900249376558603,
+          "recall": 0.9925,
+          "f1": 0.9912609238451936
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.8005780346820809,
+          "recall": 0.6925,
+          "f1": 0.7426273458445041
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E2__seed_52",
+      "target_env": "E2",
+      "seed": 52,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E2__seed_52__arm_H11.json",
+      "source_config_file_sha256": "f9c8c7cc7655b9543ce30d4a7cd52ff379a8eb30ef4f3f0de98c1e4b445a6ca2",
+      "source_config_payload_sha256": "ddadcf7e6828c3f6efbb37e35482aec38f187a736ae928c324ab3993f29da777",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E2\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "3999cd48c46b297c413a4ea26a27dceb5ed27b6741bc0e893340d6aa8370f482",
+      "attempt_seal_sha256": "7ba8a088652a65c1ab716868640b59e67d61cf587ee98b1d766d18173c00becc",
+      "metrics_sha256": "14d3d68c4a47fa98a7ba27c966797ab64985c389cff93ee9f003bbd61044dcd1",
+      "checkpoint_sha256": "f6eeb4732ae2edd66a1c29a9b64d5a992c21648e0e8afbd3db6a2bcd0b2ac543",
+      "target_predictions_sha256": "33a36e525df56ba536a7b3b51dbd3d90103c27c500c99e25c76cf05107af3ae2",
+      "sampler_schedule_sha256": "63b549afd07bcfc38ed4b80bd74bbfd6923ce237000108e849312d47410b4178",
+      "split_hashes": {
+        "train": "c11b95e183f45b43f1578f4ee98e3bd75a813bcc3826cc879b55dd7f9130e800",
+        "val": "ac63276a5d4322e45534aff1963ab8a97c27f04056307182802f548c60be25ef",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.9126666666666666,
+        "precision_macro": 0.9016718872238623,
+        "recall_macro": 0.8905555555555554,
+        "f1_macro": 0.8955573758520347
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9651821862348178,
+          "recall": 0.9933333333333333,
+          "f1": 0.9790554414784395
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.691764705882353,
+          "recall": 0.735,
+          "f1": 0.7127272727272727
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9787798408488063,
+          "recall": 0.9225,
+          "f1": 0.9498069498069498
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950124688279302,
+          "recall": 0.9975,
+          "f1": 0.9962546816479401
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7945205479452054,
+          "recall": 0.725,
+          "f1": 0.7581699346405228
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9847715736040609,
+          "recall": 0.97,
+          "f1": 0.9773299748110831
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E2__seed_62",
+      "target_env": "E2",
+      "seed": 62,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E2__seed_62__arm_H11.json",
+      "source_config_file_sha256": "40e5e170ecaac74f92e5990d8c214c497cadcac1989ede4f68bfdf0ea42bc92a",
+      "source_config_payload_sha256": "e97dcc3d2c05ab1af35f3c2a30a84aa3f0c656dafddb32eed2d104143e951cdc",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E2\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "725533df857940d62983f9be9791b6845621142611f482b3c398c62ccc468342",
+      "attempt_seal_sha256": "d20e3b01a61455233c89d21b04f144d604c3e2a7986475acb990e1296c05d7aa",
+      "metrics_sha256": "73e7b388c0e988b9783cdd7b6a3496d367a42ec795591aee3f9609998fc62d2c",
+      "checkpoint_sha256": "c7a995fdb221d70ccfd3aab06b21f5b6b580aba0641b18d7f73f0b35504e0d3c",
+      "target_predictions_sha256": "e7ab07ba15a349b780e6cb00c8d4d36bfb9726ccd2f7ab2e564899cc0fea0b63",
+      "sampler_schedule_sha256": "bd1d585e42cc7e35c3c0cb8ab9068d6b6b81eadccedfe9bea4d71530ad4b04c2",
+      "split_hashes": {
+        "train": "4b3d0afc7bf1758949abaf5634d32f98e4fd7e1b9221b05bfea52b5bce744601",
+        "val": "2c97cea52960971ebb1799fa649489404a1fc9e936a961fdd3758d5200ced275",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.9153333333333333,
+        "precision_macro": 0.8927021291755294,
+        "recall_macro": 0.9020833333333332,
+        "f1_macro": 0.8962973671315329
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9815436241610739,
+          "recall": 0.975,
+          "f1": 0.9782608695652174
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7734375,
+          "recall": 0.7425,
+          "f1": 0.7576530612244898
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.9275,
+          "f1": 0.9623865110246433
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9924433249370277,
+          "recall": 0.985,
+          "f1": 0.9887076537013803
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.735981308411215,
+          "recall": 0.7875,
+          "f1": 0.7608695652173914
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.8728070175438597,
+          "recall": 0.995,
+          "f1": 0.9299065420560748
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E3__seed_42",
+      "target_env": "E3",
+      "seed": 42,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E3__seed_42__arm_H11.json",
+      "source_config_file_sha256": "408084f226f7e465135ecf34e89d8ab9b01e2a28c6ad2f98d3621c6624a1e28d",
+      "source_config_payload_sha256": "1cdb9b659cd23bdea8a33a3bb74deb831fbc2d64d17a0d3d56486e8b50c64bd1",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E3\\seed_42\\H11\\attempt_001",
+      "completion_manifest_sha256": "86e85b27c67f6c0db7b1830c044b25f02b15a5c07c4cd61b6e2809316d11045f",
+      "attempt_seal_sha256": "574ea5b129c919aea6718c3342c277c6528d4d639f98f463dcc47add4767bec3",
+      "metrics_sha256": "a390a0e199e523b757e9eb775a4f50be30d2bd83836c34d54ec5d0cc92c9fd5b",
+      "checkpoint_sha256": "3c3c08b8a29207a381f238f1fc3399b2703bc5b20bdaf77c503c1acab5292090",
+      "target_predictions_sha256": "f234d7cde9bda6f768ba364c26c0b03ed884051ddd20d48ef9983467fe01fb14",
+      "sampler_schedule_sha256": "ef6e25b9658dd488713b772e463e1ad1166174e8a5d15612b57c536a0de8472c",
+      "split_hashes": {
+        "train": "e58fe2824d1443011e3638d80999e7b390172c776634956870a65d4aa5102dfb",
+        "val": "483638e65f222305406a386efc6c269bf9e0447c461c8c4668ce8d85ab7e0b42",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.9333333333333333,
+        "precision_macro": 0.9274129784719115,
+        "recall_macro": 0.9216666666666667,
+        "f1_macro": 0.9196337247707461
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9966273187183811,
+          "recall": 0.985,
+          "f1": 0.9907795473595976
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8795986622073578,
+          "recall": 0.6575,
+          "f1": 0.7525035765379113
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9949238578680203,
+          "recall": 0.98,
+          "f1": 0.9874055415617129
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9925558312655087,
+          "recall": 1.0,
+          "f1": 0.9962640099626401
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7007722007722008,
+          "recall": 0.9075,
+          "f1": 0.7908496732026145
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E3__seed_52",
+      "target_env": "E3",
+      "seed": 52,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E3__seed_52__arm_H11.json",
+      "source_config_file_sha256": "e9eb41176ec6f700b69fdecb548eefffb4216f088a35fed1bcd92bd9c62aa0b5",
+      "source_config_payload_sha256": "4d552dd54e78be1189086eb3cf4cdb047d7ba35962ac4cc5c962916a7a5ddcfa",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E3\\seed_52\\H11\\attempt_001",
+      "completion_manifest_sha256": "d6cd19095eca5d75f2f8e7fa7229f578d9057d26b070a5f88582b96a375e28b1",
+      "attempt_seal_sha256": "f1cb73603c6a8fc7aff6d10ada42225c1527a706fabd3da469200dac70a5d6fc",
+      "metrics_sha256": "a949a3ca65516c6571e46af2ff3548e2e5d9daddf0337e6fdf2d2c16657aa8ed",
+      "checkpoint_sha256": "def4941ae88cc6fc7315e7a417d1c34ca297d615b140b4e159c1753748b49af1",
+      "target_predictions_sha256": "4301f904030e4ab4fca6474656dcbae313981c9f2c2037f29e6e88cea3818627",
+      "sampler_schedule_sha256": "2b6a913629f8815be6f9ab734d93ba481feb8b54f73fc1e3b2636c90e2a3215c",
+      "split_hashes": {
+        "train": "46ceed39f5aa066908880bb33a713c7a0af74dc54411823dff82e502ed6722ec",
+        "val": "b6caa457dfc2af94c76f9b1f30da7dcd881366e662b2c34a2456af007397948a",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.9086666666666666,
+        "precision_macro": 0.9074681567155597,
+        "recall_macro": 0.892638888888889,
+        "f1_macro": 0.892313206543633
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9940728196443692,
+          "recall": 0.9783333333333334,
+          "f1": 0.9861402771944562
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8321917808219178,
+          "recall": 0.6075,
+          "f1": 0.7023121387283237
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9943019943019943,
+          "recall": 0.8725,
+          "f1": 0.9294274300932092
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9975062344139651,
+          "recall": 1.0,
+          "f1": 0.9987515605493134
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6267361111111112,
+          "recall": 0.9025,
+          "f1": 0.7397540983606558
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h11_l1248_scale0250__target_E3__seed_62",
+      "target_env": "E3",
+      "seed": 62,
+      "arm": "H11",
+      "scale": 0.25,
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\generated_l1248_v1\\configs\\tpp_l1248__target_E3__seed_62__arm_H11.json",
+      "source_config_file_sha256": "66a83c56492a821ad887b0ea52f43400f36eaf6ae2ab9246882d68465e77bf4f",
+      "source_config_payload_sha256": "fadabb92f2f3bfb4e7935f4b24de3402208027c7b7f8b9a0e3400321da200e01",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\runs\\E3\\seed_62\\H11\\attempt_001",
+      "completion_manifest_sha256": "c50fd9be17e2551b3d88619ec6eb9838dedc6a10802bb1e9a96e75d041038ec7",
+      "attempt_seal_sha256": "e786cd26241a48245f678ca34c86aab11d9bf65fad6d5138497f9df6aef5e275",
+      "metrics_sha256": "e495b62615861138e93dfeb990c20374746d9bee03193343311e52969defeef7",
+      "checkpoint_sha256": "4530c8f93b723baa943e60731eb1e63aff2ae1ef9dc71eb35a4d62326f42a3a2",
+      "target_predictions_sha256": "2c061c1c1c2daeed02d0563529c545a658a67872ed8156e7ccf80a5ae46c94e0",
+      "sampler_schedule_sha256": "83431787ada99cdd4caab6e8fc3c035b4351ccc5d8f2efb9678008cc84c2825c",
+      "split_hashes": {
+        "train": "ccee8906acd23df8628c4092b6e7c60e1130a2852a8624899e1356b3cb7ea71e",
+        "val": "f1b5f4e88c37648a7a8f59f97292266fd0b0866d014a5039bf5cf773460af7ae",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.939,
+        "precision_macro": 0.929582073917187,
+        "recall_macro": 0.9252777777777778,
+        "f1_macro": 0.9250777094255564
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.998326359832636,
+          "recall": 0.9941666666666666,
+          "f1": 0.9962421711899792
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.858433734939759,
+          "recall": 0.7125,
+          "f1": 0.778688524590164
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9948586118251928,
+          "recall": 0.9675,
+          "f1": 0.9809885931558935
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1": 0.9975062344139651
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7308488612836439,
+          "recall": 0.8825,
+          "f1": 0.7995469988674972
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    }
+  ],
+  "row_count": 9
+}

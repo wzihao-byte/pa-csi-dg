@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "files": {
+    "protocol_lock.json": "d661c0898d43ec381013a5778197365970c1a9d1e5e3b8ff0a1c4420c3e61f20",
+    "anchor_registry.json": "b96185e8c7c9e5b12161b263307809807eae862e84c3fa966896e456097ea3f9",
+    "execution_lock.json": "95325f5f4668b5c21e79fc5203970e3214e68eafbc218b46e4e152b1b5b05185",
+    "anchor_configs/anchor_ce.json": "2e47ff83c847ce5fa334bc4447019220ad562e828af08dbcd683865bccd7987d",
+    "anchor_configs/anchor_supcon.json": "c87982063037aacf61d3a87aba35b35b02a46ad131db30c8580d3f844157b84d",
+    "anchor_configs/anchor_tpp_l124.json": "7db3e9bcd1850be6cc6fde827d96e3acb94e4b119bc644aaf9b5ab6107304ce5",
+    "anchor_configs/anchor_tpp_residual025.json": "62bf77f3fd1c39dd50487932e769cbd60463aa3ad2a8d182aff7791dddf44911"
+  }
+}

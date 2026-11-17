@@ -1,0 +1,31 @@
+{
+  "date": "2026-09-04",
+  "status": "passed",
+  "scope": "synthetic formal-fragment integration and final PDF structural gate",
+  "builder": "analysis/build_final_revision_pdf.py",
+  "builder_sha256": "008b26c974d0e271bb338d23e97335a2e0997e48a261802609dd43f6b909da6b",
+  "negative_gate": {
+    "status": "passed",
+    "fixture": "D:\\pa-csi-dg-revision-runtime\\qa\\final_pdf_pipeline_synthetic_v1",
+    "trigger": "formal fragment referenced tab:formalcontrols while the synthetic table omitted that label",
+    "observed": "builder stopped with undefined=2 and did not write build_report.json",
+    "scientific_result_claimed": false
+  },
+  "positive_gate": {
+    "fixture": "D:\\pa-csi-dg-revision-runtime\\qa\\final_pdf_pipeline_synthetic_v2",
+    "build_report_sha256": "affadb2e395ef88aa0af549f911185cdd0a05f0ee6ce41bf8a8be100119aa59d",
+    "pdf_sha256": "6934c5a01a520a259f44bc8974f3805e3e6e8245707083e92be2e27857db750d",
+    "pages": 15,
+    "latex_passes": 2,
+    "undefined_references_or_citations": 0,
+    "overfull_boxes": 0,
+    "underfull_boxes": 6,
+    "rendered_page_count": 15,
+    "contact_sheet_sha256": "ff6b3c2af65dbf38670fe073efbc90f05d9c1ecb349baf94f4c782f5ba1157df",
+    "contact_sheet_visual_qa": "All 15 synthetic integration pages inspected; formal fragment, four table positions, two new figures, following sections and final page are visible without clipping or overlap."
+  },
+  "limitations": [
+    "Synthetic numeric values validate gates and layout integration only; they are not scientific evidence.",
+    "The real final PDF still requires formal narrative review and page-by-page visual approval."
+  ]
+}

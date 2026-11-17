@@ -1,0 +1,32 @@
+本次执行范围：H-S 相位 unwrap 边界验证，9 次新训练（N_L11），对应 2026-10-23 周报 Next Steps 的 Phase check。
+
+问题：native historical-style 相位链（N_H11）沿 90 列特征轴 unwrap，会跨越 29→30、59→60 两个接收链路边界。
+N_L11 只把 unwrap 改为在 0–29、30–59、60–89 三个 30 列组内分别进行；其余处理链完全相同。
+伪Tx：mode=tx,num_rx=1,num_tx=3,num_subcarriers=30 仍只指三个软件 30 列 feature groups，切片不变。
+
+输入：D:/pa-csi-dg-revision-runtime/data/native_linkunwrap_phase_v1（manifest SHA256 6a78a4ee…7f38）。
+生成：analysis/prepare_native_linkunwrap_phase_20261023.py；9000 行全部校验，报告 docs/revision/native_linkunwrap_phase_20261023.md。
+与 N_H11 输入的关系逐行核验：链路 0 逐位相同；链路 1、2 只差每行每帧每链路一个整数 2π 偏移。
+跨边界 unwrap 改变了链路 1 的 84.9% 帧、链路 2 的 87.6% 帧；9000 行中没有一行两条链完全相同。
+
+配对：每个 N_L11 配置由 h_main_controls_20261008_v2 已完成的同目标同种子 N_H11 配置派生。
+除 phase 文件绑定、job 标识、bundle 内路径外配置逐项相同（common.verify_config 强制）；
+同一初始化哈希、采样序列、H-S 主体/采集划分、30000 更新、batch32＋masked96、hybrid .05/.2、末个并列最佳源 checkpoint。
+9 个 N_H11 配对运行复用已封存结果，不重跑。
+
+预先固定的判读（bundle/decision_rule.json，目标评分前写入）：
+主对比 N_L11−N_H11 macro-F1，9 个配对差、配对均值、逐环境均值、符号计数、9 对 bootstrap 95% 区间（10000 次，seed 20261023）。
+区间含 0 且 |均值| ≤ N_H11 环境内种子 SD 均值 → unchanged（结果不依赖跨链路 unwrap）；
+区间整体 < 0 → drop，作为历史式相位链的局限报告；其他 → inconclusive，描述性报告，不改主表示。
+9 对共享 3 个开发环境，区间只作描述，不当作独立环境检验。
+
+冻结执行包：D:/pa-csi-dg-revision-runtime/studies/h_phase_link_unwrap_20261023_v2/bundle（manifest SHA256 f7a0529c…fa32）。
+预检：32 项单元测试＋真实源 4 样本 2 次更新轨迹（初始化等于 N_H11、幅度/标签/链路 0 相同、链路 1–2 仅差整圈）通过；qa/approval.json。
+v1 为预检失败版本（phase_free 比较了逐 attempt 的 output_dir，所有正式 run 会被拒绝），未训练，原样保留并有 PREFLIGHT_FAILED.json。
+
+启动：2026-10-23 13:17 JST，经 WMI Win32_Process 脱离会话进程树启动（避免 10-14 sandbox 停止导致中断的情况）；记录在 launcher/。
+实测约 0.96 秒/step，单 run 约 8 小时，9 run 连续约 3 天。
+状态：queue/status.json、queue/completed_jobs.json、各 run 的 training_status.json 与 source_progress.json。
+结果：analysis/validated_runs.csv 与 analysis/results.json（含 prespecified_outcome）；未满 9 run 只标 partial。
+中断后在 bundle/code 下重新执行 run.py --execute 会跳过已封存 run；如需当前 run 后停止，创建 queue/stop_after_current.json。
+运行中不依据 target 结果修改冻结配置或队列；论文中在完成并核验前不写成已完成结果。

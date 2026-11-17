@@ -1,0 +1,44 @@
+{
+  "passed": false,
+  "epochs": 2,
+  "updates_per_epoch": 4,
+  "target_data_loaded": false,
+  "same_batch_schedule": true,
+  "same_selected_source_predictions": true,
+  "max_absolute_final_parameter_difference": 0.0014472277835011482,
+  "parameter_tolerance_predeclared": 1e-05,
+  "selected_epoch": [
+    2,
+    2
+  ],
+  "source_macro_f1": [
+    0.15966340422862163,
+    0.15966340422862163
+  ],
+  "scope": "One actual E1-source/R11 short trajectory; not a full-training deterministic guarantee",
+  "run_directories": [
+    "D:\\pa-csi-dg-revision-runtime\\qa\\resume_v2_cublas\\uninterrupted",
+    "D:\\pa-csi-dg-revision-runtime\\qa\\resume_v2_cublas\\resumed"
+  ],
+  "status_sha256": {
+    "D:\\pa-csi-dg-revision-runtime\\qa\\resume_v2_cublas\\uninterrupted": "22233665af30a03b65eea87de5b3b6985fc34ddb72ffc9ee43ddaf8e67510e46",
+    "D:\\pa-csi-dg-revision-runtime\\qa\\resume_v2_cublas\\resumed": "bb3a1117c7406c3bf0b80fe196534836e5f72591d53b6bd816cffc063e266a2e"
+  },
+  "code_sha256": {
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments/tpp_isolated/tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+    "experiments/supcon_tpp_joint/protocol.py": "64a928834c7399b688630bf22120e1c16f7bc8bf185c0a5965d3723481626472",
+    "experiments/supcon_tpp_joint/runner_utils.py": "a139f322421daf9ea5af4a98efb4d72b7d727bed1970da54128881959bf16be4",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "experiments/revision_validation/prepare_verified_protocol.py": "a4d1929dbba604e13579b87248470bfe6358a0c910946f823eec70ccc6bc3c66",
+    "experiments/revision_validation/train_source.py": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+    "experiments/revision_validation/study_io.py": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+    "experiments/revision_validation/study_engine.py": "58e0a4e4a10de2412116cd261dad70241c077efd45c3dc33bd0004a5a83f73b7",
+    "experiments/revision_validation/freeze_study.py": "a82c734f2da97850061ca044c940653723d8a5e83b05bd38a97777e2b114f027",
+    "experiments/revision_validation/evaluate_study.py": "4d24cd2d2a537b3a91a4ba5c9b892ceb9dbf9f8a1fb84e44630dc768ba0998ab",
+    "experiments/revision_validation/resume_qa.py": "b61d277e1914ad72190afdfa5af3cad76375a3fd303847a8d51ee980da4f6e8f"
+  }
+}

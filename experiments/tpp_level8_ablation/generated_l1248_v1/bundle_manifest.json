@@ -1,0 +1,8 @@
+{
+  "schema_version": "tpp-level8-bundle/v1",
+  "protocol_lock_sha256": "205e0d5a1795f7617ea57487916414105dd3c21c502ea8c0d9755ae8c785505e",
+  "registry_sha256": "a68066f0de8e8a2c7e34de872887547e78295bcceef9ec105ac6ebd17741eb7e",
+  "reference_registry_sha256": "21a575b6bb0c7b4dec88b0b0fb4904426cb7b7f2701ff162ab87755da8977f8c",
+  "execution_lock_sha256": "a0b9a869ee0e6abd974b8e7f4d42c852edc046b1fec37bd8081d58ba2c037338",
+  "job_count": 9
+}

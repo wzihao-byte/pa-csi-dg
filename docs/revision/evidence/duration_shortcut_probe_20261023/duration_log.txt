@@ -1,0 +1,26 @@
+13:41:29 LOEO class <- duration_only      macroF1 mean= 58.41 E1= 57.6 E2= 59.3 E3= 58.3
+13:41:31 LOEO class <- packet_count_only  macroF1 mean= 53.19 E1= 53.3 E2= 53.6 E3= 52.7
+13:41:36 LOEO class <- duration+pkt       macroF1 mean= 58.98 E1= 58.4 E2= 58.6 E3= 59.8
+13:41:37 duration-only E1 row-normalised confusion (%):
+[[ 75.6   9.2   5.8   0.    9.4   0. ]
+ [ 29.   26.5  18.    0.   26.5   0. ]
+ [ 27.   28.7  18.8   0.   25.5   0. ]
+ [  0.    0.    0.  100.    0.    0. ]
+ [ 24.   34.   17.    0.   25.    0. ]
+ [  0.    0.    0.    0.    0.  100. ]]
+13:53:29 LOEO R2 duration <- phase_time_mean_90         mean R2= 0.808 E1= 0.633 E2= 0.873 E3= 0.919
+13:54:23 LOEO F1 segment-position <- phase_time_mean_90 mean= 41.47 E1= 39.3 E2= 41.9 E3= 43.3
+13:55:08 LOEO R2 duration <- phase_link_slope_icpt_6    mean R2= 0.803 E1= 0.631 E2= 0.867 E3= 0.910
+13:55:22 LOEO F1 segment-position <- phase_link_slope_icpt_6 mean= 40.19 E1= 36.6 E2= 40.5 E3= 43.5
+14:05:43 LOEO R2 duration <- phase_first_frame_90       mean R2=-0.025 E1=-0.023 E2=-0.029 E3=-0.024
+14:06:37 LOEO F1 segment-position <- phase_first_frame_90 mean= 22.93 E1= 23.3 E2= 22.0 E3= 23.5
+14:20:20 LOEO R2 duration <- amp_time_mean_90           mean R2=-0.156 E1=-0.140 E2=-0.172 E3=-0.155
+14:21:06 LOEO F1 segment-position <- amp_time_mean_90   mean= 20.62 E1= 22.4 E2= 16.9 E3= 22.5
+14:47:22 LOEO R2 duration <- amp_mean+std_180           mean R2=-0.065 E1=-0.090 E2=-0.075 E3=-0.029
+14:48:17 LOEO F1 segment-position <- amp_mean+std_180   mean= 32.74 E1= 32.4 E2= 25.6 E3= 40.2
+14:48:18 LOEO F1 among falling/walking/turning (all 4 s) <- phase_time_mean_90         E1= 23.9 E2= 23.5 E3= 25.8  mean= 24.4
+14:48:19 LOEO F1 among falling/walking/turning (all 4 s) <- phase_link_slope_icpt_6    E1= 27.2 E2= 26.3 E3= 22.2  mean= 25.2
+14:48:19 LOEO F1 among falling/walking/turning (all 4 s) <- amp_time_mean_90           E1= 36.5 E2= 36.2 E3= 34.0  mean= 35.5
+14:48:21 LOEO F1 among falling/walking/turning (all 4 s) <- amp_mean+std_180           E1= 50.4 E2= 41.1 E3= 45.5  mean= 45.7
+14:49:03 LOEO class <- phase_time_mean_90 + duration  macroF1 mean= 57.42 E1= 56.3 E2= 55.1 E3= 60.9
+14:49:03 DONE

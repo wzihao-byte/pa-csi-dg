@@ -1,0 +1,79 @@
+{
+  "observed_at_jst": "2026-09-30T21:49:30.806845+09:00",
+  "completed_new_source_runs": 4,
+  "planned_new_source_runs": 45,
+  "new_target_evaluations_completed": 0,
+  "studies": [
+    {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929",
+      "total": 18,
+      "completed": 4,
+      "active": [
+        {
+          "job_id": "E2_G_NATIVE_MERGE_502",
+          "status": "running",
+          "epoch": 141,
+          "total_epochs": 200
+        }
+      ],
+      "observation_source": "append-only events; no live mutable study JSON opened"
+    },
+    {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929",
+      "total": 27,
+      "completed": 0,
+      "active": [],
+      "observation_source": "append-only events; no live mutable study JSON opened"
+    }
+  ],
+  "coordinator": {
+    "pid": 31952,
+    "create_time": 1790772405.6175425,
+    "started_at": "2026-09-30T12:46:45.623706+00:00",
+    "alive_at_observation": true
+  },
+  "worker": {
+    "pid": 18496,
+    "create_time": 1790772406.6203456,
+    "command": [
+      "C:/ProgramData/anaconda3/python.exe",
+      "-u",
+      "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260930_recovery_v1\\resume_revision_io_20260930.py",
+      "worker",
+      "--directory",
+      "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260930_recovery_v1",
+      "--index",
+      "0"
+    ],
+    "started_at": "2026-09-30T12:46:46.625711+00:00",
+    "stdout": "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260930_recovery_v1\\0.stdout.log",
+    "stderr": "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260930_recovery_v1\\0.stderr.log",
+    "alive_at_observation": true
+  },
+  "failure_time_jst": "2026-09-30T02:54:31.912575+09:00",
+  "failure": "Windows WinError 5 replacing status.json.tmp with status.json; exact holder unknown",
+  "restoration": {
+    "time": "2026-09-30T12:47:06.615114+00:00",
+    "event": "resume_state_audit",
+    "model_exact": true,
+    "optimizer_exact": true,
+    "rng_exact": true
+  },
+  "resumed": {
+    "time": "2026-09-30T12:47:06.616112+00:00",
+    "event": "resumed",
+    "completed_epochs": 136,
+    "checkpoint_sha256": "c6342db33402864257d65f1c6c827d3bfc14d8ccaa6107543dc4be128eb0cb8b"
+  },
+  "recovery_directory": "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260930_recovery_v1",
+  "unchanged_bundle_hashes": {
+    "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929": "4fb22b1a2afb090e5dd8c64df2b6ca5748ebb1ee301368b818fecc841fab9854",
+    "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929": "c98c640ac361a7888bb9a8c3a636781e8c7a9d6b117c34afeb5091a45a9a277f"
+  },
+  "checkpoint_audit": "docs/revision/recovery_20260930/checkpoint_audit.json",
+  "qa": [
+    "D:/pa-csi-dg-revision-runtime/qa/windows_atomic_retry_20260930.json",
+    "D:/pa-csi-dg-revision-runtime/qa/revision_recovery_20260930.json"
+  ],
+  "observation": "Append-only event logs and process identity; no live study status/progress JSON opened"
+}

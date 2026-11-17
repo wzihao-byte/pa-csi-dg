@@ -1,0 +1,33 @@
+{
+  "status": "failed",
+  "failed_at": "2026-09-21T02:22:41.474334+00:00",
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_multienv_fragment_after_assets.py\", line 92, in main\n    raise RuntimeError(\"Formal paper-assets coordinator did not complete\")\nRuntimeError: Formal paper-assets coordinator did not complete\n",
+  "pid": 18588,
+  "started_at": "2026-09-17T17:41:58.839998+00:00",
+  "assets_pid": 18784,
+  "assets_process_create_time": 1789666918.1703877,
+  "assets_command": [
+    "C:\\ProgramData\\anaconda3\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "analysis/continue_multienv_paper_assets_after_evidence.py",
+    "--final-evidence-pid",
+    "30356",
+    "--final-evidence-output",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v5",
+    "--evidence",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+    "--staging",
+    "D:\\pa-csi-dg-revision-runtime\\paper_assets\\multienv_v2",
+    "--assets",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+    "--output",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v5"
+  ],
+  "assets_coordinator_output": "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v5",
+  "evidence": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+  "assets": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+  "frozen_builder_sha256": "f1ad770477798feb6f2da26355e8a67cd155e528bba012a03d040bb225668157",
+  "mutable_upstream_json_observed_while_writer_live": false
+}

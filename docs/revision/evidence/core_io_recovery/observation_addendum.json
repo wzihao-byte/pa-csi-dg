@@ -1,0 +1,17 @@
+{
+  "recorded_at": "2026-09-03T16:31:08.713892+00:00",
+  "filesystem": "D: NTFS",
+  "file_holder_identified": false,
+  "open_handle_replace_test": "failed even with FILE_SHARE_READ|WRITE|DELETE",
+  "retained_test": "D:/pa-csi-dg-revision-runtime/qa/windows_observer_v1/qa.json",
+  "append_with_open_observer": "passed",
+  "final_mitigation": "No mutable atomically replaced JSON is opened while its writer is active; use append-only logs and OS process state. Frozen control runner starts only after core process success and exit.",
+  "observer_sha256": "5799c3631dfea3f680fe52213f1bb75dd64dc27ae4c0d057099fa4beabc8c2d2",
+  "coordinator_sha256": "ea47e8007875c81db8a6dbd7c6e16b7114767df0eb626b2c8658e260b26c906d",
+  "resumed_core_pid": 10248,
+  "external_coordinator_pid": 58112,
+  "model_optimizer_rng_restore_exact": true,
+  "resumed_from_committed_epoch": 96,
+  "optimizer_updates_replayed": 0,
+  "frozen_training_code_modified": false
+}

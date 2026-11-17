@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "protocol_name": "supcon_tpp_legacy_reproduction",
+  "protocol_version": "1.0.0",
+  "scripts": {
+    "protocol.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/protocol.py",
+      "sha256": "4b4c7e3d2ab9ae90044fb9b6ee7715b903ade1c1ef96e98e7a3b808205ad121d"
+    },
+    "generate_bundle.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generate_bundle.py",
+      "sha256": "c49e8c2c0957e1dbd2b8e88753038a64c5a59abcdcd780655369f9a8affabe64"
+    },
+    "preflight.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/preflight.py",
+      "sha256": "62ed729796fc2712beb68fc8a932d4495f8b21792ee4fb2c91a03d636c0cba06"
+    },
+    "run_anchors.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/run_anchors.py",
+      "sha256": "193a75e3bed84939b288a72544a6969fb44d734d3f001361b848ff85fd97c876"
+    },
+    "gpu_smoke.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/gpu_smoke.py",
+      "sha256": "71c4dbe569d49b7ff3acaf371f80ae3b2731ddaf3372be89a7e24815f9c841ef"
+    },
+    "checkpoint_replay.py": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/checkpoint_replay.py",
+      "sha256": "b43c13e70c2428477ede519fb3d9441c875bd34176ff6c849e2f4ac3e9cf47ae"
+    }
+  },
+  "required_gate_artifacts": {
+    "gpu_smoke": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/outputs_supcon_tpp_legacy_reproduction/audit/gpu_smoke.json",
+      "sha256": "5a633328f4c1301c161a385b545fcb336c44f531f119ff1f448d43e0bb313fff",
+      "required_status": "pass"
+    },
+    "checkpoint_replay": {
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/outputs_supcon_tpp_legacy_reproduction/audit/checkpoint_replay.json",
+      "sha256": "70b70cf40f5cf40e9a994e3d75f16bebf5bfaed81d9c72a6d7f50900345d285b",
+      "required_status": "passed"
+    }
+  },
+  "constraints": {
+    "training_may_start_only_after_all_gates_pass": true,
+    "runner_must_match_self_hash": true,
+    "attempts_are_append_only": true
+  }
+}

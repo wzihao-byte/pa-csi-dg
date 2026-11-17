@@ -1,0 +1,61 @@
+{
+  "status": "storage_order_protocol_registered",
+  "physical_axis_export_status": "unresolved",
+  "axis_storage_protocol_sha256": "44cda0fc868c6bf286af94730386c6be99f8ec26d237827f950c943b2782a1cf",
+  "author_tree_sha256": "6e4c92c0c1702753ad700700e6689fdfedb38fb78175da341cff6171de3834c6",
+  "author_preprocess_sha256": "20d036839898aed442a840794cad601c8244b90db8983b30857dfdb7616ef449",
+  "saved_probe_receipts": {
+    "act_19_1": {
+      "sample_id": "act_19_1",
+      "relative_path": "wifi_csi/mat/act_19_1.mat",
+      "dataset_version": 1,
+      "bytes": 2362126,
+      "sha256": "6cb50b8bfee290083bcdaf4cb23db3c82f8972cd4d18a83a04f0b075ce49f6f3",
+      "acquired_at_utc": "2026-10-14T07:08:38.761890+00:00",
+      "origin": "saved_probe_reverified",
+      "target_access_kind": "raw_identity_and_numerical_audit_only",
+      "model_scores_read": false
+    },
+    "act_55_1": {
+      "sample_id": "act_55_1",
+      "relative_path": "wifi_csi/mat/act_55_1.mat",
+      "dataset_version": 1,
+      "bytes": 2406758,
+      "sha256": "1f965487d0a495f2f609966a8bfd7cda95e4637b722c616c4c25705c2baa77da",
+      "acquired_at_utc": "2026-10-14T07:08:52.690415+00:00",
+      "origin": "saved_probe_reverified",
+      "target_access_kind": "raw_identity_and_numerical_audit_only",
+      "model_scores_read": false
+    },
+    "act_91_1": {
+      "sample_id": "act_91_1",
+      "relative_path": "wifi_csi/mat/act_91_1.mat",
+      "dataset_version": 1,
+      "bytes": 2466166,
+      "sha256": "a3a465e6d2e139d13491713b6746e44cecd85367df226a8ea4c67371945cfc5d",
+      "acquired_at_utc": "2026-10-14T07:08:52.706416+00:00",
+      "origin": "saved_probe_reverified",
+      "target_access_kind": "raw_identity_and_numerical_audit_only",
+      "model_scores_read": false
+    }
+  },
+  "csi_tool_commit": "08ea7cc082c2eb903c0a6fecb0af92d545734673",
+  "reference_files": {
+    "read_bfee.c": {
+      "url": "https://raw.githubusercontent.com/dhalperi/linux-80211n-csitool-supplementary/08ea7cc082c2eb903c0a6fecb0af92d545734673/matlab/read_bfee.c",
+      "sha256": "0c46a4bb1f21f16f24f77f7cab4ce98242806d44828c39970df6e814ddaf3622"
+    },
+    "read_bf_file.m": {
+      "url": "https://raw.githubusercontent.com/dhalperi/linux-80211n-csitool-supplementary/08ea7cc082c2eb903c0a6fecb0af92d545734673/matlab/read_bf_file.m",
+      "sha256": "aa06830f164404a50ca1c1b2074e9a978cc8d551f24534bbaef0a923fbaeffd5"
+    }
+  },
+  "full_input_qa_passed": false,
+  "training_started": false,
+  "current_complete_input_qa": {
+    "status": "passed_storage_order_v2",
+    "rows": 1782,
+    "verification_sha256": "d88087572f40dbac0094232514a71af2d9ffbfc957fd91455ae0cfa6a3bcc9e0",
+    "physical_export_confirmed": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "csi-revision-runtime-recovery-addendum/v1",
+  "recorded_at": "2026-09-11T06:15:21.1195408Z",
+  "corrects": {
+    "path": "docs/revision/evidence/runtime_recovery_20260911.json",
+    "sha256": "6105553e33fb11e312665b9c7ba34cda854b7715bce67f2b82bd7b70fd68801f",
+    "field": "current_owners",
+    "reason": "The initial PowerShell serializer encountered the reserved PID variable, leaving current_owners null; all other recorded fields remain the retained initial observation."
+  },
+  "current_owners": {
+    "controls": {
+      "pid": 39456,
+      "creation_date": "09/11/2026 15:08:45",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 -m experiments.revision_validation.extended_engine --bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1"
+    },
+    "inputs_coordinator": {
+      "pid": 11964,
+      "creation_date": "09/11/2026 15:09:10",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 analysis/continue_inputs_after_controls.py --controls-pid 39456 --controls-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1 --input-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3"
+    },
+    "source_analysis_coordinator": {
+      "pid": 16896,
+      "creation_date": "09/11/2026 15:09:10",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -X utf8 analysis/continue_source_analyses.py --core D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1 --controls D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\formal_source_analysis_v3 --analysis-root D:\\pa-csi-dg-revision-runtime\\analyses\\formal_source_v1 --resume-existing"
+    },
+    "h_queue_recovery": {
+      "pid": 37576,
+      "creation_date": "09/11/2026 15:12:08",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/recover_h_grouped_l1248_queue.py --inputs-pid 11964 --inputs-output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3 --input-bundle D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1 --h-root C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2 --superseded-owner C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\queue\\owner.interrupted_20260911_0605Z.json"
+    },
+    "final_evidence": {
+      "pid": 38628,
+      "creation_date": "09/11/2026 15:12:49",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_final_evidence.py --inputs-pid 11964 --inputs-output D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v3 --source-pid 16896 --source-output D:\\pa-csi-dg-revision-runtime\\coordinators\\formal_source_analysis_v3 --h-pid 37576 --h-root C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2 --runtime D:\\pa-csi-dg-revision-runtime --evidence-output C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v2"
+    },
+    "paper_assets": {
+      "pid": 36972,
+      "creation_date": "09/11/2026 15:13:25",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_paper_assets_after_evidence.py --final-evidence-pid 38628 --final-evidence-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v2 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --staging D:\\pa-csi-dg-revision-runtime\\paper_assets\\multienv_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v2"
+    },
+    "fragment": {
+      "pid": 30152,
+      "creation_date": "09/11/2026 15:13:25",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_fragment_after_assets.py --assets-pid 36972 --assets-coordinator-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v2 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_fragment_v2"
+    },
+    "manuscript": {
+      "pid": 25428,
+      "creation_date": "09/11/2026 15:13:26",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_manuscript_after_fragment.py --fragment-pid 30152 --fragment-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_fragment_v2 --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --build D:\\pa-csi-dg-revision-runtime\\qa\\manuscript_multienv_v2 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v2 --final-qa C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json"
+    },
+    "release": {
+      "pid": 27032,
+      "creation_date": "09/11/2026 15:13:26",
+      "command_line": "\"C:\\ProgramData\\anaconda3\\python.exe\" -B -X utf8 analysis/continue_multienv_release_after_manuscript.py --manuscript-pid 25428 --manuscript-output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v2 --runtime D:\\pa-csi-dg-revision-runtime --evidence C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2 --assets C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2 --final-qa C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json --release D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v1 --output D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_release_v2"
+    }
+  },
+  "validation": {
+    "owner_count": 9,
+    "all_live": true,
+    "widar_training_process_count": 0,
+    "control_resume_exact": true,
+    "h_training_started": false
+  }
+}

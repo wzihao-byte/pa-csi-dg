@@ -1,0 +1,9 @@
+{
+  "schema": "pa-csi-dg-final-completion-negative-gate/v1",
+  "checked_at": "2026-09-03T18:57:13.2768667Z",
+  "expected_rejection": true,
+  "exit_code": 1,
+  "completion_audit_created": false,
+  "verifier_sha256": "0b8caf97ffbcb6dfa12574798f5d6419c045879bb2b7a8607558daa22648885b",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 299, in <module>\r\n    main()\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 259, in main\r\n    formal, evidence_manifest = verify_formal_evidence(evidence)\r\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 71, in verify_formal_evidence\r\n    require(formal_path.is_file() and manifest_path.is_file(), \"Formal evidence is absent\")\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 57, in require\r\n    raise RuntimeError(message)\r\nRuntimeError: Formal evidence is absent\r\n"
+}

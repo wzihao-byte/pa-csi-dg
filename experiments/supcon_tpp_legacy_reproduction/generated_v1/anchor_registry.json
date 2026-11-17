@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "protocol_lock": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generated_v1/protocol_lock.json",
+  "protocol_lock_sha256": "d661c0898d43ec381013a5778197365970c1a9d1e5e3b8ff0a1c4420c3e61f20",
+  "anchor_configs": [
+    {
+      "config_id": "anchor_ce",
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generated_v1/anchor_configs/anchor_ce.json",
+      "file_sha256": "2e47ff83c847ce5fa334bc4447019220ad562e828af08dbcd683865bccd7987d",
+      "canonical_payload_sha256": "d3ccb64d069f9c5ba0bc0ce2f954e7668fc49792c3dad3f726edd060b34cff2f",
+      "runner": "train_dg.py",
+      "exact_historical_carrier": true,
+      "jobs": 9
+    },
+    {
+      "config_id": "anchor_supcon",
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generated_v1/anchor_configs/anchor_supcon.json",
+      "file_sha256": "c87982063037aacf61d3a87aba35b35b02a46ad131db30c8580d3f844157b84d",
+      "canonical_payload_sha256": "e69784793ee3c5fc74884b2a3e0765c965cee9f29aef77a99b9caf08b0f58fe5",
+      "runner": "train_dg.py",
+      "exact_historical_carrier": true,
+      "jobs": 9
+    },
+    {
+      "config_id": "anchor_tpp_l124",
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generated_v1/anchor_configs/anchor_tpp_l124.json",
+      "file_sha256": "7db3e9bcd1850be6cc6fde827d96e3acb94e4b119bc644aaf9b5ab6107304ce5",
+      "canonical_payload_sha256": "71fd3bd8149d6a484322b235a425797b0edc616a517441bdd82ee4aa84568e35",
+      "runner": "train_tpp_isolated.py",
+      "exact_historical_carrier": true,
+      "jobs": 9
+    },
+    {
+      "config_id": "anchor_tpp_residual025",
+      "path": "C:/Users/howie/Desktop/pa-csi-dg/experiments/supcon_tpp_legacy_reproduction/generated_v1/anchor_configs/anchor_tpp_residual025.json",
+      "file_sha256": "62bf77f3fd1c39dd50487932e769cbd60463aa3ad2a8d182aff7791dddf44911",
+      "canonical_payload_sha256": "dddcc71659790db7580d7dd1e5574dfd848fd584b3e6a5b0c3271261c4432a39",
+      "runner": "train_tpp_isolated.py",
+      "exact_historical_carrier": true,
+      "jobs": 9
+    }
+  ],
+  "total_anchor_jobs": 36,
+  "stage_order": [
+    "anchor_preflight",
+    "anchor_seed42_sentinel",
+    "anchor_full_matrix",
+    "factorial_s32_generation"
+  ]
+}

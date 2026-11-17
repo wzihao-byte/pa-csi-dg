@@ -1,0 +1,584 @@
+{
+  "schema_version": "tpp-level8-bundle/v1",
+  "created_at_utc": "2026-08-04T05:19:54.699728+00:00",
+  "protocol_name": "h11_tpp_level8_ablation",
+  "protocol_version": "1.0.0",
+  "question": "effect of adding TPP level 8 on the locked H11 carrier",
+  "targets": [
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "seeds": [
+    42,
+    52,
+    62
+  ],
+  "arm_order": [
+    "H11"
+  ],
+  "job_count": 9,
+  "reference": {
+    "name": "Factorial-S32 H11 L124",
+    "bundle": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1",
+    "bundle_manifest_sha256": "702670d529a7083d4d3214f5927914cbcbf0d621b7623de86cbbeb5d5e760a1a",
+    "protocol_lock_sha256": "2f0b2f25556bca98044354ea21bbfdc50f252242d4aae627dd4fac1e735e96e3",
+    "results": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\factorial_results.json",
+    "results_sha256": "9ce95b429539693847abb1fcd402cbfe43786f8ecebb785f19b485f6edcf5c4f",
+    "completion_audit": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\audit\\factorial_s32_completion.json",
+    "completion_audit_sha256": "080d189243de59e47bd5b68d2576305f1dd0094d07690af983d9b7708248ac95"
+  },
+  "allowed_config_changes": [
+    "experiment_name",
+    "job_id",
+    "model.tpp_levels",
+    "protocol.expected_parameter_count",
+    "protocol.version"
+  ],
+  "alignment_audit": [
+    {
+      "job_id": "tpp_l1248__target_E1__seed_42__arm_H11",
+      "reference_id": "reference_h11_l124__target_E1__seed_42",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E1__seed_52__arm_H11",
+      "reference_id": "reference_h11_l124__target_E1__seed_52",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E1__seed_62__arm_H11",
+      "reference_id": "reference_h11_l124__target_E1__seed_62",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_42__arm_H11",
+      "reference_id": "reference_h11_l124__target_E2__seed_42",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_52__arm_H11",
+      "reference_id": "reference_h11_l124__target_E2__seed_52",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_62__arm_H11",
+      "reference_id": "reference_h11_l124__target_E2__seed_62",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_42__arm_H11",
+      "reference_id": "reference_h11_l124__target_E3__seed_42",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_52__arm_H11",
+      "reference_id": "reference_h11_l124__target_E3__seed_52",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_62__arm_H11",
+      "reference_id": "reference_h11_l124__target_E3__seed_62",
+      "changed_paths": [
+        "experiment_name",
+        "job_id",
+        "model.tpp_levels",
+        "protocol.expected_parameter_count",
+        "protocol.version"
+      ],
+      "reference_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      },
+      "candidate_effective_tpp": {
+        "tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "channel_tpp_levels": [
+          1,
+          2,
+          4,
+          8
+        ],
+        "tpp_pool_type": "max",
+        "channel_tpp_pool_type": "max",
+        "tpp_preserve_global": true,
+        "channel_tpp_preserve_global": true,
+        "tpp_pyramid_scale": 0.25,
+        "channel_tpp_pyramid_scale": 0.25
+      }
+    }
+  ],
+  "carrier": {
+    "batch_size": 32,
+    "sampler": "domain_class_balanced",
+    "epochs": 200,
+    "optimizer_steps_per_epoch": 150,
+    "total_optimizer_steps": 30000,
+    "optimizer": "adam",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0,
+    "scheduler": {
+      "name": "exponential_decay",
+      "update": "step",
+      "decay_rate": 0.9,
+      "decay_steps": 10000,
+      "staircase": false
+    }
+  },
+  "supcon": {
+    "temperature": 0.2,
+    "lambda": 0.05,
+    "warmup_epochs": 0,
+    "positive_mode": "global_class_instance_views",
+    "include_same_domain_same_class": true,
+    "views": 4
+  },
+  "reference_effective_tpp": {
+    "tpp_levels": [
+      1,
+      2,
+      4
+    ],
+    "channel_tpp_levels": [
+      1,
+      2,
+      4
+    ],
+    "tpp_pool_type": "max",
+    "channel_tpp_pool_type": "max",
+    "tpp_preserve_global": true,
+    "channel_tpp_preserve_global": true,
+    "tpp_pyramid_scale": 0.25,
+    "channel_tpp_pyramid_scale": 0.25
+  },
+  "candidate_effective_tpp": {
+    "tpp_levels": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "channel_tpp_levels": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "tpp_pool_type": "max",
+    "channel_tpp_pool_type": "max",
+    "tpp_preserve_global": true,
+    "channel_tpp_preserve_global": true,
+    "tpp_pyramid_scale": 0.25,
+    "channel_tpp_pyramid_scale": 0.25
+  },
+  "model_parameters": {
+    "reference_l124": 3721334,
+    "candidate_l1248": 4786294,
+    "increment": 1064960
+  },
+  "checkpoint_rule": "source_val_accuracy_last_tied_best",
+  "delayed_target_evaluation": true,
+  "target_prediction_count": 3000,
+  "cross_protocol_pairing": {
+    "split_hashes_must_match": true,
+    "sampler_schedule_sha256_must_match": true
+  },
+  "provenance": {
+    "clean_worktree": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09",
+    "legacy_commit": "7b8ec0947846daef65c6c6f37b912f9eeb5efcd6",
+    "legacy_modules": {
+      "adaptive_kmargin": {
+        "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09\\adaptive_kmargin.py",
+        "sha256": "c2172fd50936282b75196a2414b4c849ca4ffbd09a77b3703596b1fece2f5219"
+      },
+      "dg_dataset": {
+        "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09\\dg_dataset.py",
+        "sha256": "d8fe0fc31ae3c7948f3ae50daf106b923011aa73ec093b58f21afeed60b99bf3"
+      },
+      "dg_losses": {
+        "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09\\dg_losses.py",
+        "sha256": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc"
+      },
+      "dg_models": {
+        "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09\\dg_models.py",
+        "sha256": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07"
+      },
+      "train_dg": {
+        "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg-legacy-replay-7b8ec09\\train_dg.py",
+        "sha256": "df58bbd96099afed10b64b4b552ffc2e92274fd20380a26e8a5213b7c1c4ef60"
+      }
+    },
+    "tpp_snapshot_root": "C:\\Users\\howie\\Desktop\\pa-csi-dg",
+    "tpp_models_sha256": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf"
+  }
+}

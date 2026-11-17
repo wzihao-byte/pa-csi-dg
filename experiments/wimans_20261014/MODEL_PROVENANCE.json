@@ -1,0 +1,32 @@
+{
+  "schema": "wimans-h-model-provenance/v1",
+  "source_bundle": "D:/pa-csi-dg-revision-runtime/studies/h_main_controls_20261008_v2/bundle",
+  "source_reference_config": "D:/pa-csi-dg-revision-runtime/studies/h_main_controls_20261008_v2/bundle/configs/HS_E1_G10_42.json",
+  "source_reference_config_sha256": "1536843fd8ad954faca0d98ca19ed90849c6b83d5f5b0f7a420eabd5ea255125",
+  "files": {
+    "dg_models.py": {
+      "source_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\code\\legacy\\dg_models.py",
+      "source_sha256": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+      "local_path": "frozen_models/dg_models.py",
+      "local_sha256": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+      "adaptation": "byte-identical snapshot"
+    },
+    "tpp_models.py": {
+      "source_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\code\\tpp\\experiments\\tpp_isolated\\tpp_models.py",
+      "source_sha256": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+      "local_path": "frozen_models/tpp_models.py",
+      "local_sha256": "c9abf8e0e7e054fa9f6f31d624742ffb130232266ab12c15fab463128de341bd",
+      "adaptation": "package-relative dg_models import only"
+    },
+    "control_components.py": {
+      "source_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\code\\control_components.py",
+      "source_sha256": "238b199ba4821540120572da8ba5477e6fb8a58b96940e6fc2cfe11f2510dc86",
+      "local_path": "frozen_models/control_components.py",
+      "local_sha256": "238b199ba4821540120572da8ba5477e6fb8a58b96940e6fc2cfe11f2510dc86",
+      "adaptation": "byte-identical snapshot"
+    }
+  },
+  "architecture_adaptation": "same H config; classifier num_classes changed from six to nine; common shared layers paired within WiMANS seeds",
+  "source_coral_formula": "experiments/revision_validation/control_components.py:source_coral",
+  "historical_view_convention": "mode tx, num_rx1, num_tx3, num_subcarriers30 defines three pseudo-Tx feature groups; no physical Tx claim"
+}

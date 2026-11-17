@@ -1,0 +1,135 @@
+{
+  "schema_version": "tpp-level8-h10-bundle/v1",
+  "protocol_lock_sha256": "5e6b9e3651ea1c12acf90443e9b2a05ef68ba68e053f8bbbd6ddf3f0932de17e",
+  "reference_registry_sha256": "66364dcc91cde34247baf33060d51e3b4c93d0e450bee0cd4acb9af7f33b0a8b",
+  "job_order": "target_then_seed",
+  "jobs": [
+    {
+      "job_id": "tpp_l1248__target_E1__seed_42__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E1__seed_42",
+      "config_path": "configs/tpp_l1248__target_E1__seed_42__arm_H10.json",
+      "config_file_sha256": "04f737df8dcc79af2f5ac299729962feeb9138b0036b2743b9eb2acb3124a74d",
+      "config_payload_sha256": "fee678ebe405702d1c9a7d1330d8a4966671790e0ac9d2b6b0fcd8107d025921"
+    },
+    {
+      "job_id": "tpp_l1248__target_E1__seed_52__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E1__seed_52",
+      "config_path": "configs/tpp_l1248__target_E1__seed_52__arm_H10.json",
+      "config_file_sha256": "c5478233dce5715267fb766882248748672013a4f8d19975ed0369a0e81ab1e5",
+      "config_payload_sha256": "978a818f254faf92c3eebac83f91fbaf92ce92222dccf6d0dd91876745733132"
+    },
+    {
+      "job_id": "tpp_l1248__target_E1__seed_62__arm_H10",
+      "target_env": "E1",
+      "source_envs": [
+        "E2",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E1__seed_62",
+      "config_path": "configs/tpp_l1248__target_E1__seed_62__arm_H10.json",
+      "config_file_sha256": "51b9ab638c55b3e70dcdbc51f48fc174fb082fbfa03efd3197a0967fdc08b158",
+      "config_payload_sha256": "d386874f8a521bbff6a60e3d7c7cd0e658f2f221e746e896fad17df44e730668"
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_42__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E2__seed_42",
+      "config_path": "configs/tpp_l1248__target_E2__seed_42__arm_H10.json",
+      "config_file_sha256": "df2c25b82b336da7f62598f377a776f2c4c91a134e2250b2bf77c154231bc842",
+      "config_payload_sha256": "f922003332c83554b70f8630cb8186cebbdd2534f96e15edb1dac4cdc5836aa0"
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_52__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E2__seed_52",
+      "config_path": "configs/tpp_l1248__target_E2__seed_52__arm_H10.json",
+      "config_file_sha256": "793ae5b3e158c08c24df30ca9a36dbc6c6db8b1ea75197fbfc63a7a52b23c623",
+      "config_payload_sha256": "2178f8501d2fb2095dfc450646961a90f37bab9ee29c644e6a9cd1308ff33a3d"
+    },
+    {
+      "job_id": "tpp_l1248__target_E2__seed_62__arm_H10",
+      "target_env": "E2",
+      "source_envs": [
+        "E1",
+        "E3"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E2__seed_62",
+      "config_path": "configs/tpp_l1248__target_E2__seed_62__arm_H10.json",
+      "config_file_sha256": "a1d329a72df8a649bacca6c93163feb50591a9a074b14de48087a7d9826f71b7",
+      "config_payload_sha256": "ec9485a16f7773ed263401a78b0d6ab404e9a72943fc7d5ffc8eee4b79b1ec37"
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_42__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 42,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E3__seed_42",
+      "config_path": "configs/tpp_l1248__target_E3__seed_42__arm_H10.json",
+      "config_file_sha256": "16a34cc41a81a5f50493cf0f9777cedf0a4c55c0b86789828547c7d02df9982b",
+      "config_payload_sha256": "e9d5fabc395612a2c6a5d5eb8e425c19b6626bf3c50d88f5bee4429aac686617"
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_52__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 52,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E3__seed_52",
+      "config_path": "configs/tpp_l1248__target_E3__seed_52__arm_H10.json",
+      "config_file_sha256": "16ca9833feb1c4247493a49ca7ff64b7fb96166c6ec71784483901bee838839d",
+      "config_payload_sha256": "94d6beec3342f9a681b62920902d42c2fd764db7c49e60ea0a6e000ade97f4ed"
+    },
+    {
+      "job_id": "tpp_l1248__target_E3__seed_62__arm_H10",
+      "target_env": "E3",
+      "source_envs": [
+        "E1",
+        "E2"
+      ],
+      "seed": 62,
+      "arm": "H10",
+      "reference_id": "reference_h10_l124__target_E3__seed_62",
+      "config_path": "configs/tpp_l1248__target_E3__seed_62__arm_H10.json",
+      "config_file_sha256": "7a8dddf7c2a2bea8513b2aff45f09166d68f359b03599826294fbcbec9f3dff4",
+      "config_payload_sha256": "065c0e0f566a7f2f04eb87b6565feba887f5f4923e758812c307785871c1b7dd"
+    }
+  ],
+  "job_count": 9
+}

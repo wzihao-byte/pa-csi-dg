@@ -1,0 +1,14 @@
+{
+  "commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+  "verifier_version": "legacy-replay-v3-timestamp-text15",
+  "requested_count": 9000,
+  "matched_count": 9000,
+  "all_9000_verified": true,
+  "tolerance_absolute": 1e-10,
+  "subject_sidecars_emitted": true,
+  "mismatches": [],
+  "timestamp_text15_changed_files": 241,
+  "timestamp_exceeds_uint32_files": 241,
+  "verifier_sha256": "8f104a8dc6e0fdc72c94953bd90e506f75d8ccf969a28cfb809c9609707ad8e5",
+  "interpretation": "Precision-equivalent timestamp replay and arithmetic wrapped-phase averaging; not calibrated phase or recovered CSV export logs."
+}

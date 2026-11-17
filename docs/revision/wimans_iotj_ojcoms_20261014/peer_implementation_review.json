@@ -1,0 +1,153 @@
+{
+  "schema": "wimans-peer-implementation-review/v1",
+  "recorded_at_utc": "2026-10-14T07:25:32.588185+00:00",
+  "timezone": "Asia/Tokyo",
+  "review_scope": "Independent read-only review of adapter/models/training/config freeze plus acquisition/raw boundary; temporary synthetic CPU probes",
+  "status": "reported_boundary_defects_addressed_in_reviewed_snapshot_real_input_and_source_qa_pending",
+  "formal_execution_approved": false,
+  "formal_training_started_by_reviewer": false,
+  "gpu_access_by_reviewer": false,
+  "target_model_score_read_or_generated_by_reviewer": false,
+  "reviewed_code_sha256": {
+    "experiments\\wimans_20261014\\adapter.py": "15ee1f68919ad4bc0c82a4749280d21eefb2b8334c2b48c78f7923d02fb4d1c4",
+    "experiments\\wimans_20261014\\models.py": "e0e47eb2e240691517224f6e103c851bcb3d29f43efef516eb8dd460a4ea1916",
+    "experiments\\wimans_20261014\\metrics.py": "c175fc1d4a7f8ca7a5f879ffc9eeccfbbf62f5f12213de1111529c1c25021246",
+    "experiments\\wimans_20261014\\training.py": "5daf4b1c3883b8d1d5f36459d15e1c9f2a478f1b96b93f069c9bd91a72bc2329",
+    "experiments\\wimans_20261014\\prepare_configs.py": "aaae4b70efc8cbf2a9c71a50d55041af9296c8a707ebcfe3786a2e35d9e1ccef",
+    "experiments\\wimans_20261014\\raw_io.py": "d9063c94a80a83e0980a3dc57cad1b47dc108c55a51bb3147a1167713fba26f1",
+    "experiments\\wimans_20261014\\acquisition.py": "1c56724a7e4a0460c8c5edf67255432c6fee4dfb4817246c9e018cc50dfb741c",
+    "experiments\\wimans_20261014\\prepare_inputs.py": "410034f640b1e01adb60ee4179f1dd99169d0e36ed21060127bb71f92816c5da"
+  },
+  "review_observations": {
+    "sampling": "All 30000 source minibatches at seed42 for all three folds verified: batch32, source16+16, each domain/class count1 or2, indices only from source train membership.",
+    "nine_class_metrics": "Explicit labels0..8 and 9x9 confusion; macroF1 reduces per class within each run.",
+    "target_model_access": "train_source accepts only source partitions and fixed source schedule; search seed excluded by evaluate_target; strict checkpoint reload precedes target dataset retrieval.",
+    "hybrid": "fullB forward before sample-major auxiliary3B; same identity positive across views, distinct class positive full/full, CE full only.",
+    "coral": "Joint-source fused feature mean difference plus unbiased covariance difference, each element mean; separate source-only gamma selection.",
+    "me": "Generic masked_forward_exposure=True executes auxiliary forwards at zero SupCon weight; formal MultiEnv ME adapter/config not supplied by WiMANS package.",
+    "checkpoint_resume": "Fixed30000 budget, source accuracy last tied best, strict reload; epoch-zero durable checkpoint added after peer finding.",
+    "storage_order": "Fallback registration checks exact slice0, groups0..2, subcarriers0..29, C-order, phase/no reperm and physical axis uncertainty; all1782 numerical QA and manifest bindings required."
+  },
+  "reported_and_corrected": [
+    {
+      "issue": "Stored-order formal gate did not validate all slicing/phase/no-extra-unwrap keys",
+      "owner": "adapter agent",
+      "status": "corrected",
+      "independent_confirmation": "exact registered protocol accepted; changed first-axis index1 rejected"
+    },
+    {
+      "issue": "ProcessedInput did not compare audit's own manifest/fold SHA to current manifest",
+      "owner": "adapter agent",
+      "status": "corrected",
+      "independent_confirmation": "current code now checks both audit lineage hashes"
+    },
+    {
+      "issue": "CORAL candidate frozen fingerprint and cross-gamma data/fold identity were insufficiently checked",
+      "owner": "adapter agent",
+      "status": "corrected",
+      "independent_confirmation": "wrong frozen config hash and three individually valid runs with different input/folds each rejected"
+    },
+    {
+      "issue": "First virtual epoch interruption had no latest.pt boundary to resume",
+      "owner": "adapter agent",
+      "status": "corrected",
+      "independent_confirmation": "current code writes model/optimizer/RNG epoch0 before first update; owner reports actual loop interruption/replay test"
+    },
+    {
+      "issue": "Unreceipted nonprobe raw file after raw rename/receipt interruption could not recover",
+      "owner": "root",
+      "status": "corrected",
+      "independent_confirmation": "mocked same-version ZIP with identical saved bytes recovered and wrote receipt without changing saved file"
+    },
+    {
+      "issue": "Timestamp/metadata cast could silently truncate fractional scalar",
+      "owner": "root",
+      "status": "corrected",
+      "independent_confirmation": "fractional timestamp test now rejects before integer cast; reader uses finite/integral/range scalar validation"
+    },
+    {
+      "issue": "Stale acquisition running state lacked owner liveness check",
+      "owner": "root",
+      "status": "corrected",
+      "independent_confirmation": "current code checks PID and process creation time, preserves prior attempt; legacy owner uncertainty remains explicit"
+    }
+  ],
+  "independent_cpu_probes": {
+    "scope": "temporary synthetic receipt tests only; no real source/target data, no GPU, no training",
+    "incorrect_storage_axis_protocol_accepted": false,
+    "storage_gate_error": "Registered storage-order slicing drift",
+    "registered_exact_storage_protocol_accepted": true,
+    "mismatched_frozen_config_and_cross_candidate_data_accepted": false,
+    "coral_gate_error": "CORAL search receipt/config binding drift",
+    "cross_candidate_data_mismatch_accepted": false,
+    "cross_candidate_data_error": "CORAL gamma searches use different input/fold bindings",
+    "unreceipted_matching_nonprobe_recovery_accepted": true,
+    "recovery_receipt_origin": "unreceipted_saved_bytes_verified_against_pinned_version_redownload",
+    "fractional_timestamp_rejected_before_integer_cast": true,
+    "metadata_schedule_checks": [
+      {
+        "target": "classroom",
+        "seed": 42,
+        "updates": 30000,
+        "batch_size": 32,
+        "all_batches_source_domain_class_balanced": true,
+        "schedule_sha256": "83c9c5da7efe00e6404be0100d6616695074b1ed61a4b328308b2b906f68df59"
+      },
+      {
+        "target": "meeting_room",
+        "seed": 42,
+        "updates": 30000,
+        "batch_size": 32,
+        "all_batches_source_domain_class_balanced": true,
+        "schedule_sha256": "602855a2261310b7a76a6c01f6378fedd799853dd2360beb971ace67e97a5952"
+      },
+      {
+        "target": "empty_room",
+        "seed": 42,
+        "updates": 30000,
+        "batch_size": 32,
+        "all_batches_source_domain_class_balanced": true,
+        "schedule_sha256": "71fd58995aa882f144c42d8763188c90fb7221ed69b099c16b9e56f581ac5cb5"
+      }
+    ],
+    "recorded_at_utc": "2026-10-14T07:25:32.588185+00:00",
+    "reviewed_files_sha256": {
+      "experiments\\wimans_20261014\\adapter.py": "15ee1f68919ad4bc0c82a4749280d21eefb2b8334c2b48c78f7923d02fb4d1c4",
+      "experiments\\wimans_20261014\\models.py": "e0e47eb2e240691517224f6e103c851bcb3d29f43efef516eb8dd460a4ea1916",
+      "experiments\\wimans_20261014\\metrics.py": "c175fc1d4a7f8ca7a5f879ffc9eeccfbbf62f5f12213de1111529c1c25021246",
+      "experiments\\wimans_20261014\\training.py": "5daf4b1c3883b8d1d5f36459d15e1c9f2a478f1b96b93f069c9bd91a72bc2329",
+      "experiments\\wimans_20261014\\prepare_configs.py": "aaae4b70efc8cbf2a9c71a50d55041af9296c8a707ebcfe3786a2e35d9e1ccef",
+      "experiments\\wimans_20261014\\raw_io.py": "d9063c94a80a83e0980a3dc57cad1b47dc108c55a51bb3147a1167713fba26f1",
+      "experiments\\wimans_20261014\\acquisition.py": "1c56724a7e4a0460c8c5edf67255432c6fee4dfb4817246c9e018cc50dfb741c",
+      "experiments\\wimans_20261014\\prepare_inputs.py": "410034f640b1e01adb60ee4179f1dd99169d0e36ed21060127bb71f92816c5da"
+    }
+  },
+  "separate_raw_access_disclosure": {
+    "sample_id": "act_19_2",
+    "raw_relative_path": "wifi_csi/mat/act_19_2.mat",
+    "dataset_ref": "shuokanghuang/wimans",
+    "dataset_version_parameter": 1,
+    "number_of_files": 1,
+    "transport": "Kaggle individual MAT ZIP download in acquisition helper",
+    "access_kind": "raw_identity_hash_recovery_probe_only",
+    "occurred_before_recorded_at_utc": "2026-10-14T07:25:32.588185+00:00",
+    "exact_event_timestamp_recorded": false,
+    "cause": "While peer probe was testing the old immediate rejection of synthetic unreceipted bytes, concurrent root repair made that function redownload the pinned file into memory before comparison.",
+    "saved_synthetic_bytes_match_real_download": false,
+    "outcome": "helper rejected digest/length mismatch and preserved synthetic bytes; real response payload was not persisted",
+    "actual_download_sha256": null,
+    "download_hash_not_captured": true,
+    "mat_csi_numerically_decoded": false,
+    "real_signal_used_by_model": false,
+    "target_model_score_read_or_generated": false,
+    "real_download_persisted": false,
+    "followup": "All subsequent acquisition peer tests patch requests.get with local fake ZIP bytes; no repeated real download."
+  },
+  "limitations": [
+    "This receipt review and seed42 full schedule check do not replace complete actual1782 input QA, source batch32 short training, or formal job freeze.",
+    "No real WiMANS signal row was passed to an encoder by this reviewer; one raw file transport access is disclosed separately.",
+    "The owner tests for model/RNG/BN and actual training-loop interruption are separate evidence; this peer check did not duplicate GPU or real-signal runs.",
+    "Code may evolve after this snapshot; the recorded SHA256 identifies the reviewed version."
+  ],
+  "probe_script_sha256": "cd5ad680d638eab35e0fd0c5c463350583f1fe0e119b9168807307f5facde089"
+}

@@ -1,0 +1,8 @@
+{
+  "status": "verified",
+  "files": 9000,
+  "bytes": 3018143339,
+  "all_raw_sha256_equal": true,
+  "source_entry": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\sources\\raw_mat_cache",
+  "destination": "D:\\pa-csi-dg-revision-runtime\\cache\\raw_mat_cache"
+}

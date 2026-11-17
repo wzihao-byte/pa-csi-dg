@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-03T15:48:56.496896+00:00",
+  "target_data_loaded": false,
+  "training_completed": false,
+  "pool_controls": {
+    "p1_only": {
+      "parameters": 1478782,
+      "source_forward_backward_finite": true,
+      "common_initial_tensors_equal": true,
+      "source_CE_smoke_only": 1.9897263050079346
+    },
+    "without_p1": {
+      "parameters": 1811582,
+      "source_forward_backward_finite": true,
+      "common_initial_tensors_equal": true,
+      "source_CE_smoke_only": 2.0268280506134033
+    },
+    "attention": {
+      "parameters": 1878142,
+      "source_forward_backward_finite": true,
+      "common_initial_tensors_equal": true,
+      "source_CE_smoke_only": 1.969474196434021
+    }
+  },
+  "pseudo_tx_slicing_exact": true,
+  "mask_controls": {
+    "hybrid": {
+      "positive_directed_pairs": 52,
+      "denominator_directed_pairs": 240,
+      "anchors": 16,
+      "anchors_without_positive": 0
+    },
+    "all_view": {
+      "positive_directed_pairs": 112,
+      "denominator_directed_pairs": 240,
+      "anchors": 16,
+      "anchors_without_positive": 0
+    },
+    "hybrid_remove_same_class_nonpositives": {
+      "positive_directed_pairs": 52,
+      "denominator_directed_pairs": 180,
+      "anchors": 16,
+      "anchors_without_positive": 0
+    }
+  },
+  "coral_identity_shift_and_gradient_checks": true,
+  "mixup_cross_domain_and_rng_checks": true,
+  "temporal_interventions": {
+    "shift_85": "deterministic per sample; preserves every input frame exactly once",
+    "shift_170": "deterministic per sample; preserves every input frame exactly once",
+    "within_85_shuffle": "deterministic per sample; preserves every input frame exactly once",
+    "ten_block_shuffle": "deterministic per sample; preserves every input frame exactly once"
+  },
+  "source_sample_ids": [
+    "E3:2977",
+    "E3:0836",
+    "E3:1821",
+    "E2:2263",
+    "E2:0712",
+    "E3:2294",
+    "E2:2888",
+    "E2:1596",
+    "E3:1182",
+    "E2:0591",
+    "E2:0859",
+    "E3:2580",
+    "E3:1800",
+    "E3:2271",
+    "E2:2728",
+    "E2:2456"
+  ],
+  "code_sha256": {
+    "analysis\\verify_revision_controls.py": "731f609dacc94aab62daeb810d6bce4da7fb19a0d4591012bba8361d688491bf",
+    "experiments\\revision_validation\\control_components.py": "34b5476ad463a99d53ef799ee0c92f097f57f770df57141486a33a2036afd94e"
+  }
+}

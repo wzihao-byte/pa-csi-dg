@@ -1,0 +1,31 @@
+本次执行范围：仅主 H-S，54 次新训练；H 的扩展验证与独立新环境均不执行。
+
+三个目标：E1、E2、E3。历史种子：42、52、62。
+等容量组：global-MLP＋CE、global-MLP＋原 hybrid，各9次；对照已封存的 H-S10/H-S11。
+正样本规则组：TPP＋all-view同类正例、TPP＋hybrid排除其他同类分母项，各9次；对照 H-S11。
+相位组：完整 H TPP 门控双流＋原 hybrid；native historical-style AP 与 native differential AP，各9次。
+相位两臂使用同一native amplitude、labels、sample identity和850端点网格；比较整条处理链。
+
+固定条件：200 epochs × 150 optimizer updates = 30000；batch 32；Adam lr=.001、wd=0。
+学习率逐更新 .001 × .9^(step/10000)，无梯度裁剪。
+对比系数 .05、temperature .2、不warmup；CE臂系数0。
+完整batch32先编码，再将3个masked views合并为batch96编码；保持原BatchNorm/RNG语义。
+伪Tx：mode=tx,num_rx=1,num_tx=3,num_subcarriers=30，仅指三个软件30列feature groups。
+H-S沿用原4800/1200样本、16/4主体、1600/400采集划分，并绑定原完整采样序列。
+按source validation accuracy选择末个并列最佳checkpoint，严格reload后才评估target。
+
+冻结执行包：D:/pa-csi-dg-revision-runtime/studies/h_main_controls_20261008_v2/bundle
+预检：23组件/输入测试＋真实源域两步训练轨迹比对通过。
+共享状态358个tensor完全相同；两模型均4786294参数；loss/gradient与旧hybrid实现逐位一致。
+保存状态：queue/status.json；各run的training_status.json和source_progress.json。
+验证后结果：analysis/validated_runs.csv 与 analysis/results.json，未满9run的单臂只标partial。
+运行中不根据target结果调整已冻结配置或队列。
+中断时保留全部尝试；重新执行冻结 run.py --execute 会跳过已成功封存的运行，未完成运行从新attempt开始。
+如需在当前run结束后停止，创建 queue/stop_after_current.json；不删除任何封存记录。
+
+同机source-only GPU预热测速：CE约.21秒/step，多视图约.80秒/step。
+30000步净计算约1.8h/6.7h，完整run另含源验证、加载、target评估和封存。
+54次 = 9 CE＋45 multiview；连续单GPU运行估计约两周，实际进展以日志为准。
+
+v1仅为启动前QA失败的准备版本，未正式训练；v2修复了冻结目录内测试模块的导入路径。
+论文未加入未完成实验的缺项清单，也未将新实验写成已完成结果。

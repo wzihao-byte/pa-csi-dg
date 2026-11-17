@@ -1,0 +1,6 @@
+{
+  "status": "completed",
+  "at": "2026-09-03T17:29:45.381275+00:00",
+  "native_input_manifest": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\dataset_manifest.json",
+  "modality_input_manifest": "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\dataset_manifest.json"
+}

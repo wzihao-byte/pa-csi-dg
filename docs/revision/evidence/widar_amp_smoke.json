@@ -1,0 +1,17 @@
+{
+  "finished_at": "2026-09-03T15:47:29.998881+00:00",
+  "rows": 6,
+  "failures": [],
+  "complete_selected_cohort": false,
+  "target_model_evaluation": false,
+  "config_sha256": "6305062e2c0a931ef0c8a8c86e9ce1f8c308c1c65a5a7ebe7f58e4161f298387",
+  "inventory_sha256": "9605caa33bb5286f9e7098bfcafb293d020f020dabefb33bbfb8da7d9a04006c",
+  "record_sha256": {
+    "20181204:20181204/user1/user1-1-1-1-1-r1.dat": "e4d146e24e0d4302d5fbb4857f38e8999b9ab82fd35c1f793bb15237e9881c89",
+    "20181205:20181205/user2/user2-1-1-1-1-r1.dat": "9282f6c70d7709959640c5b8886ed7b89bd452dbd785d4e74cfada1234de91fb",
+    "20181208:20181208/user2/user2-1-1-1-1-r1.dat": "05ed9e45362440ea8fcf5dc4390dea35a94c7b511fc41bfb8c4f093459acd4ea",
+    "20181130_user5_10_11:user10/user10-1-1-1-1-r1.dat": "0ca07573865d4062d731c85fa00a88e0306f4ca94fba556d76b7bdfb231143d6",
+    "20181209:20181209/user6/user6-1-1-1-1-r1.dat": "39dd8ae580e5454f61b0f58e01cdf72db3dca6f85ff30f5b32eeeda82e7e6a27",
+    "20181211:20181211/user7/user7-1-1-1-1-r1.dat": "1fb17c0ed49ff97ace7d574e5940f4fd3b2fb70728a4ed076a4206484db39389"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "One-epoch source trainer integration pilot, not a full baseline result",
+  "checkpoint_strictly_loaded": true,
+  "source_prediction_rows_verified": 1200,
+  "all_predictions_and_metrics_equal": true,
+  "target_data_loaded": false,
+  "status_sha256": "231761598e9d0e106b8560f0c08be86c847c294111bf52cb99ad5bcdf80991ea",
+  "source_manifest_sha256": "bf15bf0b217f29edffefafb353f1047dab1bd191933b68f0e6b5e1a1fe4a63bd",
+  "checkpoint_sha256": "ed928759f8692e900fc60cdd8dbcb5229b766f5ad879598e0287c8874e0f260a",
+  "optimizer_updates_executed": 300,
+  "selected_epoch": 1,
+  "source_metrics": {
+    "macro_f1": 0.6822639508287246,
+    "class_f1": [
+      0.9369565217391305,
+      0.6946107784431138,
+      0.7890818858560794,
+      0.7181208053691275,
+      0.54421768707483,
+      0.4105960264900662
+    ],
+    "accuracy": 0.77,
+    "confusion_matrix": [
+      [
+        431,
+        7,
+        12,
+        11,
+        14,
+        5
+      ],
+      [
+        0,
+        116,
+        13,
+        11,
+        16,
+        4
+      ],
+      [
+        0,
+        0,
+        159,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        33,
+        5,
+        107,
+        12,
+        3
+      ],
+      [
+        0,
+        6,
+        37,
+        9,
+        80,
+        28
+      ],
+      [
+        9,
+        12,
+        17,
+        0,
+        11,
+        31
+      ]
+    ]
+  }
+}

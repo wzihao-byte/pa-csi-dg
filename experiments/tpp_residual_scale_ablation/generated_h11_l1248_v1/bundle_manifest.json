@@ -1,0 +1,8 @@
+{
+  "schema_version": "tpp-residual-scale-bundle/v1",
+  "protocol_lock_sha256": "6f14d4cd6663f79a756fc708458333d5997cdd821a279df627e117d72cad61d1",
+  "registry_sha256": "6885a5266ab742a97a8d074ee7ab542f18623c6a404ada397b20290a44f2697e",
+  "reference_registry_sha256": "3be3dc7630fc7a551fe6dc00af3c5d473d32688d29663c8762a9a8085d4c6687",
+  "execution_lock_sha256": "880b38f4c9d12ddfb59d9a099bd971c8e93dbd24a7790a51ea535a3f1aa909e2",
+  "job_count": 36
+}

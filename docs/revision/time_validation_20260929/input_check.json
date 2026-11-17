@@ -1,0 +1,645 @@
+{
+  "started_at": "2026-09-29T12:05:32.482349+00:00",
+  "passed": true,
+  "training_or_target_scoring": false,
+  "downloaded_data": false,
+  "historical_or_frozen_files_modified": false,
+  "script_sha256": "214b9e59f99c6646bd03f82455ae0ae32288ee58d6c09b1e39ea1c79225e3a67",
+  "compiled_directory": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1",
+  "prepared_directory": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1",
+  "full_raw_DAT_replay_performed": false,
+  "source_code_sha256_verified": {
+    "analysis\\prepare_native_multienv.py": "c0fe31b8d6dbf41b5cec24858787603046c3f58b2411bfe2836cfc7dcd2ce8eb",
+    "analysis\\audit_multienv_timestamps.py": "4f8656dfeef239a01faf7145b5cb49f0adf79436290e58245574f3e1688040f6",
+    "analysis\\verify_multienv_raw_mapping.py": "8f104a8dc6e0fdc72c94953bd90e506f75d8ccf969a28cfb809c9609707ad8e5"
+  },
+  "compiled_artifacts_sha256_verified": {
+    "compile_config.json": "d630221844c67f8e19e1147b1d654a4e9373cbec8cbc4f346b90e8023453f0d3",
+    "E1_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "E2_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "E3_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "native_time_legacy_merge/E1_amp.npy": "c842948ba7ac27946853977b7600cc876c0884f8aa9082baa3094136810715a3",
+    "native_time_legacy_merge/E2_amp.npy": "df404e4b85041ec0987c738be1e0f333872037a2e5b0658171a89301516c58b1",
+    "native_time_legacy_merge/E3_amp.npy": "7914137cc69eb2b04448106d4b1c4324e71e0eb61471a6e7808df83331ebb7bf",
+    "native_time_legacy_merge/manifests/deferred_target_E1.json": "27a99871c25576c6a05d1d3509de2df1d3b06db0afde06ebc27be02552a46d40",
+    "native_time_legacy_merge/manifests/deferred_target_E2.json": "35230be0d0b738d2691a44ac2b8a7bb198ca3be2543b4df3dafb06b620a2a786",
+    "native_time_legacy_merge/manifests/deferred_target_E3.json": "f5de588dc7361286b31b4f170fb44bc8134dd69c49e17442b457087d1c4095ef",
+    "native_time_legacy_merge/manifests/source_E1.json": "8d507cccb89dbd87849f4aa83761d71d6739dc4987b06815ea583b7740c325d1",
+    "native_time_legacy_merge/manifests/source_E2.json": "bfceee70da3650f648f3d299da4f7924a43558a370e7ac483af5c64c306d0d91",
+    "native_time_legacy_merge/manifests/source_E3.json": "7b01ff71db1966d29b72fd68aefa08dcb8cae55cea98f1c7d26f9e4a6918fbc4",
+    "native_time_legacy_merge/subject_sidecars/E1.json": "5206eeda59d49a813497d035afe0d86de410c29b3d5245673cf91682c9916f61",
+    "native_time_legacy_merge/subject_sidecars/E2.json": "e1d22b58edd631cfa7cba79df8f3af1ea9f2a70d06caaab4195bcfa4dc5347ac",
+    "native_time_legacy_merge/subject_sidecars/E3.json": "89aa85e3a9fc6971bbb47317779ff43d82b3d9f258f31fe56a197cc59f914a54",
+    "native_time_linear/E1_amp.npy": "c782e7656a9a940d665fc3531de0ed5d43e83c281b18ca5d59eddb28f57e4d91",
+    "native_time_linear/E2_amp.npy": "986c0efe006eb20adf164c6beca0b6f4e0916fac30d7178ac8ced6eb09606d1c",
+    "native_time_linear/E3_amp.npy": "d08888f01f62779082975a8e2c12945eb0fb93d03f710c800648d11da26464f4",
+    "native_time_linear/manifests/deferred_target_E1.json": "f7241138fe5e51484ac0d637670aa282ab7d641b2855bf4a10589c18ea24c46d",
+    "native_time_linear/manifests/deferred_target_E2.json": "35666465586058a59298495687ca410f92c74a59243ce9b27b182b3ccd512136",
+    "native_time_linear/manifests/deferred_target_E3.json": "6fe6c68b0e7865a2328d33d1e1d22625aa1acbe704d32b076880b5eaa1ea4920",
+    "native_time_linear/manifests/source_E1.json": "a71e6a98008b2bb6002cdd57acfc208efcfb616ab650f8877708950992874796",
+    "native_time_linear/manifests/source_E2.json": "464b109e85b036f2b5285ff16f96b293e5f092610669372ec9505771841a454b",
+    "native_time_linear/manifests/source_E3.json": "fe920e45ae3ebd15d526bf39a15d8d5cbb8d5b886f0e15a4a60de43fcf38846f",
+    "native_time_linear/subject_sidecars/E1.json": "3ca61163d78a2786a07ef5f20daa477c49bbacdadea83351c9f636f462bfe533",
+    "native_time_linear/subject_sidecars/E2.json": "97b6439c35c0b2e6fe06fc26b8d05caa9624e0962535d870055ac3ec079a5d28",
+    "native_time_linear/subject_sidecars/E3.json": "af3fee16358f6319a8aaa9ae1a759f9d1a7678bdd35a749c36f58592878f192a"
+  },
+  "preparation_record_hashes_verified": 9000,
+  "arrays": [
+    {
+      "variant": "native_time_legacy_merge",
+      "environment": "E1",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\E1_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 101.59724426269531,
+      "sha256": "c842948ba7ac27946853977b7600cc876c0884f8aa9082baa3094136810715a3"
+    },
+    {
+      "variant": "native_time_linear",
+      "environment": "E1",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\E1_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 97.88186645507812,
+      "sha256": "c782e7656a9a940d665fc3531de0ed5d43e83c281b18ca5d59eddb28f57e4d91"
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "environment": "E2",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\E2_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 150.98313903808594,
+      "sha256": "df404e4b85041ec0987c738be1e0f333872037a2e5b0658171a89301516c58b1"
+    },
+    {
+      "variant": "native_time_linear",
+      "environment": "E2",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\E2_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 144.6745147705078,
+      "sha256": "986c0efe006eb20adf164c6beca0b6f4e0916fac30d7178ac8ced6eb09606d1c"
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "environment": "E3",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\E3_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 132.0037841796875,
+      "sha256": "7914137cc69eb2b04448106d4b1c4324e71e0eb61471a6e7808df83331ebb7bf"
+    },
+    {
+      "variant": "native_time_linear",
+      "environment": "E3",
+      "path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\E3_amp.npy",
+      "rows": 3000,
+      "shape": [
+        3000,
+        850,
+        90
+      ],
+      "dtype": "float32",
+      "nonfinite_count": 0,
+      "min": 0.0,
+      "max": 127.66188049316406,
+      "sha256": "d08888f01f62779082975a8e2c12945eb0fb93d03f710c800648d11da26464f4"
+    }
+  ],
+  "membership_checks": [
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E1",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E1",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E1",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E1",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E1",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E1",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E2",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E2",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E2",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E2",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E2",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E2",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E3",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E3",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_legacy_merge",
+      "outer_target": "E3",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E3",
+      "partition": "train",
+      "rows": 4800,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E3",
+      "partition": "val",
+      "rows": 1200,
+      "historical_order_labels_subjects_preserved": true
+    },
+    {
+      "variant": "native_time_linear",
+      "outer_target": "E3",
+      "partition": "test",
+      "rows": 3000,
+      "historical_order_labels_subjects_preserved": true
+    }
+  ],
+  "clock_statistics": {
+    "duration_seconds": {
+      "min": 2.990493,
+      "median": 3.999814,
+      "p95": 4.999801,
+      "max": 5.905944
+    },
+    "max_gap_seconds_per_record": {
+      "min": 0.003221,
+      "median": 0.009395,
+      "p95": 0.02187805,
+      "max": 2.015493
+    },
+    "duplicate_timestamp_steps": 0,
+    "uint32_wraps": 0,
+    "records_with_max_gap_gt_0_05_seconds": 62,
+    "records_with_max_gap_gt_0_1_seconds": 4,
+    "records_with_max_gap_gt_0_5_seconds": 3,
+    "records_with_max_gap_gt_1_second": 2,
+    "longest_gaps": [
+      {
+        "environment": "E2",
+        "index": 158,
+        "mat_path": "MAT/E2/E2_S11_C03_A07_T19.mat",
+        "duration_seconds": 5.905944,
+        "max_gap_seconds": 2.015493,
+        "packet_count": 1232
+      },
+      {
+        "environment": "E2",
+        "index": 2733,
+        "mat_path": "MAT/E2/E2_S20_C01_A02_T14.mat",
+        "duration_seconds": 5.606006,
+        "max_gap_seconds": 1.63435,
+        "packet_count": 1187
+      },
+      {
+        "environment": "E2",
+        "index": 2081,
+        "mat_path": "MAT/E2/E2_S17_C05_A12_T02.mat",
+        "duration_seconds": 4.981032,
+        "max_gap_seconds": 0.759277,
+        "packet_count": 1276
+      },
+      {
+        "environment": "E1",
+        "index": 2747,
+        "mat_path": "MAT/E1/E1_S09_C01_A03_T08.mat",
+        "duration_seconds": 3.99982,
+        "max_gap_seconds": 0.106144,
+        "packet_count": 1236
+      },
+      {
+        "environment": "E1",
+        "index": 853,
+        "mat_path": "MAT/E1/E1_S02_C04_A10_T14.mat",
+        "duration_seconds": 3.199906,
+        "max_gap_seconds": 0.064775,
+        "packet_count": 973
+      },
+      {
+        "environment": "E2",
+        "index": 2969,
+        "mat_path": "MAT/E2/E2_S20_C04_A11_T10.mat",
+        "duration_seconds": 3.196688,
+        "max_gap_seconds": 0.062561,
+        "packet_count": 845
+      },
+      {
+        "environment": "E1",
+        "index": 2863,
+        "mat_path": "MAT/E1/E1_S09_C03_A08_T04.mat",
+        "duration_seconds": 3.999819,
+        "max_gap_seconds": 0.062502,
+        "packet_count": 1174
+      },
+      {
+        "environment": "E3",
+        "index": 1055,
+        "mat_path": "MAT/E3/E3_S24_C03_A07_T16.mat",
+        "duration_seconds": 3.999742,
+        "max_gap_seconds": 0.059378,
+        "packet_count": 1215
+      },
+      {
+        "environment": "E2",
+        "index": 2254,
+        "mat_path": "MAT/E2/E2_S18_C03_A07_T15.mat",
+        "duration_seconds": 3.999778,
+        "max_gap_seconds": 0.0563,
+        "packet_count": 1162
+      },
+      {
+        "environment": "E2",
+        "index": 456,
+        "mat_path": "MAT/E2/E2_S12_C03_A07_T17.mat",
+        "duration_seconds": 3.999887,
+        "max_gap_seconds": 0.056278,
+        "packet_count": 1167
+      }
+    ]
+  },
+  "bound_full_reconstruction_audit_reused": {
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\native_reconstruction_v1\\summary.json",
+    "sha256": "ad3b59d033e202e6cea2f77725ff1d84575185f5e36e72643bbb29c80163947c",
+    "all_artifact_hashes_verified": true,
+    "comparisons": {
+      "historical_vs_native_merge": {
+        "rows": 9000,
+        "exact_rows": 5256,
+        "rows_with_abs_error_gt_1e_minus5": 3744,
+        "max_abs_error": {
+          "valid_rows": 9000,
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 3.465972423553467,
+          "max": 55.02214479446411
+        },
+        "rmse": {
+          "valid_rows": 9000,
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 0.06060743637075678,
+          "max": 10.865013708564009
+        },
+        "relative_l2_error": {
+          "valid_rows": 9000,
+          "min": 0.0,
+          "median": 0.0,
+          "p95": 0.0022893696704067777,
+          "max": 0.4493475269974624
+        },
+        "pearson_correlation": {
+          "valid_rows": 9000,
+          "min": 0.41513290127954694,
+          "median": 1.0,
+          "p95": 1.0,
+          "max": 1.0
+        }
+      },
+      "historical_vs_native_linear": {
+        "rows": 9000,
+        "exact_rows": 0,
+        "rows_with_abs_error_gt_1e_minus5": 9000,
+        "max_abs_error": {
+          "valid_rows": 9000,
+          "min": 1.4823799133300781,
+          "median": 7.855964660644531,
+          "p95": 32.96631774902344,
+          "max": 84.43512916564941
+        },
+        "rmse": {
+          "valid_rows": 9000,
+          "min": 0.21712985010284674,
+          "median": 0.7745446161079648,
+          "p95": 1.4416164694932643,
+          "max": 10.84038227819647
+        },
+        "relative_l2_error": {
+          "valid_rows": 9000,
+          "min": 0.008392467698645977,
+          "median": 0.029546178793166983,
+          "p95": 0.05459094412418496,
+          "max": 0.44832883777911936
+        },
+        "pearson_correlation": {
+          "valid_rows": 9000,
+          "min": 0.41820319943509704,
+          "median": 0.9959740886851511,
+          "p95": 0.9987535727608869,
+          "max": 0.9997871039701071
+        }
+      },
+      "native_merge_vs_native_linear": {
+        "rows": 9000,
+        "exact_rows": 0,
+        "rows_with_abs_error_gt_1e_minus5": 9000,
+        "max_abs_error": {
+          "valid_rows": 9000,
+          "min": 1.4823799133300781,
+          "median": 7.709815979003906,
+          "p95": 31.131894588470455,
+          "max": 84.43512916564941
+        },
+        "rmse": {
+          "valid_rows": 9000,
+          "min": 0.21769106867332155,
+          "median": 0.7644302470888371,
+          "p95": 1.3024459800553747,
+          "max": 4.15034818962122
+        },
+        "relative_l2_error": {
+          "valid_rows": 9000,
+          "min": 0.008392467698645977,
+          "median": 0.029296976062291948,
+          "p95": 0.04838791536015134,
+          "max": 0.158467437282955
+        },
+        "pearson_correlation": {
+          "valid_rows": 9000,
+          "min": 0.9107385743960708,
+          "median": 0.9961125490828261,
+          "p95": 0.9987710182818402,
+          "max": 0.9997871039701071
+        }
+      }
+    }
+  },
+  "independent_local_reconstruction": [
+    {
+      "environment": "E1",
+      "index": 0,
+      "raw_mat_path": "MAT/E1/E1_S01_C01_A01_T01.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E1_S01_C01_A01_T01.dat",
+      "packet_count": 959,
+      "native_duration_seconds": 2.999905,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.003533457008244994,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.006297,
+      "largest_gap_start_seconds": 0.893703,
+      "largest_gap_end_seconds": 0.9,
+      "linear_grid_points_strictly_inside_largest_gap": 2,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E2",
+      "index": 0,
+      "raw_mat_path": "MAT/E2/E2_S11_C01_A01_T01.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E2_S11_C01_A01_T01.dat",
+      "packet_count": 942,
+      "native_duration_seconds": 2.999903,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.003533454652532391,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.009373,
+      "largest_gap_start_seconds": 2.340511,
+      "largest_gap_end_seconds": 2.349884,
+      "linear_grid_points_strictly_inside_largest_gap": 3,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E3",
+      "index": 0,
+      "raw_mat_path": "MAT/E3/E3_S21_C01_A01_T01.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E3_S21_C01_A01_T01.dat",
+      "packet_count": 950,
+      "native_duration_seconds": 2.999903,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.003533454652532391,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.01257,
+      "largest_gap_start_seconds": 2.846753,
+      "largest_gap_end_seconds": 2.859323,
+      "linear_grid_points_strictly_inside_largest_gap": 4,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E1",
+      "index": 1108,
+      "raw_mat_path": "MAT/E1/E1_S03_C04_A01_T09.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E1_S03_C04_A01_T09.dat",
+      "packet_count": 1601,
+      "native_duration_seconds": 4.999753,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.005888990577149588,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.004366,
+      "largest_gap_start_seconds": 0.603055,
+      "largest_gap_end_seconds": 0.607421,
+      "linear_grid_points_strictly_inside_largest_gap": 1,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E1",
+      "index": 1715,
+      "raw_mat_path": "MAT/E1/E1_S05_C04_A01_T16.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E1_S05_C04_A01_T16.dat",
+      "packet_count": 1589,
+      "native_duration_seconds": 4.999821,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.005889070671378092,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.009366,
+      "largest_gap_start_seconds": 1.381309,
+      "largest_gap_end_seconds": 1.390675,
+      "linear_grid_points_strictly_inside_largest_gap": 2,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E2",
+      "index": 158,
+      "raw_mat_path": "MAT/E2/E2_S11_C03_A07_T19.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E2_S11_C03_A07_T19.dat",
+      "packet_count": 1232,
+      "native_duration_seconds": 5.905944,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.006956353356890459,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 2.015493,
+      "largest_gap_start_seconds": 3.890451,
+      "largest_gap_end_seconds": 5.905944,
+      "linear_grid_points_strictly_inside_largest_gap": 289,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E2",
+      "index": 2733,
+      "raw_mat_path": "MAT/E2/E2_S20_C01_A02_T14.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E2_S20_C01_A02_T14.dat",
+      "packet_count": 1187,
+      "native_duration_seconds": 5.606006,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.006603069493521791,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 1.63435,
+      "largest_gap_start_seconds": 3.971656,
+      "largest_gap_end_seconds": 5.606006,
+      "linear_grid_points_strictly_inside_largest_gap": 247,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    },
+    {
+      "environment": "E2",
+      "index": 2081,
+      "raw_mat_path": "MAT/E2/E2_S17_C05_A12_T02.mat",
+      "dat_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_v1\\dat_cache\\E2_S17_C05_A12_T02.dat",
+      "packet_count": 1276,
+      "native_duration_seconds": 4.981032,
+      "grid_points": 850,
+      "grid_spacing_seconds": 0.005866939929328622,
+      "grid_is_record_specific_not_fixed_Hz": true,
+      "duplicate_timestamp_steps": 0,
+      "max_gap_seconds": 0.759277,
+      "largest_gap_start_seconds": 4.221755,
+      "largest_gap_end_seconds": 4.981032,
+      "linear_grid_points_strictly_inside_largest_gap": 129,
+      "DAT_MAT_complex_CSI_and_packet_IDs_exact": true,
+      "replayed_B_and_C_exact_to_prepared_and_packed_float32": true,
+      "historical_replay_max_absolute_error": 0.0
+    }
+  ],
+  "interpretation_limits": [
+    "B changes only the timestamp basis while retaining historical merge boundaries and reverse-tail padding; its 850 output indices are not a strict physical-time grid.",
+    "C linearly interpolates native DAT amplitude onto 850 equally spaced within-record times including endpoints; spacing varies with recording duration, so it does not impose a fixed sampling frequency.",
+    "Duplicate timestamps would be averaged before linear interpolation; no duplicate steps or uint32 wraps occur in the 9000 verified provenance records.",
+    "Linear interpolation crosses missing-packet gaps without a gap mask or gap-duration cutoff. The longest observed gap is 2.015493 seconds; the frozen C arm tests sensitivity under that rule, not recovery of the missing physical signal.",
+    "No rows are excluded due to long gaps or model performance; changing the gap policy would require a separately versioned experiment.",
+    "All packed input bytes, preparation records, identities and prior audit hashes were rechecked. Raw DAT/MAT reconstruction was independently repeated only for the listed subset; the complete 9000-row reconstruction is reused through hash bindings.",
+    "Historical row index and native elapsed seconds are different coordinates and must not be plotted as the same measured physical time."
+  ],
+  "completed_at": "2026-09-29T12:08:58.552815+00:00"
+}

@@ -1,0 +1,119 @@
+{
+  "P1": {
+    "total_parameters": 1478782,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 1671824,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673375304,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "NO_P1": {
+    "total_parameters": 1811582,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2004624,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673708104,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "ATTENTION": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2186096,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673889576,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "MASK_HYBRID": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "MASK_ALL": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "MASK_REMOVE": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "CORAL": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "MIXUP": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  },
+  "TEMPORAL_AUG": {
+    "total_parameters": 1878142,
+    "inference_counted_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "counting_limit": "Conv/linear/attention/position matrix MACs only; excludes pooling arithmetic, normalization and other elementwise operations"
+  }
+}

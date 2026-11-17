@@ -1,0 +1,698 @@
+{
+  "schema": "author-csi-dg-qualification-audit/v1",
+  "audit_date": "2026-10-14",
+  "timezone": "Asia/Tokyo",
+  "status": "conditional_method_eligible_execution_not_qualified",
+  "method_qualification": {
+    "full_label_source_only_objective_exists": true,
+    "unmodified_release_qualifies": false,
+    "adaptation_possible": true,
+    "execution_freeze_approved": false,
+    "decision": "retain MA as conditional author-code DG candidate; register adaptations and pass source QA before training"
+  },
+  "author": {
+    "repository": "https://github.com/KaoruMiyazono/UniCrossFi",
+    "canonical_repository_name": "KaoruMiyazono/UnicrossFi",
+    "commit": "f31e655a8414415de58659c0af7d7dba6281a0c1",
+    "tree": "69ea826105f758332fc0f86c4e6a3da4cbd483c9",
+    "commit_date": "2025-12-20T14:10:21+08:00",
+    "branch_on_clone": "main",
+    "working_tree_status": "",
+    "local_source_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\work\\wimans_20261014\\author_baseline_audit\\UniCrossFi",
+    "license": "MIT",
+    "file_inventory": {
+      "README.md": {
+        "sha256": "14129f8195240ad417935d12a5c8f721e2309d4a0dfb2e4a89b405fd5cabb93f",
+        "bytes": 4354
+      },
+      "LICENSE": {
+        "sha256": "9eb6f69d48a1dd764e8a33f14a584f460d3cec653477c136a95dd6df9c249211",
+        "bytes": 1055
+      },
+      "run_uda.py": {
+        "sha256": "5fd6648de8975864e7fac9ffba85c5f4c16a3b44c9ba86f2f8ad01070cd91b23",
+        "bytes": 7108
+      },
+      "algorithm/train_dg.py": {
+        "sha256": "88a93798d0829a5991abca5e9e2d7935b8079292fdbfce15ef1813efc067e00a",
+        "bytes": 13298
+      },
+      "data/dataset.py": {
+        "sha256": "26cb4b7f61818f54a8a2a188e72a9a840f2140818529a77b5b04f52c8f14a93a",
+        "bytes": 7174
+      },
+      "data/Widar.py": {
+        "sha256": "682f0852986a3f0c3ccd062a658121dd665cfe07dc04a01986cc2c6f1236e154",
+        "bytes": 29790
+      },
+      "data/CSIDA.py": {
+        "sha256": "b22a56c75ebe4ae04ec56e38331274fb3db8fdc177e985c08a2d688ca9378276",
+        "bytes": 26769
+      },
+      "data/utils.py": {
+        "sha256": "85b9ecf72c224da135fb150824b7cc57b30ae7a132946a60310e188b0bd6dc66",
+        "bytes": 63207
+      },
+      "data/TD_CSI_process_widar.py": {
+        "sha256": "54f98c4e0c116e7b7ec19ad06f4ab1cb9fdb56acc16378d798822fcd21b5ce00",
+        "bytes": 24532
+      },
+      "models/contrast_methods.py": {
+        "sha256": "40a392f83bf4d68553b9682c64b7278d80efb3b1653f0e921d64119397d5e2a0",
+        "bytes": 116185
+      },
+      "models/sdaresnet.py": {
+        "sha256": "377fbce2277182ac1820637a57a783ee3076197b47446dfce40bf0ce9c1cad2c",
+        "bytes": 7693
+      },
+      "util/optimizer.py": {
+        "sha256": "b12db0f2f1f9e45eaa7ce9638677fcb7591e97b9d9c967c2dd080cb82a5baf2d",
+        "bytes": 725
+      },
+      "bash/UnicrossFi/UniCrossFi_dg_widar.sh": {
+        "sha256": "1dd081459ac8ecf24049d7f89ef266ae3a45ad64b8071c3ad77e0e3516ef6e31",
+        "bytes": 12672
+      },
+      "bash/UnicrossFi/UnicrossFi_dg_CSIDA.sh": {
+        "sha256": "c5702acea78b41ff16a0add5af9d2e92e3077e12c5c6da0ce67e76829b47970e",
+        "bytes": 4721
+      },
+      "optuna_UniCrossFi_launch.py": {
+        "sha256": "40ec99b8df3477016bbf963e81c9af8ae3165744a1f7751888a646403b933caf",
+        "bytes": 5732
+      }
+    }
+  },
+  "paper": {
+    "arxiv_version": "2310.06328v7",
+    "version_date": "2026-06-16",
+    "title": "ARC-Fi: Exploiting Antenna Spatial Diversity for Label-Efficient Domain Generalization in Wi-Fi Sensing",
+    "primary_url": "https://arxiv.org/html/2310.06328v7",
+    "abstract_url": "https://arxiv.org/abs/2310.06328v7",
+    "saved_html": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\work\\wimans_20261014\\author_baseline_audit\\arxiv_2310.06328v7.html",
+    "saved_html_sha256": "0678b61350105bc6b92cb649fda88eaf1fc3bf5bfd4c45dc787876f86b81346a",
+    "exact_v7_experiment_code_correspondence_verified": false,
+    "correspondence_caveat": "release commit precedes v6/v7; no tag or per-table source/config/result binding supplied"
+  },
+  "upstream_method": {
+    "class": "UniCrossFi_dg",
+    "class_lines": [
+      2168,
+      2433
+    ],
+    "full_label_configuration": {
+      "method": "UniCrossFi_dg",
+      "ratio": null
+    },
+    "supervision_budget": "all source train labels; source validation labels for checkpoint selection; no pseudo-label branch in this class",
+    "backbone": "shared 2D ResNet BasicBlock [2,2,2,2], input channels=2, output dimension=512",
+    "neck": "Linear(512,512), ReLU, Linear(512,128), L2 normalization",
+    "classifier": "Linear(128,6) over normalized neck embedding; same head for each view",
+    "loss": {
+      "ce": "mean_v cross_entropy(logits[:,v,:],y)",
+      "contrast": "beta*SupCon(emb,y)+(1-beta)*SupCon(emb)",
+      "dynamic_scale": "min(scale_cap, L_con.detach()/(L_ce.detach()+1e-6))",
+      "total": "L_ce + dynamic_scale*L_con",
+      "base_temperature": 0.07,
+      "supcon_positive_policy": "class-equality tiled across all view pairs; self comparisons removed",
+      "ucon_positive_policy": "same instance across all view pairs; self comparisons removed"
+    },
+    "widar_path_views": {
+      "train": "two receiver-ratio views plus one randomized feature view",
+      "inference": "mean of two per-view probabilities"
+    },
+    "style_randomization": "batch randperm of global 512-D feature means/stds, uniform interpolation; domain labels unused",
+    "optimizer": "two Adam optimizers for feature_extractor and classifier; neck omitted",
+    "schedule": "CosineAnnealingLR(eta_min=0,T_max=100*max(len(train_loader),len(test_loader))) stepped per update",
+    "training_budget": "finite source DataLoader traversals until config.epochs or early-stop; not 30000 locked updates",
+    "source_validation": "random 20% sample holdout seed=0; no subject/acquisition grouping",
+    "checkpoint_rule": "validation accuracy >= current best selects last tied best; reload before final test",
+    "target_access": [
+      "Widar target paths and labels enumerated before train",
+      "test_loader length enters scheduler and logged training loss denominator",
+      "DG update uses only source minibatch; test data prediction after checkpoint reload",
+      "CSIDA sibling loader eagerly loads target tensors and fits independent target min/max; must not be reused"
+    ]
+  },
+  "input_audit": {
+    "widar_preprocessing_code": "data/TD_CSI_process_widar.py",
+    "raw_axis": "Intel DAT decoder [T,30,Rx=3,Tx=1], actual receiver perm applied once",
+    "author_scaled_complex": "per-packet RSSI/AGC/noise scaling, then complex conjugation",
+    "antenna_score_code": "mean_subcarrier(mean_t(abs(H))/(var_t(abs(H))+1e-8))",
+    "reference_code": "argmin(score)",
+    "numerators_code": "argmax(score), remaining receiver",
+    "antenna_score_matches_v7_eq4": false,
+    "complex_ratio": "numerator/(reference+1e-8)",
+    "time_differential": "first j with timestamp[j]>=timestamp[i]+80000 microseconds; difference H_ratio[j]-H_ratio[i]",
+    "resampling_code": "scipy.signal.resample over sample index to 800 complex points; timestamps used for differences, not final resampling grid",
+    "tensor_disk": "[ratio_view=2,amp_phase=2,subcarrier=30,time=800]",
+    "normalization": "per-record shared amplitude min/max over both ratios, map to [0,pi], phase=np.angle without unwrap",
+    "direct_upstream_model_input": "[B,ratio_view=2,amp_phase=2,time,subcarrier]",
+    "required_multienv_adapter": "original DAT identity joined through raw_path and pinned inventory; do not reconstruct ratios from historical interpolated amplitude/phase arrays",
+    "physical_claim_boundary": "author ratio views use physical Rx; historical H pseudo-Tx masked groups remain software feature groups"
+  },
+  "multienv_identity_evidence": {
+    "raw_dataset_commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+    "raw_inventory_sha256": "acfa3e05cd6be453703c288475537b29d5e7f511002041ffd84ea1a6563668b3",
+    "decoder_sha256": "4f8656dfeef239a01faf7145b5cb49f0adf79436290e58245574f3e1688040f6",
+    "prior_dat_mat_equality_evidence": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\timestamp_precision_audit.json",
+      "sha256": "d1ddebe811f456c812e43a9b40fb31fb39a1bcfef7188e23e447a82aa2aa2f7d",
+      "scope": "two prior audited E1 recordings; read stored evidence only, no equality re-execution in this audit",
+      "records": [
+        {
+          "raw_stem": "E1_S03_C04_A01_T09",
+          "packet_count": 1601,
+          "mat_sha256": "579aca1535041e54e0a32dcd9ef5e1bad53da016d26d9b17f0fabcae3bb055da",
+          "dat_sha256": "fd93b164e9bc22a319525a91df1b86ed0c2198ed7d4a98752a3eac2fc9c2431e",
+          "all_packet_ids_and_complex_csi_equal": true
+        },
+        {
+          "raw_stem": "E1_S05_C04_A01_T16",
+          "packet_count": 1589,
+          "mat_sha256": "4380ea96dc520c03a8c99a7f11e23a39a498cecf95d9a3e56726cb4ddb63c682",
+          "dat_sha256": "8ace4d0eecec7acd01c5b8789337cda7bce7ecc592fc2a850720ba6054c94de6",
+          "all_packet_ids_and_complex_csi_equal": true
+        }
+      ]
+    },
+    "folds": [
+      {
+        "target": "E1",
+        "source_manifest_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\manifests\\source_E1.json",
+        "source_manifest_sha256": "bf15bf0b217f29edffefafb353f1047dab1bd191933b68f0e6b5e1a1fe4a63bd",
+        "source_environments": [
+          "E2",
+          "E3"
+        ],
+        "source_descriptions": {
+          "train": {
+            "count": 4800,
+            "subjects": [
+              "E2:S12",
+              "E2:S13",
+              "E2:S14",
+              "E2:S15",
+              "E2:S16",
+              "E2:S18",
+              "E2:S19",
+              "E2:S20",
+              "E3:S22",
+              "E3:S23",
+              "E3:S24",
+              "E3:S26",
+              "E3:S27",
+              "E3:S28",
+              "E3:S29",
+              "E3:S30"
+            ],
+            "acquisitions": 1600,
+            "label_counts": {
+              "0": 1920,
+              "1": 640,
+              "2": 640,
+              "3": 640,
+              "4": 640,
+              "5": 320
+            },
+            "environment_counts": {
+              "E2": 2400,
+              "E3": 2400
+            },
+            "sample_keys_sha256": "a512741683dac55c207186623b4e6e62b26a441c3a3e1afd19a08c54861d50f6"
+          },
+          "val": {
+            "count": 1200,
+            "subjects": [
+              "E2:S11",
+              "E2:S17",
+              "E3:S21",
+              "E3:S25"
+            ],
+            "acquisitions": 400,
+            "label_counts": {
+              "0": 480,
+              "1": 160,
+              "2": 160,
+              "3": 160,
+              "4": 160,
+              "5": 80
+            },
+            "environment_counts": {
+              "E2": 600,
+              "E3": 600
+            },
+            "sample_keys_sha256": "483c89ebebe809d0491c59f1964148490940cb39d5cec20490d4c38e81994997"
+          }
+        },
+        "recomputed_identity_overlap_counts": {
+          "sample_id": 0,
+          "subject_id": 0,
+          "acquisition_id": 0,
+          "raw_path": 0
+        },
+        "source_member_environments_exclude_target": true,
+        "paired_sampling_schedules": [
+          {
+            "seed": 42,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E1_42.npy",
+            "file_sha256": "1ea594e3a61fd74cd98cda0f7f1196428c3bf481c2d72d392f7580f944d11703",
+            "expected_sampler_schedule_sha256": "65679e2c062f7af78cef4621952552ff931c14b5362b9fe29fb02e165f41c964"
+          },
+          {
+            "seed": 52,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E1_52.npy",
+            "file_sha256": "6cbb2f0a7e6f36041276c1fb4d4db7abf16570a298a88595542454f5bd865812",
+            "expected_sampler_schedule_sha256": "a9789d7913a6d1459de414904fc3bbddbcd268d06c7f4ce54c970fcd27d1a093"
+          },
+          {
+            "seed": 62,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E1_62.npy",
+            "file_sha256": "7f0b8f167a31c15a805a15795a9b82f0c37ecbae3d78be9d66c94125e1415cc2",
+            "expected_sampler_schedule_sha256": "45c96778dfba9e0fbfcc7906c41f440e93821f3581149e01c5478bed15084fd8"
+          }
+        ]
+      },
+      {
+        "target": "E2",
+        "source_manifest_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\manifests\\source_E2.json",
+        "source_manifest_sha256": "669bcfe646ff0ac7f5bbd80468da9f686c6ed577c4f147ec26d3bf37aa4eda67",
+        "source_environments": [
+          "E1",
+          "E3"
+        ],
+        "source_descriptions": {
+          "train": {
+            "count": 4800,
+            "subjects": [
+              "E1:S01",
+              "E1:S02",
+              "E1:S03",
+              "E1:S04",
+              "E1:S05",
+              "E1:S06",
+              "E1:S08",
+              "E1:S09",
+              "E3:S22",
+              "E3:S23",
+              "E3:S24",
+              "E3:S26",
+              "E3:S27",
+              "E3:S28",
+              "E3:S29",
+              "E3:S30"
+            ],
+            "acquisitions": 1600,
+            "label_counts": {
+              "0": 1920,
+              "1": 640,
+              "2": 640,
+              "3": 640,
+              "4": 640,
+              "5": 320
+            },
+            "environment_counts": {
+              "E1": 2400,
+              "E3": 2400
+            },
+            "sample_keys_sha256": "49c47f763dd0b991e5458f40343049ca1c9b49a567f85cb9bb7df2732cfdbcdd"
+          },
+          "val": {
+            "count": 1200,
+            "subjects": [
+              "E1:S07",
+              "E1:S10",
+              "E3:S21",
+              "E3:S25"
+            ],
+            "acquisitions": 400,
+            "label_counts": {
+              "0": 480,
+              "1": 160,
+              "2": 160,
+              "3": 160,
+              "4": 160,
+              "5": 80
+            },
+            "environment_counts": {
+              "E1": 600,
+              "E3": 600
+            },
+            "sample_keys_sha256": "7d6a8ba40b3f54ec3c68288e321baa9b3825cb9573b5983638d87e0df1c378ce"
+          }
+        },
+        "recomputed_identity_overlap_counts": {
+          "sample_id": 0,
+          "subject_id": 0,
+          "acquisition_id": 0,
+          "raw_path": 0
+        },
+        "source_member_environments_exclude_target": true,
+        "paired_sampling_schedules": [
+          {
+            "seed": 42,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E2_42.npy",
+            "file_sha256": "522bc7244898514eb107f7fe100d2664bc768e209f0e1e83cfabd00cdbf19578",
+            "expected_sampler_schedule_sha256": "3f47568ec3742aacf07da23ad9bf1a301cd7588787e4458069f33113ef3ec2d6"
+          },
+          {
+            "seed": 52,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E2_52.npy",
+            "file_sha256": "497a7a3015d9322fdb6e6f8b9b7a355bcf597d4c7adaeb6ded6228d7f7a1be25",
+            "expected_sampler_schedule_sha256": "8325757890d50373e317221a5e95b30a2df97bda6c46b835479fdb4f26ecba06"
+          },
+          {
+            "seed": 62,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E2_62.npy",
+            "file_sha256": "dccaf50986d4004a4c867263abba6064f30faab49a5581588b5c174d3f3abb86",
+            "expected_sampler_schedule_sha256": "be8642be9af5e9e8643f37002cfbe3114127f849015f28526b99092ac99029c9"
+          }
+        ]
+      },
+      {
+        "target": "E3",
+        "source_manifest_path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\manifests\\source_E3.json",
+        "source_manifest_sha256": "768c4afb169d40ae16f950b1dcff20807348e5ab7b96a8e13c5bfb2e79312b7d",
+        "source_environments": [
+          "E1",
+          "E2"
+        ],
+        "source_descriptions": {
+          "train": {
+            "count": 4800,
+            "subjects": [
+              "E1:S01",
+              "E1:S02",
+              "E1:S03",
+              "E1:S04",
+              "E1:S05",
+              "E1:S06",
+              "E1:S08",
+              "E1:S09",
+              "E2:S12",
+              "E2:S13",
+              "E2:S14",
+              "E2:S15",
+              "E2:S16",
+              "E2:S18",
+              "E2:S19",
+              "E2:S20"
+            ],
+            "acquisitions": 1600,
+            "label_counts": {
+              "0": 1920,
+              "1": 640,
+              "2": 640,
+              "3": 640,
+              "4": 640,
+              "5": 320
+            },
+            "environment_counts": {
+              "E1": 2400,
+              "E2": 2400
+            },
+            "sample_keys_sha256": "d1087171944d3138fbab207f5ac7a368e783acdb41ade40b310295d9e58e42db"
+          },
+          "val": {
+            "count": 1200,
+            "subjects": [
+              "E1:S07",
+              "E1:S10",
+              "E2:S11",
+              "E2:S17"
+            ],
+            "acquisitions": 400,
+            "label_counts": {
+              "0": 480,
+              "1": 160,
+              "2": 160,
+              "3": 160,
+              "4": 160,
+              "5": 80
+            },
+            "environment_counts": {
+              "E1": 600,
+              "E2": 600
+            },
+            "sample_keys_sha256": "5a6bd1171e5fe782217ccf6a73e954c2efc1a1fbc7cb5093c4e61a1964b4781e"
+          }
+        },
+        "recomputed_identity_overlap_counts": {
+          "sample_id": 0,
+          "subject_id": 0,
+          "acquisition_id": 0,
+          "raw_path": 0
+        },
+        "source_member_environments_exclude_target": true,
+        "paired_sampling_schedules": [
+          {
+            "seed": 42,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E3_42.npy",
+            "file_sha256": "860877968290f00a1dd215cb74477ff16d2453f50abdba3a7dfb7756c441974d",
+            "expected_sampler_schedule_sha256": "17ebb62d75e9f8a9e27f4609e069c6dd562420a26973ffaa15ab03434003f1a8"
+          },
+          {
+            "seed": 52,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E3_52.npy",
+            "file_sha256": "97f55fd93dfa54bb0b3914f7c986ed5b26b45308d81cbfb1ead01fe57ca08bd0",
+            "expected_sampler_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10"
+          },
+          {
+            "seed": 62,
+            "path": "D:\\pa-csi-dg-revision-runtime\\studies\\h_main_controls_20261008_v2\\bundle\\schedules\\HS_E3_62.npy",
+            "file_sha256": "8d18ba03cde5dffd228f685ab288a32680375d07531930ffa39eb98ccc4c309b",
+            "expected_sampler_schedule_sha256": "1188e5808e09576a78529bba4a118f2815098e28405e9924a0ec433bc6ca9e86"
+          }
+        ]
+      }
+    ],
+    "source_label_budget_per_fold": 4800,
+    "source_val_label_budget_per_fold": 1200,
+    "historical_target_development_access": true
+  },
+  "source_only_candidate": {
+    "status": "design_only_not_executable_frozen_config",
+    "name": "MA_authorcode_DG_corrected_optimizer_v1",
+    "interface": "train_source(model,source_train_manifest,source_val_manifest,sampler_schedule,optimizer_updates=30000); separate evaluate_frozen(checkpoint,test_manifest)",
+    "runner_never_accepts": [
+      "test_loader",
+      "target_dataset",
+      "target_length",
+      "target_statistics",
+      "target_score"
+    ],
+    "optimizer": {
+      "type": "Adam",
+      "feature_group": [
+        "feature_extractor",
+        "neck"
+      ],
+      "classifier_group": [
+        "classifier"
+      ],
+      "betas": [
+        0.9,
+        0.999
+      ]
+    },
+    "architecture_and_loss": "retain upstream ResNet, neck classification, all-view CE, beta mix, temperature/base-temperature scale, dynamic detached multiplier and within-batch style randomization; add neck to optimizer_f and zero its gradient every update",
+    "neck_policy_disclosure_required": true,
+    "author_release_fixed_neck_variant": "separate explicitly named variant only; do not select optimizer semantics by target score",
+    "batch_size": 32,
+    "source_per_batch": [
+      16,
+      16
+    ],
+    "sampling": "reuse pinned H-S global ID sequences in manifest order",
+    "optimizer_updates": 30000,
+    "validation_every_updates": 150,
+    "early_stopping": false,
+    "schedule": {
+      "type": "CosineAnnealingLR",
+      "T_max": 30000,
+      "eta_min": 0,
+      "step_frequency": "after every optimizer update"
+    },
+    "selection": "source validation accuracy, last tied best; reload selected checkpoint before target evaluation",
+    "preprocessing_candidate": "author-code DAT scaling/conjugation + code-score antenna selection + epsilon ratio + timestamp 80ms differential + Fourier index resample T=800 + per-record amp [0,pi]; full source QA and exact tie/nonfinite/clock handling registration pending",
+    "candidate_sets": [
+      {
+        "id": "A",
+        "lr": 0.001,
+        "weight_decay": 0.0003,
+        "temperature": 0.07,
+        "beta": 0.5,
+        "scale_cap": 6
+      },
+      {
+        "id": "B",
+        "lr": 0.003,
+        "weight_decay": 0.0003,
+        "temperature": 0.07,
+        "beta": 0.5,
+        "scale_cap": 6
+      },
+      {
+        "id": "C",
+        "lr": 0.003,
+        "weight_decay": 0.0003,
+        "temperature": 0.1,
+        "beta": 0.5,
+        "scale_cap": 6
+      }
+    ],
+    "search_seed": 20261014,
+    "max_search_runs": 9,
+    "formal_seeds": [
+      42,
+      52,
+      62
+    ],
+    "formal_runs": 9,
+    "search_selection": "maximum source validation accuracy over selected checkpoint, ties A<B<C; zero target evaluation for search",
+    "cost_disclosure": "same updates but 32-vs-upstream-128 batch and 800-vs-main-850 representation; separately report wall time, optimized/inference parameters and encoder passes"
+  },
+  "required_adaptations": [
+    {
+      "id": "A1",
+      "item": "replace upstream filename/random sample split with H-S hash-bound subject/acquisition manifests"
+    },
+    {
+      "id": "A2",
+      "item": "remove target construction, target length and target-wide normalization from training and search"
+    },
+    {
+      "id": "A3",
+      "item": "30000 update cap, source-only cosine horizon, 150-update validation, no early stop"
+    },
+    {
+      "id": "A4",
+      "item": "explicit neck optimizer repair policy and parameter-coverage assertion"
+    },
+    {
+      "id": "A5",
+      "item": "pin code vs v7 antenna score, scaled/conjugated complex representation, index/Fourier resampling and fixed T800"
+    },
+    {
+      "id": "A6",
+      "item": "record invalid ratio denominators, score ties, duplicated/wrapped timestamps and short differential sequences before target evaluation"
+    },
+    {
+      "id": "A7",
+      "item": "export total/CE/SupCon/UCon/dynamic multiplier and per-view losses rather than treating CE+Con log sum as optimized total"
+    },
+    {
+      "id": "A8",
+      "item": "preserve mean per-view probabilities without a second softmax for reliability metrics; export sample identity-bound predictions"
+    },
+    {
+      "id": "A9",
+      "item": "save model and both optimizer/scheduler states plus RNG and source sampling position for interruption resume; final selected state reload"
+    }
+  ],
+  "unresolved": [
+    "Release-to-v7 table correspondence, actual author training members, raw preprocessing invocation, and per-table hyperparameter selection evidence are not supplied.",
+    "Formal choice and prose disclosure of corrected trainable neck versus author-release fixed random neck must be recorded before freeze.",
+    "No MultiEnv author-representation arrays have been built; all selected raw identities must pass byte/hash, receiver axes, signal scaling and time/ratio QA.",
+    "Code-score antenna selection differs from v7; proposed code-first semantics and deterministic score tie handling are not yet frozen.",
+    "Budget30000/T800/batch32 and candidate A/B/C are prospective proposals; source-only smoke and runtime cost remain unmeasured.",
+    "Full environment packaging, actual-source CPU/GPU smoke, checkpoint reload equivalence and interruption resume checks remain pending."
+  ],
+  "validation": {
+    "author_python_syntax_parse_passed": [
+      "run_uda.py",
+      "algorithm/train_dg.py",
+      "data/dataset.py",
+      "data/Widar.py",
+      "data/CSIDA.py",
+      "data/utils.py",
+      "data/TD_CSI_process_widar.py",
+      "models/contrast_methods.py",
+      "models/sdaresnet.py",
+      "util/optimizer.py",
+      "optuna_UniCrossFi_launch.py"
+    ],
+    "synthetic_cpu_probe": {
+      "scope": "one synthetic CPU optimizer update on exact extracted upstream classes and actual 2D ResNet; no real sample, training run or GPU access",
+      "device": "cpu",
+      "torch_version": "2.6.0+cu124",
+      "num_threads": 2,
+      "input_shape": [
+        4,
+        2,
+        2,
+        64,
+        30
+      ],
+      "direct_input_layout": [
+        "batch",
+        "ratio_view",
+        "amp_phase",
+        "time",
+        "subcarrier"
+      ],
+      "parameter_count": 11502470,
+      "optimized_parameter_count": 11174150,
+      "unoptimized_parameter_names": [
+        "neck.0.weight",
+        "neck.0.bias",
+        "neck.2.weight",
+        "neck.2.bias"
+      ],
+      "unoptimized_parameter_count": 328320,
+      "neck_gradient_norms_after_backward": {
+        "0.weight": 16.353599548339844,
+        "0.bias": 0.642911970615387,
+        "2.weight": 13.157625198364258,
+        "2.bias": 1.2034168243408203
+      },
+      "neck_parameters_changed": {
+        "0.weight": false,
+        "0.bias": false,
+        "2.weight": false,
+        "2.bias": false
+      },
+      "neck_gradient_survives_both_optimizer_zero_grad": true,
+      "train_output_shape": [
+        4,
+        6
+      ],
+      "prediction_shape": [
+        4,
+        6
+      ],
+      "prediction_probability_row_sums": [
+        1.0,
+        1.0,
+        0.9999998807907104,
+        1.0
+      ],
+      "upstream_prediction_equals_mean_per_view_probabilities": true,
+      "double_softmax_changes_probabilities": true,
+      "loss_dict": {
+        "loss_ce": 1.8065881729125977,
+        "loss_con": 2.6925902366638184,
+        "loss_ce_view0": 1.8005415201187134,
+        "loss_ce_view1": 1.809596061706543,
+        "loss_ce_view2": 1.8096269369125366
+      },
+      "all_reported_losses_finite": true,
+      "code_sha256": "b83c3ee3a8e0c4b970560177aed73074732068caad1e5bdfd22dff10e12cbb43",
+      "author_source_sha256": {
+        "models/contrast_methods.py": "40a392f83bf4d68553b9682c64b7278d80efb3b1653f0e921d64119397d5e2a0",
+        "models/sdaresnet.py": "377fbce2277182ac1820637a57a783ee3076197b47446dfce40bf0ce9c1cad2c",
+        "util/optimizer.py": "b12db0f2f1f9e45eaa7ce9638677fcb7591e97b9d9c967c2dd080cb82a5baf2d"
+      }
+    },
+    "source_identity_disjointness_recomputed": true,
+    "sampler_bytes_rehashed": true,
+    "gpu_access": false,
+    "real_source_sample_loaded": false,
+    "target_signal_loaded": false,
+    "target_score_read_or_produced": false,
+    "formal_training_started": false,
+    "modified_upstream_files": false,
+    "modified_existing_queue": false
+  },
+  "audit_tool_sha256": "40009b79f11bdfe046c79a242961ce671632236c8048b223fd881882aa53f5d3"
+}

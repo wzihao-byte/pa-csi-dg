@@ -1,0 +1,90 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-03T16:20:49.412022+00:00",
+  "historical_phase": {
+    "legacy_loader_values_exact": true,
+    "stored_dtype": "float64",
+    "output_dtype": "float32",
+    "cast_before_unwrap_max_error": 1.52587890625e-05,
+    "legacy_loader_sha256": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd"
+  },
+  "amp_amp_and_amp_phase_all_initial_tensors_exact": true,
+  "single_twin_common_tensors_exact": 184,
+  "secondary_seed_offset": 100000,
+  "fusion_seed_offset": 200000,
+  "checks": {
+    "historical_phase_only": {
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "objective": 1.9001542329788208,
+      "optimizer_updates": 0
+    },
+    "amplitude_amplitude": {
+      "parameters": 3655286,
+      "active_CE_parameters": 3556598,
+      "objective": 1.8948118686676025,
+      "optimizer_updates": 0
+    },
+    "amplitude_phase": {
+      "parameters": 3655286,
+      "active_CE_parameters": 3556598,
+      "objective": 1.8402087688446045,
+      "optimizer_updates": 0
+    }
+  },
+  "counted_macs": {
+    "single": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    },
+    "twin": {
+      "conv1d": 855081960,
+      "linear": 4140832,
+      "attention": 487560000,
+      "position_embedding": 765000,
+      "total_counted_macs": 1347547792,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "target_data_loaded": false,
+  "training_completed": false,
+  "opened_source_paths": [
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy"
+  ],
+  "source_sample_ids": [
+    "E3:2977",
+    "E3:0836",
+    "E3:1821",
+    "E2:2263",
+    "E2:0712",
+    "E3:2294",
+    "E2:2888",
+    "E2:1596",
+    "E3:1182",
+    "E2:0591",
+    "E2:0859",
+    "E3:2580",
+    "E3:1800",
+    "E3:2271",
+    "E2:2728",
+    "E2:2456"
+  ],
+  "code_sha256": {
+    "analysis/verify_modality_models.py": "854eb5953fcd42531c38e0a65d61225f6330d1f62d0926ec8392899bdac4d800",
+    "experiments/revision_validation/modality_models.py": "80146db5a9ecd7d048d28dc207e29be7020518b862fc069c17ba85cf68c8a573",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/experiment_data.py": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd"
+  }
+}

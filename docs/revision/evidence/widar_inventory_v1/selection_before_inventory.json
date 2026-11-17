@@ -1,0 +1,154 @@
+{
+  "schema": "widar-replication-cohort/v1",
+  "declared_at": "2026-09-03T15:43:47.459586+00:00",
+  "archives": {
+    "20181130_user5_10_11.zip": {
+      "room": 1,
+      "users": {
+        "5": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        },
+        "10": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        },
+        "11": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        }
+      }
+    },
+    "20181204.zip": {
+      "room": 2,
+      "users": {
+        "1": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        }
+      }
+    },
+    "20181205.zip": {
+      "room": 2,
+      "users": {
+        "2": {
+          "1": 4,
+          "2": 5
+        }
+      }
+    },
+    "20181208.zip": {
+      "room": 2,
+      "users": {
+        "2": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3
+        }
+      }
+    },
+    "20181209.zip": {
+      "room": 2,
+      "users": {
+        "6": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        }
+      }
+    },
+    "20181211.zip": {
+      "room": 3,
+      "users": {
+        "7": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        },
+        "8": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        },
+        "9": {
+          "1": 0,
+          "2": 1,
+          "3": 2,
+          "4": 3,
+          "5": 4,
+          "6": 5
+        }
+      }
+    }
+  },
+  "class_names": [
+    "Push&Pull",
+    "Sweep",
+    "Clap",
+    "Slide",
+    "Draw-O(Horizontal)",
+    "Draw-Zigzag(Horizontal)"
+  ],
+  "receiver": "r1",
+  "positions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "orientations": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "repetitions": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "rationale": "Three subjects per room with six common gestures and disjoint subjects; fixed first receiver and first five recorded repetitions",
+  "selection_basis": "Official README metadata and public archive availability only; no model outputs",
+  "validation_subjects_if_room_is_source": {
+    "1": "11",
+    "2": "6",
+    "3": "9"
+  },
+  "invalid_files": "Record zero-byte/corrupt files individually, no outcome-based exclusions",
+  "external_inference": "Prospective cross-dataset retraining/replication; not direct transfer of MultiEnv activity labels",
+  "training_protocol_frozen": false,
+  "target_performance_used": false,
+  "README_sha256": "e6f7309296bf0d8f0011ab25a6d0e0a765cea0dbf86e55ad3866968ca90f7787",
+  "code_sha256": "f3e0849033b7644c959936e162839f4decda22ae79734838d77fe186a880df4f",
+  "source_share": "https://cloud.tsinghua.edu.cn/d/2760bb9557ca4d09a74d/"
+}

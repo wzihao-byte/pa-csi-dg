@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "at": "2026-09-03T17:08:39.518791+00:00",
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_input_preparation.py\", line 123, in main\n    results[name] = task.result()\n                    ^^^^^^^^^^^^^\n  File \"C:\\ProgramData\\anaconda3\\Lib\\concurrent\\futures\\_base.py\", line 449, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\ProgramData\\anaconda3\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\ProgramData\\anaconda3\\Lib\\concurrent\\futures\\thread.py\", line 58, in run\n    result = self.fn(*self.args, **self.kwargs)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_input_preparation.py\", line 112, in widar_branch\n    raise RuntimeError(\"Widar downloader exited without the complete verified cohort\")\nRuntimeError: Widar downloader exited without the complete verified cohort\n"
+}

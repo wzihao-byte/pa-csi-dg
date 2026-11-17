@@ -1,0 +1,56 @@
+{
+  "active_children": [
+    {
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\execute_h_grouped_l1248_recovery_v2.py",
+        "--h-root",
+        "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2",
+        "--ready",
+        "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\queue\\ready.json"
+      ],
+      "pid": 19656,
+      "process_create_time": 1789666919.0633209
+    },
+    {
+      "command": [
+        "C:\\ProgramData\\anaconda3\\python.exe",
+        "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\bundle\\code\\train_factorial.py",
+        "--config",
+        "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E1\\seed_42\\H10\\attempt_001\\job_config.json"
+      ],
+      "pid": 22376,
+      "process_create_time": 1789666925.3480995
+    }
+  ],
+  "attempt": 1,
+  "gpu_execution_probe_sha256": "f4f7261af2557d570e7584b882d510eb6cc4ce00523297c647bd6f8fd6505c8f",
+  "gpu_readiness_sha256": "9d0114d4798b8bada2b4d86cae26a6be166fddb8564d2cb770a0e74ad2318dda",
+  "group_overlap": false,
+  "h_bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+  "initialization": {
+    "historical_configuration_matched": true,
+    "initial_state_sha256": "427971bed08d4fa23e17e0829d10f2d7677778fa20f0c32e0b44181291794ee0",
+    "parameter_count": 4786294,
+    "seed": 42
+  },
+  "initialization_sha256": "77d4ca31d16d714590be5ccd178f536c8df5f6cd7f546008a3dffac222712995",
+  "job_id": "E1_HG_H10_42",
+  "latest_append_event_at_verification": {
+    "accuracy": 0.9616666666666667,
+    "at": "2026-09-17T17:46:46.158887+00:00",
+    "epoch": 6,
+    "event": "source_validation_completed"
+  },
+  "owner_sha256": "5e1564ea9901d38565cb654b4c1f3a04980420f496ade319b49c9d261285efc6",
+  "protocol_modified": false,
+  "qa_approval_sha256": "6b495b82feaffd6bb25c495ebe8120b31dc27a60d917d6dc63cd51afd74cf26d",
+  "ready_sha256": "fd9dcc916bcea057f96dde91cc1f2b08d8d60b834e2643bcf647a86d0502ea35",
+  "recovery_record_sha256": "9f1506a88d6fff7c35f2f433ef17da9e364034df48be3c33b1a434bebd809f98",
+  "schema": "h-grouped-start-verified/v1",
+  "split_manifest_sha256": "c09bddf7e3b2ec1bf5ec7142c08ac6aaf7be3c55e167d6cc18f2933577e86c6b",
+  "target_result_claimed": false
+}

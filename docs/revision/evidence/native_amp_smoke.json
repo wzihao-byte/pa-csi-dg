@@ -1,0 +1,27 @@
+{
+  "version": "native-dat-amplitude-controls-v1",
+  "completed_at": "2026-09-03T15:38:32.618289+00:00",
+  "config_value_sha256": "5031129f81cb0d72393c030b54a397284b9e01c158f1a340ffe921410b30cf29",
+  "complete_9000": false,
+  "rows": 12,
+  "failures": [],
+  "all_packet_signal_matches": true,
+  "duration_seconds_min_max": [
+    2.999855,
+    4.999821
+  ],
+  "record_sha256": {
+    "MAT/E1/E1_S01_C01_A01_T01.mat": "96f0f5ac0f4489331ab27810a6423727264abee99be034806f341d3e4cb4655f",
+    "MAT/E1/E1_S03_C04_A01_T09.mat": "1f171238d2e5aafcea747b2a2d43f980ca9caf7de86fd1e867b072efadd3841b",
+    "MAT/E1/E1_S05_C04_A01_T16.mat": "6d06d4eaf7038e67800e6512c18c2b0c24c55a6b14fc15e992887e38aa6f8bdd",
+    "MAT/E1/E1_S06_C03_A09_T20.mat": "8645845fff687714fa393d491e5f9f26e603336c606f65f7b364e94700c5dd5d",
+    "MAT/E1/E1_S09_C05_A12_T20.mat": "2ef442b70618d9c1f874bbdb965c65db0d9cbd18ecec42584d7769dab7f73f4b",
+    "MAT/E1/E1_S03_C02_A04_T20.mat": "95def3e8bcd0e600f9e4f32ac3462b947fdca3a8451373fc3999049211428223",
+    "MAT/E2/E2_S14_C02_A04_T20.mat": "c423e0a5afd67ed557dc1b1d8f4710a5732dede13f1c66556b962eed64289757",
+    "MAT/E2/E2_S20_C05_A12_T20.mat": "1f8d21bf0551e7c52c11cdd1d05ab5a82929236360541f91bfa3336f5041c7c2",
+    "MAT/E2/E2_S17_C03_A09_T20.mat": "817bf6400c1fcd20652e8d5fdb85dd4a3f7313845a74de90e29618ccf145e205",
+    "MAT/E3/E3_S27_C03_A09_T20.mat": "865e68a989f0f8075c6e5322039ef43bafaa6552e4a4a042ab4655965f1900a1",
+    "MAT/E3/E3_S24_C02_A04_T20.mat": "bf5bf0cd2ea00df3ed7173b9d520857fca7f8b59fb59258a2b921d94ccd082cd",
+    "MAT/E3/E3_S30_C05_A12_T20.mat": "6022460bf61d1268c9f4251c7fc32a543dad80fcba9635b2fb33052e432cdb12"
+  }
+}

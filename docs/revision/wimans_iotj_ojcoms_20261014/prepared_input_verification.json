@@ -1,0 +1,263 @@
+{
+  "schema": "wimans-full-prepared-input-verification/v1",
+  "checked_at_utc": "2026-10-14T07:35:33.832198+00:00",
+  "status": "passed",
+  "representation_version": "storage_order_v2",
+  "physical_MAT_export_status": "unresolved",
+  "verified_rows": 1782,
+  "all_row_matrix_hashes_verified": true,
+  "no_model_evaluation": true,
+  "raw_target_access": "27 raw records inspected across room/class metadata cells for input QA only",
+  "runtime": {
+    "python": "3.11.4",
+    "numpy": "1.24.3",
+    "scipy": "1.10.1"
+  },
+  "input_audit_sha256": "008c638c0dd2e7ee48f8359ea5f3020628209f024e8b7af0ebd00801d28cef87",
+  "processed_files": {
+    "amp.npy": {
+      "sha256": "3481874690d6e207f3d8fee19e2fc820be5b96e17abf209967adee48a5b0e8eb",
+      "bytes": 545292128
+    },
+    "phase.npy": {
+      "sha256": "90943eeb7b86e5cca59a0dc98de78649fd9f228802d570dee6de946e1c5f387e",
+      "bytes": 545292128
+    },
+    "label.npy": {
+      "sha256": "250996b67a634cd1c7f382d08fcdac70186cc2d5b3874d173207ab36258c9350",
+      "bytes": 14384
+    },
+    "sample_ids.json": {
+      "sha256": "218395d388e70cbace6af93a66fc515fc1d31b2afc42a9962908c763ae10438b",
+      "bytes": 28355
+    }
+  },
+  "numerical_records_sha256": "995383f85cade97a14ee525283a9d9bab96a41bee61b5120be192da59e3bcab8",
+  "software_sha256": {
+    "verifier": "323d7ee59cf1ce0248fa01dc1ce36e5d3bbbce6fc750d1e9233ba75e40fe1359",
+    "raw_reader": "d9063c94a80a83e0980a3dc57cad1b47dc108c55a51bb3147a1167713fba26f1",
+    "independent_phase_reference": "0dfcb0d07e2abd3cd2f6f505fdf32a68a7f266a6d0ed8174555e7c26b395204e",
+    "scipy_grid_reference": "c0fe31b8d6dbf41b5cec24858787603046c3f58b2411bfe2836cfc7dcd2ce8eb"
+  },
+  "packets_min_max": [
+    2726,
+    2993
+  ],
+  "duration_seconds_min_max": [
+    2.895086,
+    3.031014
+  ],
+  "max_packet_gap_microseconds": 42707,
+  "total_duplicate_timestamps": 0,
+  "total_wraps": 0,
+  "total_selected_zero_amplitude_values": 23997,
+  "amp_range": [
+    0.0,
+    179.60511779785156
+  ],
+  "phase_range": [
+    -82.27043151855469,
+    110.92715454101562
+  ],
+  "all_packet_perm_counts": {
+    "3,1,2": 1662577,
+    "3,2,1": 544464,
+    "1,2,3": 842026,
+    "1,3,2": 815170,
+    "2,3,1": 770807,
+    "2,1,3": 585843
+  },
+  "independent_reconstruction_examples": [
+    {
+      "sample_id": "act_19_1",
+      "room": "classroom",
+      "class_id": 0,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_2",
+      "room": "classroom",
+      "class_id": 1,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_3",
+      "room": "classroom",
+      "class_id": 2,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_4",
+      "room": "classroom",
+      "class_id": 3,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_5",
+      "room": "classroom",
+      "class_id": 4,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_6",
+      "room": "classroom",
+      "class_id": 5,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_7",
+      "room": "classroom",
+      "class_id": 6,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_8",
+      "room": "classroom",
+      "class_id": 7,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_19_9",
+      "room": "classroom",
+      "class_id": 8,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_1",
+      "room": "meeting_room",
+      "class_id": 0,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_2",
+      "room": "meeting_room",
+      "class_id": 1,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_3",
+      "room": "meeting_room",
+      "class_id": 2,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_4",
+      "room": "meeting_room",
+      "class_id": 3,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_5",
+      "room": "meeting_room",
+      "class_id": 4,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_6",
+      "room": "meeting_room",
+      "class_id": 5,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_7",
+      "room": "meeting_room",
+      "class_id": 6,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_8",
+      "room": "meeting_room",
+      "class_id": 7,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_55_9",
+      "room": "meeting_room",
+      "class_id": 8,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_1",
+      "room": "empty_room",
+      "class_id": 0,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_2",
+      "room": "empty_room",
+      "class_id": 1,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_3",
+      "room": "empty_room",
+      "class_id": 2,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_4",
+      "room": "empty_room",
+      "class_id": 3,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_5",
+      "room": "empty_room",
+      "class_id": 4,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_6",
+      "room": "empty_room",
+      "class_id": 5,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_7",
+      "room": "empty_room",
+      "class_id": 6,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_8",
+      "room": "empty_room",
+      "class_id": 7,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    },
+    {
+      "sample_id": "act_91_9",
+      "room": "empty_room",
+      "class_id": 8,
+      "amplitude_max_abs_error": 0.0,
+      "phase_max_abs_error": 0.0
+    }
+  ],
+  "formal_training_freeze_authorized": false,
+  "real_source_short_training_qa_passed": false
+}

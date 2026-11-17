@@ -1,0 +1,38 @@
+{
+  "schema_version": "factorial-s32-bundle/v1",
+  "created_at_utc": "2026-07-28T02:18:34.795028+00:00",
+  "scripts": {
+    "generate_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generate_factorial.py",
+      "sha256": "b2809d78b1d9586b671030108156e8ff63ac56db6dfd363d9373e684565d2329"
+    },
+    "train_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\train_factorial.py",
+      "sha256": "9910696d05771ca24ec50f002d67cb2a908199de214278280c5bba46763091ec"
+    },
+    "run_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\run_factorial.py",
+      "sha256": "5009bf9a113f49f58b3ce12f0c31c996df68bec9179179d912536ac39e36403d"
+    }
+  },
+  "protocol_lock_sha256": "2f0b2f25556bca98044354ea21bbfdc50f252242d4aae627dd4fac1e735e96e3",
+  "registry_sha256": "61b77bd6b3da7b14e7c201587e0f32b02dd1685fb4c8c0b4c35f003481e2bdd5",
+  "required_gate_artifacts": {
+    "anchor_matrix_completion": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\audit\\anchor_matrix_completion.json",
+      "sha256": "29073767ccaa9930e9b81671674a3894615182441d10417185fd1971e951752d"
+    },
+    "h11_gpu_smoke": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\audit\\gpu_smoke.json",
+      "sha256": "5a633328f4c1301c161a385b545fcb336c44f531f119ff1f448d43e0bb313fff"
+    }
+  },
+  "constraints": {
+    "attempts_append_only": true,
+    "single_runner_os_lock": true,
+    "cuda_device": "cuda:0",
+    "quartet_pairing_required": true,
+    "target_open_only_after_checkpoint_freeze": true,
+    "no_target_metric_tuning": true
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "status": "source_smoke_complete_not_full_training",
+  "model_config": {
+    "time_downsample": 2,
+    "max_positions": 500,
+    "position_kernels": 10,
+    "mcat_layers": 5,
+    "mcat_heads": 9,
+    "dropout": 0.1,
+    "temporal_kernel_num": 128,
+    "temporal_kernel_sizes": [
+      20,
+      40
+    ],
+    "channel_group_width": 30,
+    "channel_encoder_layers": 1,
+    "channel_encoder_heads": 6,
+    "channel_kernel_num": 16,
+    "channel_kernel_sizes": [
+      2,
+      4
+    ],
+    "tpp_levels": [
+      1,
+      2,
+      4
+    ],
+    "tpp_pool_type": "max",
+    "tpp_preserve_global": true,
+    "tpp_pyramid_scale": 0.25
+  },
+  "initialization_audit": {
+    "seed": 401,
+    "shared_state_tensors_exactly_equal": 182,
+    "same_pool_CE_SupCon_all_initial_tensors_equal": true,
+    "total_parameters": {
+      "R00": 1878142,
+      "R01": 1878142,
+      "R10": 1878142,
+      "R11": 1878142
+    }
+  },
+  "arm_runs": 12,
+  "total_optimizer_updates_executed": 360,
+  "device": "cuda:0",
+  "gpu": "Quadro RTX 5000",
+  "torch_version": "2.6.0+cu124",
+  "candidate_lambda": 0.025,
+  "all_arms_equal_total_parameters": true,
+  "all_arms_equal_counted_inference_macs": true,
+  "source_only": true,
+  "full_training_completed": false,
+  "timing_scope": "Preloaded batches; excludes loading, source validation, checkpoint writes and full-run variability",
+  "source_sha256": {
+    "experiments\\revision_validation\\run_source_smoke.py": "1da45852525b693d9854a883824cf722f8a9536c8ae59b17970213002cd1c5b4",
+    "experiments\\revision_validation\\models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments\\revision_validation\\source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments\\tpp_isolated\\tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf"
+  }
+}

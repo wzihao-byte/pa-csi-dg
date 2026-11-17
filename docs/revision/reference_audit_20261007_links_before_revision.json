@@ -1,0 +1,367 @@
+{
+  "checked_date": "2026-10-07",
+  "scope": "Active LaTeX manuscript input graph, excluding unused template examples and unused supporting files.",
+  "variants": [
+    {
+      "variant": "sensors",
+      "references": 14,
+      "citation_keys": [
+        "alsaify2020",
+        "fan2025",
+        "gulrajani2021",
+        "khosla2020",
+        "liu2024unifi",
+        "liu2024wisr",
+        "quy2025",
+        "varga2024",
+        "wang2017tpp",
+        "wang2022dgsurvey",
+        "wang2024airfi",
+        "xu2025unicrossfi",
+        "xu2026arcfi",
+        "yang2023sensefi"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "quy2025",
+          "entry": "Quy, T.D.; Lin, C.-Y.; Shih, T.K. Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms. \\emph{Sensors} \\textbf{2025}, \\emph{25}, 1038. https://doi.org/10.3390/s25041038."
+        },
+        {
+          "key": "alsaify2020",
+          "entry": "Alsaify, B.A.; Almazari, M.M.; Alazrai, R.; Daoud, M.I. A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments. \\emph{Data Brief} \\textbf{2020}, \\emph{33}, 106534."
+        },
+        {
+          "key": "wang2017tpp",
+          "entry": "Wang, P.; Cao, Y.; Shen, C.; Liu, L.; Shen, H.T. Temporal pyramid pooling-based convolutional neural network for action recognition. \\emph{IEEE Trans. Circuits Syst. Video Technol.} \\textbf{2017}, \\emph{27}(12), 2613--2622. \\url{https://doi.org/10.1109/TCSVT.2016.2576761}."
+        },
+        {
+          "key": "khosla2020",
+          "entry": "Khosla, P.; Teterwak, P.; Wang, C.; Sarna, A.; Tian, Y.; Isola, P.; Maschinot, A.; Liu, C.; Krishnan, D. Supervised contrastive learning. In \\emph{Advances in Neural Information Processing Systems}; Curran Associates: Red Hook, NY, USA, 2020; Volume 33, pp. 18661--18673."
+        },
+        {
+          "key": "wang2024airfi",
+          "entry": "Wang, D.; Yang, J.; Cui, W.; Xie, L.; Sun, S. AirFi: Empowering WiFi-based passive human gesture recognition to unseen environment via domain generalization. \\emph{IEEE Trans. Mob. Comput.} \\textbf{2024}, \\emph{23}, 1156--1168. \\url{https://doi.org/10.1109/TMC.2022.3230665}."
+        },
+        {
+          "key": "liu2024unifi",
+          "entry": "Liu, Y.; Yu, A.; Wang, L.; Guo, B.; Li, Y.; Yi, E.; Zhang, D. UniFi: A unified framework for generalizable gesture recognition with Wi-Fi signals using consistency-guided multi-view networks. \\emph{Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.} \\textbf{2023}, \\emph{7}(4), 168. https://doi.org/10.1145/3631429."
+        },
+        {
+          "key": "liu2024wisr",
+          "entry": "Liu, S.; Chen, Z.; Wu, M.; Liu, C.; Chen, L. WiSR: Wireless domain generalization based on style randomization. \\emph{IEEE Trans. Mob. Comput.} \\textbf{2024}, \\emph{23}(5), 4520--4532. \\url{https://doi.org/10.1109/TMC.2023.3292229}."
+        },
+        {
+          "key": "fan2025",
+          "entry": "Fan, T.; Qiu, S.; Gong, W.; Fang, Y. Multi-source domain generalization for CSI-based human activity recognition. \\emph{IEEE Trans. Mob. Comput.} \\textbf{2025}, \\emph{24}(10), 11034--11045. \\url{https://doi.org/10.1109/TMC.2025.3573457}."
+        },
+        {
+          "key": "yang2023sensefi",
+          "entry": "Yang, J.; Chen, X.; Zou, H.; Lu, C.X.; Wang, D.; Sun, S.; Xie, L. SenseFi: A library and benchmark on deep-learning-empowered WiFi human sensing. \\emph{Patterns} \\textbf{2023}, \\emph{4}(3), 100703. \\url{https://doi.org/10.1016/j.patter.2023.100703}."
+        },
+        {
+          "key": "xu2025unicrossfi",
+          "entry": "Xu, K.; Zheng, Z.; Zhu, H.; Wang, L.; Wang, J. UniCrossFi: A unified framework for cross-domain Wi-Fi-based gesture recognition. \\emph{arXiv} \\textbf{2025}, arXiv:2310.06328v5. \\url{https://arxiv.org/abs/2310.06328v5}."
+        },
+        {
+          "key": "xu2026arcfi",
+          "entry": "Xu, K.; Zheng, Z.; Zhu, H.; Wang, L.; Wang, J. ARC-Fi: Exploiting antenna spatial diversity for label-efficient domain generalization in Wi-Fi sensing. \\emph{arXiv} \\textbf{2026}, arXiv:2310.06328v7. \\url{https://arxiv.org/abs/2310.06328v7}."
+        },
+        {
+          "key": "gulrajani2021",
+          "entry": "Gulrajani, I.; Lopez-Paz, D. In search of lost domain generalization. In \\emph{Proceedings of the International Conference on Learning Representations}, Virtual, 3--7 May 2021."
+        },
+        {
+          "key": "wang2022dgsurvey",
+          "entry": "Wang, J.; Lan, C.; Liu, C.; Ouyang, Y.; Qin, T.; Lu, W.; Chen, Y.; Zeng, W.; Yu, P.S. Generalizing to unseen domains: A survey on domain generalization. \\emph{IEEE Trans. Knowl. Data Eng.} \\textbf{2023}, \\emph{35}(8), 8052--8072. \\url{https://doi.org/10.1109/TKDE.2022.3178128}."
+        },
+        {
+          "key": "varga2024",
+          "entry": "Varga, D. Critical analysis of data leakage in WiFi CSI-based human action recognition using CNNs. \\emph{Sensors} \\textbf{2024}, \\emph{24}, 3159. https://doi.org/10.3390/s24103159."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\sensors\\body.tex": "8daba392728450a073018d4480b424e82d2094f8b561b4c3487473f597d35e7f",
+        "paper\\submission_versions_20261007\\sensors\\boundary_table.tex": "07240e197f77cd45509f7d5ef2848b5f5fe7b07ca738aed83fcd5ce6efe3e348",
+        "paper\\submission_versions_20261007\\sensors\\main_class_table.tex": "2245d87fb48d96786b7b3ddb06ed38b893bdd1355a9e3e66a41068e87edf3274",
+        "paper\\submission_versions_20261007\\sensors\\main_crossenv_table.tex": "771df7a884b71f494da1b15fefd63cbee24bb7af9f2754262793eef590e75ce5",
+        "paper\\submission_versions_20261007\\sensors\\manuscript.tex": "8f83e97e61918b3008d22a222ca6d5ced968c5331c454d9aa5c7e55bb726bf5a",
+        "paper\\submission_versions_20261007\\sensors\\phase_table.tex": "36fca577355f7e8edf73b92dede82f3d3782654a774fb95d32191a95cfd10453",
+        "paper\\submission_versions_20261007\\sensors\\references.tex": "defe782f7be87a5e153d10393f1fc080073104d68b3958ad6892aa23ceba6da1",
+        "paper\\submission_versions_20261007\\sensors\\supporting_processing.tex": "d8eefb787cdf6cac4f005369931d54af3a34338aad9ff9bc5ea01ffa2e5ba205",
+        "paper\\submission_versions_20261007\\sensors\\time_table.tex": "3f1ae9231f01e42d6492ede7209c7af92531d0f8ce72ff891c9b07e3a0576dae"
+      }
+    },
+    {
+      "variant": "ieice_transactions",
+      "references": 12,
+      "citation_keys": [
+        "alsaify2020",
+        "ge2024",
+        "gulrajani2021",
+        "khosla2020",
+        "liu2024unifi",
+        "liu2024wisr",
+        "quy2025",
+        "varga2024",
+        "wang2017tpp",
+        "wang2022dgsurvey",
+        "wang2024airfi",
+        "yang2023sensefi"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "quy2025",
+          "entry": "T.D. Quy, C.-Y. Lin, and T.K. Shih, ``Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms,'' Sensors, vol.25, no.4, 1038, 2025, doi:10.3390/s25041038."
+        },
+        {
+          "key": "ge2024",
+          "entry": "F. Ge, Z. Dai, Z. Yang, F. Wu, and L. Tan, ``VBCNet: A hybird network for human activity recognition,'' Sensors, vol.24, no.23, 7793, 2024, doi:10.3390/s24237793."
+        },
+        {
+          "key": "wang2017tpp",
+          "entry": "P. Wang, Y. Cao, C. Shen, L. Liu, and H.T. Shen, ``Temporal pyramid pooling-based convolutional neural network for action recognition,'' IEEE Trans. Circuits Syst. Video Technol., vol.27, no.12, pp.2613--2622, 2017, doi:10.1109/TCSVT.2016.2576761."
+        },
+        {
+          "key": "khosla2020",
+          "entry": "P. Khosla, P. Teterwak, C. Wang, A. Sarna, Y. Tian, P. Isola, A. Maschinot, C. Liu, and D. Krishnan, ``Supervised contrastive learning,'' Advances in Neural Information Processing Systems, vol.33, pp.18661--18673, 2020."
+        },
+        {
+          "key": "alsaify2020",
+          "entry": "B.A. Alsaify, M.M. Almazari, R. Alazrai, and M.I. Daoud, ``A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments,'' Data Brief, vol.33, 106534, 2020."
+        },
+        {
+          "key": "wang2024airfi",
+          "entry": "D. Wang, J. Yang, W. Cui, L. Xie, and S. Sun, ``AirFi: Empowering WiFi-based passive human gesture recognition to unseen environment via domain generalization,'' IEEE Trans. Mobile Comput., vol.23, pp.1156--1168, 2024, doi:10.1109/TMC.2022.3230665."
+        },
+        {
+          "key": "liu2024unifi",
+          "entry": "Y. Liu, A. Yu, L. Wang, B. Guo, Y. Li, E. Yi, and D. Zhang, ``UniFi: A unified framework for generalizable gesture recognition with Wi-Fi signals using consistency-guided multi-view networks,'' Proc. ACM Interact. Mob. Wearable Ubiquitous Technol., vol.7, no.4, 168, 2023, doi:10.1145/3631429."
+        },
+        {
+          "key": "liu2024wisr",
+          "entry": "S. Liu, Z. Chen, M. Wu, C. Liu, and L. Chen, ``WiSR: Wireless domain generalization based on style randomization,'' IEEE Trans. Mobile Comput., vol.23, no.5, pp.4520--4532, 2024, doi:10.1109/TMC.2023.3292229."
+        },
+        {
+          "key": "yang2023sensefi",
+          "entry": "J. Yang, X. Chen, H. Zou, C.X. Lu, D. Wang, S. Sun, and L. Xie, ``SenseFi: A library and benchmark on deep-learning-empowered WiFi human sensing,'' Patterns, vol.4, no.3, 100703, 2023, doi:10.1016/j.patter.2023.100703."
+        },
+        {
+          "key": "varga2024",
+          "entry": "D. Varga, ``Critical analysis of data leakage in WiFi CSI-based human action recognition using CNNs,'' Sensors, vol.24, no.10, 3159, 2024, doi:10.3390/s24103159."
+        },
+        {
+          "key": "gulrajani2021",
+          "entry": "I. Gulrajani and D. Lopez-Paz, ``In search of lost domain generalization,'' Proc. Int. Conf. Learning Representations, 2021."
+        },
+        {
+          "key": "wang2022dgsurvey",
+          "entry": "J. Wang, C. Lan, C. Liu, Y. Ouyang, T. Qin, W. Lu, Y. Chen, W. Zeng, and P.S. Yu, ``Generalizing to unseen domains: A survey on domain generalization,'' IEEE Trans. Knowl. Data Eng., vol.35, no.8, pp.8052--8072, 2023, doi:10.1109/TKDE.2022.3178128."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\ieice_transactions\\body.tex": "47a93dfa306957f7b5c2ce2667e27b8d4ea7745a03fdbdf34bb5215077ad76ef",
+        "paper\\submission_versions_20261007\\ieice_transactions\\manuscript.tex": "2206a6c04f5f6e676168e56a50ff63881a6d50fe5e7518fb2ed6361382d36d8c",
+        "paper\\submission_versions_20261007\\ieice_transactions\\references.tex": "a6f9124f8c4e65bb37f64fb4c73df7a368957f9d6f74fefeb18f77ab76f78c9b"
+      }
+    },
+    {
+      "variant": "research_meeting",
+      "references": 12,
+      "citation_keys": [
+        "alsaify2020",
+        "fan2025",
+        "gulrajani2021",
+        "khosla2020",
+        "liu2024unifi",
+        "liu2024wisr",
+        "quy2025",
+        "varga2024",
+        "wang2017tpp",
+        "wang2022dgsurvey",
+        "wang2024airfi",
+        "yang2023sensefi"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "quy2025",
+          "entry": "T.D. Quy, C.-Y. Lin, and T.K. Shih, ``Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms,'' \\emph{Sensors}, vol.25, art.1038, 2025, doi:10.3390/s25041038."
+        },
+        {
+          "key": "yang2023sensefi",
+          "entry": "J. Yang, X. Chen, H. Zou, C.X. Lu, D. Wang, S. Sun, and L. Xie, ``SenseFi: A library and benchmark on deep-learning-empowered WiFi human sensing,'' \\emph{Patterns}, vol.4, no.3, art.100703, 2023, doi:10.1016/j.patter.2023.100703."
+        },
+        {
+          "key": "alsaify2020",
+          "entry": "B.A. Alsaify, M.M. Almazari, R. Alazrai, and M.I. Daoud, ``A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments,'' \\emph{Data in Brief}, vol.33, art.106534, 2020, doi:10.1016/j.dib.2020.106534."
+        },
+        {
+          "key": "wang2017tpp",
+          "entry": "P. Wang, Y. Cao, C. Shen, L. Liu, and H.T. Shen, ``Temporal pyramid pooling-based convolutional neural network for action recognition,'' \\emph{IEEE Trans. Circuits Syst. Video Technol.}, vol.27, no.12, pp.2613--2622, 2017, doi:10.1109/TCSVT.2016.2576761."
+        },
+        {
+          "key": "wang2024airfi",
+          "entry": "D. Wang, J. Yang, W. Cui, L. Xie, and S. Sun, ``AirFi: Empowering WiFi-based passive human gesture recognition to unseen environment via domain generalization,'' \\emph{IEEE Trans. Mobile Comput.}, vol.23, pp.1156--1168, 2024, doi:10.1109/TMC.2022.3230665."
+        },
+        {
+          "key": "liu2024unifi",
+          "entry": "Y. Liu, A. Yu, L. Wang, B. Guo, Y. Li, E. Yi, and D. Zhang, ``UniFi: A unified framework for generalizable gesture recognition with Wi-Fi signals using consistency-guided multi-view networks,'' \\emph{Proc. ACM Interact. Mob. Wearable Ubiquitous Technol.}, vol.7, no.4, art.168, 2023, doi:10.1145/3631429."
+        },
+        {
+          "key": "liu2024wisr",
+          "entry": "S. Liu, Z. Chen, M. Wu, C. Liu, and L. Chen, ``WiSR: Wireless domain generalization based on style randomization,'' \\emph{IEEE Trans. Mobile Comput.}, vol.23, no.5, pp.4520--4532, 2024, doi:10.1109/TMC.2023.3292229."
+        },
+        {
+          "key": "fan2025",
+          "entry": "T. Fan, S. Qiu, W. Gong, and Y. Fang, ``Multi-source domain generalization for CSI-based human activity recognition,'' \\emph{IEEE Trans. Mobile Comput.}, vol.24, no.10, pp.11034--11045, 2025, doi:10.1109/TMC.2025.3573457."
+        },
+        {
+          "key": "gulrajani2021",
+          "entry": "I. Gulrajani and D. Lopez-Paz, ``In search of lost domain generalization,'' \\emph{Proc. International Conference on Learning Representations}, 2021."
+        },
+        {
+          "key": "wang2022dgsurvey",
+          "entry": "J. Wang, C. Lan, C. Liu, Y. Ouyang, T. Qin, W. Lu, Y. Chen, W. Zeng, and P.S. Yu, ``Generalizing to unseen domains: A survey on domain generalization,'' \\emph{IEEE Trans. Knowl. Data Eng.}, vol.35, no.8, pp.8052--8072, 2023, doi:10.1109/TKDE.2022.3178128."
+        },
+        {
+          "key": "varga2024",
+          "entry": "D. Varga, ``Critical analysis of data leakage in WiFi CSI-based human action recognition using CNNs,'' \\emph{Sensors}, vol.24, art.3159, 2024, doi:10.3390/s24103159."
+        },
+        {
+          "key": "khosla2020",
+          "entry": "P. Khosla, P. Teterwak, C. Wang, A. Sarna, Y. Tian, P. Isola, A. Maschinot, C. Liu, and D. Krishnan, ``Supervised contrastive learning,'' \\emph{Advances in Neural Information Processing Systems}, vol.33, pp.18661--18673, 2020."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\research_meeting\\body.tex": "298e64e2e3b6447dfd10b614a5e727a25b0b7215b22f3a36e45d3043ae9b8748",
+        "paper\\submission_versions_20261007\\research_meeting\\manuscript.tex": "4ffc5f4ff3eaeea953401ea4b30599a0f1713c679a4de00b5c864403e01e3d55",
+        "paper\\submission_versions_20261007\\research_meeting\\references.tex": "6ba5d8671cf0f95085c0ad66b3b2e38afe33d8e8d513f9088fba868e1d1d2dfe"
+      }
+    },
+    {
+      "variant": "comex",
+      "references": 7,
+      "citation_keys": [
+        "airfi2024",
+        "alsaify2020",
+        "khosla2020",
+        "quy2025",
+        "varga2024",
+        "wang2017",
+        "wisr2024"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "airfi2024",
+          "entry": "D. Wang, J. Yang, W. Cui, L. Xie, and S. Sun, \\lq\\lq{}AirFi: Empowering WiFi-based passive human gesture recognition to unseen environment via domain generalization,'' \\emph{IEEE Trans. Mobile Comput.}, vol. 23, pp. 1156--1168, 2024. DOI: 10.1109/TMC.2022.3230665."
+        },
+        {
+          "key": "wisr2024",
+          "entry": "S. Liu, Z. Chen, M. Wu, C. Liu, and L. Chen, \\lq\\lq{}WiSR: Wireless domain generalization based on style randomization,'' \\emph{IEEE Trans. Mobile Comput.}, vol. 23, no. 5, pp. 4520--4532, 2024. DOI: 10.1109/TMC.2023.3292229."
+        },
+        {
+          "key": "wang2017",
+          "entry": "P. Wang, Y. Cao, C. Shen, L. Liu, and H. T. Shen, \\lq\\lq{}Temporal pyramid pooling-based convolutional neural network for action recognition,'' \\emph{IEEE Trans. Circuits Syst. Video Technol.}, vol. 27, no. 12, pp. 2613--2622, 2017. DOI: 10.1109/TCSVT.2016.2576761."
+        },
+        {
+          "key": "khosla2020",
+          "entry": "P. Khosla et al., \\lq\\lq{}Supervised contrastive learning,'' \\emph{Adv. Neural Inf. Process. Syst.}, vol. 33, pp. 18661--18673, 2020."
+        },
+        {
+          "key": "quy2025",
+          "entry": "T. D. Quy, C.-Y. Lin, and T. K. Shih, \\lq\\lq{}Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms,'' \\emph{Sensors}, vol. 25, 1038, 2025. DOI: 10.3390/s25041038."
+        },
+        {
+          "key": "alsaify2020",
+          "entry": "B. A. Alsaify, M. M. Almazari, R. Alazrai, and M. I. Daoud, \\lq\\lq{}A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments,'' \\emph{Data Brief}, vol. 33, 106534, 2020. DOI: 10.1016/j.dib.2020.106534."
+        },
+        {
+          "key": "varga2024",
+          "entry": "D. Varga, \\lq\\lq{}Critical analysis of data leakage in WiFi CSI-based human action recognition using CNNs,'' \\emph{Sensors}, vol. 24, 3159, 2024. DOI: 10.3390/s24103159."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\comex\\manuscript.tex": "ea7f9e0fd4a978c6a96194f32fd69fd7c514d12b65e0f15e7835d62ae6378d1b"
+      }
+    },
+    {
+      "variant": "ipsj89",
+      "references": 4,
+      "citation_keys": [
+        "alsaify2020",
+        "khosla2020",
+        "quy2025",
+        "wang2017"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "wang2017",
+          "entry": "P. Wang et al., \\lq\\lq{}Temporal pyramid pooling-based convolutional neural network for action recognition,'' \\emph{IEEE TCSVT}, 27(12), 2613--2622, 2017."
+        },
+        {
+          "key": "khosla2020",
+          "entry": "P. Khosla et al., \\lq\\lq{}Supervised contrastive learning,'' \\emph{NeurIPS}, 33, 18661--18673, 2020."
+        },
+        {
+          "key": "quy2025",
+          "entry": "T. D. Quy, C.-Y. Lin, and T. K. Shih, \\lq\\lq{}Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms,'' \\emph{Sensors}, 25, 1038, 2025."
+        },
+        {
+          "key": "alsaify2020",
+          "entry": "B. A. Alsaify et al., \\lq\\lq{}A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments,'' \\emph{Data Brief}, 33, 106534, 2020."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\ipsj89\\manuscript.tex": "972580bc44078dabe0be9227920ee387dbb27d5545031298ed32deed99737562"
+      }
+    },
+    {
+      "variant": "ieice_general",
+      "references": 4,
+      "citation_keys": [
+        "data",
+        "pacsi",
+        "sc",
+        "tpp"
+      ],
+      "missing_bibliography_keys": [],
+      "uncited_bibliography_keys": [],
+      "duplicate_bibliography_keys": [],
+      "bibliography": [
+        {
+          "key": "tpp",
+          "entry": "P. Wang et al., ``Temporal pyramid pooling-based convolutional neural network for action recognition,'' IEEE TCSVT, vol.27, no.12, pp.2613--2622, 2017."
+        },
+        {
+          "key": "sc",
+          "entry": "P. Khosla et al., ``Supervised contrastive learning,'' NeurIPS, vol.33, pp.18661--18673, 2020."
+        },
+        {
+          "key": "pacsi",
+          "entry": "T.D. Quy, C.-Y. Lin, and T.K. Shih, ``Enhanced human activity recognition using Wi-Fi sensing: Leveraging phase and amplitude with attention mechanisms,'' Sensors, vol.25, 1038, 2025."
+        },
+        {
+          "key": "data",
+          "entry": "B.A. Alsaify et al., ``A dataset for Wi-Fi-based human activity recognition in line-of-sight and non-line-of-sight indoor environments,'' Data Brief, vol.33, 106534, 2020."
+        }
+      ],
+      "sources_sha256": {
+        "paper\\submission_versions_20261007\\ieice_general\\manuscript.tex": "35c4a8ca976a2169afe0e51bdecbf82d1340b98eb2a8ee1302ce8c1c1dbf25f6"
+      }
+    }
+  ]
+}

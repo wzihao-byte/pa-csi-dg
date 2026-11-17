@@ -1,0 +1,29 @@
+{
+  "schema": "arcfi-corrected-optimizer-prototype-qa/v1",
+  "recorded_at_utc": "2026-10-14T07:33:52.649703+00:00",
+  "status": "passed_synthetic_cpu_only",
+  "command": "python -m unittest experiments.arcfi_hs_20261014.test_optimizer_adapter -v",
+  "tests_passed": 4,
+  "tests_failed": 0,
+  "tests_runtime_seconds": 2.419,
+  "device": "cpu",
+  "author_commit": "f31e655a8414415de58659c0af7d7dba6281a0c1",
+  "author_class": "UniCrossFi_dg",
+  "actual_author_2d_resnet_used": true,
+  "parameter_count": 11502470,
+  "corrected_neck_parameter_count": 328320,
+  "all_trainable_parameters_optimized_exactly_once": true,
+  "neck_updated_by_actual_author_update": true,
+  "neck_zero_grad_cleared": true,
+  "original_state_methods_and_predictions_preserved_before_update": true,
+  "actual_data_loaded": false,
+  "gpu_used": false,
+  "target_scores_read_or_generated": false,
+  "source_adapter_completed": false,
+  "formal_MA_qualification_passed": false,
+  "files_sha256": {
+    "optimizer_adapter.py": "04f950a596abdcabe08387b9a3495013f3b3133614b1076d84ff917e8b22832c",
+    "test_optimizer_adapter.py": "f340b353b52cc5bea32b56e61a66e8f4dfbe4fe071976dbce456b0d23d4fec29",
+    "ADAPTATION_PLAN.md": "a12c8d60da83b3dda5afdec7bdd07948b75d99efeac62c31556f854c6804acaa"
+  }
+}

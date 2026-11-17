@@ -1,0 +1,27 @@
+{
+  "diagnosed_at": "2026-09-03T16:25:32.114204+00:00",
+  "job_id": "E1_R00_401",
+  "cause": "Windows denied atomic status-file replacement after checkpoint/progress/history writes",
+  "file_holder_identified": false,
+  "possible_contributor": "Dependency observer polls the same status file without FILE_SHARE_DELETE; its next failure timestamp follows this event by 30 seconds",
+  "bundle_sha256_unchanged": "16ffc8361e67c6d5bd22cbc65d840749a28d52327535ebb8772136555736d914",
+  "checkpoint_sha256": "7bd38218e8855f7ee096731e0689eaac64f12e0c82cac8fc0e6c79b8f1724b6c",
+  "committed_epochs": 96,
+  "committed_updates": 28800,
+  "updates_to_replay": 0,
+  "all_numeric_state_finite": true,
+  "source_identity_and_earliest_best_verified": true,
+  "target_data_loaded": false,
+  "action": "Archive failed flags after diagnosis, then resume the unmodified frozen engine from its committed checkpoint",
+  "mitigation": "Use Windows shared-delete observer reads; defer the original control runner until the core process exits successfully",
+  "files_sha256": {
+    "failed_run_status.json": "0b4e90e5525d8f23bd8d086c51433f3c2d70d663bf4c6821f07ff8b23c39de02",
+    "core_queue_failure.json": "13c248058a6acdc8c0f63d2a1a0f50d74488382adee51c97cc7f865b12f3d396",
+    "core_stdout.log": "ce0d5feaf5ba4e9afe7cea68874e1c4df147b2fe352020a2d30f3ede6e51f9b3",
+    "core_stderr.log": "67f234ca721b6eaaa01fac7d7bb7697ad1300645d22ed1b910ff1672de1615be",
+    "committed_progress.json": "e66cc09d45dc35eaf72fe9ce01384467956ac6af6a44a186cba9d67226049a1b",
+    "committed_history.json": "e6ec6ceb18d3df7385b6ee7def8144a2b7a4f18322e7211317ee8abd63578dd5",
+    "dependent_queue_failure.json": "d5d4d21814e13248acfa10367d645e40d7c0f9561f8f8f57f1e7b3a04520a558",
+    "dependent_stderr.log": "7519bd359dc3b0519bb57678d07e878c3f5e59d0ce0e2d933033dc581f9812a2"
+  }
+}

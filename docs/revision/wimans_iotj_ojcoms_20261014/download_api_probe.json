@@ -1,0 +1,78 @@
+{
+  "schema": "bounded-wimans-download-diagnostic/v1",
+  "serial_requests": 3,
+  "authentication_used": false,
+  "acquisition_mutated": false,
+  "raw_payloads_saved": false,
+  "probes": [
+    {
+      "label": "failed_file_original_query",
+      "requested_api": "https://www.kaggle.com/api/v1/datasets/download/shuokanghuang/wimans",
+      "params": {
+        "fileName": "wifi_csi/mat/act_21_44.mat",
+        "datasetVersionNumber": 1
+      },
+      "at_utc": "2026-10-14T07:17:21.885571+00:00",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "server": null,
+      "final_host": "www.kaggle.com",
+      "redirect_statuses": [],
+      "redirect_hosts": [],
+      "response_bytes": 134,
+      "response_sha256": "8a114ea699d68d9426ca4cf7f3c020a5ede1e8de9af2d207e30f26002ec14419",
+      "html_title": "404",
+      "body_starts_html": true
+    },
+    {
+      "label": "known_good_adjacent_original_query",
+      "requested_api": "https://www.kaggle.com/api/v1/datasets/download/shuokanghuang/wimans",
+      "params": {
+        "fileName": "wifi_csi/mat/act_21_43.mat",
+        "datasetVersionNumber": 1
+      },
+      "at_utc": "2026-10-14T07:17:22.224573+00:00",
+      "status": 404,
+      "content_type": "text/html; charset=UTF-8",
+      "server": null,
+      "final_host": "www.kaggle.com",
+      "redirect_statuses": [],
+      "redirect_hosts": [],
+      "response_bytes": 134,
+      "response_sha256": "8a114ea699d68d9426ca4cf7f3c020a5ede1e8de9af2d207e30f26002ec14419",
+      "html_title": "404",
+      "body_starts_html": true
+    },
+    {
+      "label": "failed_file_path_endpoint",
+      "requested_api": "https://www.kaggle.com/api/v1/datasets/download/shuokanghuang/wimans/wifi_csi%2Fmat%2Fact_21_44.mat",
+      "params": {
+        "datasetVersionNumber": 1
+      },
+      "at_utc": "2026-10-14T07:17:22.560085+00:00",
+      "status": 200,
+      "content_type": "application/zip",
+      "server": "UploadServer",
+      "final_host": "storage.googleapis.com",
+      "redirect_statuses": [
+        302
+      ],
+      "redirect_hosts": [
+        "storage.googleapis.com"
+      ],
+      "response_bytes": 2350559,
+      "response_sha256": "9b239a722b8e69cd785dee065eaa53e84b87393625e6d886665397e2b02ce59a",
+      "zip_members": [
+        "act_21_44.mat"
+      ],
+      "mat_files": [
+        {
+          "name": "act_21_44.mat",
+          "bytes": 2349356,
+          "matlab_v5_header": true,
+          "sha256": "0162c8161116962ae777850103dda2b9db8e0174e8326945a5d77982250667b7"
+        }
+      ]
+    }
+  ]
+}

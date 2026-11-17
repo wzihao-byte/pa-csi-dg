@@ -1,0 +1,59 @@
+{
+  "completed_at": "2026-09-03T19:30:55.209962+00:00",
+  "complete": true,
+  "schema": "widar-compiled-input/v2",
+  "variants": [
+    "native_amplitude"
+  ],
+  "rows": 6748,
+  "room_counts": {
+    "W1": 2250,
+    "W2": 2250,
+    "W3": 2248
+  },
+  "subjects": [
+    "Widar:user1",
+    "Widar:user10",
+    "Widar:user11",
+    "Widar:user2",
+    "Widar:user5",
+    "Widar:user6",
+    "Widar:user7",
+    "Widar:user8",
+    "Widar:user9"
+  ],
+  "signal_exclusions": [
+    {
+      "sample_id": "20181211:20181211/user7/user7-2-2-3-5-r1.dat",
+      "archive": "20181211.zip",
+      "room": 3,
+      "subject": "7",
+      "label": 1,
+      "reason": "inventory-bound nonempty DAT fails signal/time decoding"
+    }
+  ],
+  "replacement_samples_added": 0,
+  "manifest_directories": [
+    "D:\\pa-csi-dg-revision-runtime\\data\\widar_arrays_v2\\native_amplitude\\manifests"
+  ],
+  "independent_confirmation_completed": false,
+  "target_model_evaluation": false,
+  "artifacts_sha256": {
+    "compile_config.json": "e39b2319744b8cb32654b67f0b78567283ea9b1c76ea4507827b376b0ff6564d",
+    "W1_label.npy": "590a25a49bbcf8631c3b195a6914e0034234d6616563099d3d91a7eaefb12309",
+    "W2_label.npy": "3f62296e8b5cb1eca4113127cfae3d84a0cec12840306f949d6d890cd842daba",
+    "W3_label.npy": "38f1b4935240e3098502aaa8cfbf3b788d4e319e417f8b52de51466c7288977b",
+    "native_amplitude/W1_amp.npy": "10aab09452ec55b66077f0957be93b709cfc60561805ed4148207f9d68a714cd",
+    "native_amplitude/W2_amp.npy": "217a1d8a6e36fce224f5142e2b64b9f9d49de192b976c1ad806704ff3d1c4272",
+    "native_amplitude/W3_amp.npy": "fad25724ccc6c55939bd3b01da8ad09035846571d1bdd5c5a319a65fad713887",
+    "native_amplitude/manifests/deferred_target_W1.json": "ffbb24efa3cf5a47168b664ec7251d300a3fab5ec090896d96f8df44d1fdc5d9",
+    "native_amplitude/manifests/deferred_target_W2.json": "ab69c16964978b195061040aa3e90410c2e899cd66720cfc3095bad825408ee6",
+    "native_amplitude/manifests/deferred_target_W3.json": "2873077e1e189c1bcd4f043eb33647f59a3614339067a9114eb8ec279614d955",
+    "native_amplitude/manifests/source_W1.json": "8b2d84cf5bcadac0a8c9fc19a6138140dd5cd0e2657d461ddf64830002f741a9",
+    "native_amplitude/manifests/source_W2.json": "b0035023617531f91b84aa8b645ce08ac93cc5a219b3260bce278b39d82aa47d",
+    "native_amplitude/manifests/source_W3.json": "774233ae37eefd53a67d4e71fc1eba78a5beab8dc833fdeec58e29d82bbd6c25",
+    "native_amplitude/subject_sidecars/W1.json": "e098a9bdc5eb6be4742798c08d332d37314194fcc97c463274a6cf938ecdcff9",
+    "native_amplitude/subject_sidecars/W2.json": "4f129ac7d99eee72abb2f7f802223227adfa1d5c83052c7fe26229326924707e",
+    "native_amplitude/subject_sidecars/W3.json": "57a2a27259f058e2c4a91ee3a81cb4ab7c58d883bf4fe033819991d713fa5428"
+  }
+}

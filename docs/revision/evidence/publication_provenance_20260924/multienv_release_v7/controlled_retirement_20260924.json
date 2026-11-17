@@ -1,0 +1,25 @@
+{
+  "at": "2026-09-24T05:53:26.105741+00:00",
+  "event": "controlled_builder_retirement",
+  "pid": 15420,
+  "create_time": 1790228711.804777,
+  "command": [
+    "C:\\ProgramData\\anaconda3\\python.exe",
+    "-X",
+    "utf8",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_release_v7\\code\\analysis\\build_multienv_release_bundle_v2.py",
+    "--runtime",
+    "D:\\pa-csi-dg-revision-runtime",
+    "--evidence",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+    "--assets",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+    "--final-qa",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json",
+    "--output",
+    "D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v1"
+  ],
+  "reason": "Release copied raw_mat_cache source data and omitted six active manuscript graphics. Preserve partial v1; build a new compact version with source-cache exclusion and complete approved graphics.",
+  "training_processes_affected": false,
+  "partial_release_preserved": true
+}

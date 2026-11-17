@@ -1,0 +1,221 @@
+{
+  "completed_at": "2026-09-04T13:01:42.474871+00:00",
+  "qa_only": false,
+  "full_trained_model_analysis": true,
+  "job_id": "E2_R11_501",
+  "run_directory": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1\\runs\\E2_R11_501",
+  "original_config_value_sha256": "134f09fedd908c1d0e9350b4cb73dc2e76e331381a4c14ac9899018e61bdb81e",
+  "source_status_sha256": "ea1a3f3f9fc0d2d45207bacb7d71e712d72d73e788d31f9cd22807fd1dcada48",
+  "source_manifest_sha256": "669bcfe646ff0ac7f5bbd80468da9f686c6ed577c4f147ec26d3bf37aa4eda67",
+  "checkpoint_sha256": "aa581a2be11ed3f09707ddd2c37dfe8494ea121c35342428c152a9bd112cb15a",
+  "selected_epoch": 37,
+  "analysis_device": "cpu",
+  "runtime": {
+    "torch_version": "2.6.0+cu124",
+    "numpy_version": "1.24.3",
+    "cuda_version": "12.4",
+    "cudnn_version": 90100,
+    "device_name": "Quadro RTX 5000",
+    "num_threads": 4,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "cublas_workspace_config": ":4096:8",
+    "strict_deterministic_algorithms": false,
+    "limitation": "Existing CUDA adaptive-max-pool backward lacks a deterministic implementation"
+  },
+  "sklearn_version": "1.3.0",
+  "target_data_loaded": false,
+  "opened_source_paths": [
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy"
+  ],
+  "source_prediction_differences_from_recorded_backend": 0,
+  "scatter": {
+    "feature": {
+      "raw_feature": {
+        "sample_count": 1200,
+        "dimensions": 256,
+        "class_count": 6,
+        "environment_count": 2,
+        "total_scatter": 202.91126713655459,
+        "between_class_scatter": 123.91482827145869,
+        "within_class_scatter": 78.9964388650959,
+        "between_to_within_class_ratio": 1.568612839410027,
+        "within_class_near_zero": false,
+        "environment_scatter_within_class": 10.529063720624483,
+        "residual_scatter_within_environment_class": 68.46737514447143,
+        "class_conditional_domain_squared_distances": {
+          "0": 18.062970400207057,
+          "1": 54.03568476423251,
+          "2": 14.900752650381829,
+          "3": 72.76443932496217,
+          "4": 62.47370428095842,
+          "5": 115.01683879515681
+        },
+        "equal_class_mean_domain_squared_distance": 56.209065035983144,
+        "decomposition_total_abs_error": 0.0,
+        "decomposition_within_class_abs_error": 1.4210854715202004e-14,
+        "epsilon": 1e-12
+      },
+      "l2_normalized_feature": {
+        "sample_count": 1200,
+        "dimensions": 256,
+        "class_count": 6,
+        "environment_count": 2,
+        "total_scatter": 0.8443662759004883,
+        "between_class_scatter": 0.512862062831045,
+        "within_class_scatter": 0.3315042130694433,
+        "between_to_within_class_ratio": 1.5470755502091038,
+        "within_class_near_zero": false,
+        "environment_scatter_within_class": 0.0441765361632032,
+        "residual_scatter_within_environment_class": 0.28732767690624,
+        "class_conditional_domain_squared_distances": {
+          "0": 0.07281472271541412,
+          "1": 0.22353763973818258,
+          "2": 0.06186678671225447,
+          "3": 0.3111614324280576,
+          "4": 0.27476860141433795,
+          "5": 0.4710349129140423
+        },
+        "equal_class_mean_domain_squared_distance": 0.23586401598704818,
+        "decomposition_total_abs_error": 5.551115123125783e-17,
+        "decomposition_within_class_abs_error": 5.551115123125783e-17,
+        "epsilon": 1e-12
+      },
+      "near_zero_feature_rows": 0
+    },
+    "projection": {
+      "raw_feature": {
+        "sample_count": 1200,
+        "dimensions": 128,
+        "class_count": 6,
+        "environment_count": 2,
+        "total_scatter": 0.9042704360018854,
+        "between_class_scatter": 0.6867310599615242,
+        "within_class_scatter": 0.2175393760403615,
+        "between_to_within_class_ratio": 3.1568126766811653,
+        "within_class_near_zero": false,
+        "environment_scatter_within_class": 0.02748692963716768,
+        "residual_scatter_within_environment_class": 0.19005244640319383,
+        "class_conditional_domain_squared_distances": {
+          "0": 0.004945221268691705,
+          "1": 0.16438401433244806,
+          "2": 0.002223618823632693,
+          "3": 0.21720563787232872,
+          "4": 0.338864434835352,
+          "5": 0.1741890388903876
+        },
+        "equal_class_mean_domain_squared_distance": 0.15030199433714014,
+        "decomposition_total_abs_error": 2.7755575615628914e-16,
+        "decomposition_within_class_abs_error": 0.0,
+        "epsilon": 1e-12
+      },
+      "l2_normalized_feature": {
+        "sample_count": 1200,
+        "dimensions": 128,
+        "class_count": 6,
+        "environment_count": 2,
+        "total_scatter": 0.9042704401040663,
+        "between_class_scatter": 0.6867310633751373,
+        "within_class_scatter": 0.21753937672892887,
+        "between_to_within_class_ratio": 3.156812682380984,
+        "within_class_near_zero": false,
+        "environment_scatter_within_class": 0.027486929342253923,
+        "residual_scatter_within_environment_class": 0.19005244738667498,
+        "class_conditional_domain_squared_distances": {
+          "0": 0.004945221432361647,
+          "1": 0.16438401700937832,
+          "2": 0.0022236189314339258,
+          "3": 0.21720563432857076,
+          "4": 0.33886442532461447,
+          "5": 0.17418904075307035
+        },
+        "equal_class_mean_domain_squared_distance": 0.15030199296323823,
+        "decomposition_total_abs_error": 1.1102230246251565e-16,
+        "decomposition_within_class_abs_error": 2.7755575615628914e-17,
+        "epsilon": 1e-12
+      },
+      "near_zero_feature_rows": 0
+    }
+  },
+  "environment_probe": {
+    "accuracy": 0.5308333333333334,
+    "balanced_accuracy": 0.5308333333333333,
+    "train_rows": 384,
+    "validation_rows": 1200,
+    "environments": [
+      "E1",
+      "E3"
+    ],
+    "class_centering_fitted_on_probe_training_only": true,
+    "requires_gold_class_labels": true,
+    "scaler_fitted_on_probe_training_only": true,
+    "subject_and_acquisition_disjoint": true,
+    "iterations": [
+      92
+    ],
+    "converged": true,
+    "fixed_C": 1.0,
+    "hyperparameter_search_trials": 0,
+    "interpretation": "Held-out source environment information accessible to this fixed linear probe; not a proof of target invariance"
+  },
+  "residual_summary": {
+    "encoder.temporal_pool": {
+      "rows": 1200,
+      "near_zero_global_rows": 0,
+      "all_ratios_median": 1.8322028302689026,
+      "all_ratios_p95": 2.691514537595699,
+      "nonzero_global_ratios_median": 1.8322028302689026,
+      "nonzero_global_ratios_p95": 2.691514537595699
+    },
+    "encoder.channel_pool": {
+      "rows": 1200,
+      "near_zero_global_rows": 0,
+      "all_ratios_median": 3.453160461465801,
+      "all_ratios_p95": 3.4537506382548195,
+      "nonzero_global_ratios_median": 3.453160461465801,
+      "nonzero_global_ratios_p95": 3.4537506382548195
+    }
+  },
+  "gradient_probe_batches": 4,
+  "gradient_scope": "Four fixed balanced source-training batches on the selected checkpoint; post-hoc train-mode probes with fresh BN state and fixed dropout seeds, not recorded training gradients",
+  "interpretation": "Descriptive source geometry and finite-input perturbation diagnostics cannot by themselves establish target mechanisms or population effects",
+  "code_sha256": {
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments/tpp_isolated/tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+    "experiments/supcon_tpp_joint/protocol.py": "64a928834c7399b688630bf22120e1c16f7bc8bf185c0a5965d3723481626472",
+    "experiments/supcon_tpp_joint/runner_utils.py": "a139f322421daf9ea5af4a98efb4d72b7d727bed1970da54128881959bf16be4",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "experiments/revision_validation/prepare_verified_protocol.py": "a4d1929dbba604e13579b87248470bfe6358a0c910946f823eec70ccc6bc3c66",
+    "experiments/revision_validation/train_source.py": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+    "experiments/revision_validation/study_io.py": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+    "experiments/revision_validation/study_engine.py": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+    "experiments/revision_validation/freeze_study.py": "a82c734f2da97850061ca044c940653723d8a5e83b05bd38a97777e2b114f027",
+    "experiments/revision_validation/evaluate_study.py": "4d24cd2d2a537b3a91a4ba5c9b892ceb9dbf9f8a1fb84e44630dc768ba0998ab",
+    "experiments/revision_validation/resume_qa.py": "256decb5481dddf61b8826594d9920fcc6e39f47905f628671cf817782c22cfe",
+    "experiments/revision_validation/control_components.py": "34b5476ad463a99d53ef799ee0c92f097f57f770df57141486a33a2036afd94e",
+    "experiments/revision_validation/experiment_data.py": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+    "experiments/revision_validation/experiment_design.py": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0",
+    "experiments/revision_validation/extended_engine.py": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715",
+    "experiments/revision_validation/extended_evaluate.py": "2117bf7c85a4078dc55eb8e5fcb8ba4ab23d56fa7ce1bd0ee3c08fd4ea3d8d5e",
+    "experiments/revision_validation/freeze_controls.py": "fccad8c8c0b8f6b7ebd788f205caeb4abd87d2aa44169dc46f026fec13990a3e",
+    "experiments/revision_validation/extension_qa.py": "6886ee52dafafb89889af1c1131cf1e4da0f353a50f8c691af3b28dbb75dcf8d",
+    "experiments/revision_validation/modality_models.py": "80146db5a9ecd7d048d28dc207e29be7020518b862fc069c17ba85cf68c8a573",
+    "experiments/revision_validation/input_study_design.py": "35e6a0d56e11f8bfb4db07f52893bede0521d0356550b71162ea674c629453d5",
+    "experiments/revision_validation/input_study_engine.py": "e535fbd7aa8255d93b3aa28894c49132819732f1cbe26e6d63faf1018050cb3d",
+    "experiments/revision_validation/freeze_inputs.py": "4677014c9ed7be2b5af8fe77608ed7365cde805cd779ee07e4afcf0747583152",
+    "experiments/revision_validation/input_study_qa.py": "254385b6b1339a18f3d9d023a196bbe0fbcbef28697e942bfe9e7ba58e991d61",
+    "experiments/revision_validation/mechanism_metrics.py": "9e41dee77945fab3011d17932488f18b9fea1b7946a80f5ba79490a5553562ef",
+    "analysis/analyze_source_representation.py": "7142ebbf488dda0f32d8769797fd70da59898c1e5ce9ecab96dcba3e78e0aabd"
+  },
+  "artifacts_sha256": {
+    "gradient_probes.json": "e2b1b0e22ef92cbb2b0114fa0fcd04fa2e1a5f1397751e502610797956cfb327",
+    "selection.json": "5b7d4d6675d9103bf9ece05f65a109fea59c91764f9c679bda6197d97565a2f8",
+    "source_features_and_norms.npz": "91f6b3b77b3ea0b972dc76825b2810dfed1019e52ca6c030ac299eb091142838"
+  }
+}

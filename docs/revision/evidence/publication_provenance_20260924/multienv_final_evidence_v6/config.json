@@ -1,0 +1,52 @@
+{
+  "pid": 48052,
+  "process_create_time": 1789957604.7831683,
+  "started_at": "2026-09-21T02:26:48.433699+00:00",
+  "completed_upstream_bindings": {
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\controls_to_inputs_v4\\status.json": "d81aa16201ae1ccaf5dff8c9bd1881ba47e9eebaed4ea924f64f8d6665449169",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\formal_source_analysis_v3\\completion.json": "481767f5c2b05137c83e1ee61ec0528af2b6ef81bbb8bbaa5b13aa5fc54a383b",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\queue\\completed.json": "69d610aa0437536e3c6a8e8a0d63324115b4a3e2488331c7ec6914532193af77"
+  },
+  "retained_v5_failures": {
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v5\\status.json": "f49c7fdac7ea37efb573880653c5bf303298cb2c63d4e5038d2152c10e6e2019",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v5\\status.json": "0ea0668d3a3f6a72fa27e396c56124e39d3ad5f22a139b42d00a041dc50e56cb",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_fragment_v5\\status.json": "ccd11331317b1541e5c8d1a89a5aa71f6558bcea63dfe77ee4e28dab6fcb2521",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v5\\status.json": "ca6b5763de2a69c5fad653a2da0f58160c4b6495590d6157cf6e44ae3c88a3dc",
+    "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_release_v5\\status.json": "b1777e851482de2d575b4a0f1fb52a18cb05091eec5f8b7cea17aa2094603865"
+  },
+  "training_restarted": false,
+  "identity_holders_used": false,
+  "code_sha256": {
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments/tpp_isolated/tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+    "experiments/supcon_tpp_joint/protocol.py": "64a928834c7399b688630bf22120e1c16f7bc8bf185c0a5965d3723481626472",
+    "experiments/supcon_tpp_joint/runner_utils.py": "a139f322421daf9ea5af4a98efb4d72b7d727bed1970da54128881959bf16be4",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "experiments/revision_validation/prepare_verified_protocol.py": "a4d1929dbba604e13579b87248470bfe6358a0c910946f823eec70ccc6bc3c66",
+    "experiments/revision_validation/train_source.py": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+    "experiments/revision_validation/study_io.py": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+    "experiments/revision_validation/study_engine.py": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+    "experiments/revision_validation/freeze_study.py": "a82c734f2da97850061ca044c940653723d8a5e83b05bd38a97777e2b114f027",
+    "experiments/revision_validation/evaluate_study.py": "4d24cd2d2a537b3a91a4ba5c9b892ceb9dbf9f8a1fb84e44630dc768ba0998ab",
+    "experiments/revision_validation/resume_qa.py": "256decb5481dddf61b8826594d9920fcc6e39f47905f628671cf817782c22cfe",
+    "experiments/revision_validation/control_components.py": "34b5476ad463a99d53ef799ee0c92f097f57f770df57141486a33a2036afd94e",
+    "experiments/revision_validation/experiment_data.py": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+    "experiments/revision_validation/experiment_design.py": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0",
+    "experiments/revision_validation/extended_engine.py": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715",
+    "experiments/revision_validation/extended_evaluate.py": "2117bf7c85a4078dc55eb8e5fcb8ba4ab23d56fa7ce1bd0ee3c08fd4ea3d8d5e",
+    "experiments/revision_validation/freeze_controls.py": "fccad8c8c0b8f6b7ebd788f205caeb4abd87d2aa44169dc46f026fec13990a3e",
+    "experiments/revision_validation/extension_qa.py": "6886ee52dafafb89889af1c1131cf1e4da0f353a50f8c691af3b28dbb75dcf8d",
+    "experiments/revision_validation/modality_models.py": "80146db5a9ecd7d048d28dc207e29be7020518b862fc069c17ba85cf68c8a573",
+    "experiments/revision_validation/input_study_design.py": "35e6a0d56e11f8bfb4db07f52893bede0521d0356550b71162ea674c629453d5",
+    "experiments/revision_validation/input_study_engine.py": "e535fbd7aa8255d93b3aa28894c49132819732f1cbe26e6d63faf1018050cb3d",
+    "experiments/revision_validation/freeze_inputs.py": "4677014c9ed7be2b5af8fe77608ed7365cde805cd779ee07e4afcf0747583152",
+    "experiments/revision_validation/input_study_qa.py": "254385b6b1339a18f3d9d023a196bbe0fbcbef28697e942bfe9e7ba58e991d61",
+    "analysis/compile_formal_revision_evidence.py": "51e8213e7cff1caaefc0bf4832afe4afb540fc26b71b19e9d61252f9c2323b97",
+    "analysis/compile_multienv_revision_evidence.py": "a8238805c879482f6e7fec6879b5d6640db39c642b194fb7b0528d9567d99534",
+    "analysis/compile_multienv_revision_evidence_v3.py": "2a67ec72f8ee918d7acde2a571589b3afb3c70dd411e916666d8005bbd671e0e"
+  },
+  "recovery_reason": "Compiler used v1 recovery paths from a frozen tree lacking operational scripts; v3 binds the actual v2 WDDM record and preserves scientific checks."
+}

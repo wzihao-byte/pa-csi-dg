@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "Archive verification only; no scientific data or training",
+  "checks": {
+    "valid": {
+      "all_member_bytes_verified": true,
+      "file_members": 2,
+      "duplicate_or_extra_members": false,
+      "manifest_member_verified": true
+    },
+    "corrupt": {
+      "rejected": true,
+      "reason": "Release ZIP member hash differs: artifact.txt"
+    },
+    "extra": {
+      "rejected": true,
+      "reason": "Release ZIP has missing, extra or duplicate file members"
+    },
+    "duplicate": {
+      "rejected": true,
+      "reason": "Release ZIP has missing, extra or duplicate file members"
+    }
+  },
+  "verifier_sha256": "04a3a1198ae9a4a09f1c8cde39549a7348351941850e6e2d14c89c859c20e3e4"
+}

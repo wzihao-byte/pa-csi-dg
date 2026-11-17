@@ -1,0 +1,21 @@
+{
+  "coordinator_directory": "D:/pa-csi-dg-revision-runtime/coordinators/full_revision_20260930_recovery_v1",
+  "python": "C:/ProgramData/anaconda3/python.exe",
+  "check_interval_minutes": 180,
+  "suspected_stall_minutes": 20,
+  "planned_source_runs": 45,
+  "monitor_audit_directory": "D:/pa-csi-dg-revision-runtime/monitoring/full_revision_20260930",
+  "recovery_authorized": true,
+  "runbook": "C:/Users/howie/Desktop/pa-csi-dg/docs/revision/MONITORING_20260930.md",
+  "automation_id": "automation",
+  "automation_name": "论文补充实验监视与自动修复",
+  "automation_kind": "heartbeat",
+  "automation_status_verified": "PAUSED",
+  "target_thread_id": "01a0d1cb-3415-7cb2-b3fc-699eb5e0c267",
+  "automation_verified_at_utc": "2026-10-03T22:07:21.606786+00:00",
+  "experiment_status": "completed_verified",
+  "completion_report": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\EXPERIMENT_COMPLETION_20261004.md",
+  "completion_receipt": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\EXPERIMENT_COMPLETION_20261004.json",
+  "completed_source_runs": 45,
+  "completed_target_evaluations": 45
+}

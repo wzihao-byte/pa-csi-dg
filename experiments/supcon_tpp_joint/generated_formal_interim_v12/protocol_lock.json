@@ -1,0 +1,258 @@
+{
+  "arms": {
+    "Y00": {
+      "code": "Y00",
+      "supcon_enabled": false,
+      "temporal_factor": "global_basis_control"
+    },
+    "Y01": {
+      "code": "Y01",
+      "supcon_enabled": true,
+      "temporal_factor": "global_basis_control"
+    },
+    "Y10": {
+      "code": "Y10",
+      "supcon_enabled": false,
+      "temporal_factor": "amplitude_residual_tpp"
+    },
+    "Y11": {
+      "code": "Y11",
+      "supcon_enabled": true,
+      "temporal_factor": "amplitude_residual_tpp"
+    }
+  },
+  "artifact_schemas": {
+    "bundle_manifest": "supcon-tpp-bundle-manifest/v1",
+    "interim_decision": "supcon-tpp-interim-decision/v1",
+    "registry": "supcon-tpp-job-registry/v2",
+    "screen_health": "supcon-tpp-screen-health/v1",
+    "screen_results": "supcon-tpp-screen-results/v2",
+    "selection_record": "supcon-tpp-lambda-selection/v1"
+  },
+  "budgets": {
+    "formal_extension_jobs": 24,
+    "formal_full_jobs": 60,
+    "formal_interim_jobs": 36,
+    "full_residual_degrees_of_freedom": 12,
+    "interim_residual_degrees_of_freedom": 6,
+    "internal_complete_path_full_runs": 78,
+    "internal_stop_path_full_runs": 54,
+    "screen_runs": 18,
+    "smoke_runs": 4
+  },
+  "environments": [
+    "E1",
+    "E2",
+    "E3"
+  ],
+  "formal_extension_seeds": {
+    "E1": [
+      104,
+      105
+    ],
+    "E2": [
+      204,
+      205
+    ],
+    "E3": [
+      304,
+      305
+    ]
+  },
+  "formal_initial_seeds": {
+    "E1": [
+      101,
+      102,
+      103
+    ],
+    "E2": [
+      201,
+      202,
+      203
+    ],
+    "E3": [
+      301,
+      302,
+      303
+    ]
+  },
+  "futility_thresholds": {
+    "futility_confidence_level": 0.9,
+    "harm_confidence_level": 0.95,
+    "minimum_practical_effect": 0.01,
+    "sit_stand_harm_margin_vs_control": -0.02,
+    "target_specific_mean_harm": -0.05,
+    "target_specific_upper_bound": 0.0
+  },
+  "global_basis": [
+    {
+      "expression": "c",
+      "name": "identity"
+    },
+    {
+      "expression": "c**2",
+      "name": "square"
+    },
+    {
+      "expression": "c**3/9",
+      "name": "scaled_cube"
+    },
+    {
+      "expression": "tanh(c)",
+      "name": "tanh"
+    },
+    {
+      "expression": "sin(pi*c/3)",
+      "name": "sine"
+    },
+    {
+      "expression": "cos(pi*c/3)",
+      "name": "cosine"
+    },
+    {
+      "expression": "sign(c)*sqrt(abs(c)+1e-6)",
+      "name": "signed_sqrt"
+    }
+  ],
+  "global_basis_calibration": {
+    "clip_max": 3.0,
+    "clip_min": -3.0,
+    "initialization_seed": 9001,
+    "kappa_max": 4.0,
+    "kappa_min": 0.25,
+    "layer_norm_affine": false,
+    "layer_norm_epsilon": 1e-05,
+    "maximum_condition_number": 10000.0,
+    "required_rank": 7,
+    "residual_rms_ratio_max": 1.25,
+    "residual_rms_ratio_min": 0.8,
+    "sample_selection": "lowest_sample_ids",
+    "samples_per_source_environment": 256,
+    "standardization_epsilon": 1e-06,
+    "svd_relative_tolerance": 1e-06
+  },
+  "labels": {
+    "0": {
+      "label": 0,
+      "name": "no_movement",
+      "support_per_environment": 1200,
+      "support_per_group": 120
+    },
+    "1": {
+      "label": 1,
+      "name": "falling",
+      "support_per_environment": 400,
+      "support_per_group": 40
+    },
+    "2": {
+      "label": 2,
+      "name": "walking",
+      "support_per_environment": 400,
+      "support_per_group": 40
+    },
+    "3": {
+      "label": 3,
+      "name": "sitting_down_standing_up",
+      "support_per_environment": 400,
+      "support_per_group": 40
+    },
+    "4": {
+      "label": 4,
+      "name": "turning",
+      "support_per_environment": 400,
+      "support_per_group": 40
+    },
+    "5": {
+      "label": 5,
+      "name": "picking_up_a_pen",
+      "support_per_environment": 200,
+      "support_per_group": 20
+    }
+  },
+  "lambda_candidates": [
+    0.01,
+    0.025
+  ],
+  "phase_unwrap": false,
+  "protocol_name": "supcon_tpp_joint",
+  "protocol_version": "1.2.0-stage0",
+  "schema_version": "supcon-tpp-protocol-lock/v2",
+  "screen_seeds": {
+    "E1": 81,
+    "E2": 82,
+    "E3": 83
+  },
+  "screen_thresholds": {
+    "gradient_absolute_floor_l2": 100.0,
+    "gradient_catastrophic_l2": 1000000.0,
+    "gradient_persistent_epochs": 3.0,
+    "gradient_reference_epochs": 5.0,
+    "gradient_relative_multiplier": 100.0,
+    "maximum_combo_macro_f1_drop_vs_tpp": 0.02,
+    "maximum_combo_sit_stand_f1_drop_vs_tpp": 0.03,
+    "maximum_late_to_early_train_ce_ratio": 0.95,
+    "minimum_positive_anchor_fraction": 0.99,
+    "minimum_source_val_macro_f1": 0.16666666666666666,
+    "smallest_lambda_score_tolerance": 0.005,
+    "train_ce_window_epochs": 20.0
+  },
+  "split": {
+    "groups_per_env": 10,
+    "inner_validation": "inferred_group_block_holdout",
+    "sidecar_available": false,
+    "split_seed": 20260714,
+    "strict_group_protocol": true,
+    "subject_block_size": 300,
+    "train_groups_per_source_env": 8,
+    "validation_group_ids": {
+      "E1": [
+        "B01",
+        "B07"
+      ],
+      "E2": [
+        "B00",
+        "B06"
+      ],
+      "E3": [
+        "B00",
+        "B04"
+      ]
+    },
+    "validation_groups_per_source_env": 2
+  },
+  "success_thresholds": {
+    "maximum_walking_drop_vs_tpp": 0.02,
+    "minimum_combo_gain_vs_control": 0.01,
+    "minimum_combo_gain_vs_each_single": 0.01,
+    "minimum_hard_pair_absolute_reduction_vs_control": 0.025,
+    "minimum_interaction_for_synergy": 0.01,
+    "minimum_sit_stand_recovery_vs_tpp": 0.05,
+    "minimum_target_specific_gain_vs_each_single": -0.02,
+    "one_sided_confidence_level": 0.95,
+    "sit_stand_noninferiority_margin_vs_control": -0.02
+  },
+  "supcon": {
+    "linear_warmup_steps": 6000,
+    "temperature": 0.2,
+    "view_scope": "global_only"
+  },
+  "tpp": {
+    "levels": [
+      1,
+      2,
+      4
+    ],
+    "pool_type": "max",
+    "preserve_global": true,
+    "residual_scale": 0.25
+  },
+  "training": {
+    "batch_size": 16,
+    "checkpoint_metric": "f1_macro",
+    "epochs": 200,
+    "optimizer_steps_per_epoch": 300,
+    "sampler": "domain_class_balanced",
+    "samples_per_source_domain_per_batch": 8,
+    "total_optimizer_steps": 60000
+  }
+}

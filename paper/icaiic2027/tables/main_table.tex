@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\caption{Leave-one-environment-out target macro-F1 (\%) on MultiEnv: mean over three seeds (SD in parentheses).}
+\label{tab:main}
+\centering\footnotesize
+\begin{tabular}{lllrrrr}
+\toprule
+Arm & Pooling & Training & E1 (LOS) & E2 (LOS) & E3 (NLOS) & Mean\\
+\midrule
+\multicolumn{7}{l}{\textit{Main study: participant-disjoint source split, capacity matched (4,786,294 parameters in every arm)}}\\
+G-CE & Global + MLP & CE & 86.35 (1.08) & 84.64 (2.99) & 84.85 (1.99) & 85.28\\
+G-SC & Global + MLP & CE + SupCon & 86.22 (2.07) & 79.77 (2.59) & 82.66 (2.03) & 82.88\\
+T-CE & TPP & CE & 88.07 (1.84) & 88.91 (1.70) & 87.09 (1.21) & 88.02\\
+T-SC & TPP & CE + SupCon & \textbf{89.38} (1.02) & \textbf{90.80} (0.51) & \textbf{89.31} (0.21) & \textbf{89.83}\\
+\midrule
+\multicolumn{7}{l}{\textit{Earlier study: sample-stratified source split (plain global arms: 2,788,918 parameters)}}\\
+G$_0$-CE & Global (plain) & CE & 86.01 (1.77) & 85.44 (0.66) & 83.30 (1.70) & 84.92\\
+G$_0$-SC & Global (plain) & CE + SupCon & 85.63 (1.54) & 84.36 (1.88) & 83.69 (1.40) & 84.56\\
+T-CE & TPP & CE & 88.80 (1.31) & 87.86 (1.13) & 89.11 (3.19) & 88.59\\
+T-SC & TPP & CE + SupCon & \textbf{89.54} (1.26) & \textbf{89.99} (0.70) & \textbf{91.23} (1.76) & \textbf{90.26}\\
+\bottomrule
+\end{tabular}
+\end{table*}

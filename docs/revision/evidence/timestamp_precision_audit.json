@@ -1,0 +1,97 @@
+{
+  "source_commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+  "historical_csv_or_export_log_recovered": false,
+  "replay_does_not_correct_physical_time": true,
+  "records": [
+    {
+      "raw_stem": "E1_S03_C04_A01_T09",
+      "processed_index": 1108,
+      "packet_count": 1601,
+      "mat_sha256": "579aca1535041e54e0a32dcd9ef5e1bad53da016d26d9b17f0fabcae3bb055da",
+      "dat_sha256": "fd93b164e9bc22a319525a91df1b86ed0c2198ed7d4a98752a3eac2fc9c2431e",
+      "all_packet_ids_and_complex_csi_equal": true,
+      "mat_equals_signextended_uint32_cast_to_float64": true,
+      "conversion_origin_verified": false,
+      "comparisons": {
+        "MAT_direct_float64": {
+          "amplitude_max_abs_error": 5.985108905970211,
+          "phase_max_abs_error": 6.141288252575422,
+          "duration_seconds": 5.001216,
+          "first_timestamps": [
+            1.8446744072476516e+19,
+            1.844674407247652e+19,
+            1.8446744072476522e+19,
+            1.8446744072476527e+19
+          ]
+        },
+        "MAT_text15": {
+          "amplitude_max_abs_error": 0.0,
+          "phase_max_abs_error": 0.0,
+          "duration_seconds": 4.999168,
+          "first_timestamps": [
+            1.84467440724765e+19,
+            1.84467440724765e+19,
+            1.84467440724765e+19,
+            1.84467440724765e+19
+          ]
+        },
+        "DAT_uint32": {
+          "amplitude_max_abs_error": 7.435472407568838,
+          "phase_max_abs_error": 6.13383960076318,
+          "duration_seconds": 4.999753,
+          "first_timestamps": [
+            3061932720.0,
+            3061935796.0,
+            3061938941.0,
+            3061942039.0
+          ]
+        }
+      }
+    },
+    {
+      "raw_stem": "E1_S05_C04_A01_T16",
+      "processed_index": 1715,
+      "packet_count": 1589,
+      "mat_sha256": "4380ea96dc520c03a8c99a7f11e23a39a498cecf95d9a3e56726cb4ddb63c682",
+      "dat_sha256": "8ace4d0eecec7acd01c5b8789337cda7bce7ecc592fc2a850720ba6054c94de6",
+      "all_packet_ids_and_complex_csi_equal": true,
+      "mat_equals_signextended_uint32_cast_to_float64": true,
+      "conversion_origin_verified": false,
+      "comparisons": {
+        "MAT_direct_float64": {
+          "amplitude_max_abs_error": 6.575058509170127,
+          "phase_max_abs_error": 6.206413415909808,
+          "duration_seconds": 4.999168,
+          "first_timestamps": [
+            1.8446744072921655e+19,
+            1.844674407292166e+19,
+            1.8446744072921661e+19,
+            1.8446744072921666e+19
+          ]
+        },
+        "MAT_text15": {
+          "amplitude_max_abs_error": 0.0,
+          "phase_max_abs_error": 0.0,
+          "duration_seconds": 4.999168,
+          "first_timestamps": [
+            1.84467440729217e+19,
+            1.84467440729217e+19,
+            1.84467440729217e+19,
+            1.84467440729217e+19
+          ]
+        },
+        "DAT_uint32": {
+          "amplitude_max_abs_error": 6.912730055006655,
+          "phase_max_abs_error": 6.2397344117880555,
+          "duration_seconds": 4.999821,
+          "first_timestamps": [
+            3507071000.0,
+            3507074136.0,
+            3507077252.0,
+            3507080373.0
+          ]
+        }
+      }
+    }
+  ]
+}

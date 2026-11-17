@@ -1,0 +1,557 @@
+{
+  "schema": "full-revision-plan-status/v1",
+  "audited_at_utc": "2026-09-29T12:11:32.302484+00:00",
+  "complete": false,
+  "audit_action": "Read-only evidence and manuscript-source audit; no training, target forward inference, paper edits, or cancelled Widar work performed by this audit.",
+  "reference": {
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\full_plan_reference_20260929.md",
+    "sha256": "d5a6a2b4f40852b9773d2c954bf3063ec308ed07131cd3188fec7d137eb2594e"
+  },
+  "verification": {
+    "historical_evidence_source_files": {
+      "checked_files": 842,
+      "passed": true,
+      "issues": []
+    },
+    "derived_analysis_outputs": {
+      "checked_files": 19,
+      "passed": true,
+      "issues": []
+    },
+    "frozen_analysis_script": {
+      "checked_files": 1,
+      "passed": true,
+      "issues": []
+    },
+    "method_code_bindings": {
+      "checked_files": 7,
+      "passed": true,
+      "issues": []
+    },
+    "method_h_configuration": {
+      "checked_files": 1,
+      "passed": true,
+      "issues": []
+    },
+    "method_audit_script": {
+      "checked_files": 1,
+      "passed": true,
+      "issues": []
+    },
+    "dated_draft_current_sources": {
+      "checked_files": 11,
+      "passed": true,
+      "issues": []
+    },
+    "dated_draft_pdf": {
+      "checked_files": 2,
+      "passed": true,
+      "issues": []
+    },
+    "core_frozen_files": {
+      "checked_files": 24,
+      "passed": true,
+      "issues": []
+    },
+    "core_reference_hashes": {
+      "checked_files": 2,
+      "passed": true,
+      "issues": []
+    },
+    "controls_frozen_files": {
+      "checked_files": 31,
+      "passed": true,
+      "issues": []
+    },
+    "controls_reference_hashes": {
+      "checked_files": 2,
+      "passed": true,
+      "issues": []
+    },
+    "inputs_frozen_files": {
+      "checked_files": 60,
+      "passed": true,
+      "issues": []
+    },
+    "inputs_reference_hashes": {
+      "checked_files": 2,
+      "passed": true,
+      "issues": []
+    },
+    "new_mask_classwise_report": {
+      "checked_files": 7,
+      "passed": true,
+      "issues": []
+    }
+  },
+  "existing_formal_studies": {
+    "core": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "configured_runs": 36,
+      "evaluation_runs": 36,
+      "arms": {
+        "R00": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "R01": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "R10": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "R11": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        }
+      }
+    },
+    "controls": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_controls_v1",
+      "configured_runs": 81,
+      "evaluation_runs": 81,
+      "arms": {
+        "P1": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "NO_P1": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "ATTENTION": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "MASK_HYBRID": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "MASK_ALL": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "MASK_REMOVE": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "CORAL": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "MIXUP": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "TEMPORAL_AUG": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        }
+      }
+    },
+    "inputs": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "configured_runs": 63,
+      "evaluation_runs": 63,
+      "arms": {
+        "NATIVE_MERGE": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "NATIVE_LINEAR": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "HIST_PHASE": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "NATIVE_PHASE": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "DIFFERENTIAL_PHASE": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "TWIN_AA": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        },
+        "TWIN_AP": {
+          "configured_runs": 9,
+          "completed_source_runs": 9,
+          "evaluated_target_runs": 9
+        }
+      }
+    }
+  },
+  "prior_verified_totals": {
+    "runs": 270,
+    "prediction_rows": 810000,
+    "fresh_prediction_metric_recompute_this_audit": false,
+    "new_target_inference_this_audit": false
+  },
+  "method_checks": {
+    "channel_pool_axis": "temporal response length; not feature/subcarrier axis",
+    "fusion_equation_exact": true,
+    "r_parameter_counts": {
+      "R00": {
+        "total_parameters": 1878142,
+        "classification_graph_parameters": 1779454,
+        "excluded_training_only_projection": 98688
+      },
+      "R01": {
+        "total_parameters": 1878142,
+        "classification_graph_parameters": 1779454,
+        "excluded_training_only_projection": 98688
+      },
+      "R10": {
+        "total_parameters": 1878142,
+        "classification_graph_parameters": 1779454,
+        "excluded_training_only_projection": 98688
+      },
+      "R11": {
+        "total_parameters": 1878142,
+        "classification_graph_parameters": 1779454,
+        "excluded_training_only_projection": 98688
+      }
+    },
+    "enumerated_mask_checks": {
+      "hybrid": {
+        "positive_directed_pairs": 38,
+        "denominator_directed_pairs": 132,
+        "anchors": 12,
+        "anchors_without_positive": 0
+      },
+      "all_view": {
+        "positive_directed_pairs": 68,
+        "denominator_directed_pairs": 132,
+        "anchors": 12,
+        "anchors_without_positive": 0
+      },
+      "hybrid_remove_same_class_nonpositives": {
+        "positive_directed_pairs": 38,
+        "denominator_directed_pairs": 102,
+        "anchors": 12,
+        "anchors_without_positive": 0
+      }
+    },
+    "mask_config_pair_comparisons": 18
+  },
+  "dated_draft": {
+    "source": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\review_20260924.tex",
+    "pdf": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\output\\pdf\\manuscript_review_20260924.pdf",
+    "pages": 21,
+    "prior_visual_qa_status": "passed_visual_review_for_dated_draft",
+    "submission_ready": false,
+    "new_visual_review_this_audit": false
+  },
+  "all_reverified_hash_checks_passed": true,
+  "legacy_completion_scope": {
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\COMPLETION_AUDIT.md",
+    "covers": "Historical H/Y + completed H-S10/H-S11 and their old manuscript/local release",
+    "does_not_cover": "New complete A-E plan, dated R-based review draft, or missing time/modality branches",
+    "treated_as_full_plan_completion": false
+  },
+  "packages": [
+    {
+      "id": "A",
+      "purpose": "Capacity-matched global-MLP/TPP x CE/full-view SupCon",
+      "evidence_bundle": "r_core_v1",
+      "completed_runs": 36,
+      "status": "Historical-input recognition and main report complete",
+      "remaining": "Native-clock global controls tracked under B; final interpretation after new results",
+      "required_new_training": 0,
+      "evaluation_only_backlog": 0,
+      "global_only_residual_already_present": true
+    },
+    {
+      "id": "B",
+      "purpose": "Time preprocessing and matched phase-versus-capacity inputs",
+      "evidence_bundle": "r_inputs_v1",
+      "completed_runs": 63,
+      "status": "Existing seven input branches complete, requested matched matrix incomplete",
+      "remaining": "Native global controls; historical twin AA/AP; native-grid historical-style twin AP",
+      "minimum_required_new_training": 36,
+      "strengthened_new_training": 45,
+      "evaluation_only_backlog": 0,
+      "missing_runs_require_training_then_evaluation_and_reporting": true
+    },
+    {
+      "id": "C",
+      "purpose": "Hybrid/all-view/remove-unselected same-class pair rules",
+      "evidence_bundle": "r_controls_v1",
+      "completed_relevant_runs": 27,
+      "status": "Recognition, paired differences, and dedicated classwise explanation/table complete",
+      "remaining": "Integrate newly derived classwise report into final manuscript and supplementary material",
+      "required_new_training": 0,
+      "evaluation_only_backlog": 0,
+      "reporting_backlog": "final manuscript integration only"
+    },
+    {
+      "id": "D",
+      "purpose": "Original-H source-membership bridge",
+      "evidence_path": "outputs_h_grouped_l1248/v2",
+      "completed_relevant_runs": 18,
+      "arms": [
+        "H10",
+        "H11"
+      ],
+      "status": "Required two-arm bridge complete",
+      "remaining": "Retain two-arm inference limit; H-S00/H-S01 only for a full interaction claim",
+      "required_new_training": 0,
+      "optional_new_training": 18,
+      "evaluation_only_backlog": 0
+    },
+    {
+      "id": "E",
+      "purpose": "H00/H10/H11 class decomposition and E1 Y10/Y11 confusions",
+      "evidence_directory": "docs/revision/review_20260924",
+      "status": "Requested stored-prediction analysis and dated manuscript presentation complete",
+      "required_new_training": 0,
+      "evaluation_only_backlog": 0,
+      "remaining": "Preserve final reporting and per-run-then-average aggregation"
+    }
+  ],
+  "missing_branches": [
+    {
+      "id": "global_native_linear",
+      "priority": "required",
+      "runs": 9,
+      "input": "native_time_linear amplitude",
+      "model": "R00 global-MLP + CE",
+      "reference": "Existing NATIVE_LINEAR R10 TPP + CE",
+      "gap_type": "new training, then deferred evaluation and reporting"
+    },
+    {
+      "id": "historical_twin_aa",
+      "priority": "required",
+      "runs": 9,
+      "input": "historical amplitude + identical historical amplitude",
+      "model": "Two independently parameterized R10 encoders; matched twin classifier",
+      "reference": "Historical R10 and historical twin AP",
+      "gap_type": "new configuration/freeze, training, deferred evaluation and reporting"
+    },
+    {
+      "id": "historical_twin_ap",
+      "priority": "required",
+      "runs": 9,
+      "input": "historical amplitude + historical phase on the historical grid",
+      "model": "Same twin architecture and initialization as historical AA",
+      "reference": "New historical twin AA",
+      "gap_type": "new configuration/freeze, training, deferred evaluation and reporting"
+    },
+    {
+      "id": "native_historical_style_twin_ap",
+      "priority": "required",
+      "runs": 9,
+      "input": "native-linear amplitude + newly versioned historical-style phase reconstructed on the same native grid",
+      "model": "Same twin architecture as existing native TWIN_AA and TWIN_AP",
+      "reference": "Existing native AA and native amplitude+differential-phase AP",
+      "gap_type": "new input version, validation/freeze, training, deferred evaluation and reporting"
+    },
+    {
+      "id": "global_native_merge",
+      "priority": "strengthened_time_design",
+      "runs": 9,
+      "input": "native_time_legacy_merge amplitude",
+      "model": "R00 global-MLP + CE",
+      "reference": "Existing NATIVE_MERGE R10 and linear-pipeline contrasts",
+      "gap_type": "new training, then deferred evaluation and reporting"
+    }
+  ],
+  "new_training_counts": {
+    "per_arm": 9,
+    "seeds": {
+      "E1": [
+        401,
+        402,
+        403
+      ],
+      "E2": [
+        501,
+        502,
+        503
+      ],
+      "E3": [
+        601,
+        602,
+        603
+      ]
+    },
+    "minimum": 36,
+    "strengthened": 45,
+    "time_queue_under_preparation": 0,
+    "remaining_modality_queue_under_preparation": 27,
+    "time_queue_includes_9_runs_already_in_minimum": true,
+    "arithmetic": "minimum 9 + 18 + 9 = 36; strengthened 18 + 18 + 9 = 45; do not add 18 on top of 36",
+    "optional_full_grouped_H_interaction": 18,
+    "new_formal_results_available_at_audit_snapshot": 0,
+    "time_queue_formally_started": 18
+  },
+  "reviewer_points": [
+    {
+      "point": 1,
+      "done": "Contribution-focused dated draft with capacity/input/pairing research questions",
+      "remaining": "Rewrite abstract and conclusions after missing B controls; avoid presuming favorable native results"
+    },
+    {
+      "point": 2,
+      "done": "R four-arm common protocol and H-S10/H-S11 bridge",
+      "remaining": "Keep H/Y protocols distinct and H-S inference conditional on two arms"
+    },
+    {
+      "point": 3,
+      "done": "Conventional MLP matches actual classification capacity and already transforms global descriptor; P1 count disclosed",
+      "remaining": "Native global contrasts and precise module-level attribution"
+    },
+    {
+      "point": 4,
+      "done": "Full documented processing chain/axes, cross-link unwrap disclosure, native A/AA/differential-AP results",
+      "remaining": "All missing B branches; new historical-style phase definition and same-grid validation"
+    },
+    {
+      "point": 5,
+      "done": "Matched 27-run three-rule target results; independent mask enumeration and config audit; 2026-09-29 dedicated classwise report with 162 signed class differences and manuscript-ready prose",
+      "remaining": "Final manuscript and supplement integration"
+    },
+    {
+      "point": 6,
+      "done": "Code-bound MCAT, attention, convolution, normalization/dropout, gate equations and tensor shapes",
+      "remaining": "Final terminology/figure consistency review"
+    },
+    {
+      "point": 7,
+      "done": "H00/H10/H11 and E1 Y10/Y11 class scores and confusion analyses",
+      "remaining": "Preserve verified aggregation in final manuscript"
+    },
+    {
+      "point": 8,
+      "done": "21-page dated review draft; development logs moved to supplementary source; terminology/LayerNorm/coefficient wording updated",
+      "remaining": "Supplement PDF, final response letter, true author/publication statements, remove pending annotations, final render and review"
+    }
+  ],
+  "selection_and_inference_rules": [
+    "Keep all environments/seeds/negative results for every included core comparison; never select only supportive results.",
+    "HIST_PHASE is phase-only and cannot substitute for a historical amplitude+phase twin result.",
+    "Existing TWIN_AA/TWIN_AP are native-grid controls; do not relabel them as historical-grid controls.",
+    "Native inputs and sample-identity verification do not establish recognition benefit or physical calibration.",
+    "Native-linear 850-point interpolation uses recording-specific spacing and does not recover unsampled signal in gaps.",
+    "The three-pipeline comparison is not a full timestamp-by-resampling factorial experiment.",
+    "H-S two arms do not establish the complete pooling-by-contrastive interaction.",
+    "Previously inspected target environments remain development environments; no population confidence intervals are supported by these seed repetitions.",
+    "Do not restart cancelled Widar, duplicate completed core/mask runs, or conduct target-informed tuning.",
+    "Preserve pseudo-Tx software slicing semantics while labeling main figures receive-link feature groups."
+  ],
+  "existing_mask_classwise_ledger": {
+    "rows": 27,
+    "class_f1_precision_recall_available": true,
+    "descriptive_mean_class_f1_differences_pp": {
+      "MASK_ALL-MASK_HYBRID": {
+        "C0_mean_f1_difference_pp": 1.8182338631831163,
+        "C1_mean_f1_difference_pp": 5.724348729486875,
+        "C2_mean_f1_difference_pp": 2.951075559826563,
+        "C3_mean_f1_difference_pp": 8.700922575105201,
+        "C4_mean_f1_difference_pp": 0.31286095541685754,
+        "C5_mean_f1_difference_pp": 2.1367505245605845
+      },
+      "MASK_REMOVE-MASK_HYBRID": {
+        "C0_mean_f1_difference_pp": 2.839526667076863,
+        "C1_mean_f1_difference_pp": 2.8313729774038836,
+        "C2_mean_f1_difference_pp": 3.4272914279714857,
+        "C3_mean_f1_difference_pp": 4.615047511299001,
+        "C4_mean_f1_difference_pp": 0.5902524895648722,
+        "C5_mean_f1_difference_pp": 4.796440639959105
+      },
+      "MASK_ALL-MASK_REMOVE": {
+        "C0_mean_f1_difference_pp": -1.0212928038937465,
+        "C1_mean_f1_difference_pp": 2.8929757520829917,
+        "C2_mean_f1_difference_pp": -0.4762158681449225,
+        "C3_mean_f1_difference_pp": 4.085875063806201,
+        "C4_mean_f1_difference_pp": -0.27739153414801465,
+        "C5_mean_f1_difference_pp": -2.6596901153985204
+      }
+    },
+    "fresh_target_inference": false,
+    "dedicated_paper_explanation_still_pending": false,
+    "new_report_directory": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\mask_classwise_20260929",
+    "new_report_manifest_sha256": "d0e93d693683d5a1299366917295e67745eadaa9d83469d73850847019028a7e",
+    "new_signed_class_differences": 162
+  },
+  "human_report": {
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\full_plan_status_20260929.md",
+    "sha256": "683b9bffd1763661b40423c733462f118305950e183efa4054573a6b94cb98a3"
+  },
+  "execution_update": {
+    "updated_at_utc": "2026-09-29T12:28:15.571489+00:00",
+    "time18": {
+      "status": "formal_source_training_running",
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929",
+      "bundle_sha256": "4fb22b1a2afb090e5dd8c64df2b6ca5748ebb1ee301368b818fecc841fab9854",
+      "pid": 27320,
+      "process_identity_verified": true,
+      "current_job_id": "E1_G_NATIVE_MERGE_401",
+      "current_job_source_status": {
+        "status": "running",
+        "epoch": 34,
+        "best_epoch": 24,
+        "best_source_macro_f1": 0.7389330444913466,
+        "pid": 27320,
+        "updated_at": "2026-09-29T12:28:10.745508+00:00",
+        "target_data_loaded": false
+      },
+      "formal_jobs_total": 18,
+      "new_evaluation_completed": false
+    },
+    "phase27": {
+      "status": "frozen_and_queued_after_time18",
+      "formal_training_started": false,
+      "formal_jobs_total": 27,
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929",
+      "bundle_sha256": "c98c640ac361a7888bb9a8c3a636781e8c7a9d6b117c34afeb5091a45a9a277f",
+      "job_count": 27,
+      "entry_module": "experiments.revision_validation.phase_followup_study"
+    },
+    "coordinator_qa": {
+      "path": "D:\\pa-csi-dg-revision-runtime\\qa\\revision_coordinator_20260929\\latest.json",
+      "sha256": "74ca20c5f855d6acb4498424b0f6568fb0b772d9050702c1f76e9c1d9b856145",
+      "passed": true,
+      "check_count": 13,
+      "coordinator_code_sha256": "4b99e2a8ad150ed19df73fe950101aba77c8ee5b139891bbd4c8bbb97283e71d",
+      "actual_studies_touched": false,
+      "gpu_used": false
+    },
+    "coordinator": {
+      "directory": "D:\\pa-csi-dg-revision-runtime\\coordinators\\full_revision_20260929",
+      "pid": 7640,
+      "status": "running",
+      "plan_sha256": "93b1a48cecd744dd97ef032b174d51dcb0a892a33c75f64ef7dd51d590710966"
+    },
+    "launch_receipt": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\experiment_launch_receipt_20260929.json",
+      "sha256": "a09597c78edb7ab5b71e34bf8964909d8d3c1c2f81a881ce3fd37750760a3696"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "NATIVE_MERGE": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "NATIVE_LINEAR": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "HIST_PHASE": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "NATIVE_PHASE": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "DIFFERENTIAL_PHASE": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "TWIN_AA": {
+    "parameters": 3655286,
+    "counted_inference_macs": {
+      "conv1d": 855081960,
+      "linear": 4140832,
+      "attention": 487560000,
+      "position_embedding": 765000,
+      "total_counted_macs": 1347547792,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "TWIN_AP": {
+    "parameters": 3655286,
+    "counted_inference_macs": {
+      "conv1d": 855081960,
+      "linear": 4140832,
+      "attention": 487560000,
+      "position_embedding": 765000,
+      "total_counted_macs": 1347547792,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  }
+}

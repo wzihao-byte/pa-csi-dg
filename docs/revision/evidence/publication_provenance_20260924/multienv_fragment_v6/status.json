@@ -1,0 +1,7 @@
+{
+  "status": "completed",
+  "completed_at": "2026-09-21T02:30:36.363739+00:00",
+  "formal_fragment_manifest_sha256": "31d47e642be7508a0b1c9f977cdbf8034f64294ded87d9c05562eab8e226fc9e",
+  "formal_results_tex_sha256": "cb9c7b8e38d29b37ac405e70bb2b0c9e30e1f87fb4bfca3ad857d71bd2d95c47",
+  "formal_narrative_values_sha256": "7faa1be1a884bf3d1dc0efdf4ea1f410993e353577d0c165486eebb6e109437d"
+}

@@ -1,0 +1,2150 @@
+{
+  "sampling": "Four uniformly sampled rows per class per source environment, numpy default_rng seed 20260903; source train and validation combined; not an independent test.",
+  "target_inference": false,
+  "epsilon": 1e-12,
+  "device": "cuda:0",
+  "runs": [
+    {
+      "arm": "H10",
+      "target": "E1",
+      "seed": 42,
+      "checkpoint_sha256": "b0ddd579c4b87ffc997bb4b18870663cfd92d88b1013aae704e4160469e99f9b",
+      "resolved_config_sha256": "0ee04e3dd12c173be7d23ead65e380e1da1b3f531a75feb0314225700a0ccb38",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E1",
+      "seed": 52,
+      "checkpoint_sha256": "d9aaa992933dd88c6d6346ca4e022baf1224a7bf3db1e0c50c97ad861b6a076d",
+      "resolved_config_sha256": "0adcc97519866766d61de02befee43af0ef58da5e9e7de8b44839794ac57708b",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E1",
+      "seed": 62,
+      "checkpoint_sha256": "847133ef13b746894b571414c6476fe937af40987fdfe1da4bf1b0cf045004d6",
+      "resolved_config_sha256": "c9c4c7b9fb51510b79de96ace3ef10799334b61eb36c697ba494db1c417e7257",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E2",
+      "seed": 42,
+      "checkpoint_sha256": "e5d994e38ccbff59055bf2a0b3de7f9e53d96132dcf57b1ca0cc8f213730fd68",
+      "resolved_config_sha256": "11a21c8d094b1249688a6f1c34f35e25eeb3b7e10957a340403409ae892c2c04",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E2",
+      "seed": 52,
+      "checkpoint_sha256": "60113bed7e346f7476b3b13aabcc68f110151ebebc1bedf088706007b90c6974",
+      "resolved_config_sha256": "8fa9aa859dad1b6c8c12af14c7ee651bc35ddbfeaf8b0381a9dfcace6c0fd9b8",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E2",
+      "seed": 62,
+      "checkpoint_sha256": "a9a41ed64393c3a1b57509244c7cf34673aca1f942b4039e9433f6a97fa92335",
+      "resolved_config_sha256": "281af3ad3de5e1d4e32a7e4fde6552efed19d06af0d75bf5b34631a3d35c9d8b",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E3",
+      "seed": 42,
+      "checkpoint_sha256": "fddb91ef1b7a0ef306b4ec01eb9bc135cbe98bda071ad349d07e6802f54ecf7d",
+      "resolved_config_sha256": "d308beb4373da4245e4d34f79928e7ed62669f83ecc3281e5d967fb62e8fd39e",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E3",
+      "seed": 52,
+      "checkpoint_sha256": "9dca85c78b3315d43481bdecbf611bac1aa366e5fdac037548002813e360dcfc",
+      "resolved_config_sha256": "b066acabd4b5cb13d89e65915484bb646fdb22ac6b6ddba52520fc5af29a61ab",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    },
+    {
+      "arm": "H10",
+      "target": "E3",
+      "seed": 62,
+      "checkpoint_sha256": "52473c63ef30a4e902c92ec22be67133a26ec6089578d38e8bd218ccdc21259e",
+      "resolved_config_sha256": "a96befade1201c09be22db9e975445fe3023d157456d4fc830acc5dc595e3e09",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E1",
+      "seed": 42,
+      "checkpoint_sha256": "005a4402ea659b4e5d7c26df369e0e14b465205b6cf2e805143068d40599f52c",
+      "resolved_config_sha256": "695cbb5c89c8f611b467403ef3d423fb406c82ea476c7fff43e8d431b9712c60",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E1",
+      "seed": 52,
+      "checkpoint_sha256": "a3c72efacfa0558f17307b051b8666c19a19410b522fab4f84a3ebae5ba3a81a",
+      "resolved_config_sha256": "ea55cfe6dd81cccf9e03bdd6d65948bca9b841d98f8995805f26e7427cb12ff9",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E1",
+      "seed": 62,
+      "checkpoint_sha256": "3d8a1cbe8fefe02db2963f137eb6f39cea1c9b5aed429e72e5b3cfb9b7a7f753",
+      "resolved_config_sha256": "71b176ff7eb0c991e253198c7dd9319247a7580135c270394178912b25f7f42c",
+      "source_file_records": {
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E2",
+      "seed": 42,
+      "checkpoint_sha256": "4124ab88870465d5c71eb7861fdcf80f29467d0db26c690ee99f9ac9cd838583",
+      "resolved_config_sha256": "8d89bbad74226cbdaa6fb618985687184ad5fb28f94e9d48ca5edfd4bd130cca",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E2",
+      "seed": 52,
+      "checkpoint_sha256": "f6eeb4732ae2edd66a1c29a9b64d5a992c21648e0e8afbd3db6a2bcd0b2ac543",
+      "resolved_config_sha256": "1fdffba47093da07cd5293d4d73e5f8d82564eff5054755078666bb63f4e7d46",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E2",
+      "seed": 62,
+      "checkpoint_sha256": "c7a995fdb221d70ccfd3aab06b21f5b6b580aba0641b18d7f73f0b35504e0d3c",
+      "resolved_config_sha256": "d77fd0cecbe010a0c2ecfdc6be88bb4a86f3b0c8cf972a2755810b2f48a369f9",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E3": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_3.npy",
+            "sha256": "daac7fd38677369c7450e099e87761c4f8d30e263f722d1fe27ab0b5577fce89",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_3.npy",
+            "sha256": "6fd35344c48d420501c8ea53ba07cc1757c38a6537426f1d8ea81401ef56850e",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E3:0069",
+        "E3:0528",
+        "E3:0686",
+        "E3:0960",
+        "E3:0111",
+        "E3:1526",
+        "E3:1910",
+        "E3:2214",
+        "E3:0762",
+        "E3:0778",
+        "E3:1922",
+        "E3:2262",
+        "E3:1454",
+        "E3:1740",
+        "E3:2344",
+        "E3:2359",
+        "E3:0189",
+        "E3:1690",
+        "E3:1990",
+        "E3:2588",
+        "E3:0280",
+        "E3:1197",
+        "E3:1781",
+        "E3:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E3",
+      "seed": 42,
+      "checkpoint_sha256": "3c3c08b8a29207a381f238f1fc3399b2703bc5b20bdaf77c503c1acab5292090",
+      "resolved_config_sha256": "742d1403036db416e9d0e593dc6d2d5a88ab46936297fb03dedbb7f40781bbdc",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E3",
+      "seed": 52,
+      "checkpoint_sha256": "def4941ae88cc6fc7315e7a417d1c34ca297d615b140b4e159c1753748b49af1",
+      "resolved_config_sha256": "3db787158d1ecdcb79d81e19dfcead4222335a51174bc8de197606947d02c09a",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    },
+    {
+      "arm": "H11",
+      "target": "E3",
+      "seed": 62,
+      "checkpoint_sha256": "4530c8f93b723baa943e60731eb1e63aff2ae1ef9dc71eb35a4d62326f42a3a2",
+      "resolved_config_sha256": "a45436c2ff436dd67506c4918635a2b2157a89fe95d37d0fffd734e5ac528d46",
+      "source_file_records": {
+        "E1": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_1.npy",
+            "sha256": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_1.npy",
+            "sha256": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_1.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        },
+        "E2": {
+          "amp": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_6c_2.npy",
+            "sha256": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "phase": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\data_angle_6c_2.npy",
+            "sha256": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+            "shape": [
+              3000,
+              850,
+              90
+            ],
+            "dtype": "float64"
+          },
+          "label": {
+            "path": "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+            "sha256": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+            "shape": [
+              3000
+            ],
+            "dtype": "int32"
+          }
+        }
+      },
+      "selected_source_ids": [
+        "E1:0069",
+        "E1:0528",
+        "E1:0686",
+        "E1:0960",
+        "E1:0111",
+        "E1:1526",
+        "E1:1910",
+        "E1:2214",
+        "E1:0762",
+        "E1:0778",
+        "E1:1922",
+        "E1:2262",
+        "E1:1454",
+        "E1:1740",
+        "E1:2344",
+        "E1:2359",
+        "E1:0189",
+        "E1:1690",
+        "E1:1990",
+        "E1:2588",
+        "E1:0280",
+        "E1:1197",
+        "E1:1781",
+        "E1:2390",
+        "E2:0069",
+        "E2:0528",
+        "E2:0686",
+        "E2:0960",
+        "E2:0111",
+        "E2:1526",
+        "E2:1910",
+        "E2:2214",
+        "E2:0762",
+        "E2:0778",
+        "E2:1922",
+        "E2:2262",
+        "E2:1454",
+        "E2:1740",
+        "E2:2344",
+        "E2:2359",
+        "E2:0189",
+        "E2:1690",
+        "E2:1990",
+        "E2:2588",
+        "E2:0280",
+        "E2:1197",
+        "E2:1781",
+        "E2:2390"
+      ]
+    }
+  ]
+}

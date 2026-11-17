@@ -1,0 +1,20 @@
+{
+  "verified_at_utc": "2026-09-30T12:52:07.639336+00:00",
+  "automation_id": "automation",
+  "name": "论文补充实验监视与自动修复",
+  "status": "ACTIVE",
+  "kind": "heartbeat",
+  "interval_minutes": 10,
+  "target_thread_id": "01a0d1cb-3415-7cb2-b3fc-699eb5e0c267",
+  "local_schedule_file": "C:\\Users\\howie\\.codex\\automations\\automation\\automation.toml",
+  "runbook": "C:/Users/howie/Desktop/pa-csi-dg/docs/revision/MONITORING_20260930.md",
+  "health_cli_validation": "14 focused tests passed and live snapshot running",
+  "health_cli_sha256": "5834b889a0192e20ba364bce4b0a932652d1ecf4dc423dd95984add92f6e8e6c",
+  "test_file": "analysis/test_monitor_revision_experiments_20260930.py",
+  "test_file_sha256": "aa10f4eff597627196d02453cd8f9919a45dbf00c8ec79540868b8493569a02a",
+  "live_snapshot_path": "D:\\pa-csi-dg-revision-runtime\\monitoring\\full_revision_20260930\\activation_snapshot_20260930.json",
+  "health_at_activation": "running",
+  "source_completed_at_activation": 4,
+  "live_verification_time_utc": "2026-09-30T12:53:57.086391+00:00",
+  "live_mutable_json_verification_attempted": false
+}

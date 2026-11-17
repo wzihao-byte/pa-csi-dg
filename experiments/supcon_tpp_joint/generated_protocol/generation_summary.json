@@ -1,0 +1,19 @@
+{
+  "budgets": {
+    "formal_extension_jobs": 24,
+    "formal_full_jobs": 60,
+    "formal_interim_jobs": 36,
+    "full_residual_degrees_of_freedom": 12,
+    "interim_residual_degrees_of_freedom": 6,
+    "internal_complete_path_full_runs": 78,
+    "internal_stop_path_full_runs": 54,
+    "screen_runs": 18,
+    "smoke_runs": 4
+  },
+  "formal_extension_job_count": 0,
+  "formal_interim_job_count": 0,
+  "generation_mode": "screen",
+  "screen_job_count": 18,
+  "screen_registry_content_sha256": "40fbeb04eb96f51201c16ea9c41ba16e1acdc8b93c76a1780494255a42e1fea7",
+  "template_count": 4
+}

@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-09-03T19:33:57.354229+00:00",
+  "passed": true,
+  "target_evaluation_rejected_before_source_completion": true,
+  "source_training_rejected_before_prerequisite_completion": true,
+  "forbidden_artifacts_absent": [
+    "target_gate.json",
+    "prerequisite_gate.json",
+    "queue_failure.json",
+    "runner.lock.json"
+  ],
+  "widar_bundle_sha256": "2a232569192805ede6d6ffc674093bc498f9d56279cc6a8d0193890eae5fdbb0"
+}

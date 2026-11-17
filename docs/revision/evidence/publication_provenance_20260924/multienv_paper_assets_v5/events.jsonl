@@ -1,0 +1,2 @@
+{"at": "2026-09-17T17:41:58.357611+00:00", "event": "waiting_for_formal_evidence"}
+{"at": "2026-09-21T02:22:40.956343+00:00", "error": "Traceback (most recent call last):\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_multienv_paper_assets_after_evidence.py\", line 132, in main\n    raise RuntimeError(\"Final-evidence coordinator did not complete\")\nRuntimeError: Final-evidence coordinator did not complete\n", "event": "failed"}

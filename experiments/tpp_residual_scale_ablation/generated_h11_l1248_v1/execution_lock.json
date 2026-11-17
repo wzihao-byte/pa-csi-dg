@@ -1,0 +1,66 @@
+{
+  "schema_version": "tpp-residual-scale-bundle/v1",
+  "created_at_utc": "2026-08-09T09:29:13.321305+00:00",
+  "protocol_lock_sha256": "6f14d4cd6663f79a756fc708458333d5997cdd821a279df627e117d72cad61d1",
+  "registry_sha256": "6885a5266ab742a97a8d074ee7ab542f18623c6a404ada397b20290a44f2697e",
+  "reference_registry_sha256": "3be3dc7630fc7a551fe6dc00af3c5d473d32688d29663c8762a9a8085d4c6687",
+  "scripts": {
+    "generate_bundle.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\generate_bundle.py",
+      "sha256": "b5dca6f2b6dca1e428e2753b91856bafb1bfbeaf8af9de2af683a1df2364de57"
+    },
+    "train_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\train_factorial.py",
+      "sha256": "6b77e8e9ccabb4fc4778039a79490ac0570c8766eefd8fea36d7f29db4de7d25"
+    },
+    "run_scale.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\run_scale.py",
+      "sha256": "bd2507288965016a67d5a479f0fbfd945daa0a949be72a12088e1d1eb8e1f2d1"
+    },
+    "analyze_scale.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\analyze_scale.py",
+      "sha256": "70d4d80829dcc9a264d5b483ceba8443e08bccc6629f34d6163ccf540c234387"
+    },
+    "gpu_smoke.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\gpu_smoke.py",
+      "sha256": "2f6f426ce8a405b046b898297a212b6a3183b793aa5d6a75ecbe7a7573ffad28"
+    },
+    "pipeline.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_residual_scale_ablation\\pipeline.py",
+      "sha256": "b55649baba049c279814adf43a502574ecad89a611c754f2e9b26eda247e8b42"
+    },
+    "base_train_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\train_factorial.py",
+      "sha256": "9910696d05771ca24ec50f002d67cb2a908199de214278280c5bba46763091ec"
+    },
+    "base_run_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\run_factorial.py",
+      "sha256": "5009bf9a113f49f58b3ce12f0c31c996df68bec9179179d912536ac39e36403d"
+    },
+    "tpp_models.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_isolated\\tpp_models.py",
+      "sha256": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf"
+    }
+  },
+  "required_gate_artifacts": {
+    "reference_l1248_results": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\l1248_v1\\level8_results.json",
+      "sha256": "03530439f7e44d9bf01b9b4d6554dc20cae396ab95aaf09bee3823d8f1197a54",
+      "required_status": "complete"
+    },
+    "residual_scale_gpu_smoke": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_residual_scale_ablation\\audit\\gpu_smoke.json",
+      "sha256": "e3a449441625e6a4815effecb4ec25ac25926895efe352adbfc2e6c92ed7bf45",
+      "required_status": "pass"
+    }
+  },
+  "constraints": {
+    "attempts_append_only": true,
+    "single_runner_os_lock": true,
+    "cuda_device": "cuda:0",
+    "paired_reference_barrier_required": true,
+    "target_open_only_after_checkpoint_freeze": true,
+    "no_target_metric_tuning": true,
+    "no_automatic_restart_or_skip_after_failure": true
+  }
+}

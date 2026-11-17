@@ -1,0 +1,96 @@
+{
+  "checked_at": "2026-09-29T12:28:15.571489+00:00",
+  "status": "running",
+  "complete": false,
+  "total_new_runs": 45,
+  "studies": [
+    {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929",
+      "bundle_sha256": "4fb22b1a2afb090e5dd8c64df2b6ca5748ebb1ee301368b818fecc841fab9854",
+      "job_count": 18,
+      "entry_module": "experiments.revision_validation.time_pooling_study"
+    },
+    {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929",
+      "bundle_sha256": "c98c640ac361a7888bb9a8c3a636781e8c7a9d6b117c34afeb5091a45a9a277f",
+      "job_count": 27,
+      "entry_module": "experiments.revision_validation.phase_followup_study"
+    }
+  ],
+  "coordinator": {
+    "pid": 7640,
+    "create_time": 1790684803.9035568,
+    "started_at": "2026-09-29T12:26:43.911162+00:00"
+  },
+  "coordinator_status": {
+    "status": "running",
+    "study_index": 0,
+    "updated_at": "2026-09-29T12:28:14.447963+00:00",
+    "pid": 7640,
+    "studies": [
+      {
+        "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929",
+        "total": 18,
+        "completed": 0,
+        "active": [
+          {
+            "job_id": "E1_G_NATIVE_MERGE_401",
+            "status": "running",
+            "epoch": 34,
+            "epochs": null,
+            "updated_at": "2026-09-29T12:28:10.745508+00:00"
+          }
+        ],
+        "queue": {
+          "status": "running",
+          "job_index": 0,
+          "job_id": "E1_G_NATIVE_MERGE_401",
+          "total_jobs": 18,
+          "bundle_sha256": "4fb22b1a2afb090e5dd8c64df2b6ca5748ebb1ee301368b818fecc841fab9854",
+          "pid": 27320,
+          "updated_at": "2026-09-29T12:13:09.342406+00:00"
+        }
+      },
+      {
+        "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929",
+        "total": 27,
+        "completed": 0,
+        "active": [],
+        "queue": {
+          "status": "pending"
+        }
+      }
+    ]
+  },
+  "first_job": {
+    "job_id": "E1_G_NATIVE_MERGE_401",
+    "status": {
+      "status": "running",
+      "epoch": 34,
+      "best_epoch": 24,
+      "best_source_macro_f1": 0.7389330444913466,
+      "pid": 27320,
+      "updated_at": "2026-09-29T12:28:10.745508+00:00",
+      "target_data_loaded": false
+    },
+    "checkpoint_verified": true,
+    "progress": {
+      "checkpoint": "resume_epoch_0034.pt",
+      "sha256": "2b0104bf6860b861e6ef35d4fbf8925efc1ec2884fb44d669c184d19527b74a3",
+      "completed_epochs": 34,
+      "updated_at": "2026-09-29T12:28:10.728506+00:00"
+    }
+  },
+  "source_training_started": true,
+  "new_target_results_available": false,
+  "phase27_frozen_and_queued": true,
+  "native_phase_rows": 9000,
+  "native_phase_dataset_manifest_sha256": "812e3394f06f21abf04d3ef2366c92ab2eeca7afb2478419da60671820da6c67",
+  "estimated_training_hours_from_historical_medians": 85.30214655862395,
+  "estimate_note": "Approximate, excludes interruptions and resource contention; not a completion guarantee",
+  "QA_receipts": {
+    "D:\\pa-csi-dg-revision-runtime\\qa\\revision_coordinator_20260929\\latest.json": "74ca20c5f855d6acb4498424b0f6568fb0b772d9050702c1f76e9c1d9b856145",
+    "D:\\pa-csi-dg-revision-runtime\\qa\\time_pooling_report_20260929.json": "f9f4e74d03df9e6ec6643f22fb875bf5662816db34389e80eee72b7305b8c18d",
+    "D:\\pa-csi-dg-revision-runtime\\qa\\phase_followup_report_20260929.json": "3d6861e0ed1104c0325720f124441a535725b23dcc4ab9d836aaff7679faef84"
+  }
+}

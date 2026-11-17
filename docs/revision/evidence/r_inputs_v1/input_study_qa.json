@@ -1,0 +1,245 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-03T17:35:35.075548+00:00",
+  "control_checks": {
+    "NATIVE_MERGE": {
+      "source_manifest_sha256": "8d507cccb89dbd87849f4aa83761d71d6739dc4987b06815ea583b7740c325d1",
+      "loss": 1.8974928855895996,
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "amp"
+      ]
+    },
+    "NATIVE_LINEAR": {
+      "source_manifest_sha256": "a71e6a98008b2bb6002cdd57acfc208efcfb616ab650f8877708950992874796",
+      "loss": 1.8933385610580444,
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "amp"
+      ]
+    },
+    "HIST_PHASE": {
+      "source_manifest_sha256": "c7b3d77bdb0ced10f8e8d0dc580172313ae99c9f5f24370ddfcc4dd28e7a737f",
+      "loss": 1.8231836557388306,
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "phase"
+      ]
+    },
+    "NATIVE_PHASE": {
+      "source_manifest_sha256": "b1b5b8416043f2fadd6e9f9527c846eea8cfbe0b7cad258de322f77baa9bf93b",
+      "loss": 1.8925144672393799,
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "phase"
+      ]
+    },
+    "DIFFERENTIAL_PHASE": {
+      "source_manifest_sha256": "36bd52603d64d67c10d35249744ce7b79d2d6ca0e3f0d91b975fa958c246c59a",
+      "loss": 1.8466137647628784,
+      "parameters": 1878142,
+      "active_CE_parameters": 1779454,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "phase"
+      ]
+    },
+    "TWIN_AA": {
+      "source_manifest_sha256": "a71e6a98008b2bb6002cdd57acfc208efcfb616ab650f8877708950992874796",
+      "loss": 1.8569718599319458,
+      "parameters": 3655286,
+      "active_CE_parameters": 3556598,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "amp"
+      ]
+    },
+    "TWIN_AP": {
+      "source_manifest_sha256": "36bd52603d64d67c10d35249744ce7b79d2d6ca0e3f0d91b975fa958c246c59a",
+      "loss": 1.776416540145874,
+      "parameters": 3655286,
+      "active_CE_parameters": 3556598,
+      "direct_CE_exact": true,
+      "optimizer_updates": 0,
+      "input_modalities": [
+        "amp",
+        "phase"
+      ]
+    }
+  },
+  "CPU_twin_resume": {
+    "model_exact": true,
+    "optimizer_exact": true,
+    "rng_exact": true,
+    "history_exact": true,
+    "source_predictions_exact": true
+  },
+  "resume_trajectories": 2,
+  "epochs_per_trajectory": 2,
+  "updates_per_epoch": 2,
+  "target_data_loaded": false,
+  "source_identities": [
+    {
+      "sample_id": "E3:2977",
+      "label": 3,
+      "subject_id": "E3:S30",
+      "acquisition_id": "E3:S30:C04:T18"
+    },
+    {
+      "sample_id": "E3:0836",
+      "label": 0,
+      "subject_id": "E3:S23",
+      "acquisition_id": "E3:S23:C04:T17"
+    },
+    {
+      "sample_id": "E3:1821",
+      "label": 1,
+      "subject_id": "E3:S27",
+      "acquisition_id": "E3:S27:C01:T02"
+    },
+    {
+      "sample_id": "E2:2263",
+      "label": 2,
+      "subject_id": "E2:S18",
+      "acquisition_id": "E2:S18:C03:T04"
+    },
+    {
+      "sample_id": "E2:0712",
+      "label": 1,
+      "subject_id": "E2:S13",
+      "acquisition_id": "E2:S13:C02:T13"
+    },
+    {
+      "sample_id": "E3:2294",
+      "label": 4,
+      "subject_id": "E3:S28",
+      "acquisition_id": "E3:S28:C03:T15"
+    },
+    {
+      "sample_id": "E2:2888",
+      "label": 4,
+      "subject_id": "E2:S20",
+      "acquisition_id": "E2:S20:C03:T09"
+    },
+    {
+      "sample_id": "E2:1596",
+      "label": 0,
+      "subject_id": "E2:S16",
+      "acquisition_id": "E2:S16:C02:T17"
+    },
+    {
+      "sample_id": "E3:1182",
+      "label": 5,
+      "subject_id": "E3:S24",
+      "acquisition_id": "E3:S24:C05:T03"
+    },
+    {
+      "sample_id": "E2:0591",
+      "label": 5,
+      "subject_id": "E2:S12",
+      "acquisition_id": "E2:S12:C05:T12"
+    },
+    {
+      "sample_id": "E2:0859",
+      "label": 3,
+      "subject_id": "E2:S13",
+      "acquisition_id": "E2:S13:C04:T20"
+    },
+    {
+      "sample_id": "E3:2580",
+      "label": 4,
+      "subject_id": "E3:S29",
+      "acquisition_id": "E3:S29:C03:T01"
+    },
+    {
+      "sample_id": "E3:1800",
+      "label": 0,
+      "subject_id": "E3:S27",
+      "acquisition_id": "E3:S27:C01:T01"
+    },
+    {
+      "sample_id": "E3:2271",
+      "label": 2,
+      "subject_id": "E3:S28",
+      "acquisition_id": "E3:S28:C03:T12"
+    },
+    {
+      "sample_id": "E2:2728",
+      "label": 1,
+      "subject_id": "E2:S20",
+      "acquisition_id": "E2:S20:C01:T09"
+    },
+    {
+      "sample_id": "E2:2456",
+      "label": 0,
+      "subject_id": "E2:S19",
+      "acquisition_id": "E2:S19:C01:T17"
+    }
+  ],
+  "opened_source_paths": [
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_2.npy",
+    "C:\\Users\\howie\\Desktop\\enhanced\\PA-CSI-HAR\\datasets\\PA-CSI datasets\\MultiEnv\\label_6c_3.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\historical_feature_axis_unwrap\\E2_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\historical_feature_axis_unwrap\\E3_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\native_time_differential_phase\\E2_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\native_time_differential_phase\\E3_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\native_time_phase\\E2_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\modality_arrays_v1\\native_time_phase\\E3_phase.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\E2_label.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\E3_label.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\E2_amp.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\E3_amp.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\E2_amp.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\E3_amp.npy"
+  ],
+  "full_training_completed": false,
+  "twin_same_amplitude_and_model_initialization": true,
+  "single_same_R10_initialization": true,
+  "compiled_dataset_manifest_sha256": {
+    "native": "2d1ae9d9f570fcc0e137297daaa9dc3aaf504558c9628ef101ef75238a252f73",
+    "modality": "fed82c5eff308ce864d192abd0a50b129bac031f81c659274941badc932842c0"
+  },
+  "code_sha256": {
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments/tpp_isolated/tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+    "experiments/supcon_tpp_joint/protocol.py": "64a928834c7399b688630bf22120e1c16f7bc8bf185c0a5965d3723481626472",
+    "experiments/supcon_tpp_joint/runner_utils.py": "a139f322421daf9ea5af4a98efb4d72b7d727bed1970da54128881959bf16be4",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "experiments/revision_validation/prepare_verified_protocol.py": "a4d1929dbba604e13579b87248470bfe6358a0c910946f823eec70ccc6bc3c66",
+    "experiments/revision_validation/train_source.py": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+    "experiments/revision_validation/study_io.py": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+    "experiments/revision_validation/study_engine.py": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+    "experiments/revision_validation/freeze_study.py": "a82c734f2da97850061ca044c940653723d8a5e83b05bd38a97777e2b114f027",
+    "experiments/revision_validation/evaluate_study.py": "4d24cd2d2a537b3a91a4ba5c9b892ceb9dbf9f8a1fb84e44630dc768ba0998ab",
+    "experiments/revision_validation/resume_qa.py": "256decb5481dddf61b8826594d9920fcc6e39f47905f628671cf817782c22cfe",
+    "experiments/revision_validation/control_components.py": "34b5476ad463a99d53ef799ee0c92f097f57f770df57141486a33a2036afd94e",
+    "experiments/revision_validation/experiment_data.py": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+    "experiments/revision_validation/experiment_design.py": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0",
+    "experiments/revision_validation/extended_engine.py": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715",
+    "experiments/revision_validation/extended_evaluate.py": "2117bf7c85a4078dc55eb8e5fcb8ba4ab23d56fa7ce1bd0ee3c08fd4ea3d8d5e",
+    "experiments/revision_validation/freeze_controls.py": "fccad8c8c0b8f6b7ebd788f205caeb4abd87d2aa44169dc46f026fec13990a3e",
+    "experiments/revision_validation/extension_qa.py": "6886ee52dafafb89889af1c1131cf1e4da0f353a50f8c691af3b28dbb75dcf8d",
+    "experiments/revision_validation/modality_models.py": "80146db5a9ecd7d048d28dc207e29be7020518b862fc069c17ba85cf68c8a573",
+    "experiments/revision_validation/input_study_design.py": "35e6a0d56e11f8bfb4db07f52893bede0521d0356550b71162ea674c629453d5",
+    "experiments/revision_validation/input_study_engine.py": "e535fbd7aa8255d93b3aa28894c49132819732f1cbe26e6d63faf1018050cb3d",
+    "experiments/revision_validation/freeze_inputs.py": "4677014c9ed7be2b5af8fe77608ed7365cde805cd779ee07e4afcf0747583152",
+    "experiments/revision_validation/input_study_qa.py": "254385b6b1339a18f3d9d023a196bbe0fbcbef28697e942bfe9e7ba58e991d61"
+  }
+}

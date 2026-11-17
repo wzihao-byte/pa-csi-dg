@@ -1,0 +1,1195 @@
+{
+  "schema": "time-validation-protocol-audit/v1",
+  "checked_at": "2026-09-29T12:05:55.334795+00:00",
+  "passed": true,
+  "audit_script_sha256": "c10d4c9174440be4ec007168f755d96aec5affb00c1258a8df34abb994daf04a",
+  "target_signal_loaded": false,
+  "source_signal_loaded": false,
+  "optimizer_steps_performed": 0,
+  "core_bundle_sha256": "16ffc8361e67c6d5bd22cbc65d840749a28d52327535ebb8772136555736d914",
+  "inputs_bundle_sha256": "4c49208ea104e05f18f338501342dcdc73aa03fe836c95cc1a56dcd0479d6619",
+  "scientific_code_checks": {
+    "dg_dataset.py": {
+      "sha256": {
+        "core": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+        "inputs": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+        "working_tree": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd"
+      },
+      "identical": true
+    },
+    "dg_models.py": {
+      "sha256": {
+        "core": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+        "inputs": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+        "working_tree": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07"
+      },
+      "identical": true
+    },
+    "dg_losses.py": {
+      "sha256": {
+        "core": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+        "inputs": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+        "working_tree": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc"
+      },
+      "identical": true
+    },
+    "experiments/tpp_isolated/tpp_models.py": {
+      "sha256": {
+        "core": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+        "inputs": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+        "working_tree": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/models.py": {
+      "sha256": {
+        "core": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+        "inputs": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+        "working_tree": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/source_data.py": {
+      "sha256": {
+        "core": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+        "inputs": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+        "working_tree": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/study_engine.py": {
+      "sha256": {
+        "core": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+        "inputs": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+        "working_tree": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/study_io.py": {
+      "sha256": {
+        "core": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+        "inputs": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+        "working_tree": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/train_source.py": {
+      "sha256": {
+        "core": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+        "inputs": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+        "working_tree": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/experiment_data.py": {
+      "sha256": {
+        "inputs": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+        "working_tree": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/experiment_design.py": {
+      "sha256": {
+        "inputs": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0",
+        "working_tree": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0"
+      },
+      "identical": true
+    },
+    "experiments/revision_validation/extended_engine.py": {
+      "sha256": {
+        "inputs": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715",
+        "working_tree": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715"
+      },
+      "identical": true
+    }
+  },
+  "ordered_identity_checks": {
+    "E1": {
+      "NATIVE_MERGE": {
+        "source_manifest_sha256": "8d507cccb89dbd87849f4aa83761d71d6739dc4987b06815ea583b7740c325d1",
+        "target_manifest_sha256": "27a99871c25576c6a05d1d3509de2df1d3b06db0afde06ebc27be02552a46d40",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      },
+      "NATIVE_LINEAR": {
+        "source_manifest_sha256": "a71e6a98008b2bb6002cdd57acfc208efcfb616ab650f8877708950992874796",
+        "target_manifest_sha256": "f7241138fe5e51484ac0d637670aa282ab7d641b2855bf4a10589c18ea24c46d",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      }
+    },
+    "E2": {
+      "NATIVE_MERGE": {
+        "source_manifest_sha256": "bfceee70da3650f648f3d299da4f7924a43558a370e7ac483af5c64c306d0d91",
+        "target_manifest_sha256": "35230be0d0b738d2691a44ac2b8a7bb198ca3be2543b4df3dafb06b620a2a786",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      },
+      "NATIVE_LINEAR": {
+        "source_manifest_sha256": "464b109e85b036f2b5285ff16f96b293e5f092610669372ec9505771841a454b",
+        "target_manifest_sha256": "35666465586058a59298495687ca410f92c74a59243ce9b27b182b3ccd512136",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      }
+    },
+    "E3": {
+      "NATIVE_MERGE": {
+        "source_manifest_sha256": "7b01ff71db1966d29b72fd68aefa08dcb8cae55cea98f1c7d26f9e4a6918fbc4",
+        "target_manifest_sha256": "f5de588dc7361286b31b4f170fb44bc8134dd69c49e17442b457087d1c4095ef",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      },
+      "NATIVE_LINEAR": {
+        "source_manifest_sha256": "fe920e45ae3ebd15d526bf39a15d8d5cbb8d5b886f0e15a4a60de43fcf38846f",
+        "target_manifest_sha256": "6fe6c68b0e7865a2328d33d1e1d22625aa1acbe704d32b076880b5eaa1ea4920",
+        "ordered_train_val_test_identities_equal": true,
+        "original_MAT_identity_mapping_verified": true,
+        "counts": {
+          "train": 4800,
+          "val": 1200,
+          "test": 3000
+        }
+      }
+    }
+  },
+  "verified_completed_runs": {
+    "E1_R00_401": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "85b36e19edee48b3621b19fa865ed51fd52b26d98d3371e46ca08e0700a9c66a",
+      "status_sha256": "975ae987f8d7befe21cb70476fb3d8dbe1aa4baca811965edc54efefd325f790",
+      "optimizer_updates": 60000,
+      "best_epoch": 182,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_R10_401": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "3062474f987ed3bfd1cffe728034cb455c4312e1f7151dad29a264384f9e8777",
+      "status_sha256": "8d106d694a91b42e5355e56b4fb489a3975181948a49ad05393af77759c18af4",
+      "optimizer_updates": 60000,
+      "best_epoch": 119,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_MERGE_401": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "ebcef022ec159cab057e040cc5c2a4afed6c03041b98300d5cc4016dcbe29358",
+      "status_sha256": "4d3e7385ada2013e4c7c2d5a60e8e4a6463ff42dfac8548e526964276bd9e45c",
+      "optimizer_updates": 60000,
+      "best_epoch": 43,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_LINEAR_401": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "668ce676b37dc2d6dfdc5f8223d5554bb02c479f85aa35314740221a283a8500",
+      "status_sha256": "c94602231663c9a9d389b943eda26a3db79808be10d9fc848ee483e0f8784298",
+      "optimizer_updates": 60000,
+      "best_epoch": 52,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_R00_402": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "8589430553f54d528b3d2df77381143ec2b1f526f87af27b30cdfde9b68c081c",
+      "status_sha256": "d251167a8abd03ffee56229b1f6de254dbbd543f5ff8be7aec07c47568271df0",
+      "optimizer_updates": 60000,
+      "best_epoch": 18,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_R10_402": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "48c8affbe482a73168a1229b2b4f62e61ddae03973674524e0b871ec39431d3c",
+      "status_sha256": "9dde06a4f717c51bbe8f5e334900ba1e94ad9104af8e10150385b6f1c8dca9f4",
+      "optimizer_updates": 60000,
+      "best_epoch": 27,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_MERGE_402": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "38461b57ce7fa549e3a5987251ded72ee234463fd59bd5af30c9df47949c31ca",
+      "status_sha256": "f876c6077f77408f5484cd39e58e0fcb07a274c6ae84675ac4c9fda35086a235",
+      "optimizer_updates": 60000,
+      "best_epoch": 61,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_LINEAR_402": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "ee4ccb82846c90ea707fa84796dd5f54d4eb1783f5df1735a4be252c53ab66ac",
+      "status_sha256": "3f1de20ab0cd22995439babd99e64e94118d8edbe80c2483d18a168e4ab17e26",
+      "optimizer_updates": 60000,
+      "best_epoch": 72,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_R00_403": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "64563a7c9616dcd9f8773e590c5e67d9c5829a82ed036207686fcf19fd052f53",
+      "status_sha256": "c2563547009ffbc317bb6e4a76017bd391be5b8b1e7de15beb6a845780a1d300",
+      "optimizer_updates": 60000,
+      "best_epoch": 48,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_R10_403": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "07e06101649f912cdb6d83d669e7b957b344addae29ecfa202c74e499081f66e",
+      "status_sha256": "41dcc2f2e1b700936fcf623eb2d5a5ea255e9871f020cdbcc4659b8a25dfdb5b",
+      "optimizer_updates": 60000,
+      "best_epoch": 58,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_MERGE_403": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "7b16b7ae69fda25c53aa92aeb7f93e1212fbc9d4bfe43e4e99beb516bdfa77fd",
+      "status_sha256": "48546ac6583c4b766900f390cfdd493a934c94f4e2014fe27340e94bc48d28d5",
+      "optimizer_updates": 60000,
+      "best_epoch": 154,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E1_I_NATIVE_LINEAR_403": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "13973ce3b5ed26fed6237e0c6988b234baefaf75dae4c7707a470be7b056fdec",
+      "status_sha256": "665d1fbb29ca4d6a7b8496032cbf0a07b74e61981237e3002807eee98c3c17f9",
+      "optimizer_updates": 60000,
+      "best_epoch": 53,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R00_501": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "9003b8db37fe974b9e234fc8ef8ba5f9c90d850401c16820e0c5a3543673ee8a",
+      "status_sha256": "226b345af653eb85f89dffea40ae2526615d180b2041146fedacf0a371b16b9f",
+      "optimizer_updates": 60000,
+      "best_epoch": 6,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R10_501": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "85928d57e9d82674867074d1da478179245befb434e0438b52a6c677f48a78a6",
+      "status_sha256": "48a9c9131b8e47677e00657d5f41bfb028b87169daa8eb0156546fccb442deab",
+      "optimizer_updates": 60000,
+      "best_epoch": 92,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_MERGE_501": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "62a8ccfbe28b6c1a07d158ae6d2b3340e2ac33aa4aaeb7b3204ee6a18a880c08",
+      "status_sha256": "caf80b97851d03dce0069dc0caed4605a8b3a84f377af2f672b0b0d4f4c9257b",
+      "optimizer_updates": 60000,
+      "best_epoch": 16,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_LINEAR_501": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "3b01d19102e0253491618669c646cc975612dfe8a468094dcc827cade8a03824",
+      "status_sha256": "b6d2c36a9ce7906a9006ac0bc1ce3a0848e79ecf7db3eb51020c624fc63c1ab0",
+      "optimizer_updates": 60000,
+      "best_epoch": 177,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R00_502": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "e94182a6aa68511a1ad53d0343251cac4245c2b52edc0a836f2d1e53ae9ca3f1",
+      "status_sha256": "3f615a5d90a80f94ae249cc9881a68d5247e243d7f477084da117dce288cbee4",
+      "optimizer_updates": 60000,
+      "best_epoch": 40,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R10_502": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "94b3c0a7dc212c18d1e934b8b72c07d37d3523f21c200fc02ce79740dbfaa78a",
+      "status_sha256": "a35006e52a22a820cfc064b87f56d6850d7267bcf40729ce6c8bcd55b27e726c",
+      "optimizer_updates": 60000,
+      "best_epoch": 68,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_MERGE_502": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "b10326a8b54cee77508bbda22ca045e2c5a0b1920b4cccc5df6f1d6964b62eb4",
+      "status_sha256": "8c383b5475f8a3bee75e3ea73f7ae36be12d18905de8625d0d46f0af67e58db2",
+      "optimizer_updates": 60000,
+      "best_epoch": 38,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_LINEAR_502": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "e4ad3b10bf69e26af0c3b82f2544bc56d7c78c73083e8f1ca6f65dd2cc92d50f",
+      "status_sha256": "174d836e5ba799f6975eef7ab34275dc508975f24f510529843c8f1ef7c7373c",
+      "optimizer_updates": 60000,
+      "best_epoch": 32,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R00_503": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "f171e349838f1f0831bc66d67f0fe71a6ba37f019d12c1d3eafe65767aaf60a5",
+      "status_sha256": "9f64c57a13956bcf93c89f1d22a58916df5ad3cfeefdb0db9bda3762594adb3c",
+      "optimizer_updates": 60000,
+      "best_epoch": 38,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_R10_503": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "f3b4701ceb86a3548de050ff1c17e2887bb287785c7c6a161b6146ce413b268b",
+      "status_sha256": "a946ec1eddbab691170ba1b4da1cc2ece494d162493e97b78a48ca9c49ad5454",
+      "optimizer_updates": 60000,
+      "best_epoch": 106,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_MERGE_503": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "982226c20645cf1524e73e07a0754b1e4cb6f1d99935c7a61d17f0d469961f17",
+      "status_sha256": "fb97142168699b9db4673a471786021e95d35d685682c5673871a6aca7fcb678",
+      "optimizer_updates": 60000,
+      "best_epoch": 57,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E2_I_NATIVE_LINEAR_503": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "b2f66022ab3e49d4f9b6e1782d6a3b567dbdbe7b087c86df9e54f770d57e9a40",
+      "status_sha256": "2040db89d92fde56d5238d3d5f4a87bfa38a31d9dc55d0fb91190432e2bae8fe",
+      "optimizer_updates": 60000,
+      "best_epoch": 24,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R00_601": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "728be5358971c5e13996459248a3a3bca70a7a07afe2b66cb882bd6275f4e38b",
+      "status_sha256": "a82d6af2d31e82de080b7a5456397eee2e45d22a6ce62188dc95a3b82fa95978",
+      "optimizer_updates": 60000,
+      "best_epoch": 150,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R10_601": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "31955891169af06a5d643c84881f5e6e1fdd78d3698227f2e6aebae0d009e68e",
+      "status_sha256": "7e3f50fcb28286b5b193114cdfc31cb502b1adcb83b1407b780c2c792cbadac8",
+      "optimizer_updates": 60000,
+      "best_epoch": 26,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_MERGE_601": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "e06d9c4bb3d23370a983ca6f3c66b8d5e5941e82e216699616857dda58b70914",
+      "status_sha256": "94614e076f150e0c2570a3354a5317c7313c83c61cbdab98a35b91fceca95f2a",
+      "optimizer_updates": 60000,
+      "best_epoch": 20,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_LINEAR_601": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "c1f2f79b70997b866fc1e9db180d754c0a3d507c1d2aefaf5771045ce7ed4cc9",
+      "status_sha256": "acaf0d35f1f385589ad04582d58e4a69ddecfc9a91cccdb18e097b746ae6cddf",
+      "optimizer_updates": 60000,
+      "best_epoch": 160,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R00_602": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "e146f26e7ca3c341bc5f433673b2688100f21cc57a3c3db1bac02b3cda4568fb",
+      "status_sha256": "a1b9c51fccc6b45afc43a2f8025c56104915f43315f7cc6dfd12868a6f546c0e",
+      "optimizer_updates": 60000,
+      "best_epoch": 8,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R10_602": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "c8efcd2d6c57eecc9e47c2b8851c0a98a8cad9621cc69ea4c2903060aaa7cb27",
+      "status_sha256": "e59f0fdabcd9be3f029e48d14dec81a5e72aa3d4a8f557ed58b6d9eb280b3538",
+      "optimizer_updates": 60000,
+      "best_epoch": 55,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_MERGE_602": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "d25b1770756233747c57f8e64f3c51328456fda9fde603d1000766df9c69a138",
+      "status_sha256": "254ae4bc0145b3157cefd180b027509963f709339351e61250d46f06e8b0d8f5",
+      "optimizer_updates": 60000,
+      "best_epoch": 78,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_LINEAR_602": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "73c7c53dd2f9989782ec13d46c7e0dd4a4ce957aeac069534369ff72e8c6e8b2",
+      "status_sha256": "5162f3ddde62beb40e67f82f1f642874833f7fd48c68a47b0a801d9aadc4c644",
+      "optimizer_updates": 60000,
+      "best_epoch": 79,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R00_603": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "f61a8cea8ee6951f80831af65daa7517455afcef61212858be8aedec5e50f79a",
+      "status_sha256": "94f95cf0cb3c18a16264a379a58af3273ba2ca746837f66940baeac60195785a",
+      "optimizer_updates": 60000,
+      "best_epoch": 66,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_R10_603": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_core_v1",
+      "config_value_sha256": "84041a5074863e8c6ece71d8f5b55d20692a95ec7601d897c0353a243118eade",
+      "status_sha256": "d04d5a5be59c48dc39225cf6b1fa5aa3a67c241dad5d710cefcf8be61a41a485",
+      "optimizer_updates": 60000,
+      "best_epoch": 38,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_MERGE_603": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "90185828f0e766567f69d8194b65e2c9163e715825fd40585442cd85d35ac4c9",
+      "status_sha256": "b8222d86f43bfe0a1a463fdc4955235e1b45471765860fc699f7437b1f9754c4",
+      "optimizer_updates": 60000,
+      "best_epoch": 45,
+      "artifacts_and_earliest_source_max_verified": true
+    },
+    "E3_I_NATIVE_LINEAR_603": {
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_inputs_v1",
+      "config_value_sha256": "12149edbee5220c62b4921c4a652845b23be8da581c95c06a58536d77c23973c",
+      "status_sha256": "8e40ae899ef771ad3b5cae21ec0cbb7bdf1cc21930874b4f9dc006a6d0730125",
+      "optimizer_updates": 60000,
+      "best_epoch": 71,
+      "artifacts_and_earliest_source_max_verified": true
+    }
+  },
+  "proposed_pairs": [
+    {
+      "target": "E1",
+      "seed": 401,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E1_I_NATIVE_MERGE_401",
+      "reference_config_value_sha256": "ebcef022ec159cab057e040cc5c2a4afed6c03041b98300d5cc4016dcbe29358",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "6c40920ee077c82865bb45b90589e2dde55a61c6bd4059d7c300b84610663516",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E1",
+      "seed": 401,
+      "input_variant": "native_time_linear",
+      "reference_job": "E1_I_NATIVE_LINEAR_401",
+      "reference_config_value_sha256": "668ce676b37dc2d6dfdc5f8223d5554bb02c479f85aa35314740221a283a8500",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "6c40920ee077c82865bb45b90589e2dde55a61c6bd4059d7c300b84610663516",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E1",
+      "seed": 402,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E1_I_NATIVE_MERGE_402",
+      "reference_config_value_sha256": "38461b57ce7fa549e3a5987251ded72ee234463fd59bd5af30c9df47949c31ca",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "84f8582f60887f7f66c712d010a824ab1f02cddde203f05e44325fd024929f38",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E1",
+      "seed": 402,
+      "input_variant": "native_time_linear",
+      "reference_job": "E1_I_NATIVE_LINEAR_402",
+      "reference_config_value_sha256": "ee4ccb82846c90ea707fa84796dd5f54d4eb1783f5df1735a4be252c53ab66ac",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "84f8582f60887f7f66c712d010a824ab1f02cddde203f05e44325fd024929f38",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E1",
+      "seed": 403,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E1_I_NATIVE_MERGE_403",
+      "reference_config_value_sha256": "7b16b7ae69fda25c53aa92aeb7f93e1212fbc9d4bfe43e4e99beb516bdfa77fd",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "8a23be52f88fcd584b86115e75ef8c20491f5bcb40bf416a3525d2e2c4d127f6",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E1",
+      "seed": 403,
+      "input_variant": "native_time_linear",
+      "reference_job": "E1_I_NATIVE_LINEAR_403",
+      "reference_config_value_sha256": "13973ce3b5ed26fed6237e0c6988b234baefaf75dae4c7707a470be7b056fdec",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "8a23be52f88fcd584b86115e75ef8c20491f5bcb40bf416a3525d2e2c4d127f6",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 501,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E2_I_NATIVE_MERGE_501",
+      "reference_config_value_sha256": "62a8ccfbe28b6c1a07d158ae6d2b3340e2ac33aa4aaeb7b3204ee6a18a880c08",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "a1ee38f7feb93906b55f4c8a7ec1a6c08c68fb8e7300e525c3b8465e0905b9b2",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 501,
+      "input_variant": "native_time_linear",
+      "reference_job": "E2_I_NATIVE_LINEAR_501",
+      "reference_config_value_sha256": "3b01d19102e0253491618669c646cc975612dfe8a468094dcc827cade8a03824",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "a1ee38f7feb93906b55f4c8a7ec1a6c08c68fb8e7300e525c3b8465e0905b9b2",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 502,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E2_I_NATIVE_MERGE_502",
+      "reference_config_value_sha256": "b10326a8b54cee77508bbda22ca045e2c5a0b1920b4cccc5df6f1d6964b62eb4",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "f2ec265b1d965ee5d9aad63d9c7a890381666d46824f37a445e3c37b1aa427ea",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 502,
+      "input_variant": "native_time_linear",
+      "reference_job": "E2_I_NATIVE_LINEAR_502",
+      "reference_config_value_sha256": "e4ad3b10bf69e26af0c3b82f2544bc56d7c78c73083e8f1ca6f65dd2cc92d50f",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "f2ec265b1d965ee5d9aad63d9c7a890381666d46824f37a445e3c37b1aa427ea",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 503,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E2_I_NATIVE_MERGE_503",
+      "reference_config_value_sha256": "982226c20645cf1524e73e07a0754b1e4cb6f1d99935c7a61d17f0d469961f17",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "e9f9ba1f0ad555f07558237c140d83436838154c4398478a8444de7db93b5dc3",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E2",
+      "seed": 503,
+      "input_variant": "native_time_linear",
+      "reference_job": "E2_I_NATIVE_LINEAR_503",
+      "reference_config_value_sha256": "b2f66022ab3e49d4f9b6e1782d6a3b567dbdbe7b087c86df9e54f770d57e9a40",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "e9f9ba1f0ad555f07558237c140d83436838154c4398478a8444de7db93b5dc3",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 601,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E3_I_NATIVE_MERGE_601",
+      "reference_config_value_sha256": "e06d9c4bb3d23370a983ca6f3c66b8d5e5941e82e216699616857dda58b70914",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "8b147bd5eb6af75a6987256366c8fba6596d48225c7c5950504c4ce5eef15904",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 601,
+      "input_variant": "native_time_linear",
+      "reference_job": "E3_I_NATIVE_LINEAR_601",
+      "reference_config_value_sha256": "c1f2f79b70997b866fc1e9db180d754c0a3d507c1d2aefaf5771045ce7ed4cc9",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "8b147bd5eb6af75a6987256366c8fba6596d48225c7c5950504c4ce5eef15904",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 602,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E3_I_NATIVE_MERGE_602",
+      "reference_config_value_sha256": "d25b1770756233747c57f8e64f3c51328456fda9fde603d1000766df9c69a138",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "774ae43e6237ef26eef977d827a81747c8fdecc6dc97e657528226bfe1ce781e",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 602,
+      "input_variant": "native_time_linear",
+      "reference_job": "E3_I_NATIVE_LINEAR_602",
+      "reference_config_value_sha256": "73c7c53dd2f9989782ec13d46c7e0dd4a4ce957aeac069534369ff72e8c6e8b2",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "774ae43e6237ef26eef977d827a81747c8fdecc6dc97e657528226bfe1ce781e",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 603,
+      "input_variant": "native_time_legacy_merge",
+      "reference_job": "E3_I_NATIVE_MERGE_603",
+      "reference_config_value_sha256": "90185828f0e766567f69d8194b65e2c9163e715825fd40585442cd85d35ac4c9",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "0511820523fbd52ec984cd33b5ba828ce4c94525878c2ac42e6c28678104aaea",
+      "proposed_model_exactly_equals_R00_initialization": true
+    },
+    {
+      "target": "E3",
+      "seed": 603,
+      "input_variant": "native_time_linear",
+      "reference_job": "E3_I_NATIVE_LINEAR_603",
+      "reference_config_value_sha256": "12149edbee5220c62b4921c4a652845b23be8da581c95c06a58536d77c23973c",
+      "fixed_keys_equal_to_core_R00": [
+        "stage",
+        "target_name_only",
+        "seed",
+        "model",
+        "epochs",
+        "updates_per_epoch",
+        "batch_size",
+        "device",
+        "optimizer",
+        "learning_rate",
+        "weight_decay",
+        "scheduler",
+        "lambda_supcon",
+        "temperature",
+        "warmup_steps",
+        "checkpoint_metric",
+        "tie_rule",
+        "expected_runtime",
+        "target_data_loaded",
+        "hyperparameter_search_trials",
+        "development_environments",
+        "phase_loaded"
+      ],
+      "all_200_epoch_schedules_regenerated_and_equal": true,
+      "schedule_sequence_sha256": "0511820523fbd52ec984cd33b5ba828ce4c94525878c2ac42e6c28678104aaea",
+      "proposed_model_exactly_equals_R00_initialization": true
+    }
+  ],
+  "shared_initialization": [
+    {
+      "target": "E1",
+      "seed": 401,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E1",
+      "seed": 402,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E1",
+      "seed": 403,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E2",
+      "seed": 501,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E2",
+      "seed": 502,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E2",
+      "seed": 503,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E3",
+      "seed": 601,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E3",
+      "seed": 602,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    },
+    {
+      "target": "E3",
+      "seed": 603,
+      "common_tensors_exactly_equal": 182,
+      "total_parameters_each": 1878142,
+      "projection_head_parameters_each": 98688,
+      "classification_parameters_each": 1779454
+    }
+  ],
+  "synthetic_CE_checks": {
+    "R00": {
+      "direct_CE_exact": true,
+      "active_CE_parameters": 1779454,
+      "unused_projection_parameters": 98688,
+      "finite_gradients": true,
+      "optimizer_steps": 0,
+      "device": "cpu",
+      "signal_data_loaded": false
+    },
+    "R10": {
+      "direct_CE_exact": true,
+      "active_CE_parameters": 1779454,
+      "unused_projection_parameters": 98688,
+      "finite_gradients": true,
+      "optimizer_steps": 0,
+      "device": "cpu",
+      "signal_data_loaded": false
+    }
+  },
+  "recommendations_and_limits": [
+    "Create a new study; never add runs or mutate protocols in r_core_v1 or r_inputs_v1.",
+    "Copy the input-study frozen scientific code. Use extended_engine.train_experiment and the VerifiedInputs adapter.",
+    "Set BOTH arm and experiment.base_arm to R00; pool remains unchanged, objective ce, model_kind single. No head_kind field is consumed.",
+    "Copy each B/C source and deferred-target manifest without modifying contents. Bind their SHA256 in each new configuration.",
+    "Keep total_parameters 1878142. Verify active CE/inference classification count 1779454; the 98688 projection-head parameters are unused by CE.",
+    "Keep all nine matched fold/seed combinations, 200 epochs x 300 updates, batch 16, fixed Adam/LR, and earliest source-validation macro-F1 checkpoint.",
+    "Sampler is fixed at 16 samples: eight per source environment, every class per source, epoch-seeded independently of model initialization.",
+    "Do not replace cached native arrays or cast/resample them again. VerifiedInputs hashes the actual files and casts batches to float32.",
+    "Resource profiling uses a separate model and no optimizer updates. Training RNG resets to seed+17 after constructing the training model.",
+    "Use a separate new run directory per configuration. A resume requires exact config/runtime/model/optimizer/RNG hashes; recorded failures must be diagnosed.",
+    "Require every one of the 18 new source jobs to finish and verify before new target evaluation. Existing E1-E3 scores have been observed, so this is development extension evidence.",
+    "The stock extended evaluator pairs only same-study or core-reference results; it does not directly resolve historical input-study TPP references. Add explicit cross-bundle keyed pairing after verifying all reference hashes.",
+    "Historical A uses MAT provenance; native B/C use DAT provenance. A-to-B includes representation/origin differences and is not a pure isolated timestamp manipulation.",
+    "B-to-C shares native clock and record identities but changes merge/interpolation processing; primary inference compares TPP-minus-global within each input version.",
+    "CUDA adaptive max-pool backward remains nondeterministic. Matched seeds and common initialization do not imply bitwise replay on GPU."
+  ]
+}

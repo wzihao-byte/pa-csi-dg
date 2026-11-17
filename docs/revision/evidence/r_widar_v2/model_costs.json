@@ -1,0 +1,50 @@
+{
+  "R00": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "R01": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "R10": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  },
+  "R11": {
+    "parameters": 1878142,
+    "counted_inference_macs": {
+      "conv1d": 427540980,
+      "linear": 2071184,
+      "attention": 243780000,
+      "position_embedding": 382500,
+      "total_counted_macs": 673774664,
+      "excludes": "pool comparisons, softmax, normalization, activations, bias additions, data movement",
+      "projection_head_used": false
+    }
+  }
+}

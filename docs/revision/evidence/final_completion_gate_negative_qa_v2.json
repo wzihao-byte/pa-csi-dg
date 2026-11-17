@@ -1,0 +1,15 @@
+{
+  "schema": "pa-csi-dg-final-completion-negative-gate/v1",
+  "version": 2,
+  "checked_at": "2026-09-03T19:00:45.1711701Z",
+  "expected_rejection": true,
+  "exit_code": 1,
+  "completion_audit_created": false,
+  "direct_historical_checkpoint_verification": {
+    "Y": 36,
+    "unique": 72,
+    "H": 36
+  },
+  "verifier_sha256": "c3f866c847e140c994b8a566db11a8be7f1ae2e57592dc4158a4398b985c70f6",
+  "stderr": "Traceback (most recent call last):\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 326, in <module>\r\n    main()\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 286, in main\r\n    formal, evidence_manifest = verify_formal_evidence(evidence)\r\n                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 72, in verify_formal_evidence\r\n    require(formal_path.is_file() and manifest_path.is_file(), \"Formal evidence is absent\")\r\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\verify_final_revision_completion.py\", line 58, in require\r\n    raise RuntimeError(message)\r\nRuntimeError: Formal evidence is absent\r\n"
+}

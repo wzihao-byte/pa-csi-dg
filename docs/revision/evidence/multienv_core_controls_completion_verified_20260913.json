@@ -1,0 +1,38 @@
+{
+  "heartbeat_triggered_at": "2026-09-13T15:30:23.072Z",
+  "full_revision_completed": false,
+  "verification_function": "analysis.compile_formal_revision_evidence.verify_study",
+  "core": {
+    "verified_runs": 36,
+    "verified_target_results": 36,
+    "verified_prediction_and_result_files": 72,
+    "evaluation_summary_sha256": "7c2b75955821a80cbabe50bbc1af018bb6baa1d240a109afce1e2053239c35a6",
+    "target_gate_sha256": "588bde06aae70ae74be7822f30d8c251ebb130c7a8dd3333b520f570f0a3e41a"
+  },
+  "controls": {
+    "verified_runs": 81,
+    "verified_target_results": 81,
+    "verified_prediction_and_result_files": 162,
+    "bundle_sha256": "64c8032078d9a4dfa531b94e89fec9d9caf675b750bcabcb7881f76468a1aa92",
+    "evaluation_summary_sha256": "8e6a06dc38f82cf2477115480505c34ef08de18f5111439171c5c5764bf7d2c1",
+    "target_gate_sha256": "cc47aa3f66bc62068a54024477df496bb5756d371161bbbb316bff21b5c1bc4e",
+    "source_status_target_gate_binding_verified": true
+  },
+  "source_analyses": {
+    "verified_analyses": 117,
+    "completion_path": "D:/pa-csi-dg-revision-runtime/coordinators/formal_source_analysis_v3/completion.json",
+    "completion_sha256": "481767f5c2b05137c83e1ee61ec0528af2b6ef81bbb8bbaa5b13aa5fc54a383b",
+    "frozen_code_hashes_verified": 29,
+    "target_data_loaded": false,
+    "coordinator_exited_normally": true
+  },
+  "inputs": {
+    "status": "running; observed from OS identity and append-only events",
+    "pid": 26216,
+    "process_create_time": 1789312346.5774193,
+    "bundle_sha256": "4c49208ea104e05f18f338501342dcdc73aa03fe836c95cc1a56dcd0479d6619",
+    "first_job": "E1_I_NATIVE_MERGE_401"
+  },
+  "widar_training_processes_observed": 0,
+  "h_supplement_training_started": false
+}

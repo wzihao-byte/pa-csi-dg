@@ -1,0 +1,50 @@
+{
+  "checked_at": "2026-09-03T18:32:32.867043+00:00",
+  "status": "preflight_only",
+  "formal_gate_passed": false,
+  "studies": {
+    "r_core_v1": {
+      "registered_jobs": 36,
+      "expected_jobs": 36,
+      "bundle_manifest_sha256": "16ffc8361e67c6d5bd22cbc65d840749a28d52327535ebb8772136555736d914"
+    },
+    "r_controls_v1": {
+      "registered_jobs": 81,
+      "expected_jobs": 81,
+      "bundle_manifest_sha256": "64c8032078d9a4dfa531b94e89fec9d9caf675b750bcabcb7881f76468a1aa92"
+    },
+    "r_inputs_v1": {
+      "registered_jobs": 63,
+      "expected_jobs": 63,
+      "bundle_manifest_sha256": "4c49208ea104e05f18f338501342dcdc73aa03fe836c95cc1a56dcd0479d6619"
+    },
+    "r_widar_v2": {
+      "registered_jobs": 0,
+      "expected_jobs": 36,
+      "not_yet_frozen": true
+    }
+  },
+  "historical_h_runs_available": 36,
+  "historical_y_runs_available": 36,
+  "source_snapshot_files": 338,
+  "completed_formal_sampler_histories_verified": [
+    {
+      "study": "r_core_v1",
+      "job_id": "E1_R00_401",
+      "epochs": 200,
+      "updates_per_epoch": 300,
+      "train_rows_value_sha256": "cf4131f6cc1d79f4f5626d10feda29441168ea9b8b9d0db95c981334d7a3b186"
+    }
+  ],
+  "git": {
+    "base_git_head": "45c0cd3553b2df2db8b8cda375bf0062c20a53af",
+    "base_git_worktree_clean": false,
+    "base_git_status_entry_count": 110,
+    "version_rule": "The release file manifest is authoritative. The base Git HEAD alone does not identify this revision state.",
+    "public_repository_or_archive_identifier": "AUTHOR_TO_SUPPLY_BEFORE_SUBMISSION"
+  },
+  "limitations": [
+    "Formal results are intentionally unavailable until the 216-run/117-analysis gate completes.",
+    "This preflight is not a release bundle and contains no scientific completion claim."
+  ]
+}

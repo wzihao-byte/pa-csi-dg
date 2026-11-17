@@ -1,0 +1,160 @@
+{
+  "schema": "wimans-synthetic-implementation-qa/v1",
+  "at": "2026-10-14T16:25:59.857217+09:00",
+  "status": "passed",
+  "synthetic": true,
+  "real_source_qa_passed": false,
+  "execution_frozen": false,
+  "formal_training_launched": false,
+  "gpu_training_launched": false,
+  "target_model_scores_accessed": false,
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "tests_output": "test_attempt_failure_and_retry_receipts_are_preserved (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_attempt_failure_and_retry_receipts_are_preserved) ... ok\ntest_coral_formula_unbiased_and_gradient (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_coral_formula_unbiased_and_gradient) ... ok\ntest_exposure_forward_bn_rng_and_hybrid_gradient (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_exposure_forward_bn_rng_and_hybrid_gradient) ... ok\ntest_factory_capacity_shared_initialization_rng_and_850_shape (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_factory_capacity_shared_initialization_rng_and_850_shape) ... ok\ntest_fixed_nine_class_metrics_and_last_tie (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_fixed_nine_class_metrics_and_last_tie) ... ok\ntest_formal_gate_unresolved_preview_and_target_gate (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_formal_gate_unresolved_preview_and_target_gate) ... ok\ntest_manifest_fixed_membership_and_reject_duplicate (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_manifest_fixed_membership_and_reject_duplicate) ... ok\ntest_pseudo_tx_slices_synchronous_and_hybrid_identity_rule (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_pseudo_tx_slices_synchronous_and_hybrid_identity_rule) ... ok\ntest_rng_optimizer_checkpoint_restore_replays_next_update_exactly (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_rng_optimizer_checkpoint_restore_replays_next_update_exactly) ... ok\ntest_runner_first_epoch_interruption_has_zero_boundary_and_replays_rng (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_runner_first_epoch_interruption_has_zero_boundary_and_replays_rng) ... ok\ntest_sampler_fixed_budget_balance_membership_and_seed (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_sampler_fixed_budget_balance_membership_and_seed) ... ok\ntest_storage_fallback_exact_slicing_and_audit_binding (experiments.wimans_20261014.tests.test_implementation.ImplementationTests.test_storage_fallback_exact_slicing_and_audit_binding) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 12.657s\n\nOK\n",
+  "code_files_sha256": {
+    "adapter.py": "15ee1f68919ad4bc0c82a4749280d21eefb2b8334c2b48c78f7923d02fb4d1c4",
+    "models.py": "e0e47eb2e240691517224f6e103c851bcb3d29f43efef516eb8dd460a4ea1916",
+    "metrics.py": "c175fc1d4a7f8ca7a5f879ffc9eeccfbbf62f5f12213de1111529c1c25021246",
+    "training.py": "5daf4b1c3883b8d1d5f36459d15e1c9f2a478f1b96b93f069c9bd91a72bc2329",
+    "prepare_configs.py": "aaae4b70efc8cbf2a9c71a50d55041af9296c8a707ebcfe3786a2e35d9e1ccef",
+    "frozen_models/dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "frozen_models/tpp_models.py": "c9abf8e0e7e054fa9f6f31d624742ffb130232266ab12c15fab463128de341bd",
+    "frozen_models/control_components.py": "238b199ba4821540120572da8ba5477e6fb8a58b96940e6fc2cfe11f2510dc86"
+  },
+  "tests_sha256": "9140bb43792ebc6f200ee206b0a494122d58cd75b4dac62a581fd9d1e76aa539",
+  "manifest_receipt": {
+    "subset_manifest_sha256": "073dfbaf9d44bfc03adecdaa9e103855009e160dd81ae9a4b10db01eebb3007d",
+    "fold_manifest_sha256": "b5d7d325b1f79bb858b790c69c021408ccfdb5668948ca104ca5edcdfd13aa8d",
+    "fold_identity_sha256": {
+      "classroom": {
+        "train": "7a1bdfb724aaa3e7b0ce632d095a284fd387381c8c852a7817f894434cc945c7",
+        "validation": "f4bba5b5ef52bea44ca1a311898aaa59093c85ade571056e3a6914475aa9b4f0",
+        "test": "3a1e7f5f70163516c1369ae34a3ec17ab658f4774929e0675224d68b590c6226"
+      },
+      "meeting_room": {
+        "train": "052d6e099d0fa65a44aaf3bbf960524ad2df89b1478744f79da358147b3ae891",
+        "validation": "34a451dac398ad72e58b28904ef8ee4c596ef01649d78be2cfb19f989f828cb2",
+        "test": "a125dd05665d6ecc9286dab20f4067edc469dc1140aff64e21e81c8c7ce7fd3d"
+      },
+      "empty_room": {
+        "train": "b9b97af154a256e25b27617c481ab8045a2ae12fb313f2c575d855f0fc61e049",
+        "validation": "d27ffe07931f508a7b2a69c437d93917b9771e45cda3bc96752d13baae1b9903",
+        "test": "6bf196ff4acb88b2aa1fd73eedc7a03f9d20717f85ab726441975f4c5cb4ef0c"
+      }
+    }
+  },
+  "runtime": {
+    "python": "3.11.4 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 13:38:37) [MSC v.1916 64 bit (AMD64)]",
+    "numpy": "1.24.3",
+    "torch": "2.6.0+cu124",
+    "device": "cpu",
+    "cuda": "12.4",
+    "gpu": null,
+    "threads": 4,
+    "cudnn_deterministic": true,
+    "cudnn_benchmark": false,
+    "matmul_allow_tf32": false,
+    "cudnn_allow_tf32": true,
+    "strict_deterministic_algorithms": false
+  },
+  "expected_nine_class_parameters": 4787065,
+  "paired_initialization": {
+    "42": {
+      "shared_state_tensors_exactly_equal": true,
+      "shared_state_tensor_count": 358,
+      "missing_shared_names": [],
+      "extra_shared_names": [],
+      "unequal_shared_names": [],
+      "model_parameter_count": 4787065,
+      "reference_parameter_count": 4787065,
+      "model_full_state_sha256": "3dfeff1a7203401e018e917b94631441e042c3ef83e5264afe53286a723c4205",
+      "reference_full_state_sha256": "b35a304423c15c9c9846d7a06f83a93a5d305584b98b0bf90222c690fae324fa",
+      "model_common_state_sha256": "e1336f4ef4d79af88689964c5be9808325882f9f190cb12d1928f33500c18562",
+      "reference_common_state_sha256": "e1336f4ef4d79af88689964c5be9808325882f9f190cb12d1928f33500c18562",
+      "excluded_prefixes": [
+        "amp_encoder.temporal_pool.projection.",
+        "amp_encoder.channel_pool.projection.",
+        "phase_encoder.temporal_pool.projection.",
+        "phase_encoder.channel_pool.projection."
+      ]
+    },
+    "52": {
+      "shared_state_tensors_exactly_equal": true,
+      "shared_state_tensor_count": 358,
+      "missing_shared_names": [],
+      "extra_shared_names": [],
+      "unequal_shared_names": [],
+      "model_parameter_count": 4787065,
+      "reference_parameter_count": 4787065,
+      "model_full_state_sha256": "c4418b59bf0ab80121eb8ca76e91679b0db580b0cc4b17793e874a918ce79f32",
+      "reference_full_state_sha256": "08da451955dc52661735e16bba9945e235b3a7cbf33424ad38d1a9233036a5e6",
+      "model_common_state_sha256": "30d3f8de8d9f282437ed9b04541dc14623231564d3360d44305dbab0f6f95680",
+      "reference_common_state_sha256": "30d3f8de8d9f282437ed9b04541dc14623231564d3360d44305dbab0f6f95680",
+      "excluded_prefixes": [
+        "amp_encoder.temporal_pool.projection.",
+        "amp_encoder.channel_pool.projection.",
+        "phase_encoder.temporal_pool.projection.",
+        "phase_encoder.channel_pool.projection."
+      ]
+    },
+    "62": {
+      "shared_state_tensors_exactly_equal": true,
+      "shared_state_tensor_count": 358,
+      "missing_shared_names": [],
+      "extra_shared_names": [],
+      "unequal_shared_names": [],
+      "model_parameter_count": 4787065,
+      "reference_parameter_count": 4787065,
+      "model_full_state_sha256": "8cd497f6e0b3afc21a73d41862b1195bcc7f5ada40ea895daf9c61d3001f1b9b",
+      "reference_full_state_sha256": "a9c171b1c5fef77c65af1c0edf6552c973157a65af9dd33495bd63f3da6fcabc",
+      "model_common_state_sha256": "9095847dfc2ccb6ff22965ecbc2043afd0e3349849c0e2b53b0cba23d8397d45",
+      "reference_common_state_sha256": "9095847dfc2ccb6ff22965ecbc2043afd0e3349849c0e2b53b0cba23d8397d45",
+      "excluded_prefixes": [
+        "amp_encoder.temporal_pool.projection.",
+        "amp_encoder.channel_pool.projection.",
+        "phase_encoder.temporal_pool.projection.",
+        "phase_encoder.channel_pool.projection."
+      ]
+    }
+  },
+  "sampling_contract": {
+    "rng": "Python random.Random(seed), isolated from model RNG",
+    "epochs": 200,
+    "updates_per_epoch": 150,
+    "batch": 32,
+    "source_domain_draws": [
+      16,
+      16
+    ],
+    "schedule_sha256": {
+      "classroom": {
+        "42": "83c9c5da7efe00e6404be0100d6616695074b1ed61a4b328308b2b906f68df59",
+        "52": "e7d25117345f6676f6a08a80d2d02183e55ff979d73cfbd1336261a36e328910",
+        "62": "cd4b297c8d84f03acd7c4652ea35a251c7cd78abdc72417e351c004c2292a7ca",
+        "20261014": "5400468559ea628f1b44747a343b16fa29071c4ce40ceb83ecc934d54c76dd9a"
+      },
+      "meeting_room": {
+        "42": "602855a2261310b7a76a6c01f6378fedd799853dd2360beb971ace67e97a5952",
+        "52": "578ba4b6c276d0219fac0c5c6aa3d7bc01c5e70105f649359e234689cf463474",
+        "62": "95ae016b10827b6e378338d6089295c8e850435cfbd9b38ef01c1de7110cf567",
+        "20261014": "d24befeb7240b3c99724f939f85f567f4c18c4da39be5988d3ed5a6aa85bfb06"
+      },
+      "empty_room": {
+        "42": "71fd58995aa882f144c42d8763188c90fb7221ed69b099c16b9e56f581ac5cb5",
+        "52": "6701892cdef34916c19c5244ef9e095806d1413281b32fdb71df33796d2daecb",
+        "62": "ca04406acfe196a6980c33c0b6fc834d01d6ba1dbe8c7e1f03ae2523c4c299bc",
+        "20261014": "204087fb37c2c0a0afab285c378a3db27fb0c973edc953094cd6fe57dd454f0b"
+      }
+    }
+  },
+  "resume_qa_scope": "CPU Adam/BatchNorm/dropout next-update replay exact; actual runner epoch-zero interruption and RNG replay tested with tiny synthetic data; formal full runner source execution pending",
+  "pending": [
+    "complete 1782-record input QA",
+    "real source-only W11 short-training QA per fold",
+    "exclusive GPU short-training timing",
+    "source CORAL gamma search",
+    "formal execution freeze",
+    "formal 30000-update runner and offline target evaluation acceptance"
+  ]
+}

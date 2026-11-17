@@ -1,0 +1,66 @@
+{
+  "schema": "revision-supplement-completion/v1",
+  "verified_at_utc": "2026-10-03T22:07:21.606786+00:00",
+  "source_completed": 45,
+  "target_evaluations_completed": 45,
+  "new_target_predictions": 135000,
+  "supplementary_experiments_complete": true,
+  "full_manuscript_revision_complete": false,
+  "all_predeclared_runs_retained": true,
+  "studies": [
+    {
+      "role": "time",
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929",
+      "source_completed": 18,
+      "source_total": 18,
+      "target_evaluations": 18,
+      "new_target_predictions": 54000,
+      "report": "D:\\pa-csi-dg-revision-runtime\\studies\\r_time_pooling_v1_20260929\\comparison\\report.json",
+      "report_sha256": "791d8772e531ac28bb475293ce999697798c0cd0a2bbb18a59433f6fac0003e6",
+      "bundle_sha256": "4fb22b1a2afb090e5dd8c64df2b6ca5748ebb1ee301368b818fecc841fab9854",
+      "evaluation_summary_sha256": "a3fffd46102f299882241f4116207e458a11004d94b14813789e0c74b7b79de8"
+    },
+    {
+      "role": "phase",
+      "bundle": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929",
+      "source_completed": 27,
+      "source_total": 27,
+      "target_evaluations": 27,
+      "new_target_predictions": 81000,
+      "report": "D:\\pa-csi-dg-revision-runtime\\studies\\r_phase_controls_v1_20260929\\comparison\\report.json",
+      "report_sha256": "20b5d4ea5ae0346b5ac3652c11410e56aeeb26b870957d12fb88a34a88ce512e",
+      "bundle_sha256": "c98c640ac361a7888bb9a8c3a636781e8c7a9d6b117c34afeb5091a45a9a277f",
+      "evaluation_summary_sha256": "0474faf87feb4efe2edf905719106d8a1bc429a911e69c9cb0b7b59cb0955b2b"
+    }
+  ],
+  "completion_snapshot": {
+    "path": "D:\\pa-csi-dg-revision-runtime\\monitoring\\full_revision_20260930\\snapshot_20261003T220058_010888Z.json",
+    "sha256": "602e7e2f123be0cea419bf9d04a2a725dbb46c27704018926a899dc31a0bfd8e"
+  },
+  "time_independent_audit": {
+    "path": "D:\\pa-csi-dg-revision-runtime\\monitoring\\full_revision_20260930\\time_completion_20261001T064830_164256Z.json",
+    "sha256": "190ec0ffa57f8abd307d574061640c2ffd301456622dddaf6c1b91db3244069c"
+  },
+  "phase_independent_audit": {
+    "path": "D:\\pa-csi-dg-revision-runtime\\monitoring\\full_revision_20260930\\phase_completion_20261003T220317_882859Z.json",
+    "sha256": "e6362e4248ecdcd7c6af29bbae0b10422d395928288318ae431bc89f5c34188e"
+  },
+  "automation": {
+    "id": "automation",
+    "status": "PAUSED",
+    "check_interval_minutes": 180,
+    "verified_at_utc": "2026-10-03T22:07:21.606786+00:00"
+  },
+  "remaining": [
+    "Integrate new results, update abstract, results, discussion and conclusions",
+    "Integrate existing mask and H/Y classwise evidence",
+    "Finalize point-by-point supervisor response and implementation-consistent figures",
+    "Prepare supplementary PDF, accurate publication metadata and final visual QA"
+  ],
+  "optional_not_launched": [
+    "H-S00/H-S01 only for full grouped interaction claims"
+  ],
+  "cancelled_not_resumed": [
+    "Widar"
+  ]
+}

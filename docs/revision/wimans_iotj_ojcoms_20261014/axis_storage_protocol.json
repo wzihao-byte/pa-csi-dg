@@ -1,0 +1,96 @@
+{
+  "schema": "wimans-stored-order-protocol/v2",
+  "registered_at_utc": "2026-10-14T07:10:39.451686+00:00",
+  "before_any_target_model_evaluation": true,
+  "author_repository_commit": "c36f94f20a5834fed22c6c208bb893ae4ae3f4e4",
+  "dataset_ref": "shuokanghuang/wimans",
+  "dataset_version": 1,
+  "status": "registered",
+  "original_physical_axis_export_status": "unresolved",
+  "selected_first_stored_axis_index": 0,
+  "retained_second_stored_axis_indices": [
+    0,
+    1,
+    2
+  ],
+  "retained_last_axis_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "flatten_order": "C",
+  "feature_group_slices": [
+    [
+      0,
+      30
+    ],
+    [
+      30,
+      60
+    ],
+    [
+      60,
+      90
+    ]
+  ],
+  "perm_reapplied": false,
+  "physical_tx_index_confirmed": false,
+  "physical_rx_mapping_confirmed": false,
+  "raw_layout_required": [
+    3,
+    3,
+    30
+  ],
+  "metadata_Ntx_Nrx_required": [
+    3,
+    3
+  ],
+  "interpretation": "One stored first-axis slice and three software feature groups; no verified physical Tx/Rx ordering or phase calibration claim",
+  "input_phase_representation": "native_historical_feature_unwrap_v1",
+  "phase_unwrap_axis": -1,
+  "loader_unwrap_phase": false,
+  "software_reference_only_csi_tool_commit": "08ea7cc082c2eb903c0a6fecb0af92d545734673",
+  "software_reference_files": {
+    "read_bfee.c": {
+      "url": "https://raw.githubusercontent.com/dhalperi/linux-80211n-csitool-supplementary/08ea7cc082c2eb903c0a6fecb0af92d545734673/matlab/read_bfee.c",
+      "sha256": "0c46a4bb1f21f16f24f77f7cab4ce98242806d44828c39970df6e814ddaf3622"
+    },
+    "read_bf_file.m": {
+      "url": "https://raw.githubusercontent.com/dhalperi/linux-80211n-csitool-supplementary/08ea7cc082c2eb903c0a6fecb0af92d545734673/matlab/read_bf_file.m",
+      "sha256": "aa06830f164404a50ca1c1b2074e9a978cc8d551f24534bbaef0a923fbaeffd5"
+    }
+  },
+  "author_export_script_available_in_pinned_tree": false,
+  "author_export_uncertainty_preserved": true,
+  "registration_basis": "PLAN explicitly permits an independently registered stored-order protocol when author export provenance cannot be confirmed",
+  "model_scores_read": false,
+  "representation_version": "storage_order_v2",
+  "target_model_scores_accessed_before_registration": false
+}

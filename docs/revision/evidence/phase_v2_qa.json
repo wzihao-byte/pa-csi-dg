@@ -1,0 +1,544 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-03T16:17:27.227672+00:00",
+  "source": "synthetic controls and metadata-selected native smoke rows",
+  "analytic_temporal_ramp_max_errors": {
+    "native_time_phase": 2.9785993671538336e-08,
+    "native_time_differential_phase": 2.9599988127237964e-08
+  },
+  "synthetic_shared_error_invariance": {
+    "differential_max_abs_error": 0.0,
+    "direct_phase_max_change": 11.91346263885498,
+    "absolute_tolerance": 1e-05,
+    "seed": 9130
+  },
+  "pi_boundary_shared_error_invariance": {
+    "differential_max_abs_error": 2.4962738581942034e-16,
+    "direct_phase_max_change": 72.04641723632812,
+    "absolute_tolerance": 1e-05,
+    "seed": 9129
+  },
+  "pi_tie_direction_is_a_convention": true,
+  "zero_interior_packet_interpolation_exact_within_1e_minus6": true,
+  "identical_duplicate_time_invariance_exact": true,
+  "all_zero_channel_rejected": true,
+  "opposite_duplicate_time_phase_marked_unusable_and_interpolated": true,
+  "no_cross_channel_unwrap_or_centering": true,
+  "pair_direction_and_order_exact": true,
+  "actual_rows": [
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S01_C01_A01_T01.dat",
+      "raw_sha256": "6e8493cb14760e7056b4f050b010dd6b6d0a6a6100c9cf5577a780eeb7786354",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 129.47476196289062,
+        "absolute_tolerance": 1e-05,
+        "seed": 9200
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 86310,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.006297,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 253,
+          "max_absolute_centered_phase": 159.15750904383344,
+          "max_abs_channel_mean_before_float32": 4.888534022029489e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 86310,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.006297,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 0.21210989106217298,
+          "max_abs_channel_mean_before_float32": 6.014796503998642e-17,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S03_C02_A04_T20.dat",
+      "raw_sha256": "b0dee358acd104d2f915a47c60afd29c5c92bcee1b0d437013313f78c7a77f5d",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 225.67312622070312,
+        "absolute_tolerance": 1e-05,
+        "seed": 9201
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 86490,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.003445,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 160,
+          "max_absolute_centered_phase": 232.16202312799442,
+          "max_abs_channel_mean_before_float32": 9.830567732398563e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 86490,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.003445,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 2.0390135501795985,
+          "max_abs_channel_mean_before_float32": 1.5067685661265654e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S03_C04_A01_T09.dat",
+      "raw_sha256": "fd93b164e9bc22a319525a91df1b86ed0c2198ed7d4a98752a3eac2fc9c2431e",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 346.8406982421875,
+        "absolute_tolerance": 1e-05,
+        "seed": 9202
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 130,
+          "raw_channel_element_count": 144090,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.04497189256714553,
+          "max_usable_time_gap_seconds": 0.009406,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 1448,
+          "max_absolute_centered_phase": 336.82522025863864,
+          "max_abs_channel_mean_before_float32": 1.786889590542106e-13,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 260,
+          "raw_channel_element_count": 144090,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.04497189256714553,
+          "max_usable_time_gap_seconds": 0.009406,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 4.946456317544055,
+          "max_abs_channel_mean_before_float32": 1.4806456714295028e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S05_C04_A01_T16.dat",
+      "raw_sha256": "8ace4d0eecec7acd01c5b8789337cda7bce7ecc592fc2a850720ba6054c94de6",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 149.40924072265625,
+        "absolute_tolerance": 1e-05,
+        "seed": 9203
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 143010,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.009366,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 468,
+          "max_absolute_centered_phase": 118.88985419302196,
+          "max_abs_channel_mean_before_float32": 5.416843444382881e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 143010,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.009366,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 0.16247558316583716,
+          "max_abs_channel_mean_before_float32": 1.4122689945599417e-17,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S06_C03_A09_T20.dat",
+      "raw_sha256": "e651fc1f10e48285a6b2120934bb3d3f4b1180cb9fd7a655239836da1580a515",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 131.68502807617188,
+        "absolute_tolerance": 1e-05,
+        "seed": 9204
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 8,
+          "raw_channel_element_count": 111330,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0032336297493936943,
+          "max_usable_time_gap_seconds": 0.009377,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 494,
+          "max_absolute_centered_phase": 142.7551752660885,
+          "max_abs_channel_mean_before_float32": 4.704628843362169e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 16,
+          "raw_channel_element_count": 111330,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0032336297493936943,
+          "max_usable_time_gap_seconds": 0.009377,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 7.712586357164906,
+          "max_abs_channel_mean_before_float32": 3.393886479042361e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E1_S09_C05_A12_T20.dat",
+      "raw_sha256": "5baf33b94f290589912582443716ec216af2c7f26332e4356643afb4e0f9522a",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 455.4380187988281,
+        "absolute_tolerance": 1e-05,
+        "seed": 9205
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 121050,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.0125,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 45,
+          "max_absolute_centered_phase": 433.0080749501267,
+          "max_abs_channel_mean_before_float32": 3.173869010745822e-13,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 121050,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.0125,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 1.400151144392016,
+          "max_abs_channel_mean_before_float32": 5.858059135816267e-17,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E2_S14_C02_A04_T20.dat",
+      "raw_sha256": "8bda9c225ce674ab0f08e0b1e7b87954f60cd65ca5cef532d759d7771d815546",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 368.0374450683594,
+        "absolute_tolerance": 1e-05,
+        "seed": 9206
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 84870,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.009352,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 798,
+          "max_absolute_centered_phase": 361.2708399317307,
+          "max_abs_channel_mean_before_float32": 1.964776054271223e-13,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 84870,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.009352,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 1.2396504599213043,
+          "max_abs_channel_mean_before_float32": 6.370720944246119e-17,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E2_S17_C03_A09_T20.dat",
+      "raw_sha256": "0c652dd3d45ea31854c8f03c96ead2a9070ee9015a74cafdf6d8dc0b3c306663",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 395.00775146484375,
+        "absolute_tolerance": 1e-05,
+        "seed": 9207
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 7,
+          "raw_channel_element_count": 111060,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.004051863857374392,
+          "max_usable_time_gap_seconds": 0.015618,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 63,
+          "max_absolute_centered_phase": 364.58138714193734,
+          "max_abs_channel_mean_before_float32": 1.6919276437393445e-13,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 14,
+          "raw_channel_element_count": 111060,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.004051863857374392,
+          "max_usable_time_gap_seconds": 0.015618,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 7.662187472954937,
+          "max_abs_channel_mean_before_float32": 1.1786650087314604e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E2_S20_C05_A12_T20.dat",
+      "raw_sha256": "ad40dcc7d904206de7db1ac350200a3ea3bc75836494dc4cf35cabe67db09182",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 167.32937622070312,
+        "absolute_tolerance": 1e-05,
+        "seed": 9208
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 5,
+          "raw_channel_element_count": 123840,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0014534883720930232,
+          "max_usable_time_gap_seconds": 0.012563,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 283,
+          "max_absolute_centered_phase": 134.49096674246223,
+          "max_abs_channel_mean_before_float32": 6.580461665768834e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 10,
+          "raw_channel_element_count": 123840,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.002180232558139535,
+          "max_usable_time_gap_seconds": 0.012563,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 5.185593211531371,
+          "max_abs_channel_mean_before_float32": 1.5004990713992704e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E3_S24_C02_A04_T20.dat",
+      "raw_sha256": "43ee83623a5335ce62f31514e8f4d9fd022cec3d7967d855c821d29476837214",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 209.50396728515625,
+        "absolute_tolerance": 1e-05,
+        "seed": 9209
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 84420,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.006391,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 170,
+          "max_absolute_centered_phase": 196.44384310250913,
+          "max_abs_channel_mean_before_float32": 8.877604533849722e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 0,
+          "raw_channel_element_count": 84420,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0,
+          "max_usable_time_gap_seconds": 0.006391,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 2.7609443940730625,
+          "max_abs_channel_mean_before_float32": 4.853633834714214e-16,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E3_S27_C03_A09_T20.dat",
+      "raw_sha256": "ad542165d08a970f3b2d7a9cc8aba76069b8c81103fdbcc5798f4efc91097516",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 380.6640625,
+        "absolute_tolerance": 1e-05,
+        "seed": 9210
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 4,
+          "raw_channel_element_count": 112410,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0008006405124099279,
+          "max_usable_time_gap_seconds": 0.009392,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 306,
+          "max_absolute_centered_phase": 392.690685890028,
+          "max_abs_channel_mean_before_float32": 1.3829669435782468e-13,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 8,
+          "raw_channel_element_count": 112410,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0008006405124099279,
+          "max_usable_time_gap_seconds": 0.009392,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 47.1614468648002,
+          "max_abs_channel_mean_before_float32": 1.7939114246366766e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    },
+    {
+      "raw_path": "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_smoke_v1\\dat_cache\\E3_S30_C05_A12_T20.dat",
+      "raw_sha256": "ca3b3955824610eacea5686c7505ea9e1f69be9330cda998259184d57d629ac1",
+      "shared_error_invariance": {
+        "differential_max_abs_error": 0.0,
+        "direct_phase_max_change": 103.1260986328125,
+        "absolute_tolerance": 1e-05,
+        "seed": 9211
+      },
+      "diagnostics": {
+        "native_time_phase": {
+          "raw_channel_zero_magnitude_count": 1,
+          "raw_channel_element_count": 128340,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0007012622720897616,
+          "max_usable_time_gap_seconds": 0.012617,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 107,
+          "max_absolute_centered_phase": 95.47588520956609,
+          "max_abs_channel_mean_before_float32": 3.987398646559621e-14,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        },
+        "native_time_differential_phase": {
+          "raw_channel_zero_magnitude_count": 2,
+          "raw_channel_element_count": 128340,
+          "duplicate_timestamp_packets": 0,
+          "circular_cancellation_bins": 0,
+          "max_unusable_time_fraction_per_channel": 0.0007012622720897616,
+          "max_usable_time_gap_seconds": 0.012617,
+          "max_endpoint_constant_extension_seconds": 0.0,
+          "wrapped_adjacent_steps_within_1e_minus6_of_pi": 0,
+          "max_absolute_centered_phase": 4.619768833667585,
+          "max_abs_channel_mean_before_float32": 2.074157838946763e-15,
+          "unwrap_axis": "native time, independently for each of the 90 channels",
+          "pi_tie_rule": "principal phase increment; within 1e-10 of +/-pi choose +pi; true direction unresolved",
+          "complete_hardware_calibration": false
+        }
+      }
+    }
+  ],
+  "model_training_or_selection": false,
+  "full_preparation_completed": false,
+  "complete_hardware_calibration": false,
+  "code_sha256": {
+    "analysis/native_phase_processing.py": "eebd0b5f96dd7a08943cab52711ea47cf2be3eb7193b5ff461f5d480805cb294",
+    "analysis/verify_native_phase.py": "1f5e1bbc949667c51bb9341ce97583aad92ed246afc3b3b9960276ed59c294fd",
+    "analysis/audit_multienv_timestamps.py": "4f8656dfeef239a01faf7145b5cb49f0adf79436290e58245574f3e1688040f6",
+    "analysis/prepare_native_multienv.py": "c0fe31b8d6dbf41b5cec24858787603046c3f58b2411bfe2836cfc7dcd2ce8eb",
+    "analysis/verify_multienv_raw_mapping.py": "8f104a8dc6e0fdc72c94953bd90e506f75d8ccf969a28cfb809c9609707ad8e5"
+  }
+}

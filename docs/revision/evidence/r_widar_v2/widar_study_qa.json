@@ -1,0 +1,197 @@
+{
+  "passed": true,
+  "checked_at": "2026-09-03T19:33:32.505169+00:00",
+  "control_checks": {
+    "R00": {
+      "loss": 1.9555835723876953,
+      "primary": 1.9555835723876953,
+      "regularizer": 0.0,
+      "weight": 0.0,
+      "parameters": 1878142,
+      "active_parameters": 1779454,
+      "optimizer_updates": 0,
+      "direct_objective_exact": true
+    },
+    "R01": {
+      "loss": 2.0249714851379395,
+      "primary": 1.9555835723876953,
+      "regularizer": 2.775520086288452,
+      "weight": 0.025,
+      "parameters": 1878142,
+      "active_parameters": 1878142,
+      "optimizer_updates": 0,
+      "direct_objective_exact": true
+    },
+    "R10": {
+      "loss": 1.9603993892669678,
+      "primary": 1.9603993892669678,
+      "regularizer": 0.0,
+      "weight": 0.0,
+      "parameters": 1878142,
+      "active_parameters": 1779454,
+      "optimizer_updates": 0,
+      "direct_objective_exact": true
+    },
+    "R11": {
+      "loss": 2.030116558074951,
+      "primary": 1.9603993892669678,
+      "regularizer": 2.7886903285980225,
+      "weight": 0.025,
+      "parameters": 1878142,
+      "active_parameters": 1878142,
+      "optimizer_updates": 0,
+      "direct_objective_exact": true
+    }
+  },
+  "CPU_resume": {
+    "model_exact": true,
+    "optimizer_exact": true,
+    "rng_exact": true,
+    "history_exact": true,
+    "source_predictions_exact": true
+  },
+  "resume_trajectories": 2,
+  "epochs_per_trajectory": 2,
+  "updates_per_epoch": 2,
+  "paired_objective_initializations_exact": true,
+  "target_data_loaded": false,
+  "target_performance_or_model_selection_used": false,
+  "source_identities": [
+    {
+      "sample_id": "W2:20181205:20181205/user2/user2-2-3-1-2-r1.dat",
+      "label": 5,
+      "subject_id": "Widar:user2",
+      "acquisition_id": "20181205.zip:user2:pos3:ori1:rep2"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user7/user7-4-3-3-3-r1.dat",
+      "label": 3,
+      "subject_id": "Widar:user7",
+      "acquisition_id": "20181211.zip:user7:pos3:ori3:rep3"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user7/user7-1-1-3-3-r1.dat",
+      "label": 0,
+      "subject_id": "Widar:user7",
+      "acquisition_id": "20181211.zip:user7:pos1:ori3:rep3"
+    },
+    {
+      "sample_id": "W2:20181204:20181204/user1/user1-1-1-2-4-r1.dat",
+      "label": 0,
+      "subject_id": "Widar:user1",
+      "acquisition_id": "20181204.zip:user1:pos1:ori2:rep4"
+    },
+    {
+      "sample_id": "W2:20181204:20181204/user1/user1-6-1-2-4-r1.dat",
+      "label": 5,
+      "subject_id": "Widar:user1",
+      "acquisition_id": "20181204.zip:user1:pos1:ori2:rep4"
+    },
+    {
+      "sample_id": "W2:20181204:20181204/user1/user1-4-5-3-1-r1.dat",
+      "label": 3,
+      "subject_id": "Widar:user1",
+      "acquisition_id": "20181204.zip:user1:pos5:ori3:rep1"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user7/user7-2-3-1-4-r1.dat",
+      "label": 1,
+      "subject_id": "Widar:user7",
+      "acquisition_id": "20181211.zip:user7:pos3:ori1:rep4"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user7/user7-6-5-1-5-r1.dat",
+      "label": 5,
+      "subject_id": "Widar:user7",
+      "acquisition_id": "20181211.zip:user7:pos5:ori1:rep5"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user8/user8-3-5-1-2-r1.dat",
+      "label": 2,
+      "subject_id": "Widar:user8",
+      "acquisition_id": "20181211.zip:user8:pos5:ori1:rep2"
+    },
+    {
+      "sample_id": "W2:20181205:20181205/user2/user2-1-3-3-5-r1.dat",
+      "label": 4,
+      "subject_id": "Widar:user2",
+      "acquisition_id": "20181205.zip:user2:pos3:ori3:rep5"
+    },
+    {
+      "sample_id": "W2:20181204:20181204/user1/user1-1-5-2-1-r1.dat",
+      "label": 0,
+      "subject_id": "Widar:user1",
+      "acquisition_id": "20181204.zip:user1:pos5:ori2:rep1"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user8/user8-2-3-3-1-r1.dat",
+      "label": 1,
+      "subject_id": "Widar:user8",
+      "acquisition_id": "20181211.zip:user8:pos3:ori3:rep1"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user7/user7-5-2-3-3-r1.dat",
+      "label": 4,
+      "subject_id": "Widar:user7",
+      "acquisition_id": "20181211.zip:user7:pos2:ori3:rep3"
+    },
+    {
+      "sample_id": "W3:20181211:20181211/user8/user8-4-4-3-2-r1.dat",
+      "label": 3,
+      "subject_id": "Widar:user8",
+      "acquisition_id": "20181211.zip:user8:pos4:ori3:rep2"
+    },
+    {
+      "sample_id": "W2:20181208:20181208/user2/user2-2-5-5-4-r1.dat",
+      "label": 1,
+      "subject_id": "Widar:user2",
+      "acquisition_id": "20181208.zip:user2:pos5:ori5:rep4"
+    },
+    {
+      "sample_id": "W2:20181204:20181204/user1/user1-3-3-4-2-r1.dat",
+      "label": 2,
+      "subject_id": "Widar:user1",
+      "acquisition_id": "20181204.zip:user1:pos3:ori4:rep2"
+    }
+  ],
+  "opened_source_paths": [
+    "D:\\pa-csi-dg-revision-runtime\\data\\widar_arrays_v2\\W2_label.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\widar_arrays_v2\\W3_label.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\widar_arrays_v2\\native_amplitude\\W2_amp.npy",
+    "D:\\pa-csi-dg-revision-runtime\\data\\widar_arrays_v2\\native_amplitude\\W3_amp.npy"
+  ],
+  "compiled_dataset_manifest_sha256": "d174c7e3f48880b922eb89082717c8a36c7a5ecb195567d24ec7845a3f860769",
+  "full_training_completed": false,
+  "code_sha256": {
+    "dg_dataset.py": "515ee15a3d186c1981892121e87b4befcc1b7138bf49e6bdf8b2c59d219745dd",
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "dg_losses.py": "fd689168b48601e82f754590e7b881faec33f9de8544f949a6b2f63fcc902dbc",
+    "experiments/tpp_isolated/tpp_models.py": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf",
+    "experiments/supcon_tpp_joint/protocol.py": "64a928834c7399b688630bf22120e1c16f7bc8bf185c0a5965d3723481626472",
+    "experiments/supcon_tpp_joint/runner_utils.py": "a139f322421daf9ea5af4a98efb4d72b7d727bed1970da54128881959bf16be4",
+    "experiments/revision_validation/models.py": "6bbdc5b4fb5672caeb59f320e384ce0f131ce878b5289766a6e54b31eaf0d962",
+    "experiments/revision_validation/source_data.py": "6b6e0ddb9a0b0c9a44e431e8889d4c07dd531821f5778cb12f6c8a2829eb1850",
+    "experiments/revision_validation/prepare_verified_protocol.py": "a4d1929dbba604e13579b87248470bfe6358a0c910946f823eec70ccc6bc3c66",
+    "experiments/revision_validation/train_source.py": "ab5219f9eb465cc531a5ae686438e54a9dc4c0d37c79d3e25095976068eb7d4c",
+    "experiments/revision_validation/study_io.py": "de955bf08a0dd20a1ce1e4796a29da926f58c23cf4f86bae52abeed666f6793a",
+    "experiments/revision_validation/study_engine.py": "abbc54efcceea748d6f3ab40adea802c45d209ffb6b5882fe39e584e930d904f",
+    "experiments/revision_validation/freeze_study.py": "a82c734f2da97850061ca044c940653723d8a5e83b05bd38a97777e2b114f027",
+    "experiments/revision_validation/evaluate_study.py": "4d24cd2d2a537b3a91a4ba5c9b892ceb9dbf9f8a1fb84e44630dc768ba0998ab",
+    "experiments/revision_validation/resume_qa.py": "256decb5481dddf61b8826594d9920fcc6e39f47905f628671cf817782c22cfe",
+    "experiments/revision_validation/control_components.py": "34b5476ad463a99d53ef799ee0c92f097f57f770df57141486a33a2036afd94e",
+    "experiments/revision_validation/experiment_data.py": "74682fdc9b106573e391d66953b92ae63ca5a9c24f82672f6429ebae83a721c7",
+    "experiments/revision_validation/experiment_design.py": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0",
+    "experiments/revision_validation/extended_engine.py": "fefc7638c15415bea80d9d044404d2f27a2b2991ef7c1671508cf5069d870715",
+    "experiments/revision_validation/extended_evaluate.py": "2117bf7c85a4078dc55eb8e5fcb8ba4ab23d56fa7ce1bd0ee3c08fd4ea3d8d5e",
+    "experiments/revision_validation/freeze_controls.py": "fccad8c8c0b8f6b7ebd788f205caeb4abd87d2aa44169dc46f026fec13990a3e",
+    "experiments/revision_validation/extension_qa.py": "6886ee52dafafb89889af1c1131cf1e4da0f353a50f8c691af3b28dbb75dcf8d",
+    "analysis/prepare_widar_inventory.py": "f3e0849033b7644c959936e162839f4decda22ae79734838d77fe186a880df4f",
+    "analysis/download_widar_cohort_v2.py": "40c34bc5796e148b9d72a21c4c70edb312f925a1f533be5647b01b899b3dde90",
+    "analysis/compile_widar_inputs_v2.py": "468fbfc50643e103cb5c7fb8779aacaa7855eed696ca4b86b89c064a5050de72",
+    "experiments/revision_validation/input_study_engine.py": "e535fbd7aa8255d93b3aa28894c49132819732f1cbe26e6d63faf1018050cb3d",
+    "experiments/revision_validation/widar_study_design.py": "e1a0be17c07ad51eb879f2d3df504d92ba6dc96384f53686e70bc2ffd3e52b8d",
+    "experiments/revision_validation/widar_study_qa.py": "e4f581c8e7092e9f3d90f7eba9a2b9a9697d912beb3c567abb0065cc763f15e6",
+    "experiments/revision_validation/freeze_widar.py": "f63ac64972b0391e3f699d5f480a0a3489212da52e3441f63fa74dc264fb3404",
+    "experiments/revision_validation/widar_study_engine.py": "a84a2f0073aba560762fe302cc47da6b85f878b103612461fbdfadf1a6160127"
+  }
+}

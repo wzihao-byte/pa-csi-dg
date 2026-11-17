@@ -1,0 +1,39 @@
+{
+  "checked_at_utc": "2026-10-14T06:36:30.731204+00:00",
+  "author_repository_commit": "c36f94f20a5834fed22c6c208bb893ae4ae3f4e4",
+  "annotation_url": "https://raw.githubusercontent.com/huangshk/WiMANS/c36f94f20a5834fed22c6c208bb893ae4ae3f4e4/dataset/annotation.csv",
+  "annotation_sha256": "d95c1efc8b3951e7f1e3a3a3b065d32523132a364e7572f5060dfde6439c6da0",
+  "rows": 1782,
+  "room_counts": {
+    "classroom": 594,
+    "meeting_room": 594,
+    "empty_room": 594
+  },
+  "all_room_class_counts_are_66": true,
+  "source_train_validation_subjects_disjoint": true,
+  "source_train_validation_acquisition_groups_disjoint": true,
+  "fold_sample_sets_disjoint": true,
+  "target_subjects_overlap_sources": true,
+  "raw_csi_loaded_by_this_script": false,
+  "training_started": false,
+  "input_quality_audit_complete": false,
+  "artifacts_sha256": {
+    "annotation_source.csv": "d95c1efc8b3951e7f1e3a3a3b065d32523132a364e7572f5060dfde6439c6da0",
+    "subset_manifest.csv": "073dfbaf9d44bfc03adecdaa9e103855009e160dd81ae9a4b10db01eebb3007d",
+    "fold_manifest.json": "b5d7d325b1f79bb858b790c69c021408ccfdb5668948ca104ca5edcdfd13aa8d",
+    "protocol_plan_v1.json": "cc2ed7bd17e8626a1113a15210f54ee77f29543246291b8ebca0aabf8162383b"
+  },
+  "protocol_plan_at_metadata_check": "protocol_plan_v1.json",
+  "current_protocol": {
+    "file": "protocol_plan.json",
+    "sha256": "b8d004f441a29297b991eea0b10a14e848eee49cba21fdfd767eb8094e939aa7",
+    "last_updated_at_utc": "2026-10-14T07:39:52.897805+00:00"
+  },
+  "current_input_qa": {
+    "scope": "storage_order_v2 software convention, physical export unresolved",
+    "status": "passed",
+    "rows": 1782,
+    "verification_file": "prepared_input_verification.json",
+    "verification_sha256": "d88087572f40dbac0094232514a71af2d9ffbfc957fd91455ae0cfa6a3bcc9e0"
+  }
+}

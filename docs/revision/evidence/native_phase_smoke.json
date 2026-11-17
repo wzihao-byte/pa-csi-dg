@@ -1,0 +1,45 @@
+{
+  "completed_at": "2026-09-03T16:18:37.762815+00:00",
+  "complete_9000": false,
+  "smoke": true,
+  "rows": 12,
+  "failures": [],
+  "config_value_sha256": "56642f95c77be681f561fdc4eb7080088b50cde818cc02f1d62bc23a45cb22fc",
+  "raw_signal_identity_parent_verified": true,
+  "classifier_training_or_selection": false,
+  "record_sha256": {
+    "MAT/E1/E1_S01_C01_A01_T01.mat": "013e2860f00acfe59eedd6699824d2e761637dbb0f74cee802ca5df89ab6bcd0",
+    "MAT/E1/E1_S03_C02_A04_T20.mat": "6fa7c107b57acf8be83711aaed30367d8b142625972be2546b3d22584a37ad5a",
+    "MAT/E1/E1_S03_C04_A01_T09.mat": "bc532f3bc2869cef375ce53b40a01e20480052b7fdd674fbfda1d1b945401299",
+    "MAT/E1/E1_S05_C04_A01_T16.mat": "0d868cd3c6935ac46937726524c333053dae57bb542866a32d7d16a6eefffe58",
+    "MAT/E1/E1_S06_C03_A09_T20.mat": "0a64711f887698a574441daacfd6f23118f44adabfd7bc6517435d768e773990",
+    "MAT/E1/E1_S09_C05_A12_T20.mat": "b1ab70f6dbbc73575d39b1b916770b86322c1bce0a8c239a59e62ed62384f5c0",
+    "MAT/E2/E2_S14_C02_A04_T20.mat": "823c7c034abd27fe3bb0b3dcd7e4cd78373d2dd6e325d22fcecdfb97d3bf2767",
+    "MAT/E2/E2_S17_C03_A09_T20.mat": "5324eda4c9762d9eadd6390d782f1b101812b62525e7f44e40a094dee2adfbd8",
+    "MAT/E2/E2_S20_C05_A12_T20.mat": "1b7db7d5163f82ced813ae6c78d2fb484c1e4b140393123e68a51bbcad0303a8",
+    "MAT/E3/E3_S24_C02_A04_T20.mat": "09ae29be2e93fc9405381458cf79c8239958c7912e3fb957d9ac4802d861c487",
+    "MAT/E3/E3_S27_C03_A09_T20.mat": "7d14cce1f3fcee544afde3996d3e6c34d0f23c688a294047bfd02395a14c6ef7",
+    "MAT/E3/E3_S30_C05_A12_T20.mat": "b9212f3796a6268917b026747791b8b3d7dca7c2b2d13a144a87d19d8dc51fbb"
+  },
+  "aggregate_diagnostics": {
+    "native_time_phase": {
+      "zero_magnitude_elements": 155,
+      "channel_elements": 1337220,
+      "circular_cancellation_bins": 0,
+      "near_pi_steps": 4595,
+      "max_usable_time_gap_seconds": 0.015618,
+      "max_endpoint_constant_extension_seconds": 0.0,
+      "max_abs_centered_phase": 433.0080749501267
+    },
+    "native_time_differential_phase": {
+      "zero_magnitude_elements": 310,
+      "channel_elements": 1337220,
+      "circular_cancellation_bins": 0,
+      "near_pi_steps": 0,
+      "max_usable_time_gap_seconds": 0.015618,
+      "max_endpoint_constant_extension_seconds": 0.0,
+      "max_abs_centered_phase": 47.1614468648002
+    }
+  },
+  "complete_hardware_calibration": false
+}

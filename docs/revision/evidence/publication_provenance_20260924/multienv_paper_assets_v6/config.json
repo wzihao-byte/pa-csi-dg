@@ -1,0 +1,17 @@
+{
+  "pid": 50852,
+  "started_at": "2026-09-21T02:29:00.467868+00:00",
+  "final_evidence_pid": 0,
+  "final_evidence_process_create_time": null,
+  "final_evidence_command": [
+    "sealed-completion-sha256",
+    "469830fd76cb5571834353995dda2ef5921ced0c26b95b5e61a21d10977f3c36"
+  ],
+  "final_evidence_output": "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_final_evidence_v6",
+  "evidence": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+  "staging": "D:\\pa-csi-dg-revision-runtime\\paper_assets\\multienv_v2",
+  "assets": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+  "frozen_figure_builder_sha256": "b6fbffe53dab7c33805e98fb290e89eae3c24819a22d659b0dec063e54097e66",
+  "frozen_shared_figure_helpers_sha256": "3a280947be356dea69f92610bd003e30cc12f1e9a62dc1fa5bda133101681b36",
+  "mutable_formal_evidence_observed_while_writer_live": false
+}

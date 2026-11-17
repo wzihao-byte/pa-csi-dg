@@ -1,0 +1,7 @@
+{
+  "model_exact": true,
+  "optimizer_exact": true,
+  "rng_exact": true,
+  "checkpoint_sha256": "c5573842f2995774b99b50694d1e1ddc239fddb62895962e2f51bd08bfc24c4c",
+  "device": "cuda:0"
+}

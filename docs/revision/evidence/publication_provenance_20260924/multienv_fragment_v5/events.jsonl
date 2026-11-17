@@ -1,0 +1,2 @@
+{"at": "2026-09-17T17:41:58.861998+00:00", "event": "waiting_for_formal_paper_assets"}
+{"at": "2026-09-21T02:22:41.491409+00:00", "error": "Traceback (most recent call last):\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_multienv_fragment_after_assets.py\", line 92, in main\n    raise RuntimeError(\"Formal paper-assets coordinator did not complete\")\nRuntimeError: Formal paper-assets coordinator did not complete\n", "event": "failed"}

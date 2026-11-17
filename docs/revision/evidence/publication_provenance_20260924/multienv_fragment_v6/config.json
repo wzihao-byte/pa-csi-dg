@@ -1,0 +1,15 @@
+{
+  "pid": 52212,
+  "started_at": "2026-09-21T02:30:36.152738+00:00",
+  "assets_pid": 0,
+  "assets_process_create_time": null,
+  "assets_command": [
+    "sealed-completion-sha256",
+    "c2210056dbfd63202310973eb1f38e13935381005962067e48525af1c3efbf34"
+  ],
+  "assets_coordinator_output": "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_paper_assets_v6",
+  "evidence": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+  "assets": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+  "frozen_builder_sha256": "d5af25cc8483286e42c0f7d4e270e56f34670b9ad5b597c402cb05a6a241313f",
+  "mutable_upstream_json_observed_while_writer_live": false
+}

@@ -1,0 +1,29 @@
+{
+  "environment": "E1",
+  "processed_index": 186,
+  "raw_inventory_index": 186,
+  "raw_path": "MAT/E1/E1_S01_C03_A09_T07.mat",
+  "commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+  "verifier_version": "legacy-replay-v3-timestamp-text15",
+  "processed_hashes": {
+    "amp": "26e4700ac8b9f0b1af3feca99d05d8502251c0274b3ce8718873179416aaa74a",
+    "phase": "14f0837b28188b3cce9bea02ec1f19fddf0ee2f1abba36ade0b2531faa3ece02",
+    "label": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85"
+  },
+  "subject_id": "S01",
+  "experiment_id": 3,
+  "activity_id": 9,
+  "trial_id": 7,
+  "acquisition_id": "E1:S01:C03:T07",
+  "raw_sha256": "64ad394d44a8cde21306532a8ef29379a86d5504d62328ef89ca687facc5735e",
+  "packets": 1277,
+  "replay_timestamp_method": "MAT values formatted to 15 significant decimal digits; precision-equivalent historical replay",
+  "mat_timestamp_exceeds_uint32": false,
+  "timestamp_text15_changed_values": 0,
+  "replay_duration_seconds": 3.999827,
+  "raw_timestamp_monotonic": true,
+  "amplitude_max_absolute_error": 0.0,
+  "phase_max_absolute_error": 0.0,
+  "label_matches": true,
+  "matched": true
+}

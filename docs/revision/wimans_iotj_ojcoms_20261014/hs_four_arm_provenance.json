@@ -1,0 +1,19 @@
+{
+  "status": "complete_four_arm_capacity_control",
+  "runs_in_table": 36,
+  "existing_new_queue_runs_in_table": 18,
+  "historical_runs_in_table": 18,
+  "prediction_count_in_table": 108000,
+  "snapshot_sha256": "9b28fbb6aac80cdb7be4b1e744df731f989c8314f7979ed8215151412bdab901",
+  "historical_reference_sha256": "733cff10872ccd5b377708d8c0c2de65791ea84dd7556a75cc6e69d16cd9f54b",
+  "scope": "MultiEnv H-S only",
+  "equal_environment_mean_interaction_pp": 4.2082285956072525,
+  "independent_environment_count": 3,
+  "target_scores_used_for_WiMANS_design": false,
+  "release_unique_runs_or_prediction_count_updated": false,
+  "outputs_sha256": {
+    "hs_four_arm_per_run.csv": "a3d38e4d68ae873ef94687ce72428cfd7cde765c0067babc70fa6bd4bbe61bc7",
+    "hs_four_arm_paired.csv": "6c1a522e01289c595c7069c24f557136a83b80421c3e6219657b7f7609cdc5c2",
+    "hs_four_arm_by_room.csv": "c9b419a40a93e126e7e7f7752340923e34c09e02096db3c7cce3061e6f2d3fee"
+  }
+}

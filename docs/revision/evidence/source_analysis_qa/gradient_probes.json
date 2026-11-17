@@ -1,0 +1,346 @@
+[
+  {
+    "batch_index": 0,
+    "sample_ids": [
+      "E2:2174",
+      "E3:2557",
+      "E3:1670",
+      "E3:2544",
+      "E2:2940",
+      "E3:0650",
+      "E2:1187",
+      "E3:0543",
+      "E2:1238",
+      "E3:2801",
+      "E2:2436",
+      "E2:2546",
+      "E3:1030",
+      "E3:2987",
+      "E2:1780",
+      "E2:1638"
+    ],
+    "source_selected_epoch": 2,
+    "effective_schedule_step": 4,
+    "primary": 1.8209065198898315,
+    "regularizer": 0.1525842398405075,
+    "weight": 1.0,
+    "regularizer_family": "coral",
+    "alignment": {
+      "all_shared": {
+        "primary_gradient_norm": 2.2618461530947003,
+        "regularizer_gradient_norm": 0.8234642037793928,
+        "cosine": 0.08061922136432673,
+        "weighted_regularizer_to_primary_norm_ratio": 0.36406729195649035,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1777912
+      },
+      "encoder.position_encoding": {
+        "primary_gradient_norm": 0.002569416244918042,
+        "regularizer_gradient_norm": 0.0014548586287756206,
+        "cosine": -0.00018569435746977722,
+        "weighted_regularizer_to_primary_norm_ratio": 0.5662214643708018,
+        "regularizer_weight": 1.0,
+        "parameter_count": 920
+      },
+      "encoder.temporal_encoder": {
+        "primary_gradient_norm": 0.19615981513920414,
+        "regularizer_gradient_norm": 0.09796027564882312,
+        "cosine": 0.08257807643435632,
+        "weighted_regularizer_to_primary_norm_ratio": 0.49939013033482904,
+        "regularizer_weight": 1.0,
+        "parameter_count": 534330
+      },
+      "encoder.temporal_pool": {
+        "primary_gradient_norm": 1.2408316289736223,
+        "regularizer_gradient_norm": 0.5009486823155999,
+        "cosine": 0.042284919450233265,
+        "weighted_regularizer_to_primary_norm_ratio": 0.40372011046331013,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1150464
+      },
+      "encoder.channel_encoder": {
+        "primary_gradient_norm": 0.08693562710498748,
+        "regularizer_gradient_norm": 0.02389563047531494,
+        "cosine": -0.3047400817531489,
+        "weighted_regularizer_to_primary_norm_ratio": 0.2748657974993092,
+        "regularizer_weight": 1.0,
+        "parameter_count": 7590
+      },
+      "encoder.channel_pool": {
+        "primary_gradient_norm": 0.09531952018159817,
+        "regularizer_gradient_norm": 0.024080683896199325,
+        "cosine": 0.22938709634929527,
+        "weighted_regularizer_to_primary_norm_ratio": 0.2526311908654383,
+        "regularizer_weight": 1.0,
+        "parameter_count": 10112
+      },
+      "representation": {
+        "primary_gradient_norm": 1.876474353580375,
+        "regularizer_gradient_norm": 0.6452863704439671,
+        "cosine": 0.10107911711561171,
+        "weighted_regularizer_to_primary_norm_ratio": 0.34388232869409563,
+        "regularizer_weight": 1.0,
+        "parameter_count": 74496
+      }
+    },
+    "objective_diagnostics": {}
+  },
+  {
+    "batch_index": 1,
+    "sample_ids": [
+      "E3:1534",
+      "E2:0413",
+      "E2:2103",
+      "E3:1023",
+      "E3:1768",
+      "E3:0451",
+      "E2:0709",
+      "E2:0453",
+      "E3:0883",
+      "E3:2230",
+      "E2:2117",
+      "E2:2998",
+      "E2:2969",
+      "E3:2027",
+      "E2:1065",
+      "E3:1650"
+    ],
+    "source_selected_epoch": 2,
+    "effective_schedule_step": 4,
+    "primary": 1.9147709608078003,
+    "regularizer": 0.11376319825649261,
+    "weight": 1.0,
+    "regularizer_family": "coral",
+    "alignment": {
+      "all_shared": {
+        "primary_gradient_norm": 2.817484461420904,
+        "regularizer_gradient_norm": 0.5984194802689422,
+        "cosine": 0.04516632714942961,
+        "weighted_regularizer_to_primary_norm_ratio": 0.21239495318002546,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1777912
+      },
+      "encoder.position_encoding": {
+        "primary_gradient_norm": 0.002790275973680528,
+        "regularizer_gradient_norm": 0.0007248182422224813,
+        "cosine": 0.27200200371545524,
+        "weighted_regularizer_to_primary_norm_ratio": 0.2597657898571252,
+        "regularizer_weight": 1.0,
+        "parameter_count": 920
+      },
+      "encoder.temporal_encoder": {
+        "primary_gradient_norm": 0.1574313833126399,
+        "regularizer_gradient_norm": 0.07039300370743902,
+        "cosine": 0.006733364868394097,
+        "weighted_regularizer_to_primary_norm_ratio": 0.44713450537144134,
+        "regularizer_weight": 1.0,
+        "parameter_count": 534330
+      },
+      "encoder.temporal_pool": {
+        "primary_gradient_norm": 1.4770497829483047,
+        "regularizer_gradient_norm": 0.3589842468562269,
+        "cosine": 0.01196612299382866,
+        "weighted_regularizer_to_primary_norm_ratio": 0.24304139982314393,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1150464
+      },
+      "encoder.channel_encoder": {
+        "primary_gradient_norm": 0.12163260228405808,
+        "regularizer_gradient_norm": 0.02727716235229267,
+        "cosine": -0.07736910640109013,
+        "weighted_regularizer_to_primary_norm_ratio": 0.22425864316041016,
+        "regularizer_weight": 1.0,
+        "parameter_count": 7590
+      },
+      "encoder.channel_pool": {
+        "primary_gradient_norm": 0.10513966447609233,
+        "regularizer_gradient_norm": 0.02122116323971872,
+        "cosine": 0.09650178967840838,
+        "weighted_regularizer_to_primary_norm_ratio": 0.2018378444087977,
+        "regularizer_weight": 1.0,
+        "parameter_count": 10112
+      },
+      "representation": {
+        "primary_gradient_norm": 2.3887028622171345,
+        "regularizer_gradient_norm": 0.47231991614449054,
+        "cosine": 0.061843177917819736,
+        "weighted_regularizer_to_primary_norm_ratio": 0.19773071134770398,
+        "regularizer_weight": 1.0,
+        "parameter_count": 74496
+      }
+    },
+    "objective_diagnostics": {}
+  },
+  {
+    "batch_index": 2,
+    "sample_ids": [
+      "E3:1781",
+      "E2:0409",
+      "E2:1239",
+      "E3:0494",
+      "E2:2330",
+      "E2:2997",
+      "E2:0840",
+      "E3:2054",
+      "E2:1020",
+      "E3:1109",
+      "E3:2967",
+      "E3:1825",
+      "E2:0300",
+      "E2:1346",
+      "E3:1080",
+      "E3:2874"
+    ],
+    "source_selected_epoch": 2,
+    "effective_schedule_step": 4,
+    "primary": 1.6618798971176147,
+    "regularizer": 0.11638494580984116,
+    "weight": 1.0,
+    "regularizer_family": "coral",
+    "alignment": {
+      "all_shared": {
+        "primary_gradient_norm": 2.667253590561998,
+        "regularizer_gradient_norm": 0.6215128665978639,
+        "cosine": -0.025931841697086542,
+        "weighted_regularizer_to_primary_norm_ratio": 0.2330160389687241,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1777912
+      },
+      "encoder.position_encoding": {
+        "primary_gradient_norm": 0.00253431689582034,
+        "regularizer_gradient_norm": 0.0008538142296695809,
+        "cosine": -0.3507614870026382,
+        "weighted_regularizer_to_primary_norm_ratio": 0.33690113145586215,
+        "regularizer_weight": 1.0,
+        "parameter_count": 920
+      },
+      "encoder.temporal_encoder": {
+        "primary_gradient_norm": 0.15663344803850882,
+        "regularizer_gradient_norm": 0.06288386039229564,
+        "cosine": -0.289916489730681,
+        "weighted_regularizer_to_primary_norm_ratio": 0.40147146844928966,
+        "regularizer_weight": 1.0,
+        "parameter_count": 534330
+      },
+      "encoder.temporal_pool": {
+        "primary_gradient_norm": 1.365060123382676,
+        "regularizer_gradient_norm": 0.370377919811223,
+        "cosine": -0.039702414018781745,
+        "weighted_regularizer_to_primary_norm_ratio": 0.27132718439786446,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1150464
+      },
+      "encoder.channel_encoder": {
+        "primary_gradient_norm": 0.09950596886746924,
+        "regularizer_gradient_norm": 0.012810320207714122,
+        "cosine": -0.18914165817409032,
+        "weighted_regularizer_to_primary_norm_ratio": 0.12873921387345144,
+        "regularizer_weight": 1.0,
+        "parameter_count": 7590
+      },
+      "encoder.channel_pool": {
+        "primary_gradient_norm": 0.11733479304513339,
+        "regularizer_gradient_norm": 0.017772734125239786,
+        "cosine": -0.09159628685604569,
+        "weighted_regularizer_to_primary_norm_ratio": 0.1514702814399086,
+        "regularizer_weight": 1.0,
+        "parameter_count": 10112
+      },
+      "representation": {
+        "primary_gradient_norm": 2.2809303419023093,
+        "regularizer_gradient_norm": 0.49463456873162265,
+        "cosine": -0.017395897183053455,
+        "weighted_regularizer_to_primary_norm_ratio": 0.21685649914196614,
+        "regularizer_weight": 1.0,
+        "parameter_count": 74496
+      }
+    },
+    "objective_diagnostics": {}
+  },
+  {
+    "batch_index": 3,
+    "sample_ids": [
+      "E3:1990",
+      "E2:0397",
+      "E2:1473",
+      "E2:2553",
+      "E2:1627",
+      "E3:1847",
+      "E2:0400",
+      "E3:1963",
+      "E2:0741",
+      "E2:1167",
+      "E3:1167",
+      "E3:0437",
+      "E3:2384",
+      "E3:2817",
+      "E2:1795",
+      "E3:2554"
+    ],
+    "source_selected_epoch": 2,
+    "effective_schedule_step": 4,
+    "primary": 1.7605587244033813,
+    "regularizer": 0.06143958866596222,
+    "weight": 1.0,
+    "regularizer_family": "coral",
+    "alignment": {
+      "all_shared": {
+        "primary_gradient_norm": 2.236657478046157,
+        "regularizer_gradient_norm": 0.34416954697290675,
+        "cosine": 0.05914414378173426,
+        "weighted_regularizer_to_primary_norm_ratio": 0.15387673363091683,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1777912
+      },
+      "encoder.position_encoding": {
+        "primary_gradient_norm": 0.0021623767212230025,
+        "regularizer_gradient_norm": 0.0007755095705597991,
+        "cosine": 0.2753482338587238,
+        "weighted_regularizer_to_primary_norm_ratio": 0.3586375874973277,
+        "regularizer_weight": 1.0,
+        "parameter_count": 920
+      },
+      "encoder.temporal_encoder": {
+        "primary_gradient_norm": 0.12843143000358864,
+        "regularizer_gradient_norm": 0.0462198947289233,
+        "cosine": -0.04469796334463273,
+        "weighted_regularizer_to_primary_norm_ratio": 0.3598799353680935,
+        "regularizer_weight": 1.0,
+        "parameter_count": 534330
+      },
+      "encoder.temporal_pool": {
+        "primary_gradient_norm": 1.1490370774434204,
+        "regularizer_gradient_norm": 0.2130051709958902,
+        "cosine": 0.017091205516873605,
+        "weighted_regularizer_to_primary_norm_ratio": 0.18537710851752628,
+        "regularizer_weight": 1.0,
+        "parameter_count": 1150464
+      },
+      "encoder.channel_encoder": {
+        "primary_gradient_norm": 0.09258907604615638,
+        "regularizer_gradient_norm": 0.01901941629297264,
+        "cosine": -0.446349753339858,
+        "weighted_regularizer_to_primary_norm_ratio": 0.20541749745392548,
+        "regularizer_weight": 1.0,
+        "parameter_count": 7590
+      },
+      "encoder.channel_pool": {
+        "primary_gradient_norm": 0.07923102199625622,
+        "regularizer_gradient_norm": 0.00958164289631594,
+        "cosine": 0.10435196999604113,
+        "weighted_regularizer_to_primary_norm_ratio": 0.12093297113810657,
+        "regularizer_weight": 1.0,
+        "parameter_count": 10112
+      },
+      "representation": {
+        "primary_gradient_norm": 1.9107592388431818,
+        "regularizer_gradient_norm": 0.2655015028808363,
+        "cosine": 0.0834147957802338,
+        "weighted_regularizer_to_primary_norm_ratio": 0.13895078850518974,
+        "regularizer_weight": 1.0,
+        "parameter_count": 74496
+      }
+    },
+    "objective_diagnostics": {}
+  }
+]

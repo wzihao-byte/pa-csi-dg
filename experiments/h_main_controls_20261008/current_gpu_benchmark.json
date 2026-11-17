@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-08T05:54:03.324637+00:00",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "Quadro RTX 5000",
+  "threads": 4,
+  "source_only": true,
+  "new_formal_runs_completed": 0,
+  "receipts": [
+    {
+      "pool_mode": "tpp",
+      "multiview": false,
+      "batch_size": 32,
+      "timed_steps": 5,
+      "seconds_per_step": 0.2104303399566561,
+      "median_seconds_per_step": 0.2115308998618275,
+      "seconds_each_step": [
+        0.2059106999076903,
+        0.20683480007573962,
+        0.2115308998618275,
+        0.21432049991562963,
+        0.21355480002239347
+      ],
+      "losses": [
+        2.0676262378692627,
+        1.6609652042388916,
+        1.0723706483840942,
+        0.7930202484130859,
+        0.7519360780715942
+      ],
+      "finite_losses": true,
+      "30000_step_compute_hours": 1.7535861663054675,
+      "peak_memory_mib": 1041.60205078125,
+      "target_input_opened": false
+    },
+    {
+      "pool_mode": "tpp",
+      "multiview": true,
+      "batch_size": 32,
+      "timed_steps": 5,
+      "seconds_per_step": 0.811700540035963,
+      "median_seconds_per_step": 0.7887697999831289,
+      "seconds_each_step": [
+        0.7887697999831289,
+        0.7867986999917775,
+        0.7875116001814604,
+        0.8510366000700742,
+        0.8443859999533743
+      ],
+      "losses": [
+        2.363309621810913,
+        1.97589910030365,
+        1.3340193033218384,
+        1.1333537101745605,
+        1.0008761882781982
+      ],
+      "finite_losses": true,
+      "30000_step_compute_hours": 6.764171166966359,
+      "peak_memory_mib": 3776.072265625,
+      "target_input_opened": false
+    },
+    {
+      "pool_mode": "global_mlp",
+      "multiview": false,
+      "batch_size": 32,
+      "timed_steps": 5,
+      "seconds_per_step": 0.2110797400120646,
+      "median_seconds_per_step": 0.20704810018651187,
+      "seconds_each_step": [
+        0.20704810018651187,
+        0.22858019988052547,
+        0.20676929992623627,
+        0.21054610004648566,
+        0.2024550000205636
+      ],
+      "losses": [
+        1.837365746498108,
+        1.3130240440368652,
+        0.9007957577705383,
+        0.765302300453186,
+        0.7002018094062805
+      ],
+      "finite_losses": true,
+      "30000_step_compute_hours": 1.7589978334338714,
+      "peak_memory_mib": 1130.73828125,
+      "target_input_opened": false
+    },
+    {
+      "pool_mode": "global_mlp",
+      "multiview": true,
+      "batch_size": 32,
+      "timed_steps": 5,
+      "seconds_per_step": 0.8035849799867719,
+      "median_seconds_per_step": 0.7999108000658453,
+      "seconds_each_step": [
+        0.8271433000918478,
+        0.8146934998221695,
+        0.7999108000658453,
+        0.7778157000429928,
+        0.7983615999110043
+      ],
+      "losses": [
+        2.1081531047821045,
+        1.6254414319992065,
+        1.1504058837890625,
+        1.0555318593978882,
+        0.9379495978355408
+      ],
+      "finite_losses": true,
+      "30000_step_compute_hours": 6.696541499889766,
+      "peak_memory_mib": 3764.1630859375,
+      "target_input_opened": false
+    }
+  ]
+}

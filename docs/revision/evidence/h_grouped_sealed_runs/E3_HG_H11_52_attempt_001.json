@@ -1,0 +1,41 @@
+{
+  "schema": "h-grouped-sealed-run-verified/v1",
+  "verified_at": "2026-09-20T17:34:52.930651+00:00",
+  "job_id": "E3_HG_H11_52",
+  "attempt": 1,
+  "completed_at": "2026-09-20T17:21:50.186762+00:00",
+  "bundle_manifest_sha256": "b30ac26dc851393ee75f58cd5dae26400930296e211bebd5384fe848b2c0696c",
+  "completion_sha256": "a0b9bc0291c8ce0157ffa454dd3ccf2717b3af400435a679d11ea52ce65fd190",
+  "seal_sha256": "f3bc8c636e15349e21bac66c32cfa1129c3e3cab2aed7939a37d463c2e6b93cc",
+  "sealed_artifact_count": 16,
+  "health": {
+    "run_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_h_grouped_l1248\\v2\\runs\\E3\\seed_52\\H11\\attempt_001\\payload\\run",
+    "checkpoint_sha256": "b786b63d3a67b7928e2556579c95bc523c0b4b293385cb5db8263aa1eb9b4671",
+    "parameter_count": 4786294,
+    "sampler_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10",
+    "split_hashes": {
+      "train": "805c85cbebd226a42476ce9fa8b692b41df7e4ae5102ce07c5b590e72af3ed76",
+      "val": "559a699cb9c94e9f91fc25c401fe880dabbcee0320a804026acee7fa00d2b5d6",
+      "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+    },
+    "target_prediction_count": 3000,
+    "target_predictions_sha256": "1f5d22ddbed7702fb2364a29d776fdee697dd588e03158eabac4bd6c113fd212",
+    "confusion_sha256": "b0f9041dfc96187ac6bc944bd2867862b7c07d191b7edc350e54614c07caca5f",
+    "metrics_sha256": "e47469e288d9d6f17ead7a838e4d46272cbc2c13204710de21b6fed289197c46",
+    "initial_state_sha256": "b0fcb07d21b7c8317ff2849d65ddea69931c05d40243118f9fa4d5d90b628663",
+    "last_tied_best_source_epoch": 46,
+    "group_identity_overlap": false
+  },
+  "sampler": {
+    "schema_version": "factorial-s32-sampler-schedule/v1",
+    "epochs_seen": 200,
+    "batches_seen": 30000,
+    "samples_seen": 960000,
+    "global_sample_schedule_sha256": "4a59cd909fc14547ff85a8040264198abeeb86b1a72e87264a0d3efdfd4b1c10"
+  },
+  "cpu_strict_checkpoint_reload_repeated": true,
+  "target_predictions_recomputed": 3000,
+  "frozen_protocol_verified": true,
+  "aggregate_conclusion_available": false,
+  "active_training_unmodified": true
+}

@@ -1,0 +1,64 @@
+{
+  "scope": "Extracted descriptive summaries of saved historical analyses; not additional independently rechecked runs in the 72-run audit.",
+  "source_hashes": {
+    "outputs_tpp_level8_ablation\\l1248_v1\\analysis\\level8_analysis.json": "e431bf94e7db1b2439ac6f5ea1dfc3074035185c49256c5cea1031d33f3ab99a",
+    "outputs_tpp_residual_scale_ablation\\h11_l1248_v1\\analysis\\residual_scale_analysis.json": "312746803d3c9a26ff3e77595fe2451636911f7123ac2d15310bc67c0669c5bf"
+  },
+  "level8_parameters": {
+    "L124": 3721334,
+    "L1248": 4786294,
+    "increment": 1064960
+  },
+  "level8_means": [
+    {
+      "arm": "L124",
+      "n": 9,
+      "mean": 0.8907586471516071,
+      "sample_sd": 0.0138798979671066,
+      "min": 0.8708117737407984,
+      "max": 0.9155869760900152,
+      "falling_turning_pair_confusion_mean": 0.21805555555555556
+    },
+    {
+      "arm": "L1248",
+      "n": 9,
+      "mean": 0.9025565943358606,
+      "sample_sd": 0.013669285758465235,
+      "min": 0.8808267353714493,
+      "max": 0.9250777094255564,
+      "falling_turning_pair_confusion_mean": 0.20319444444444446
+    }
+  ],
+  "level8_environment_deltas": {
+    "E1": 0.004667362421893288,
+    "E2": 0.003997529171264354,
+    "E3": 0.02672894995960277
+  },
+  "coefficient_curve": [
+    {
+      "scale": 0.125,
+      "mean_macro_f1": 0.9025895505370782,
+      "source": "new_candidate"
+    },
+    {
+      "scale": 0.25,
+      "mean_macro_f1": 0.9025565943358606,
+      "source": "sealed_reference"
+    },
+    {
+      "scale": 0.5,
+      "mean_macro_f1": 0.867744392020422,
+      "source": "new_candidate"
+    },
+    {
+      "scale": 0.75,
+      "mean_macro_f1": 0.8556474486624308,
+      "source": "new_candidate"
+    },
+    {
+      "scale": 1.0,
+      "mean_macro_f1": 0.8577148095584471,
+      "source": "new_candidate"
+    }
+  ]
+}

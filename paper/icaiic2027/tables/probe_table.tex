@@ -1,0 +1,23 @@
+\begin{table}[t]
+\caption{Duration-shortcut probes: leave-one-environment-out macro-F1 (\%) of a random forest on scalar or time-aggregated per-segment features.}
+\label{tab:probe}
+\centering\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrr}
+\toprule
+Feature & E1 & E2 & E3 & Mean\\
+\midrule
+Segment duration only & 57.6 & 59.3 & 58.3 & 58.4\\
+Packet count only & 53.3 & 53.6 & 52.7 & 53.2\\
+Duration + packet count & 58.4 & 58.6 & 59.8 & 59.0\\
+Phase: link slope + intercept (6-d) & 42.2 & 41.3 & 48.1 & 43.9\\
+Phase: mean + SD over time (180-d) & 49.0 & 43.2 & 54.5 & 48.9\\
+Amplitude: mean + SD over time (180-d) & 34.8 & 21.3 & 31.3 & 29.1\\
+Phase: mean over time (90-d) + duration & 56.3 & 55.1 & 60.9 & 57.4\\
+\midrule
+\multicolumn{5}{l}{\textit{Three 4\,s classes only (uniform-random reference 33.3)}}\\
+Phase: link slope + intercept (6-d) & 27.2 & 26.3 & 22.2 & 25.2\\
+Amplitude: mean + SD over time (180-d) & 50.4 & 41.1 & 45.5 & 45.7\\
+\bottomrule
+\end{tabular}
+\end{table}

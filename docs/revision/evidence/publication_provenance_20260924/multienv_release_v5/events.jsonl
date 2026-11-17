@@ -1,0 +1,2 @@
+{"at": "2026-09-17T17:41:59.885009+00:00", "event": "waiting_for_final_manuscript"}
+{"at": "2026-09-21T02:22:42.477753+00:00", "error": "Traceback (most recent call last):\n  File \"C:\\Users\\howie\\Desktop\\pa-csi-dg\\analysis\\continue_multienv_release_after_manuscript.py\", line 123, in main\n    raise RuntimeError(\"Final-manuscript coordinator did not complete\")\nRuntimeError: Final-manuscript coordinator did not complete\n", "event": "failed"}

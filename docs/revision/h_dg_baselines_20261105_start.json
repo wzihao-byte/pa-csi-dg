@@ -1,0 +1,131 @@
+{
+  "status": "formal_training_started",
+  "at": "2026-11-05T05:08:39.321927+00:00",
+  "scope": "H-S only, 36 new CE runs (GC10/GX10 global-backbone CORAL/Mixup first, then C10/X10 TPP-backbone); no H, no SupCon arms, no new environments",
+  "study": "D:\\pa-csi-dg-revision-runtime\\studies\\h_dg_baselines_20261105_v2",
+  "code": "experiments/h_dg_baselines_20261105/",
+  "launcher_pid": 27392,
+  "bundle_manifest_sha256": "85629db2adb4d03934c54f5d4259cd2958493caee8fd559c5389359dc320c277",
+  "qa_approval": {
+    "status": "passed",
+    "at": "2026-11-05T05:06:00.639371+00:00",
+    "bundle_manifest_sha256": "85629db2adb4d03934c54f5d4259cd2958493caee8fd559c5389359dc320c277",
+    "frozen_unique_configs_validated": 36,
+    "ce_replay_equivalence": {
+      "tpp": {
+        "status": "passed",
+        "pool_mode": "tpp",
+        "real_source_examples": 8,
+        "optimizer_steps": 2,
+        "all_model_state_tensors_bitwise_equal": true,
+        "loss_metrics_bitwise_equal": true,
+        "scheduler_state_equal": true
+      },
+      "global_mlp": {
+        "status": "passed",
+        "pool_mode": "global_mlp",
+        "real_source_examples": 8,
+        "optimizer_steps": 2,
+        "all_model_state_tensors_bitwise_equal": true,
+        "loss_metrics_bitwise_equal": true,
+        "scheduler_state_equal": true
+      }
+    }
+  },
+  "queue": {
+    "status": "running",
+    "at": "2026-11-05T05:06:32.533455+00:00",
+    "pid": 27392,
+    "process_create_time": 1793855184.7012606,
+    "current_job": "HS_E1_GC10_42",
+    "current_attempt": 1,
+    "completed_jobs": 0,
+    "total_jobs": 36,
+    "position": 1,
+    "manifest_sha256": "85629db2adb4d03934c54f5d4259cd2958493caee8fd559c5389359dc320c277"
+  },
+  "first_training_status": {
+    "status": "training",
+    "at": "2026-11-05T05:08:19.066729+00:00",
+    "job_id": "HS_E1_GC10_42",
+    "pid": 25432,
+    "optimizer_steps": 200,
+    "total_optimizer_steps": 30000,
+    "elapsed_seconds": 100.23499999999967,
+    "lr_used": 0.0009979055222245153,
+    "target_opened": false
+  },
+  "first_initialization_audit": {
+    "status": "passed",
+    "parameter_count": 4786294,
+    "initial_state_sha256": "d97bfc210db474b1abf2616089cf8c5b13e6ad68324f6ce50c0ffeeb0c8f5875",
+    "common_state_sha256": "f4e4b32b62c57245f7646f0b8e2409fbd8f1c3ea8f24a4fc2df90d1ee28fdff9",
+    "historical_common_tensors_matched": true,
+    "pool_mode": "global_mlp",
+    "dg_baseline_method": "coral",
+    "seed": 42,
+    "model_class": "CapacityMatchedH"
+  },
+  "registry": {
+    "new_runs": 36,
+    "ce_runs": 36,
+    "multiview_runs": 0,
+    "queue_order": "global-backbone arms (GC10, GX10) for all cells, then TPP-backbone arms (C10, X10)",
+    "paired_arms": [
+      "H10",
+      "H11",
+      "G10",
+      "G11"
+    ]
+  },
+  "decision_rule": {
+    "purpose": "Same-protocol generic domain-generalization baselines for the ICAIIC 2027 manuscript",
+    "arms": {
+      "GC10": "global MLP pooling (capacity-matched ERM backbone, as G10) + CE + DomainBed CORAL (gamma 1.0) on the fused 256-d feature",
+      "GX10": "global MLP pooling + CE + DomainBed inter-domain Mixup (alpha 0.2) on amplitude and phase",
+      "C10": "TPP + CE + DomainBed CORAL (gamma 1.0) on the fused 256-d feature",
+      "X10": "TPP + CE + DomainBed inter-domain Mixup (alpha 0.2) on amplitude and phase"
+    },
+    "primary_question": "Does TPP + multiview SupCon (HS11) exceed ERM (G10) and generic DG methods applied to the same plain backbone (GC10, GX10)?",
+    "secondary_question": "Given the TPP representation, does multiview SupCon (HS11) exceed generic DG regularizers (C10, X10)?",
+    "paired_with": "completed v2 G10/G11 and historical H-S T-CE (HS10) / T-SC (HS11) runs of the same target and seed",
+    "reported": [
+      "per-arm environment means and equal-environment means",
+      "nine paired differences per contrast",
+      "sign counts",
+      "95% percentile bootstrap interval over the nine pairs (10,000 resamples, seed 20261105)"
+    ],
+    "contrasts": [
+      "GC10 - G10",
+      "GX10 - G10",
+      "HS11 - GC10",
+      "HS11 - GX10",
+      "C10 - HS10",
+      "X10 - HS10",
+      "HS11 - C10",
+      "HS11 - X10"
+    ],
+    "interpretation": "descriptive; no configuration of the main method is changed on the basis of these results",
+    "caveat": "Nine pairs share three development environments; intervals are descriptive, not tests of independent environments",
+    "fixed_before_target_scoring": true
+  },
+  "superseded_v1": {
+    "study": "D:\\pa-csi-dg-revision-runtime\\studies\\h_dg_baselines_20261105_v1",
+    "note": "﻿2026-11-05: v1 (two TPP-backbone arms C10/X10) was started at 14:01 and stopped during its first job after a design review: external DG baselines must also be applied to the plain capacity-matched global-pooling ERM backbone (G10) to benchmark the TPP+SupCon combination. Superseded by h_dg_baselines_20261105_v2 (four arms GC10/GX10/C10/X10, global-backbone arms first). No target data was scored in v1; the interrupted attempt is preserved.",
+    "queue_status": {
+      "status": "failed",
+      "at": "2026-11-05T05:04:19.716601+00:00",
+      "current_job": "HS_E1_C10_42",
+      "completed_jobs": 0,
+      "total_jobs": 18,
+      "error": "RunnerError('Training subprocess returned 4294967295')"
+    }
+  },
+  "paper_integration": "paper/icaiic2027/evidence/make_baseline_table.py writes tables/baseline_table.tex only when GC10 and GX10 are complete; manuscript not yet updated",
+  "scope_change": {
+    "at": "2026-11-05T05:17:33.502925+00:00",
+    "decision": "User: only the global-backbone group (GC10/GX10, 18 runs) is needed; the TPP-backbone arms C10/X10 are not executed",
+    "mechanism": "experiments/h_dg_baselines_20261105/stop_after_global_arms.py (detached watcher, pid 15996) writes queue/stop_after_current.json while job 18 is running; runner stops after sealing it",
+    "expected_final_queue_status": "stopped_after_completed_job with completed_jobs = 18; analysis/results.json will report C10/X10 as partial (0 runs)"
+  }
+}

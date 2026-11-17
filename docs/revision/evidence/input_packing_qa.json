@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "rows": 12,
+  "arrays_reproduced_exactly": true,
+  "incomplete_preparation_rejected": [
+    {
+      "kind": "native",
+      "reason": "Full preparation gate is not satisfied"
+    },
+    {
+      "kind": "widar",
+      "reason": "Full preparation gate is not satisfied"
+    }
+  ],
+  "full_dataset_compilation": false,
+  "code_sha256": "fb78703f8712a85a4b10d899c5be8b9fd2336a8ca312ab70e41b188078432eca"
+}

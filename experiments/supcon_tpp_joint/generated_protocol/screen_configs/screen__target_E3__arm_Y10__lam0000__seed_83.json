@@ -1,0 +1,293 @@
+{
+  "calibration": {
+    "artifact_id": "global_basis_calibration_E3",
+    "initialization_seed": 9001,
+    "uses_target_data": false
+  },
+  "data": {
+    "env_files": {
+      "E1": {
+        "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_1.npy",
+        "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_1.npy",
+        "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_1.npy"
+      },
+      "E2": {
+        "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_2.npy",
+        "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_2.npy",
+        "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_2.npy"
+      }
+    },
+    "format": "env_npy_triplets",
+    "loaded_envs": [
+      "E1",
+      "E2"
+    ],
+    "source_only": true,
+    "strict_group_protocol": true,
+    "unwrap_phase": false
+  },
+  "device": "cuda",
+  "evaluation": {
+    "evaluate_target": false,
+    "save_confusion_matrix": true,
+    "save_per_sample_predictions": true
+  },
+  "experiment_name": "screen__target_E3__arm_Y10__lam0000__seed_83",
+  "losses": {
+    "contrastive_loss_type": "pairwise_supcon",
+    "include_same_domain_same_class": true,
+    "lambda_supcon": 0.0,
+    "linear_warmup_steps": 6000,
+    "supcon_enabled": false,
+    "supcon_positive_mode": "all_views",
+    "supcon_view_scope": "global_only",
+    "temperature": 0.2
+  },
+  "mode": "dg_loeo",
+  "model": {
+    "channel_encoder_heads": 6,
+    "channel_encoder_layers": 1,
+    "channel_group_width": 30,
+    "channel_kernel_num": 16,
+    "channel_kernel_sizes": [
+      2,
+      4
+    ],
+    "dropout": 0.1,
+    "fusion_dim": 256,
+    "joint_temporal": {
+      "branch": "amplitude_only",
+      "factor": "amplitude_residual_tpp",
+      "global_basis": {
+        "basis": [
+          {
+            "expression": "c",
+            "name": "identity"
+          },
+          {
+            "expression": "c**2",
+            "name": "square"
+          },
+          {
+            "expression": "c**3/9",
+            "name": "scaled_cube"
+          },
+          {
+            "expression": "tanh(c)",
+            "name": "tanh"
+          },
+          {
+            "expression": "sin(pi*c/3)",
+            "name": "sine"
+          },
+          {
+            "expression": "cos(pi*c/3)",
+            "name": "cosine"
+          },
+          {
+            "expression": "sign(c)*sqrt(abs(c)+1e-6)",
+            "name": "signed_sqrt"
+          }
+        ],
+        "calibration": {
+          "clip_max": 3.0,
+          "clip_min": -3.0,
+          "initialization_seed": 9001,
+          "kappa_max": 4.0,
+          "kappa_min": 0.25,
+          "layer_norm_affine": false,
+          "layer_norm_epsilon": 1e-05,
+          "maximum_condition_number": 10000.0,
+          "required_rank": 7,
+          "residual_rms_ratio_max": 1.25,
+          "residual_rms_ratio_min": 0.8,
+          "sample_selection": "lowest_sample_ids",
+          "samples_per_source_environment": 256,
+          "standardization_epsilon": 1e-06,
+          "svd_relative_tolerance": 1e-06
+        },
+        "input_normalization": {
+          "affine": false,
+          "clip_max": 3.0,
+          "clip_min": -3.0,
+          "epsilon": 1e-05,
+          "name": "layer_norm"
+        }
+      },
+      "levels": [
+        1,
+        2,
+        4
+      ],
+      "pool_type": "max",
+      "preserve_global": true,
+      "residual_scale": 0.25
+    },
+    "max_positions": 500,
+    "mcat_heads": 9,
+    "mcat_layers": 5,
+    "name": "supcon_tpp_joint",
+    "position_kernels": 10,
+    "projection_dim": 128,
+    "projection_hidden_dim": 256,
+    "temporal_kernel_num": 128,
+    "temporal_kernel_sizes": [
+      20,
+      40
+    ],
+    "time_downsample": 2
+  },
+  "output_root": "outputs_supcon_tpp_joint",
+  "protocol": {
+    "arm": "Y10",
+    "futility_thresholds": {
+      "futility_confidence_level": 0.9,
+      "harm_confidence_level": 0.95,
+      "minimum_practical_effect": 0.01,
+      "sit_stand_harm_margin_vs_control": -0.02,
+      "target_specific_mean_harm": -0.05,
+      "target_specific_upper_bound": 0.0
+    },
+    "interim_decision": null,
+    "job_id": "screen__target_E3__arm_Y10__lam0000__seed_83",
+    "labels": {
+      "0": {
+        "name": "no_movement",
+        "support_per_environment": 1200,
+        "support_per_group": 120
+      },
+      "1": {
+        "name": "falling",
+        "support_per_environment": 400,
+        "support_per_group": 40
+      },
+      "2": {
+        "name": "walking",
+        "support_per_environment": 400,
+        "support_per_group": 40
+      },
+      "3": {
+        "name": "sitting_down_standing_up",
+        "support_per_environment": 400,
+        "support_per_group": 40
+      },
+      "4": {
+        "name": "turning",
+        "support_per_environment": 400,
+        "support_per_group": 40
+      },
+      "5": {
+        "name": "picking_up_a_pen",
+        "support_per_environment": 200,
+        "support_per_group": 20
+      }
+    },
+    "lock_sha256": "a770e28fb3fae2d023b6e0c5ddb6e0ca0b91861300c6ac2116ef76e872e9e5b7",
+    "name": "supcon_tpp_joint",
+    "phase_unwrap": false,
+    "resolved": true,
+    "screen_thresholds": {
+      "gradient_absolute_floor_l2": 100.0,
+      "gradient_catastrophic_l2": 1000000.0,
+      "gradient_persistent_epochs": 3.0,
+      "gradient_reference_epochs": 5.0,
+      "gradient_relative_multiplier": 100.0,
+      "maximum_combo_macro_f1_drop_vs_tpp": 0.02,
+      "maximum_combo_sit_stand_f1_drop_vs_tpp": 0.03,
+      "maximum_late_to_early_train_ce_ratio": 0.95,
+      "minimum_positive_anchor_fraction": 0.99,
+      "minimum_source_val_macro_f1": 0.16666666666666666,
+      "smallest_lambda_score_tolerance": 0.005,
+      "train_ce_window_epochs": 20.0
+    },
+    "seed": 83,
+    "selected_lambda": 0.0,
+    "selection_record": null,
+    "source_envs": [
+      "E1",
+      "E2"
+    ],
+    "stage": "screen",
+    "strict_group_protocol": true,
+    "success_thresholds": {
+      "maximum_walking_drop_vs_tpp": 0.02,
+      "minimum_combo_gain_vs_control": 0.01,
+      "minimum_combo_gain_vs_each_single": 0.01,
+      "minimum_hard_pair_absolute_reduction_vs_control": 0.025,
+      "minimum_interaction_for_synergy": 0.01,
+      "minimum_sit_stand_recovery_vs_tpp": 0.05,
+      "minimum_target_specific_gain_vs_each_single": -0.02,
+      "one_sided_confidence_level": 0.95,
+      "sit_stand_noninferiority_margin_vs_control": -0.02
+    },
+    "supcon_enabled": false,
+    "target_env": "E3",
+    "temporal_factor": "amplitude_residual_tpp",
+    "version": "1.2.0-stage0"
+  },
+  "seed_list": [
+    83
+  ],
+  "source_envs": [
+    "E1",
+    "E2"
+  ],
+  "split": {
+    "groups_per_env": 10,
+    "inner_validation": "inferred_group_block_holdout",
+    "split_seed": 20260714,
+    "strict_group_protocol": true,
+    "subject_block_size": 300,
+    "train_groups_per_source_env": 8,
+    "validation_group_ids": {
+      "E1": [
+        "B01",
+        "B07"
+      ],
+      "E2": [
+        "B00",
+        "B06"
+      ],
+      "E3": [
+        "B00",
+        "B04"
+      ]
+    },
+    "validation_groups_per_source_env": 2
+  },
+  "target_data": {
+    "env_files": {
+      "amp": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_6c_3.npy",
+      "label": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/label_6c_3.npy",
+      "phase": "C:/Users/howie/Desktop/enhanced/PA-CSI-HAR/datasets/PA-CSI datasets/MultiEnv/data_angle_6c_3.npy"
+    },
+    "load_for_evaluation": false,
+    "target_env": "E3"
+  },
+  "target_env": "E3",
+  "training": {
+    "batch_size": 16,
+    "domain_balanced_batch": true,
+    "early_stopping": false,
+    "epochs": 200,
+    "grad_clip_norm": 0.0,
+    "lr": 0.001,
+    "lr_scheduler": {
+      "decay_rate": 0.9,
+      "decay_steps": 10000,
+      "name": "exponential_decay",
+      "staircase": false,
+      "update": "step"
+    },
+    "num_workers": 0,
+    "optimizer": "adam",
+    "optimizer_steps_per_epoch": 300,
+    "patience": 200,
+    "sampler": "domain_class_balanced",
+    "samples_per_source_domain_per_batch": 8,
+    "selection_metric": "f1_macro",
+    "selection_tie_break": "earlier_epoch",
+    "total_optimizer_steps": 60000,
+    "weight_decay": 0.0
+  }
+}

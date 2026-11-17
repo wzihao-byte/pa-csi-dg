@@ -1,0 +1,29 @@
+{
+  "environment": "E2",
+  "processed_index": 2963,
+  "raw_inventory_index": 2963,
+  "raw_path": "MAT/E2/E2_S20_C04_A11_T04.mat",
+  "commit": "5337147c5156948b13e6b05a50b79529614acfbe",
+  "verifier_version": "legacy-replay-v3-timestamp-text15",
+  "processed_hashes": {
+    "amp": "83040641875495ccea66b1cc92dde3619a6dd74c0da62e9ce07a31ba19419ed5",
+    "phase": "809c21b2de876bdede92e7e42ac1b6734863ad6f1b225c9c963440906a9961e7",
+    "label": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85"
+  },
+  "subject_id": "S20",
+  "experiment_id": 4,
+  "activity_id": 11,
+  "trial_id": 4,
+  "acquisition_id": "E2:S20:C04:T04",
+  "raw_sha256": "88cabc88048f9f08cf11db524dc7b0f727641a6527505c6d8a3bf7aae8ec0415",
+  "packets": 985,
+  "replay_timestamp_method": "MAT values formatted to 15 significant decimal digits; precision-equivalent historical replay",
+  "mat_timestamp_exceeds_uint32": false,
+  "timestamp_text15_changed_values": 0,
+  "replay_duration_seconds": 3.19989,
+  "raw_timestamp_monotonic": true,
+  "amplitude_max_absolute_error": 0.0,
+  "phase_max_absolute_error": 0.0,
+  "label_matches": true,
+  "matched": true
+}

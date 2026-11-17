@@ -1,0 +1,92 @@
+{
+  "status": "approved",
+  "approved_at": "2026-09-24T06:05:12.576320+00:00",
+  "reviewer": "Codex final document and implementation audit",
+  "formal_states_synchronized": true,
+  "author_actions_not_fabricated": true,
+  "pseudo_tx_checked_against_code": true,
+  "historical_h_y_preserved": true,
+  "formal_tables_claims_checked_against_evidence": true,
+  "widar_cancelled_without_performance_claim": true,
+  "h_grouped_l1248_integrated": true,
+  "no_independent_cross_dataset_confirmation_claim": true,
+  "unresolved_numeric_claims": [],
+  "r_results_technical_audit_only": true,
+  "writing_scope_check": {
+    "writing_scope": "H/Y plus verified grouped-H; R technical audit only",
+    "all_signed_paired_deltas": 9,
+    "all_signed_historical_metric_deltas": 36,
+    "scope_instruction_sha256": "4720a74f58a64f42b188a1da68402a050a9868af4b6e10f05ab87c2dbed3be8b",
+    "scope_verifier_sha256": "61afa612521b91d551557107104dda565307e3057918614a51f291765db53a97",
+    "included_tex_sha256": {
+      "paper/sensors_manuscript/manuscript.tex": "7f73a80f21a9bb14e2453966c63ef8c113ffab4cf1ab13d72f42e0b9773139cd",
+      "paper/sensors_manuscript/revision_assets/literature_20260917/related_work.tex": "99bd2729311bda0b1e5ed1dacdbf3310c87e4f470ff18f0dd6ca5e41c8a2b097",
+      "paper/sensors_manuscript/revision_assets/multienv_v2/formal_results.tex": "cb9c7b8e38d29b37ac405e70bb2b0c9e30e1f87fb4bfca3ad857d71bd2d95c47",
+      "paper/sensors_manuscript/revision_assets/protocol_results.tex": "a1983a56bb448e20519ec2a532a88a26ffac07b65199f1e6e6c5b12f790336e6",
+      "paper/sensors_manuscript/revision_assets/thesis_20260917/class_table.tex": "c61e6e54a2daf7eec027cffbc988ea90d4195c724e4924e1437ca6d7f549affb",
+      "paper/sensors_manuscript/revision_assets/thesis_20260917/development_history.tex": "f6bfd1842de526e4f8c314e54fd9328b28d1832cafadee251a4728de053ccf97",
+      "paper/sensors_manuscript/revision_assets/thesis_20260917/paired_table.tex": "95719831e4d3c72b5a78719013723894985e80f412c0da8db8c47ba392b1e9df",
+      "paper/sensors_manuscript/revision_assets/thesis_20260917/scale_table.tex": "0e58efcb1fc50694bbe526c0f57657cbab4668c119bfd3cef8931c2c822e3a67",
+      "paper/sensors_manuscript/revision_body.tex": "4762f44b71a8b1ef2306c60d0ea4572bf5085eea4c13c6575a01a63f501d63f9"
+    },
+    "review_response_sha256": "f01fca51b2be66577e8ef58fc6cd7c1bfd8e37b9fa6b36d8cc8852c70322f3ea"
+  },
+  "verified_multienv_results_sha256": "d1111889335d130d19ea2ab2b97f5d0a8fefd87217a8548d819ac86a2ebd9071",
+  "release_manifest_sha256": "a032223ed056026b7516ff8104d4acb6b499fa986a2b917d732908eca0c4ce2b",
+  "documents_sha256": {
+    "docs/revision/REVISION_PLAN.md": "3aa7d99c7938a728fdf1614bf8da9be2943451bd81519d54764e883967b1f9e1",
+    "docs/revision/COMPLETION_AUDIT.md": "754bbc6ee03a47560837af8452348b539ce54336cb68a3839259a0856c0559db",
+    "docs/revision/REVIEW_RESPONSE_MATRIX.md": "bc80dda0bbb383a98c4aa46cce1e217142701e216578d0e56c32b97abb78aade",
+    "docs/revision/REVIEW_RESPONSE_DRAFT.md": "f01fca51b2be66577e8ef58fc6cd7c1bfd8e37b9fa6b36d8cc8852c70322f3ea",
+    "docs/revision/WIDAR_EXTERNAL_PROTOCOL.md": "fcf207ca16425994971a9aed75f09c578a7649a45ce5cfb464f924bf89737516",
+    "docs/revision/INDEPENDENT_CONFIRMATION.md": "319583ea1e937d22ad230de991002e12d8604a751fdc65128d10fc3b4d9c90ef",
+    "docs/revision/REPRODUCIBILITY_RELEASE_CHECKLIST.md": "a9616987aaa2b23e7a34f3ae9150ee271d248c9d061affa49f9dc3397e5bdfa2",
+    "experiments/revision_validation/EXPERIMENT_PLAN.md": "7795de56827bc94edd406893606431fc0208233f25eb7123175821d7c11408c6",
+    "experiments/h_grouped_l1248/EXPERIMENT_PLAN.md": "2a7a4baff1c72261f126d1563ce515400e2012b59751935868ac7ea437d8d4c9",
+    "paper/sensors_manuscript/README.md": "aae2827ebbeebf9d798a8133ea2918e2fd874b3a49163aa6e49ccc59cb62f8c2",
+    "paper/sensors_manuscript/manuscript.tex": "7f73a80f21a9bb14e2453966c63ef8c113ffab4cf1ab13d72f42e0b9773139cd",
+    "paper/sensors_manuscript/revision_body.tex": "4762f44b71a8b1ef2306c60d0ea4572bf5085eea4c13c6575a01a63f501d63f9"
+  },
+  "implementation_bindings": {
+    "dg_models.py": "7f99caf93a5103e00866d24263faf0444429ae8a128d954838bef82a6cd02d07",
+    "H18_resolved_configs": {
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_42/H10/attempt_001/payload/run/resolved_config.json": "c925022dac52dcf64a03310392b7eacde300eaf5ee51d46f66cb40173773b49e",
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_42/H11/attempt_001/payload/run/resolved_config.json": "4d2ef710a035bd1d555a9d16f874fdcec2143cf4e7932250f9f62e9d6adc9352",
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_52/H10/attempt_001/payload/run/resolved_config.json": "f07ee97aa4d9c87dd824746a4d4caa8549f8bc1c116c04812279a2f7f8d7a1c2",
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_52/H11/attempt_001/payload/run/resolved_config.json": "63ea235b62202c23e4c1f4d456e67e6d9d095e98a5bb60f0b7b57123e9c31e4b",
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_62/H10/attempt_001/payload/run/resolved_config.json": "3e6e0f68a2743719dd8faccafbcbbb6eaa5c42b1a1cffdd34b48ad2f8a8a2c24",
+      "outputs_h_grouped_l1248/v2/runs/E1/seed_62/H11/attempt_001/payload/run/resolved_config.json": "1e34c7d1bad7802f3d494a712c0e9d2863da38a3b68c099a0efcb4dc214eea3c",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_42/H10/attempt_001/payload/run/resolved_config.json": "e6053d129609e473719aadcd0fe978337805fe4fb9ef7322ae2e11044799bda8",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_42/H11/attempt_001/payload/run/resolved_config.json": "60bd841dbf19a48b075c2dd1d2f93708f12cc7c61c4febb7d3767b84f80d74b0",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_52/H10/attempt_001/payload/run/resolved_config.json": "1d6fbc202308938cda20ea22ceabc2fdbd46ed6f193e74745e2b27cd846943eb",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_52/H11/attempt_001/payload/run/resolved_config.json": "6ac20912fa2884a99db988bc79eec737f135428750c256acc3637772ca1f58e2",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_62/H10/attempt_001/payload/run/resolved_config.json": "1520f207d636494d6cb5a022daad923a8e8b41b2ee0ccadcb3a58b6dbcbe602d",
+      "outputs_h_grouped_l1248/v2/runs/E2/seed_62/H11/attempt_001/payload/run/resolved_config.json": "1f659cf97dafaa4ecc98d2e7d4ca2851e147404d30cc036baefe7b55ffe5b073",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_42/H10/attempt_001/payload/run/resolved_config.json": "319fbffe9c888a65919675ac1d514e2ca911c7f3fe197b53acbed99a2882b5b8",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_42/H11/attempt_001/payload/run/resolved_config.json": "014fe6d9908e5f2ad172e1f83606483d58a295bc294ea65ac33b75a79d3336cb",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_52/H10/attempt_001/payload/run/resolved_config.json": "32fe081a12b69f49795ef3b4a7d60ab9e8b97710093a300db9b587c8057cc309",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_52/H11/attempt_001/payload/run/resolved_config.json": "f050eca3b0071bee5eb01b4150364d03039c83a58e0ac1f9eec1a56222c06c9c",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_62/H10/attempt_001/payload/run/resolved_config.json": "fcd97b2767dca75506b8154db7e893f68ca6a5001281458eb7b29979fbf79293",
+      "outputs_h_grouped_l1248/v2/runs/E3/seed_62/H11/attempt_001/payload/run/resolved_config.json": "15abfec38bf0a5ee6e0f2e72e40a5e7a4777bda4f3616fae2ad2f4564be4e3bb"
+    }
+  },
+  "unresolved_scientific_claims": [
+    "Independent environment confirmation",
+    "Population inference",
+    "Full factorial interaction from H18",
+    "Validation selection isolated from train membership",
+    "Historical physical clock and phase calibration",
+    "Masked-view label preservation",
+    "Individual pooling-path causal attribution",
+    "Matched inference latency advantage"
+  ],
+  "author_actions_pending": [
+    "Author names, affiliations and correspondence",
+    "Funding, contributions and conflicts confirmation",
+    "Data licensing confirmation",
+    "Public deposit and stable identifier",
+    "Final author submission review"
+  ],
+  "separate_dated_review_draft": "review_20260924 is preserved and is outside this H/Y release approval",
+  "release_document_policy": "Immutable build-time snapshot; this approval binds the current twelve documents to its manifest."
+}

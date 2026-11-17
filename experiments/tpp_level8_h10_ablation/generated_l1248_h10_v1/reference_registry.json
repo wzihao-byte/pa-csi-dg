@@ -1,0 +1,648 @@
+{
+  "schema_version": "tpp-level8-h10-reference-registry/v1",
+  "reference_bundle_manifest_sha256": "702670d529a7083d4d3214f5927914cbcbf0d621b7623de86cbbeb5d5e760a1a",
+  "reference_results_sha256": "9ce95b429539693847abb1fcd402cbfe43786f8ecebb785f19b485f6edcf5c4f",
+  "reference_completion_audit_sha256": "080d189243de59e47bd5b68d2576305f1dd0094d07690af983d9b7708248ac95",
+  "rows": [
+    {
+      "reference_id": "reference_h10_l124__target_E1__seed_42",
+      "target_env": "E1",
+      "seed": 42,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E1__seed_42__arm_H10.json",
+      "source_config_file_sha256": "88d3af6d35133184974bc8d13edc70ff07763cc082d55b49894d95bac8872eeb",
+      "source_config_payload_sha256": "02e8d79260e39d71e0bb1aced2f5c974617e6f189b69a3d24eecd7e012013160",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E1\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "531cf274676ac6aef052ee8b27bc78ecd3e42fac5e201d0205c4b7edd6003ed8",
+      "attempt_seal_sha256": "bfbfafdff615896d75ce31abda4c97d46b2706a38da5dfd239f221a2061855a7",
+      "metrics_sha256": "a9f75fd63658528dafa9d8cc5f3044989c5fdf36b6ee96c3df981fa324712105",
+      "checkpoint_sha256": "533d2348b83b0b6e59f95d38405711a6f206632542037c9429933308f05c7359",
+      "target_predictions_sha256": "c5b63cee814b933ace3d160d4264234a1eaccb16310e2d42bab71368c0193b6b",
+      "sampler_schedule_sha256": "d29837557c9b4847e3c875a3be1c074db7e80c4e40303c1c39a9e5dc24e7b7b0",
+      "split_hashes": {
+        "train": "0f44ac7f25e1290a06d05323aafeb573bf3ed8ee5b09659577e41bc1935e7cb8",
+        "val": "ca8b840cbcdca4d3481eab3bc80597ca3d259e4411bfd5ead66a9298a674bb13",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.9093333333333333,
+        "precision_macro": 0.925965004383516,
+        "recall_macro": 0.8880555555555557,
+        "f1_macro": 0.8889855873289418
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9941763727121464,
+          "recall": 0.9958333333333333,
+          "f1": 0.9950041631973355
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9741379310344828,
+          "recall": 0.565,
+          "f1": 0.7151898734177216
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9849624060150376,
+          "recall": 0.9825,
+          "f1": 0.983729662077597
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9907120743034056,
+          "recall": 0.8,
+          "f1": 0.8852005532503457
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6118012422360248,
+          "recall": 0.985,
+          "f1": 0.7547892720306514
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E1__seed_52",
+      "target_env": "E1",
+      "seed": 52,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E1__seed_52__arm_H10.json",
+      "source_config_file_sha256": "284df458a3c7d79ac23d1c9c84f5de57044d4e08c3469e828dc332f43a37c3a3",
+      "source_config_payload_sha256": "b9e9f529b6127b92cd0fa4bfd7a2d0dee930222a2616a269cbeed5002a178560",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E1\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "3da9c4bd43ef191866e936ab1638ba3ff740e4a5bbcf70d595e665c650af7c26",
+      "attempt_seal_sha256": "ff7bb3a45563027fd05870482bf64916c44df015e11a6b000ce37410bfc207ef",
+      "metrics_sha256": "84e7156f43d0af5f16d6517c391773faa773cfd27d050a04b4fded2de69c89ca",
+      "checkpoint_sha256": "c0f01aefeaa746928359c49d8cc16f31ad32173fb7f6f2a2e095583b605088b1",
+      "target_predictions_sha256": "f52a2137688d10fe0c2aced1c4b7133a32c34dd9065e2ad50e9d5fea005a7596",
+      "sampler_schedule_sha256": "5025e72cc5ee121d33fa06b94ffcd7a15aa7ca038259f5678d542708a946a0b9",
+      "split_hashes": {
+        "train": "d2ca290230c040220cbaee77a5e1617e92f106b66f055933bb5d0f5d4d79c5fe",
+        "val": "086d9fe9592ebb6b7dfe398ea566b7336ed128dd2ef5c5537e359ff452b15d48",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.917,
+        "precision_macro": 0.9234192231874756,
+        "recall_macro": 0.8983333333333334,
+        "f1_macro": 0.8981453664877157
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.989202657807309,
+          "recall": 0.9925,
+          "f1": 0.9908485856905159
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9206349206349206,
+          "recall": 0.58,
+          "f1": 0.7116564417177913
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9803439803439803,
+          "recall": 0.9975,
+          "f1": 0.9888475836431228
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9970674486803519,
+          "recall": 0.85,
+          "f1": 0.9176788124156545
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6532663316582915,
+          "recall": 0.975,
+          "f1": 0.7823470411233701
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E1__seed_62",
+      "target_env": "E1",
+      "seed": 62,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E1__seed_62__arm_H10.json",
+      "source_config_file_sha256": "a848d9588840c33f1c0f399b2d5ee7dab12f9e8be8e57b0f6d58274e320fcc0d",
+      "source_config_payload_sha256": "dfbd6339b4f4a5786c0a803615b5e9a2a440ac357c004ffdcea57ce204ce92d6",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E1\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "1bc688c599840d73d6e841e42752f8445604e11db5357f71d815a43099b7f269",
+      "attempt_seal_sha256": "7a5f3a8a7fb6b9c20268ec16d3deefae10d4091a3e53239b033eac74e5d5fb2c",
+      "metrics_sha256": "ed4282362be77eb9ec89e10c36d06a38ddd77f7ff9c2865d18b53b1e4184327d",
+      "checkpoint_sha256": "68d3ddb0221b7f9a37915fd219e4227359dbdc0d6d9c79af399b748d7b8e0bfd",
+      "target_predictions_sha256": "fa366bdfc8047255f45b11ccbe5b7ebd1521eefae42e0649e8e4de5d7b1e242b",
+      "sampler_schedule_sha256": "312475a5e73843d13694f58c785a9eff090841309e57ad3f4f5a0df39520d1e3",
+      "split_hashes": {
+        "train": "0c4984898b48b59c4b3ce83e127cf610e7273a4fd44b86dae445aec66c24842c",
+        "val": "cfcc0fff9f4ff1094754ec8f572899d8a38becd304bd9ca26a1a8822dffbe173",
+        "test": "e8c9ceaf5aacc63c25b4cdd8542592f9d58aff50e3e8fc6c55591d3d8f596562"
+      },
+      "test_metrics": {
+        "accuracy": 0.8963333333333333,
+        "precision_macro": 0.9102678807520929,
+        "recall_macro": 0.8845833333333334,
+        "f1_macro": 0.872880210747466
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9939446366782007,
+          "recall": 0.9575,
+          "f1": 0.9753820033955857
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.9885714285714285,
+          "recall": 0.4325,
+          "f1": 0.6017391304347827
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9408983451536643,
+          "recall": 0.995,
+          "f1": 0.9671931956257594
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9429928741092637,
+          "recall": 0.9925,
+          "f1": 0.967113276492083
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5952,
+          "recall": 0.93,
+          "f1": 0.7258536585365855
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E2__seed_42",
+      "target_env": "E2",
+      "seed": 42,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E2__seed_42__arm_H10.json",
+      "source_config_file_sha256": "ad6600f78a5f8f2df6edc01043332f5b12cf3edde54c4d6906292597c85ff20c",
+      "source_config_payload_sha256": "5cbcbc59226552ccf1792d48c95ac9f50de5d3db8ca7f48f0c7ff2e29b1de7d3",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E2\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "2d7bbf662819cb2693b26b2070c0269ab376b2d1a35de62eec1d453d0db7c42b",
+      "attempt_seal_sha256": "fc40245627fd75311761a8d3cc6796208bf627e3cb5b401b1329298e77dc32c6",
+      "metrics_sha256": "e9fa862266bf4f6e69714a6e6f50e0bdb96d74cc471e21368d73becb33f8d8e1",
+      "checkpoint_sha256": "bd24a2a25a3ea8e8b01c447e703290ff1bde2480ccfdae07a0e8e959a56694b3",
+      "target_predictions_sha256": "3717b61bca9b35e45eaa4d27ad547e9685bcd5548adf0456362f2f78f8a30193",
+      "sampler_schedule_sha256": "690e72b2d9639403a53ac60a7fc78ca86f73778f773123fcce36ccca44fc8596",
+      "split_hashes": {
+        "train": "865d9a94823fdc43ae78674eb55a103c027764713a4f859acb0bd071dca2a48d",
+        "val": "251e39c0fe93bbf1427f1b99f00e1427fe504941f4df323b64fa4babb777c300",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.898,
+        "precision_macro": 0.8815784138555817,
+        "recall_macro": 0.8770833333333333,
+        "f1_macro": 0.8788012440123589
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9809128630705394,
+          "recall": 0.985,
+          "f1": 0.982952182952183
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.6598639455782312,
+          "recall": 0.7275,
+          "f1": 0.6920332936979786
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9493333333333334,
+          "recall": 0.89,
+          "f1": 0.9187096774193549
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9850746268656716,
+          "recall": 0.99,
+          "f1": 0.9875311720698254
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.7142857142857143,
+          "recall": 0.675,
+          "f1": 0.6940874035989718
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E2__seed_52",
+      "target_env": "E2",
+      "seed": 52,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E2__seed_52__arm_H10.json",
+      "source_config_file_sha256": "ea256b6ad7ca3c0048bda09bfbc8ed38170a6ec7cd6551568479fdb1f199eef3",
+      "source_config_payload_sha256": "e800a77f3c5d798f1df9f6e6da79f8a657412184b71267e1241d3d4de0fba9c2",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E2\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "0330193c7712f5acac5220a14b6bf02ff6cb1235f0c6ce5d0f6581be06fd35a2",
+      "attempt_seal_sha256": "811977c5ccf980ca16af0a90ec8635b017d2eacd878b8164d7f6b62627fc9ef4",
+      "metrics_sha256": "2db301aacf001f24f8cb5f48fc37638418db7740c913d5f09d1a6f952767be31",
+      "checkpoint_sha256": "b1f82ae0cb6186b15432bbc58aa3c051447dd98563ca0bca090fca46683ce438",
+      "target_predictions_sha256": "bc65cb79415821f0a002bc1f48152cf8c164de52646a34214f65e9685f07650e",
+      "sampler_schedule_sha256": "63b549afd07bcfc38ed4b80bd74bbfd6923ce237000108e849312d47410b4178",
+      "split_hashes": {
+        "train": "c11b95e183f45b43f1578f4ee98e3bd75a813bcc3826cc879b55dd7f9130e800",
+        "val": "ac63276a5d4322e45534aff1963ab8a97c27f04056307182802f548c60be25ef",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.896,
+        "precision_macro": 0.8835894456817489,
+        "recall_macro": 0.8748611111111111,
+        "f1_macro": 0.8764043866377579
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9866332497911445,
+          "recall": 0.9841666666666666,
+          "f1": 0.985398414685023
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.647887323943662,
+          "recall": 0.805,
+          "f1": 0.717948717948718
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 1.0,
+          "recall": 0.8375,
+          "f1": 0.9115646258503401
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9875930521091811,
+          "recall": 0.995,
+          "f1": 0.991282689912827
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6893732970027248,
+          "recall": 0.6325,
+          "f1": 0.6597131681877444
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 0.9900497512437811,
+          "recall": 0.995,
+          "f1": 0.9925187032418954
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E2__seed_62",
+      "target_env": "E2",
+      "seed": 62,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E2__seed_62__arm_H10.json",
+      "source_config_file_sha256": "1345744529afe3ae3eca21de06d559a361a2c0c7c3d5eedc6098189d1130c0d5",
+      "source_config_payload_sha256": "dc99088603ec2e59866ac73b6ff8bed6d62a00dc7b8d52b9aeb4128944bb4dcc",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E2\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "e00a624795b925fdbef6ed768958d335be9022498339b2d6f026d02cab8b55e8",
+      "attempt_seal_sha256": "ef90c80b93abf366d0d153e0fdd5c926affdaa893d500a74be0d54d9d372e8bf",
+      "metrics_sha256": "279a752b81a0a92f09fc59d45a49e48d411dbe9327cc4b88fd6f953e1154a4ed",
+      "checkpoint_sha256": "e7de5d3563aff2c75275d13e682cedf0122ced5475d1720d687e043d70dbc001",
+      "target_predictions_sha256": "a79e7a66f1c83b76330623e5c49f32c02c87adaaceac59b70241b705639aeb6b",
+      "sampler_schedule_sha256": "bd1d585e42cc7e35c3c0cb8ab9068d6b6b81eadccedfe9bea4d71530ad4b04c2",
+      "split_hashes": {
+        "train": "4b3d0afc7bf1758949abaf5634d32f98e4fd7e1b9221b05bfea52b5bce744601",
+        "val": "2c97cea52960971ebb1799fa649489404a1fc9e936a961fdd3758d5200ced275",
+        "test": "df541fe3c6cba6b4a4003c7e3b6e70ea47c85e0976c3c1842a268401e2d3ddab"
+      },
+      "test_metrics": {
+        "accuracy": 0.9333333333333333,
+        "precision_macro": 0.9244447754004291,
+        "recall_macro": 0.9173611111111111,
+        "f1_macro": 0.9198559694167509
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9819376026272578,
+          "recall": 0.9966666666666667,
+          "f1": 0.9892473118279571
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.7511111111111111,
+          "recall": 0.845,
+          "f1": 0.7952941176470588
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9948453608247423,
+          "recall": 0.965,
+          "f1": 0.9796954314720813
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9949109414758269,
+          "recall": 0.9775,
+          "f1": 0.9861286254728877
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.8238636363636364,
+          "recall": 0.725,
+          "f1": 0.7712765957446809
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 0.995,
+          "f1": 0.9974937343358395
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E3__seed_42",
+      "target_env": "E3",
+      "seed": 42,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E3__seed_42__arm_H10.json",
+      "source_config_file_sha256": "7d3ff407e4a4c0c3b76d7a343357f71488043a50e44b025d94c0313307a168c7",
+      "source_config_payload_sha256": "fc802921d3e3afb24c76c36f7a1779b4c7bd1b5c21c3013f8e712ed0b152e898",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E3\\seed_42\\H10\\attempt_001",
+      "completion_manifest_sha256": "e4ced8d34f3245e9674344d01df1c551ffa60f33e2e8653acd99a8b8792b7f45",
+      "attempt_seal_sha256": "3bfd2b5570c37d3b02f4c7c41469f12222c30f11f2f8d7e7763e9b74d3aab3a4",
+      "metrics_sha256": "6511195f37e778710cc13687f5bdecfd4963572c8ac3eb4f0b0b9359f56679d3",
+      "checkpoint_sha256": "4bed89ba0c32723a4be8e54fc022342b10b13332dd8637dfe6a3d036cc196d05",
+      "target_predictions_sha256": "19c034db7d393b7d555c711644f711909c8b1778989df277360764b7c13d0c51",
+      "sampler_schedule_sha256": "ef6e25b9658dd488713b772e463e1ad1166174e8a5d15612b57c536a0de8472c",
+      "split_hashes": {
+        "train": "e58fe2824d1443011e3638d80999e7b390172c776634956870a65d4aa5102dfb",
+        "val": "483638e65f222305406a386efc6c269bf9e0447c461c8c4668ce8d85ab7e0b42",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.8943333333333333,
+        "precision_macro": 0.8950786596174926,
+        "recall_macro": 0.8704166666666667,
+        "f1_macro": 0.871621784591364
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9690805532953621,
+          "recall": 0.9925,
+          "f1": 0.9806504734458626
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8089430894308943,
+          "recall": 0.4975,
+          "f1": 0.6160990712074303
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9884393063583815,
+          "recall": 0.855,
+          "f1": 0.9168900804289545
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950124688279302,
+          "recall": 0.9975,
+          "f1": 0.9962546816479401
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.6089965397923875,
+          "recall": 0.88,
+          "f1": 0.719836400817996
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E3__seed_52",
+      "target_env": "E3",
+      "seed": 52,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E3__seed_52__arm_H10.json",
+      "source_config_file_sha256": "c7db8c815ab3fc38082e58c003c3a0b04d346d55b9ea94178a1aa134fe70e73b",
+      "source_config_payload_sha256": "1d8b81b52a7e0c25a630d7601db3165ea95070236cb64300c11df474b831eb64",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E3\\seed_52\\H10\\attempt_001",
+      "completion_manifest_sha256": "d874185af3d905d8274e29094b38a7260eea2b73b359fff761a1a7d05c9e203f",
+      "attempt_seal_sha256": "0b38b8a58f8b04b7642b982263e8c0480043d433c5b33eb7482a8c95db8576cd",
+      "metrics_sha256": "c71670817818547b79e220ab44ffba4a5d4166391765bd91f0d166f65b25121c",
+      "checkpoint_sha256": "9355cd1b4435fcc1fc0489a2aeac4f13d93fbe4d1a8b9cc93a8a52b782581d9b",
+      "target_predictions_sha256": "a9c32c25b3bf0be0726c21c0a8334020c79996b134c42087e6136d338d2e7378",
+      "sampler_schedule_sha256": "2b6a913629f8815be6f9ab734d93ba481feb8b54f73fc1e3b2636c90e2a3215c",
+      "split_hashes": {
+        "train": "46ceed39f5aa066908880bb33a713c7a0af74dc54411823dff82e502ed6722ec",
+        "val": "b6caa457dfc2af94c76f9b1f30da7dcd881366e662b2c34a2456af007397948a",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.8776666666666667,
+        "precision_macro": 0.8935538271018162,
+        "recall_macro": 0.8748611111111111,
+        "f1_macro": 0.8705353927991467
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.9830205540661304,
+          "recall": 0.9166666666666666,
+          "f1": 0.9486847779215178
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8537549407114624,
+          "recall": 0.54,
+          "f1": 0.6615620214395099
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9917582417582418,
+          "recall": 0.9025,
+          "f1": 0.9450261780104713
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.9950248756218906,
+          "recall": 1.0,
+          "f1": 0.9975062344139651
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5377643504531722,
+          "recall": 0.89,
+          "f1": 0.6704331450094162
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    },
+    {
+      "reference_id": "reference_h10_l124__target_E3__seed_62",
+      "target_env": "E3",
+      "seed": 62,
+      "arm": "H10",
+      "source_config_path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\generated_factorial_s32_v1\\configs\\factorial_s32__target_E3__seed_62__arm_H10.json",
+      "source_config_file_sha256": "e216b2b6b36e304fbb003b8b97a7c7346c8c30c1656646541b80e744fb5fc465",
+      "source_config_payload_sha256": "c6e96f2179a84dd578e41309341b6b2d539d33d8eebf5863631b43fe3e3b20e6",
+      "attempt_dir": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\factorial_s32\\runs\\E3\\seed_62\\H10\\attempt_001",
+      "completion_manifest_sha256": "eed72768b976653c1e3e1052e053b51829bc1f608efe06886150f6294a62afc7",
+      "attempt_seal_sha256": "c159c82a387e12dd4238afeeef0920c6f1fd9ef2998fddad2ab7c9a43fedc3e6",
+      "metrics_sha256": "29d60c3b5a5befcf8f209f7c81f634a4595c7864f49ebcbd9aa9b5ed5a366889",
+      "checkpoint_sha256": "7be85532fd18ff052f4cd85dc971b226bd8904068322a38e0cd85b5b3abc2c98",
+      "target_predictions_sha256": "9546d4efa62018caed665952b717b55a406df482365954857947df92ff280164",
+      "sampler_schedule_sha256": "83431787ada99cdd4caab6e8fc3c035b4351ccc5d8f2efb9678008cc84c2825c",
+      "split_hashes": {
+        "train": "ccee8906acd23df8628c4092b6e7c60e1130a2852a8624899e1356b3cb7ea71e",
+        "val": "f1b5f4e88c37648a7a8f59f97292266fd0b0866d014a5039bf5cf773460af7ae",
+        "test": "61014996542255421ced7f4f3fbbdd8d5bfa09e023b5c88c23bdc3f95b79a136"
+      },
+      "test_metrics": {
+        "accuracy": 0.8736666666666667,
+        "precision_macro": 0.8901439910230481,
+        "recall_macro": 0.8626388888888888,
+        "f1_macro": 0.86154175101818
+      },
+      "per_class_metrics": [
+        {
+          "class_id": 0,
+          "support": 1200,
+          "precision": 0.990325417766051,
+          "recall": 0.9383333333333334,
+          "f1": 0.9636285836542576
+        },
+        {
+          "class_id": 1,
+          "support": 400,
+          "precision": 0.8505747126436781,
+          "recall": 0.555,
+          "f1": 0.6717095310136157
+        },
+        {
+          "class_id": 2,
+          "support": 400,
+          "precision": 0.9968652037617555,
+          "recall": 0.795,
+          "f1": 0.8845618915159945
+        },
+        {
+          "class_id": 3,
+          "support": 400,
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "f1": 0.9876543209876543
+        },
+        {
+          "class_id": 4,
+          "support": 400,
+          "precision": 0.5274888558692422,
+          "recall": 0.8875,
+          "f1": 0.6616961789375582
+        },
+        {
+          "class_id": 5,
+          "support": 200,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      ]
+    }
+  ],
+  "row_count": 9
+}

@@ -1,0 +1,11 @@
+{
+  "seed": 401,
+  "shared_state_tensors_exactly_equal": 182,
+  "same_pool_CE_SupCon_all_initial_tensors_equal": true,
+  "total_parameters": {
+    "R00": 1878142,
+    "R01": 1878142,
+    "R10": 1878142,
+    "R11": 1878142
+  }
+}

@@ -1,0 +1,17 @@
+{
+ "uniform_grid_minus_original_pp": {
+  "mean": 0.8327222541957915,
+  "by_env": {
+   "E1": 3.758133817132465,
+   "E2": -1.518585742903819,
+   "E3": 0.25861868835872787
+  },
+  "improved": 4
+ },
+ "within_minus_across_link_bootstrap_95_pp": [
+  -2.203022304898315,
+  0.9544631134293102
+ ],
+ "r2_duration_from_phase_slope_intercept_6d": 0.8027337177033851,
+ "r2_duration_from_amplitude_mean_sd_180d": -0.0647870484449969
+}

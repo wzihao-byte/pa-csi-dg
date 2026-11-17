@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "run_count": 27,
+  "paired_class_count": 162,
+  "new_training": false,
+  "new_target_inference": false,
+  "source_files_sha256": {
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\review_20260924\\recomputed_runs.csv": "b622ca2daaafdcebf4217927cd3257b36fdbe885e1ad1efe4cf9968fb30d7cae",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\review_20260924\\H00_H10_H11_classwise.csv": "af54cc9ed1d7cf71452d014d7c139aafe9c17a1da770128e7842e12f89d1041a",
+    "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\review_20260924\\evidence_manifest.json": "df3c400efb120b1173effdd12d75f59daf552f8d7cde1878c00acf82433f2ecf"
+  },
+  "script_sha256": "54befe450a09713df069f50127969d9da5424143139b963bd897cce9fa5cc51b",
+  "artifacts_sha256": {
+    "all_paired_class_differences.csv": "55fa6edf7cce61a93e8fc9536a496cbedbef70cc31dc5dad8a49255d13eafae4",
+    "classwise_report.md": "d7fe0b111320ff34781a4b7ca53250a513f4ff58f91bf10f82f7e9b249af993e",
+    "class_difference_summary.csv": "5327a53d29db3551602e3f2b07ac087d37ed86c04d18e55161ad6c2be4c9469f"
+  }
+}

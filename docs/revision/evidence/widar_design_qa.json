@@ -1,0 +1,339 @@
+{
+  "passed": true,
+  "metadata_only": true,
+  "target_signal_loaded": false,
+  "job_count": 36,
+  "unique_job_ids": true,
+  "parameters": 1878142,
+  "negative_wrong_fold": "Widar source manifest is not the declared data version/fold",
+  "jobs": [
+    {
+      "job_id": "W1_W_R00_701",
+      "target": "W1",
+      "arm": "R00",
+      "seed": 701,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R01_701",
+      "target": "W1",
+      "arm": "R01",
+      "seed": 701,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W1_W_R10_701",
+      "target": "W1",
+      "arm": "R10",
+      "seed": 701,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R11_701",
+      "target": "W1",
+      "arm": "R11",
+      "seed": 701,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W1_W_R00_702",
+      "target": "W1",
+      "arm": "R00",
+      "seed": 702,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R01_702",
+      "target": "W1",
+      "arm": "R01",
+      "seed": 702,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W1_W_R10_702",
+      "target": "W1",
+      "arm": "R10",
+      "seed": 702,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R11_702",
+      "target": "W1",
+      "arm": "R11",
+      "seed": 702,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W1_W_R00_703",
+      "target": "W1",
+      "arm": "R00",
+      "seed": 703,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R01_703",
+      "target": "W1",
+      "arm": "R01",
+      "seed": 703,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W1_W_R10_703",
+      "target": "W1",
+      "arm": "R10",
+      "seed": 703,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W1_W_R11_703",
+      "target": "W1",
+      "arm": "R11",
+      "seed": 703,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R00_801",
+      "target": "W2",
+      "arm": "R00",
+      "seed": 801,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R01_801",
+      "target": "W2",
+      "arm": "R01",
+      "seed": 801,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R10_801",
+      "target": "W2",
+      "arm": "R10",
+      "seed": 801,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R11_801",
+      "target": "W2",
+      "arm": "R11",
+      "seed": 801,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R00_802",
+      "target": "W2",
+      "arm": "R00",
+      "seed": 802,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R01_802",
+      "target": "W2",
+      "arm": "R01",
+      "seed": 802,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R10_802",
+      "target": "W2",
+      "arm": "R10",
+      "seed": 802,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R11_802",
+      "target": "W2",
+      "arm": "R11",
+      "seed": 802,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R00_803",
+      "target": "W2",
+      "arm": "R00",
+      "seed": 803,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R01_803",
+      "target": "W2",
+      "arm": "R01",
+      "seed": 803,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W2_W_R10_803",
+      "target": "W2",
+      "arm": "R10",
+      "seed": 803,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W2_W_R11_803",
+      "target": "W2",
+      "arm": "R11",
+      "seed": 803,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R00_901",
+      "target": "W3",
+      "arm": "R00",
+      "seed": 901,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R01_901",
+      "target": "W3",
+      "arm": "R01",
+      "seed": 901,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R10_901",
+      "target": "W3",
+      "arm": "R10",
+      "seed": 901,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R11_901",
+      "target": "W3",
+      "arm": "R11",
+      "seed": 901,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R00_902",
+      "target": "W3",
+      "arm": "R00",
+      "seed": 902,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R01_902",
+      "target": "W3",
+      "arm": "R01",
+      "seed": 902,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R10_902",
+      "target": "W3",
+      "arm": "R10",
+      "seed": 902,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R11_902",
+      "target": "W3",
+      "arm": "R11",
+      "seed": 902,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R00_903",
+      "target": "W3",
+      "arm": "R00",
+      "seed": 903,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R01_903",
+      "target": "W3",
+      "arm": "R01",
+      "seed": 903,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    },
+    {
+      "job_id": "W3_W_R10_903",
+      "target": "W3",
+      "arm": "R10",
+      "seed": 903,
+      "parameters": 1878142,
+      "lambda": 0.0,
+      "objective": "ce"
+    },
+    {
+      "job_id": "W3_W_R11_903",
+      "target": "W3",
+      "arm": "R11",
+      "seed": 903,
+      "parameters": 1878142,
+      "lambda": 0.025,
+      "objective": "supcon"
+    }
+  ],
+  "code_sha256": {
+    "experiments/revision_validation/widar_study_design.py": "579160142d663233701b8b6dd375b191deb78fc78897db74d70c9dedfa9a62ad",
+    "experiments/revision_validation/experiment_design.py": "a4b91ea6db6ef8aeb3e9e1c88594cd3e4ce244b4f980758ce9afb855053dc4e0"
+  }
+}

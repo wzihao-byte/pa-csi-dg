@@ -1,0 +1,78 @@
+{
+  "candidate_evaluations": [
+    {
+      "components": {
+        "Y01_minus_Y00_macro_f1": -0.00014751090330933359,
+        "Y11_minus_Y10_macro_f1": -0.011008258215385758,
+        "Y11_minus_Y10_sit_stand_f1": 0.009140271493212726
+      },
+      "hard_gate_failures": [],
+      "input_job_ids": [
+        "screen__target_E3__arm_Y00__lam0000__seed_83",
+        "screen__target_E3__arm_Y10__lam0000__seed_83",
+        "screen__target_E3__arm_Y01__lam0010__seed_83",
+        "screen__target_E3__arm_Y11__lam0010__seed_83"
+      ],
+      "lambda_supcon": 0.01,
+      "passed_hard_gates": true,
+      "score": -0.005577884559347546
+    },
+    {
+      "components": {
+        "Y01_minus_Y00_macro_f1": 0.01232948456592653,
+        "Y11_minus_Y10_macro_f1": -0.004510376645463499,
+        "Y11_minus_Y10_sit_stand_f1": -0.00148399785446085
+      },
+      "hard_gate_failures": [],
+      "input_job_ids": [
+        "screen__target_E3__arm_Y00__lam0000__seed_83",
+        "screen__target_E3__arm_Y10__lam0000__seed_83",
+        "screen__target_E3__arm_Y01__lam0025__seed_83",
+        "screen__target_E3__arm_Y11__lam0025__seed_83"
+      ],
+      "lambda_supcon": 0.025,
+      "passed_hard_gates": true,
+      "score": 0.0039095539602315155
+    }
+  ],
+  "lambda_candidates": [
+    0.01,
+    0.025
+  ],
+  "protocol_lock_sha256": "a770e28fb3fae2d023b6e0c5ddb6e0ca0b91861300c6ac2116ef76e872e9e5b7",
+  "protocol_name": "supcon_tpp_joint",
+  "protocol_version": "1.2.0-stage0",
+  "schema_version": "supcon-tpp-lambda-selection/v1",
+  "screen_registry": {
+    "content_sha256": "40fbeb04eb96f51201c16ea9c41ba16e1acdc8b93c76a1780494255a42e1fea7",
+    "file_sha256": "ae0fee2ea579d82028af497467a3da9100ba84938649754789eaaac669c11a21",
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_joint\\generated_protocol\\screen_job_registry.json"
+  },
+  "screen_results": {
+    "content_sha256": "46f0f4a27b9e3936a47651716c1819831ad6348578e5edcf034d1f9efbfc7814",
+    "file_sha256": "5542dbaed8375b15b38616525dfb563a05525e75296ecdeef698a3cb779ecc60",
+    "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_joint\\stage1_screen_v12\\screen_results.json"
+  },
+  "screen_seed": 83,
+  "screen_thresholds": {
+    "gradient_absolute_floor_l2": 100.0,
+    "gradient_catastrophic_l2": 1000000.0,
+    "gradient_persistent_epochs": 3.0,
+    "gradient_reference_epochs": 5.0,
+    "gradient_relative_multiplier": 100.0,
+    "maximum_combo_macro_f1_drop_vs_tpp": 0.02,
+    "maximum_combo_sit_stand_f1_drop_vs_tpp": 0.03,
+    "maximum_late_to_early_train_ce_ratio": 0.95,
+    "minimum_positive_anchor_fraction": 0.99,
+    "minimum_source_val_macro_f1": 0.16666666666666666,
+    "smallest_lambda_score_tolerance": 0.005,
+    "train_ce_window_epochs": 20.0
+  },
+  "selected_lambda": 0.025,
+  "source_envs": [
+    "E1",
+    "E2"
+  ],
+  "status": "selected",
+  "target_env": "E3"
+}

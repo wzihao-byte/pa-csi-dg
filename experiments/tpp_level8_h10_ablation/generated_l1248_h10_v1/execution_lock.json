@@ -1,0 +1,65 @@
+{
+  "schema_version": "tpp-level8-h10-bundle/v1",
+  "created_at_utc": "2026-08-07T09:25:59.519831+00:00",
+  "protocol_lock_sha256": "5e6b9e3651ea1c12acf90443e9b2a05ef68ba68e053f8bbbd6ddf3f0932de17e",
+  "registry_sha256": "c80449ff3fb036e085d90a2032d9f2a9f94db5b1797eb8bb09064f549682daa6",
+  "reference_registry_sha256": "66364dcc91cde34247baf33060d51e3b4c93d0e450bee0cd4acb9af7f33b0a8b",
+  "scripts": {
+    "generate_bundle.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_h10_ablation\\generate_bundle.py",
+      "sha256": "80b7b865938afa44313f4e65eef39cb1e985b95b829d83edc1f9243c66414851"
+    },
+    "train_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_h10_ablation\\train_factorial.py",
+      "sha256": "9d4f5b1be9f0aa4f27da1316c15c0042c3614f68d67fd01ef995cce88f8c279a"
+    },
+    "run_level8.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_h10_ablation\\run_level8.py",
+      "sha256": "5b386b6d3c5aab0d61d5c192c4390043d71ae2bc97f9ed5f1e9c9e3558206b5c"
+    },
+    "analyze_level8.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_h10_ablation\\analyze_level8.py",
+      "sha256": "b4a5c22b8b8d443a4f3fdad5c2b08afed405970231ce5acc42db5bf5b629cd93"
+    },
+    "h11_level8_runner.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\run_level8.py",
+      "sha256": "653d86722dd58abecd0eeed0d8d68a2d371c25d57c3f39f09f9ff70bdae5fd98"
+    },
+    "h11_level8_analysis.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_level8_ablation\\analyze_level8.py",
+      "sha256": "0fb4d94deec30dbc935694d8baebd3a46900a4270db383996787f5b46e7918da"
+    },
+    "base_train_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\train_factorial.py",
+      "sha256": "9910696d05771ca24ec50f002d67cb2a908199de214278280c5bba46763091ec"
+    },
+    "base_run_factorial.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\supcon_tpp_legacy_reproduction\\run_factorial.py",
+      "sha256": "5009bf9a113f49f58b3ce12f0c31c996df68bec9179179d912536ac39e36403d"
+    },
+    "tpp_models.py": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\experiments\\tpp_isolated\\tpp_models.py",
+      "sha256": "fc6aeb3858763c282b892f8c8e91ac31425d93df4343d83bb33cd1c6749ebccf"
+    }
+  },
+  "required_gate_artifacts": {
+    "reference_factorial_completion": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_supcon_tpp_legacy_reproduction\\audit\\factorial_s32_completion.json",
+      "sha256": "080d189243de59e47bd5b68d2576305f1dd0094d07690af983d9b7708248ac95",
+      "required_status": "passed"
+    },
+    "level8_gpu_smoke": {
+      "path": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\outputs_tpp_level8_ablation\\audit\\gpu_smoke.json",
+      "sha256": "d44f536822f27c059de58877656c46a65de8172c093640ca4b257c8105eeabf8",
+      "required_status": "pass"
+    }
+  },
+  "constraints": {
+    "attempts_append_only": true,
+    "single_runner_os_lock": true,
+    "cuda_device": "cuda:0",
+    "paired_reference_barrier_required": true,
+    "target_open_only_after_checkpoint_freeze": true,
+    "no_target_metric_tuning": true
+  }
+}

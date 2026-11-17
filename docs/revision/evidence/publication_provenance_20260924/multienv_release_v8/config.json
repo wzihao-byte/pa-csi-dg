@@ -1,0 +1,19 @@
+{
+  "pid": 5036,
+  "started_at": "2026-09-24T05:55:52.473954+00:00",
+  "manuscript_pid": 0,
+  "manuscript_process_create_time": null,
+  "manuscript_command": [
+    "sealed-completion-sha256",
+    "c086f4ac6ed8773ea46a954b6ca08fb3720105b7d33ec1a0cb40093fa9889ad8"
+  ],
+  "manuscript_output": "D:\\pa-csi-dg-revision-runtime\\coordinators\\multienv_manuscript_v7",
+  "runtime": "D:\\pa-csi-dg-revision-runtime",
+  "evidence": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\multienv_revision_v2",
+  "assets": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\paper\\sensors_manuscript\\revision_assets\\multienv_v2",
+  "final_qa": "C:\\Users\\howie\\Desktop\\pa-csi-dg\\docs\\revision\\evidence\\manuscript_multienv_final_qa.json",
+  "release": "D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v2",
+  "archive": "D:\\pa-csi-dg-revision-runtime\\releases\\pa_csi_dg_multienv_revision_v2.zip",
+  "frozen_builder_sha256": "0ef098f3cc88c307b2d70015198ba8faf54bdaa45bf5ef4b2229555770dd8482",
+  "mutable_upstream_json_observed_while_writer_live": false
+}

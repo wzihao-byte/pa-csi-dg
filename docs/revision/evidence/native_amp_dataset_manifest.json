@@ -1,0 +1,45 @@
+{
+  "completed_at": "2026-09-03T16:38:27.594327+00:00",
+  "complete": true,
+  "variants": [
+    "native_time_legacy_merge",
+    "native_time_linear"
+  ],
+  "rows": 9000,
+  "historical_partition_sample_order_preserved": true,
+  "phase_included": false,
+  "manifest_directories": [
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_legacy_merge\\manifests",
+    "D:\\pa-csi-dg-revision-runtime\\data\\native_amp_arrays_v1\\native_time_linear\\manifests"
+  ],
+  "artifacts_sha256": {
+    "compile_config.json": "d630221844c67f8e19e1147b1d654a4e9373cbec8cbc4f346b90e8023453f0d3",
+    "E1_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "E2_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "E3_label.npy": "619e56cc7768625b0f2cdff8f973501b3b09ea2bf9300a045470e7a99c7a8b85",
+    "native_time_legacy_merge/E1_amp.npy": "c842948ba7ac27946853977b7600cc876c0884f8aa9082baa3094136810715a3",
+    "native_time_legacy_merge/E2_amp.npy": "df404e4b85041ec0987c738be1e0f333872037a2e5b0658171a89301516c58b1",
+    "native_time_legacy_merge/E3_amp.npy": "7914137cc69eb2b04448106d4b1c4324e71e0eb61471a6e7808df83331ebb7bf",
+    "native_time_legacy_merge/manifests/deferred_target_E1.json": "27a99871c25576c6a05d1d3509de2df1d3b06db0afde06ebc27be02552a46d40",
+    "native_time_legacy_merge/manifests/deferred_target_E2.json": "35230be0d0b738d2691a44ac2b8a7bb198ca3be2543b4df3dafb06b620a2a786",
+    "native_time_legacy_merge/manifests/deferred_target_E3.json": "f5de588dc7361286b31b4f170fb44bc8134dd69c49e17442b457087d1c4095ef",
+    "native_time_legacy_merge/manifests/source_E1.json": "8d507cccb89dbd87849f4aa83761d71d6739dc4987b06815ea583b7740c325d1",
+    "native_time_legacy_merge/manifests/source_E2.json": "bfceee70da3650f648f3d299da4f7924a43558a370e7ac483af5c64c306d0d91",
+    "native_time_legacy_merge/manifests/source_E3.json": "7b01ff71db1966d29b72fd68aefa08dcb8cae55cea98f1c7d26f9e4a6918fbc4",
+    "native_time_legacy_merge/subject_sidecars/E1.json": "5206eeda59d49a813497d035afe0d86de410c29b3d5245673cf91682c9916f61",
+    "native_time_legacy_merge/subject_sidecars/E2.json": "e1d22b58edd631cfa7cba79df8f3af1ea9f2a70d06caaab4195bcfa4dc5347ac",
+    "native_time_legacy_merge/subject_sidecars/E3.json": "89aa85e3a9fc6971bbb47317779ff43d82b3d9f258f31fe56a197cc59f914a54",
+    "native_time_linear/E1_amp.npy": "c782e7656a9a940d665fc3531de0ed5d43e83c281b18ca5d59eddb28f57e4d91",
+    "native_time_linear/E2_amp.npy": "986c0efe006eb20adf164c6beca0b6f4e0916fac30d7178ac8ced6eb09606d1c",
+    "native_time_linear/E3_amp.npy": "d08888f01f62779082975a8e2c12945eb0fb93d03f710c800648d11da26464f4",
+    "native_time_linear/manifests/deferred_target_E1.json": "f7241138fe5e51484ac0d637670aa282ab7d641b2855bf4a10589c18ea24c46d",
+    "native_time_linear/manifests/deferred_target_E2.json": "35666465586058a59298495687ca410f92c74a59243ce9b27b182b3ccd512136",
+    "native_time_linear/manifests/deferred_target_E3.json": "6fe6c68b0e7865a2328d33d1e1d22625aa1acbe704d32b076880b5eaa1ea4920",
+    "native_time_linear/manifests/source_E1.json": "a71e6a98008b2bb6002cdd57acfc208efcfb616ab650f8877708950992874796",
+    "native_time_linear/manifests/source_E2.json": "464b109e85b036f2b5285ff16f96b293e5f092610669372ec9505771841a454b",
+    "native_time_linear/manifests/source_E3.json": "fe920e45ae3ebd15d526bf39a15d8d5cbb8d5b886f0e15a4a60de43fcf38846f",
+    "native_time_linear/subject_sidecars/E1.json": "3ca61163d78a2786a07ef5f20daa477c49bbacdadea83351c9f636f462bfe533",
+    "native_time_linear/subject_sidecars/E2.json": "97b6439c35c0b2e6fe06fc26b8d05caa9624e0962535d870055ac3ec079a5d28",
+    "native_time_linear/subject_sidecars/E3.json": "af3fee16358f6319a8aaa9ae1a759f9d1a7678bdd35a749c36f58592878f192a"
+  }
+}

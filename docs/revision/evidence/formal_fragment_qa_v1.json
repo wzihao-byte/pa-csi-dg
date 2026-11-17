@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-04",
+  "status": "synthetic_gate_and_layout_qa_passed",
+  "builder": "paper/sensors_manuscript/build_formal_revision_fragment.py",
+  "builder_sha256": "c3ac32599a12da5a067c4530f6d84eac0143fe716d7dee408e4353c12621c696",
+  "coordinator": "analysis/continue_formal_fragment_after_assets.py",
+  "coordinator_sha256": "1219e454ca31e5d6bcd200e433fb5223377932b0d8313d9780ba3548db042482",
+  "synthetic_evidence": "D:/pa-csi-dg-revision-runtime/qa/formal_fragment_v1/evidence",
+  "synthetic_assets": "D:/pa-csi-dg-revision-runtime/qa/formal_fragment_v1/assets",
+  "compiled_pdf": "D:/pa-csi-dg-revision-runtime/qa/manuscript_formal_fragment_synthetic_v1/source/manuscript_formal_synthetic.pdf",
+  "compiled_pdf_sha256": "cef933c140b58f0611b78912b63adbb5205e079e228c063521452aa0ac177fb9",
+  "pages": 15,
+  "undefined_references_or_citations": 0,
+  "overfull_boxes": 0,
+  "visual_qa": "All fifteen synthetic integration pages were inspected in a rendered contact sheet. The gated fragment, four table positions, two formal figures, source-only diagnostic narrative, and following manuscript sections were visible without clipping or overlap.",
+  "gate_requirements": {
+    "formal_target_evaluated_runs": 216,
+    "formal_source_only_analyses": 117,
+    "target_gates_verified": true,
+    "population_inference_performed": false,
+    "evidence_and_asset_manifest_hashes_required": true
+  },
+  "limitations": [
+    "The numerical inputs used for this QA were synthetic and cannot be cited as scientific results.",
+    "The production coordinator uses a frozen builder and will run only after the real formal evidence and asset coordinators terminate successfully.",
+    "The real result fragment and final manuscript require a second numerical and visual review after generation."
+  ]
+}
